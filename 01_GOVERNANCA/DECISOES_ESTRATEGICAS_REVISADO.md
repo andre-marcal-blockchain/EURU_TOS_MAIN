@@ -601,3 +601,148 @@ ACCOES IMEDIATAS:
   actualizada gradualmente quando identificada.
 
 Operador: Andre (Risk/Product Owner)
+
+## 2026-04-25 13:30 - PROPOSTA FORMAL: Migracao Operacional para EURU TOS MAIN (Type 3)
+
+Tipo de mudanca: Type 3 (Critica - Mudanca de repositorio operacional canonico)
+Proposto por: Risk/Product Owner (Andre)
+Data da proposta: 2026-04-25 13:30 (hora local Espanha)
+Periodo de espera: 48 horas
+Activacao prevista: 2026-04-27 (nao antes das 13:30)
+
+CONTEXTO:
+A partir de 2026-04-25 existem dois repositorios paralelos com codigo
+e documentacao do Euru:
+
+1. C:\Users\andre\Desktop\EURO MAIN
+   - Repositorio operacional historico (Euru_TOS no GitHub)
+   - Scheduled tasks activas escrevem aqui
+   - Documentacao acumulada com algumas duplicacoes e legacy
+   - Foi onde o sistema operou de forma autonoma desde Marco 2026
+
+2. C:\Users\andre\Desktop\EURU TOS MAIN
+   - Novo repositorio (EURU_TOS_MAIN no GitHub)
+   - Documentacao consolidada e organizada por Codex (2026-04-25)
+   - Source of Truth e Operational State formalmente declarados
+   - Estrutura limpa, ADRs, hierarquia clara
+   - Inclui scripts ja revistos pela Codex
+
+Este estado de paralelismo cria divergencia operacional crescente:
+- Sistema escreve em EURO MAIN
+- Codex actualiza scripts em EURU TOS MAIN
+- Diferentes versoes podem coexistir sem reconciliacao
+
+Esta proposta resolve o paralelismo definitivamente.
+
+DECISAO PROPOSTA:
+
+A partir de 2026-04-27 (apos cooling-off):
+
+1. EURU TOS MAIN passa a ser o REPOSITORIO OPERACIONAL OFICIAL
+2. EURO MAIN passa a estado ARQUIVADO READ-ONLY
+3. Repositorio GitHub Euru_TOS passa a estado legacy (read-only, mantido para historico)
+4. Repositorio GitHub EURU_TOS_MAIN torna-se o novo origem oficial
+
+JUSTIFICACAO:
+
+A migracao realiza a intencao do operador de ter "estrutura limpa,
+transparente, sem duplicacao, com IAs auxiliares trabalhando em
+sincronia sobre uma fonte unica". Nao realiza essa intencao manter
+o status quo (dois repositorios em paralelo).
+
+Optar por substituir documentacao dentro de EURO MAIN (variante 2B)
+mantém o repositorio antigo com nome desactualizado e nao aproveita
+o trabalho de consolidacao formal feito por Codex.
+
+PLANO DE EXECUCAO (apos aprovacao em 2026-04-27):
+
+Fase A - Preparacao (sem disruption):
+- Backup completo de EURO MAIN como ZIP em local seguro fora do repo
+- Backup completo de EURU TOS MAIN equivalente
+- Verificar integridade de ambos antes de qualquer accao
+
+Fase B - Migracao de dados operacionais:
+- Migrar PAPER_TRADE_001.md a 004.md de EURO MAIN para EURU TOS MAIN
+  (verificar que sao os mesmos ou identificar diferencas primeiro)
+- Migrar JOURNAL_DAILY entries unicos de EURO MAIN
+- Migrar AUDIT_REPORTS unicos de EURO MAIN
+- Migrar SCOUT_REPORT, ASIAN_REPORT, TRADE_MONITOR_REPORT historicos
+- Verificar que nao ha duplicados ou versoes conflitantes
+
+Fase C - Migracao de scheduled tasks:
+- Listar todas as scheduled tasks Euru_* activas
+- Para cada uma:
+  * Modificar Action path para apontar EURU TOS MAIN
+  * Modificar WorkingDirectory para EURU TOS MAIN
+  * Validar manualmente que executa correctamente
+- Tasks afectadas (9 total):
+  * Euru_Morning_Scan
+  * Euru_Asian_Scan
+  * Euru_Journal_Auditor
+  * Euru_Smoke_Test_Night
+  * Euru_GitHub_Sync
+  * Euru_Friday_Cycle
+  * EuruLearningEngine
+  * Euru_Daily_Audit
+  * Euru_Weekly_Audit
+
+Fase D - Arquivamento:
+- Renomear C:\Users\andre\Desktop\EURO MAIN para
+  C:\Users\andre\Desktop\EURO MAIN_ARCHIVED_2026-04-27
+- Atributo somente leitura na pasta inteira
+- README claro a apontar EURU TOS MAIN como sucessor
+- No GitHub, repositorio Euru_TOS recebe README a apontar EURU_TOS_MAIN
+
+Fase E - Validacao pos-migracao:
+- Executar manualmente euru_morning_scan.py em EURU TOS MAIN
+- Executar manualmente euru_daily_audit.py
+- Esperar primeira execucao agendada natural (proximo dia)
+- Confirmar commits chegam ao novo repositorio remoto
+- Confirmar emails de notificacao continuam a funcionar
+
+CRITERIOS DE SUCESSO:
+
+A migracao e considerada bem-sucedida se ao fim de 7 dias (2026-05-04):
+- Sistema operacional escreve apenas em EURU TOS MAIN
+- Scheduled tasks executam sem erros
+- Audit reports diarios sao gerados normalmente
+- Weekly Audit do proximo sabado (2026-05-02) executa sem incidente
+- Friday Cycle do proximo sexta (2026-05-01) tenta executar
+- Nenhum commit autonomo aparece em Euru_TOS legacy
+
+CRITERIOS DE ROLLBACK:
+
+Se durante Fase B, C ou D ocorrer erro grave (perda de dados, sistema
+inoperacional, scheduled tasks quebradas e sem recuperacao em 1 hora):
+
+- Pasta EURO MAIN_ARCHIVED_2026-04-27 e renomeada de volta para EURO MAIN
+- Scheduled tasks revertidas para paths originais
+- EURU TOS MAIN e mantido como existe mas desconectado da operacao
+- Incidente formal registado neste documento
+- Nova proposta de migracao com correcao do problema identificado
+
+RISCOS RECONHECIDOS:
+
+1. Scripts em EURU TOS MAIN podem ter sido modificados por Codex e
+   nao terem sido testados em producao
+   Mitigacao: validacao manual antes de activar scheduled tasks
+
+2. .euru_secrets/euru.env esta em C:\Users\andre\.euru_secrets - fora
+   de ambos os repositorios. Migracao nao afecta credenciais.
+
+3. Historico Git de EURO MAIN nao e migrado, fica em Euru_TOS legacy
+   Mitigacao: aceitavel - novo historico comeca em EURU TOS MAIN com
+   referencia ao repositorio legado
+
+4. Race condition se houver scheduled task durante a migracao
+   Mitigacao: executar Fase C com todas as tasks paradas temporariamente
+
+CRITERIOS DE APROVACAO (apos 48h cooling-off):
+
+- Operador confirma alinhamento apos 48h de reflexao
+- Codex confirma alinhamento (atraves do operador como canal)
+- Plano de execucao continua aplicavel sem alteracoes
+- Nenhum incidente novo identificado que altere a analise
+
+Operador: Andre (Risk/Product Owner)
+Status: PENDING (48h wait ate 2026-04-27 13:30)
