@@ -1,0 +1,418 @@
+# euru_breakout_feature_schema.yaml
+# Version: 1.0.0 | Layer: BREAKOUT_LAYER | Module: 05_SCORING/schemas
+# Created: 2026-04-15 | Status: ACTIVE
+# Purpose: Canonical feature schema for all breakout scoring computations.
+#          Every feature row stored in Journal Learning must conform to this schema.
+#          Fields marked required: true must be populated. All others may be null.
+
+schema_meta:
+  name: euru_breakout_feature_schema
+  version: "1.0.0"
+  created: "2026-04-15"
+  owner: Score Engine
+  consumers:
+    - Score Engine (05_SCORING)
+    - Journal Learning (08_JOURNAL_LEARNING)
+    - Promise Auditor (09_PROMISE_AUDITOR)
+    - Friday Cycle
+    - Scorecard Engine (main pipeline)
+
+# ─────────────────────────────────────────────
+# GROUP 1: STRUCTURE FEATURES
+# Source: Structure Hunter (02_STRUCTURE_HUNTER)
+# Describes the quality and maturity of the S/R zone at the breakout event.
+# ─────────────────────────────────────────────
+structure_features:
+
+  zone_touch_count:
+    type: int
+    required: true
+    min: 0
+    max: 20
+    description: Number of distinct price touches on the zone before the breakout event.
+    scoring_note: "Minimum 2 required for valid zone. Each touch above 2 increases zone significance."
+
+  zone_maturity_bars:
+    type: int
+    required: true
+    min: 0
+    max: 200
+    description: Age of the zone in candle bars since the first touch. Older zones (up to 30 bars) carry more weight; beyond 30 without retest, zone expires.
+    scoring_note: "Zone expires if > 30 bars with no retest. Score peaks at 10–25 bar maturity."
+
+  compression_candles:
+    type: int
+    required: true
+    min: 0
+    max: 50
+    description: Count of consecutive candles with contracting ranges immediately before the breakout.
+    scoring_note: "Minimum 3 required for compression confirmation. 5+ is strong."
+
+  prior_failed_breaks:
+    type: int
+    required: true
+    min: 0
+    max: 10
+    description: Number of prior false breakout attempts at this zone that were rejected and closed back inside.
+    scoring_note: "Each failed break strengthens the zone. 1+ significantly increases zone confidence."
+
+  zone_width_atr:
+    type: float
+    required: true
+    min: 0.0
+    description: Width of the zone's price band expressed as a multiple of ATR(14).
+    scoring_note: "Narrow zones (< 0.5x ATR) are crisper; wide zones (> 1.5x ATR) introduce ambiguity."
+
+# ─────────────────────────────────────────────
+# GROUP 2: BREAKOUT CANDLE FEATURES
+# Source: Breakout Confirmation (03_BREAKOUT_CONFIRMATION)
+# Describes the quality of the candle that triggered the breakout event.
+# ─────────────────────────────────────────────
+breakout_candle_features:
+
+  candle_body_pct:
+    type: float
+    required: true
+    min: 0.0
+    max: 100.0
+    unit: percent_of_total_range
+    description: Body size as a percentage of the total candle range (high - low). High values indicate conviction.
+    scoring_note: "≥ 60% is strong. < 30% is weak. Used with wick_rejection_pct for full candle quality."
+
+  wick_rejection_pct:
+    type: float
+    required: true
+    min: 0.0
+    max: 100.0
+    unit: percent_of_body
+    description: Size of the rejection wick (upper wick for longs, lower for shorts) as a percentage of the body size.
+    scoring_note: "Hard constraint: > 40% disqualifies confirmation. 0–20% is clean."
+
+  close_position_in_range:
+    type: float
+    required: true
+    min: 0.0
+    max: 1.0
+    description: Normalized close position within the candle range. 1.0 = close at high, 0.0 = close at low.
+    scoring_note: "For bullish breakouts: > 0.7 is strong. < 0.5 is weak. < 0.3 may be fakeout."
+
+  volume_ratio:
+    type: float
+    required: true
+    min: 0.0
+    description: Breakout candle volume divided by the 20-period average volume.
+    scoring_note: "Hard constraint: < 0.8 blocks confirmation. ≥ 1.5 is strong. ≥ 2.0 is exceptional."
+
+  candle_size_atr:
+    type: float
+    required: true
+    min: 0.0
+    description: Breakout candle total range (high - low) expressed as a multiple of ATR(14).
+    scoring_note: "1.0–2.0x ATR is healthy expansion. > 3.0x may indicate news spike. < 0.5x is weak."
+
+# ─────────────────────────────────────────────
+# GROUP 3: IMPULSE FEATURES
+# Source: Breakout Confirmation + Flow Analyst
+# Describes the momentum characteristics of the breakout move itself.
+# ─────────────────────────────────────────────
+impulse_features:
+
+  impulse_distance_atr:
+    type: float
+    required: true
+    min: 0.0
+    description: Distance the close traveled beyond the zone boundary, expressed as a multiple of ATR(14).
+    scoring_note: "< 0.3x is marginal. 0.5–1.5x is healthy. > 2.0x may indicate overextension."
+
+  impulse_speed:
+    type: string
+    required: true
+    allowed_values:
+      - FAST     # breakout candle range > 1.5x ATR
+      - NORMAL   # breakout candle range 0.8–1.5x ATR
+      - SLOW     # breakout candle range < 0.8x ATR
+    description: Qualitative classification of how quickly the breakout candle moved through the zone.
+    scoring_note: "FAST scores highest for momentum breakouts. SLOW may indicate absorption, not breakout."
+
+  momentum_direction:
+    type: string
+    required: true
+    allowed_values:
+      - ALIGNED       # price momentum and breakout direction are the same
+      - NEUTRAL       # mixed momentum signals
+      - OPPOSED       # momentum indicators point against breakout direction
+    description: Alignment of RSI/MACD momentum with the breakout direction at time of event.
+    scoring_note: "OPPOSED is a significant warning. ALIGNED confirms momentum participation."
+
+# ─────────────────────────────────────────────
+# GROUP 4: VOLUME FEATURES
+# Source: Flow Analyst (euru_flow_analyst.py) + Breakout Confirmation
+# Describes broader volume context beyond the single breakout candle.
+# ─────────────────────────────────────────────
+volume_features:
+
+  volume_ratio_breakout:
+    type: float
+    required: true
+    min: 0.0
+    description: Volume on the breakout candle divided by MA20. Duplicate of candle-level volume_ratio for cross-group consistency.
+    scoring_note: "Same value as breakout_candle_features.volume_ratio. Kept here for volume group completeness."
+
+  volume_trend_3bars:
+    type: string
+    required: true
+    allowed_values:
+      - INCREASING    # volume rising over the 3 bars leading into breakout
+      - FLAT          # volume stable
+      - DECREASING    # volume declining into breakout (warning)
+    description: Volume trend direction over the 3 candles immediately preceding the breakout candle.
+    scoring_note: "INCREASING confirms accumulation. DECREASING into a breakout is a warning signal."
+
+  obv_direction:
+    type: string
+    required: true
+    allowed_values:
+      - BULLISH   # OBV trending up
+      - BEARISH   # OBV trending down
+      - FLAT      # OBV sideways
+    description: On-Balance Volume trend direction computed over the last 10 bars.
+    scoring_note: "OBV confirming breakout direction adds conviction. OBV divergence is a red flag."
+
+# ─────────────────────────────────────────────
+# GROUP 5: POST-BREAK FEATURES
+# Source: Breakout Confirmation (evaluated 1–3 bars after breakout)
+# Describes behavior after the initial breakout candle closed.
+# ─────────────────────────────────────────────
+post_break_features:
+
+  retest_occurred:
+    type: bool
+    required: true
+    description: Whether price pulled back to test the broken zone boundary after the initial breakout.
+    scoring_note: "Retest events with successful holds are the highest-quality breakout confirmation pattern."
+
+  retest_held:
+    type: bool
+    required: false
+    nullable: true
+    description: Whether price held above (for longs) / below (for shorts) the zone during the retest. Null if retest_occurred = false.
+    scoring_note: "retest_held = true is a premium signal. retest_held = false = FAKEOUT reclassification."
+
+  bars_above_zone:
+    type: int
+    required: true
+    min: 0
+    description: Number of candles that have closed beyond the zone boundary since the breakout (up to evaluation time).
+    scoring_note: "0 = only the breakout candle. 1–3 = early confirmation. 3+ = established acceptance."
+
+  close_acceptance:
+    type: string
+    required: true
+    allowed_values:
+      - STRONG      # 2+ closes clearly beyond zone, no reversal
+      - MODERATE    # 1 clear close beyond zone, minor pullback
+      - WEAK        # breakout candle only, no follow-through yet
+      - REJECTED    # subsequent close(s) back inside zone
+    description: Summary classification of post-break close behavior.
+    scoring_note: "REJECTED immediately reclassifies the event as FAKEOUT regardless of breakout candle quality."
+
+# ─────────────────────────────────────────────
+# GROUP 6: MULTI-TIMEFRAME FEATURES
+# Source: Market Regime (05_MARKET_REGIME) + Scout (main pipeline)
+# Describes the higher-timeframe and cross-asset context at time of breakout.
+# ─────────────────────────────────────────────
+multi_timeframe_features:
+
+  htf_trend:
+    type: string
+    required: true
+    allowed_values:
+      - BULLISH
+      - BEARISH
+      - NEUTRAL
+      - SIDEWAYS
+    description: Higher-timeframe (Daily if event is 4H, Weekly if event is Daily) trend direction at time of breakout.
+    scoring_note: "Breakout in direction of HTF trend scores significantly higher."
+
+  htf_structure:
+    type: string
+    required: true
+    allowed_values:
+      - EXPANSION     # HTF is in trending, expanding phase
+      - COMPRESSION   # HTF is in consolidation or coiling phase
+      - TRANSITION    # HTF changing regime
+      - UNKNOWN
+    description: Higher-timeframe structural condition at time of breakout.
+    scoring_note: "EXPANSION + breakout direction alignment is the strongest HTF context."
+
+  btc_alignment_score:
+    type: float
+    required: true
+    min: 0.0
+    max: 1.0
+    description: BTC regime alignment score from Market Regime agent. 1.0 = fully supportive. 0.0 = fully opposed. Required for all altcoin assets; set to 1.0 for BTCUSDT.
+    scoring_note: "< 0.5 = BTC headwind. < 0.2 = BTC strongly opposed — apply maximum penalty to score."
+
+  session_tag:
+    type: string
+    required: true
+    allowed_values:
+      - MORNING   # primary analysis session
+      - ASIAN     # 00:00 UTC lateralization scan
+      - MANUAL    # operator-triggered outside scheduled sessions
+      - OVERLAP   # London/NY overlap (high-volume window)
+    description: Trading session during which the breakout event occurred.
+    scoring_note: "Session context is mandatory for Journal Learning population segmentation."
+
+# ─────────────────────────────────────────────
+# GROUP 7: TRADEABILITY FEATURES
+# Source: Tactical Execution (06_TACTICAL_EXECUTION) + Risk Guardian (01_RISK_GUARDIAN)
+# Describes whether the setup is actually executable given current market conditions.
+# ─────────────────────────────────────────────
+tradeability_features:
+
+  stop_distance_atr:
+    type: float
+    required: true
+    min: 0.0
+    description: Distance from entry to stop loss, expressed as a multiple of ATR(14).
+    scoring_note: "Hard constraint: must be ≥ 1.0x ATR. 1.0–1.5x is tight. > 2.5x may reduce R:R below threshold."
+
+  target_distance_atr:
+    type: float
+    required: true
+    min: 0.0
+    description: Distance from entry to T1 target, expressed as a multiple of ATR(14).
+    scoring_note: "Must be ≥ 2x stop_distance_atr for minimum 2:1 R:R compliance."
+
+  rr_estimated:
+    type: float
+    required: true
+    min: 0.0
+    description: Estimated risk-to-reward ratio at T1, computed after spread adjustment.
+    scoring_note: "Hard constraint: < 2.0 blocks plan construction. 2.0–3.0 is standard. > 3.0 is premium."
+
+  distance_to_next_resistance_atr:
+    type: float
+    required: true
+    min: 0.0
+    description: Distance from entry to the nearest overhead resistance (for longs) or support (for shorts), expressed as ATR multiples.
+    scoring_note: "Low values (< 1.0x ATR) indicate insufficient room to T1. Penalizes score significantly."
+
+  liquidity_score:
+    type: float
+    required: true
+    min: 0.0
+    max: 1.0
+    description: Normalized liquidity quality score for the asset at current market depth. 1.0 = highly liquid, 0.0 = illiquid.
+    scoring_note: "Low liquidity assets carry slippage risk. Score < 0.4 applies maximum slippage penalty."
+
+  spread_pct:
+    type: float
+    required: true
+    min: 0.0
+    unit: percent_of_price
+    description: Current bid-ask spread as a percentage of the current price.
+    scoring_note: "< 0.05% is excellent. 0.05–0.15% is acceptable. > 0.3% triggers HIGH_SPREAD_WARNING."
+
+  slippage_estimate:
+    type: float
+    required: true
+    min: 0.0
+    unit: percent_of_price
+    description: Estimated market impact slippage for the proposed position size given current order book depth.
+    scoring_note: "Combined spread + slippage > 0.5% significantly degrades effective R:R."
+
+  distance_to_liquidation_atr:
+    type: float
+    required: true
+    min: 0.0
+    description: Distance from entry to the liquidation price at proposed leverage, expressed as ATR multiples.
+    scoring_note: "Hard constraint: must be ≥ 2.0x ATR. < 2.0x blocks Risk Guardian approval."
+
+# ─────────────────────────────────────────────
+# SCORE OUTPUTS
+# Computed by Score Engine from the feature groups above.
+# These are outputs, not inputs — populated after scoring, stored alongside features.
+# ─────────────────────────────────────────────
+score_outputs:
+
+  breakout_raw_score:
+    type: float
+    required: true
+    min: 0.0
+    max: 100.0
+    description: Composite score from structure_features, breakout_candle_features, impulse_features, volume_features. Represents setup quality independent of context and tradeability.
+    source_groups:
+      - structure_features
+      - breakout_candle_features
+      - impulse_features
+      - volume_features
+
+  breakout_context_score:
+    type: float
+    required: true
+    min: 0.0
+    max: 100.0
+    description: Composite score from post_break_features and multi_timeframe_features. Represents how favorable the broader context is for follow-through.
+    source_groups:
+      - post_break_features
+      - multi_timeframe_features
+
+  breakout_tradeability_score:
+    type: float
+    required: true
+    min: 0.0
+    max: 100.0
+    description: Composite score from tradeability_features. Represents whether the setup is mechanically executable within risk parameters.
+    source_groups:
+      - tradeability_features
+
+  breakout_final_score:
+    type: float
+    required: true
+    min: 0.0
+    max: 100.0
+    description: Weighted composite of raw, context, and tradeability scores. Primary classification signal. Weights defined in breakout_weights_v1.yaml.
+
+# ─────────────────────────────────────────────
+# CLASSIFICATION BANDS
+# Applied to breakout_final_score to determine pipeline routing.
+# ─────────────────────────────────────────────
+classification_bands:
+
+  discard:
+    range: [0, 39]
+    label: DISCARD
+    color: RED
+    action: "Do not route. Log as DISCARD. No further pipeline activation."
+    description: "Setup lacks sufficient quality in raw signal, context, or tradeability. Not worth monitoring."
+
+  watch:
+    range: [40, 54]
+    label: WATCH
+    color: YELLOW
+    action: "Log as WATCHLIST candidate. No execution. Re-evaluate on next session."
+    description: "Setup shows some merit but insufficient composite quality for activation. Monitor only."
+
+  valid:
+    range: [55, 69]
+    label: VALID
+    color: LIGHT_GREEN
+    action: "Route to Risk Guardian. Eligible for execution with standard risk parameters."
+    description: "Acceptable breakout quality. Trade if Risk Guardian approves. No special handling."
+
+  strong:
+    range: [70, 84]
+    label: STRONG
+    color: GREEN
+    action: "Route to Risk Guardian with STRONG flag. Eligible for standard or scaled entry."
+    description: "High-quality breakout with good context and tradeability. Higher confidence routing."
+
+  premium:
+    range: [85, 100]
+    label: PREMIUM
+    color: DARK_GREEN
+    action: "Route to Risk Guardian with PREMIUM flag. Eligible for maximum approved risk."
+    description: "Exceptional setup. All feature groups score well. Full pipeline activation."
+    governance_note: "PREMIUM classification is audited by Promise Auditor. Performance must back the label."

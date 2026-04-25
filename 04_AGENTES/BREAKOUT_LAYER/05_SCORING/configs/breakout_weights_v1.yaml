@@ -1,0 +1,283 @@
+# breakout_weights_v1.yaml
+# Version: 1.0.0 | Layer: BREAKOUT_LAYER | Module: 05_SCORING/configs
+# Created: 2026-04-15 | Status: ACTIVE
+# Purpose: Weight configuration for the Euru Breakout Score Engine — conservative profile.
+#          All weights within each score family must sum to 1.0.
+#          Weights apply to normalized sub-scores (0–100) before blending.
+#          Changes to this file require Type 2 governance approval (24h wait + separate session sign-off).
+
+config_meta:
+  profile_name: conservative_v1
+  version: "1.0.0"
+  created: "2026-04-15"
+  approved_by: "Risk/Product Owner"
+  phase_applicability:
+    - READ_ONLY
+    - SIMULATE
+  next_review_date: "2026-05-16"
+  governance_change_type: Type_2
+  notes: >
+    Conservative profile prioritizes candle quality and volume confirmation over
+    pure structural strength. Tradeability is given equal weight to context
+    (0.30 each) to prevent high-scoring setups with poor execution conditions
+    from reaching Risk Guardian. Designed for SIMULATE phase calibration.
+
+# ─────────────────────────────────────────────
+# SCORE FAMILY 1: BREAKOUT_RAW_SCORE
+# Measures the quality of the breakout signal itself.
+# Sources: structure_features, breakout_candle_features, impulse_features, volume_features
+# All group weights must sum to 1.0
+# ─────────────────────────────────────────────
+breakout_raw_score:
+  description: >
+    Raw breakout quality score. Measures whether the zone, candle, momentum,
+    and volume paint a convincing breakout picture — independent of context
+    and execution conditions.
+
+  group_weights:
+    structure_features:
+      weight: 0.25
+      rationale: >
+        Zone quality (touches, compression, failed breaks) is the foundation
+        of the setup. However, it is not sufficient alone — candle and volume
+        must confirm. Hence 25%, not dominant.
+
+    breakout_candle_features:
+      weight: 0.30
+      rationale: >
+        Candle quality is the most direct signal of breakout conviction.
+        Body size, wick rejection, close position, and volume ratio directly
+        determine whether the breakout is genuine. Highest weight in raw score.
+
+    impulse_features:
+      weight: 0.20
+      rationale: >
+        Impulse distance, speed, and momentum direction describe the energy
+        of the move. Important but secondary to candle quality — momentum
+        can lag or lead; the candle is the immediate truth.
+
+    volume_features:
+      weight: 0.25
+      rationale: >
+        Volume trend (3-bar), OBV, and breakout volume ratio together provide
+        the broader participation picture. Equal weight to structure_features —
+        volume is as important as zone maturity.
+
+  weight_sum_check: 1.00
+
+  # Per-feature weights within each group (must sum to 1.0 within group)
+  feature_weights:
+    structure_features:
+      zone_touch_count: 0.35
+      zone_maturity_bars: 0.20
+      compression_candles: 0.25
+      prior_failed_breaks: 0.15
+      zone_width_atr: 0.05
+
+    breakout_candle_features:
+      candle_body_pct: 0.30
+      wick_rejection_pct: 0.25
+      close_position_in_range: 0.20
+      volume_ratio: 0.15
+      candle_size_atr: 0.10
+
+    impulse_features:
+      impulse_distance_atr: 0.40
+      impulse_speed: 0.35
+      momentum_direction: 0.25
+
+    volume_features:
+      volume_ratio_breakout: 0.40
+      volume_trend_3bars: 0.35
+      obv_direction: 0.25
+
+# ─────────────────────────────────────────────
+# SCORE FAMILY 2: BREAKOUT_CONTEXT_SCORE
+# Measures the environmental quality around the breakout.
+# Sources: post_break_features, multi_timeframe_features
+# All group weights must sum to 1.0
+# ─────────────────────────────────────────────
+breakout_context_score:
+  description: >
+    Context quality score. Measures how favorable the post-break behavior
+    and higher-timeframe environment are for sustained follow-through.
+    A setup can have a strong raw score but poor context (e.g., breakout
+    during BTC CHOPPY regime with no post-break acceptance).
+
+  group_weights:
+    post_break_features:
+      weight: 0.35
+      rationale: >
+        Retest quality and close acceptance are the most direct evidence
+        of whether the breakout is real. Lower weight than HTF because
+        post-break data may be limited at time of evaluation (live setups
+        may have zero post-break candles). Conservative handling.
+
+    multi_timeframe_features:
+      weight: 0.65
+      rationale: >
+        HTF trend alignment, HTF structure, BTC alignment, and session tag
+        are knowable before the breakout candle closes. They represent the
+        macro environment in which the setup exists. Dominant weight because
+        wrong macro context kills even perfect raw setups.
+
+  weight_sum_check: 1.00
+
+  feature_weights:
+    post_break_features:
+      retest_occurred: 0.20
+      retest_held: 0.35
+      bars_above_zone: 0.25
+      close_acceptance: 0.20
+
+    multi_timeframe_features:
+      htf_trend: 0.30
+      htf_structure: 0.20
+      btc_alignment_score: 0.35
+      session_tag: 0.15
+
+# ─────────────────────────────────────────────
+# SCORE FAMILY 3: BREAKOUT_TRADEABILITY_SCORE
+# Measures whether the setup is mechanically executable.
+# Sources: tradeability_features
+# All feature weights must sum to 1.0
+# ─────────────────────────────────────────────
+breakout_tradeability_score:
+  description: >
+    Tradeability score. Measures execution feasibility: is the stop placement
+    valid, is the R:R achievable, is there room to the next resistance,
+    and can the asset be entered without excessive spread/slippage cost?
+    A PREMIUM raw + context setup with 0.8 R:R is not tradeable.
+
+  feature_weights:
+    stop_distance_atr:
+      weight: 0.15
+      rationale: Stop distance in ATR determines whether stop is viable without being too tight or too wide.
+
+    target_distance_atr:
+      weight: 0.15
+      rationale: Target distance validates that sufficient price room exists for T1 to be reached.
+
+    rr_estimated:
+      weight: 0.20
+      rationale: >
+        R:R after spread is the single most important tradeability metric.
+        Highest weight. Below 2.0 is disqualifying regardless of other scores.
+
+    distance_to_next_resistance_atr:
+      weight: 0.20
+      rationale: >
+        Overhead resistance proximity limits T1 reachability. Equal weight
+        to R:R because a technically valid R:R is meaningless if resistance
+        sits just above entry.
+
+    liquidity_score:
+      weight: 0.10
+      rationale: Liquidity determines whether execution is clean. Low liquidity = high slippage risk.
+
+    spread_pct:
+      weight: 0.05
+      rationale: Direct cost of entry. Small weight because most watchlisted assets have acceptable spread.
+
+    slippage_estimate:
+      weight: 0.05
+      rationale: Market impact cost. Small weight — slippage is predictable for watchlisted assets.
+
+    distance_to_liquidation_atr:
+      weight: 0.10
+      rationale: Liquidation safety is a hard constraint (≥ 2x ATR). Score reflects how comfortably it is met.
+
+  weight_sum_check: 1.00
+
+# ─────────────────────────────────────────────
+# SCORE FAMILY 4: BREAKOUT_FINAL_SCORE
+# Weighted blend of the three score families.
+# Must sum to 1.0
+# ─────────────────────────────────────────────
+breakout_final_score:
+  description: >
+    Final classification score. Weighted blend of raw quality, context quality,
+    and tradeability. Maps to classification bands (DISCARD / WATCH / VALID /
+    STRONG / PREMIUM) defined in euru_breakout_feature_schema.yaml.
+    Design principle: a strong raw score does not produce a PREMIUM final score
+    unless context and tradeability are also sufficient.
+
+  family_weights:
+    raw_weight:
+      weight: 0.40
+      score_source: breakout_raw_score
+      rationale: >
+        Raw breakout quality is the largest contributor — if the zone, candle,
+        momentum, and volume are all poor, the setup should not score high
+        regardless of context. 40% is dominant but not overwhelming.
+
+    context_weight:
+      weight: 0.30
+      score_source: breakout_context_score
+      rationale: >
+        Context explains whether the environment supports follow-through.
+        30% — significant but cannot compensate for a weak raw score.
+
+    tradeability_weight:
+      weight: 0.30
+      score_source: breakout_tradeability_score
+      rationale: >
+        Tradeability ensures execution feasibility. Equal weight to context —
+        a setup that cannot be executed safely at the current spread/R:R
+        has zero practical value regardless of signal quality.
+
+  weight_sum_check: 1.00
+
+# ─────────────────────────────────────────────
+# HARD DISQUALIFIERS
+# These conditions override score and force DISCARD regardless of final_score.
+# ─────────────────────────────────────────────
+hard_disqualifiers:
+  - condition: "wick_rejection_pct > 40.0"
+    outcome: DISCARD
+    reason: "Hard constraint — wick rejection exceeds confirmation threshold"
+
+  - condition: "volume_ratio < 0.8"
+    outcome: DISCARD
+    reason: "Hard constraint — volume below minimum confirmation threshold"
+
+  - condition: "close_vs_zone == BELOW (for longs)"
+    outcome: DISCARD
+    reason: "Hard constraint — wick-only break, not a real breakout"
+
+  - condition: "close_acceptance == REJECTED"
+    outcome: DISCARD
+    reason: "Post-break reversal — breakout failed"
+
+  - condition: "rr_estimated < 2.0"
+    outcome: DISCARD
+    reason: "Hard constraint — R:R below 2:1 minimum"
+
+  - condition: "distance_to_liquidation_atr < 2.0"
+    outcome: DISCARD
+    reason: "Hard constraint — liquidation too close"
+
+  - condition: "zone_touch_count < 2"
+    outcome: DISCARD
+    reason: "Hard constraint — insufficient zone touches"
+
+  - condition: "compression_candles < 3 AND structural_status == BREAKOUT_READY"
+    outcome: DOWNGRADE_TO_WATCH
+    reason: "Compression below minimum for BREAKOUT_READY classification"
+
+# ─────────────────────────────────────────────
+# ALTCOIN MODIFIER
+# Applied to btc_alignment_score when asset is not BTCUSDT
+# ─────────────────────────────────────────────
+altcoin_modifier:
+  enabled: true
+  description: >
+    When btc_alignment_score < 0.5 for an altcoin asset, apply a penalty
+    multiplier to breakout_context_score before blending into final score.
+  btc_alignment_thresholds:
+    - range: [0.5, 1.0]
+      modifier: 1.0     # no penalty
+    - range: [0.2, 0.49]
+      modifier: 0.80    # 20% penalty on context score
+    - range: [0.0, 0.19]
+      modifier: 0.50    # 50% penalty on context score — forces DISCARD or WATCH

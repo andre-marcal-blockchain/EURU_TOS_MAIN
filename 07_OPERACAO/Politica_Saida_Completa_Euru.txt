@@ -1,0 +1,208 @@
+POLÍTICA DE SAÍDA COMPLETA — Euru OS
+Fonte: documento validado para o Euru OS
+Data de integração: 2026-04-03
+========================================
+
+Este documento define como o Euru sai das operações
+com a mesma precisão e disciplina com que entra.
+Complementa o Protocolo Aguiar Módulos 08, 09 e 10.
+
+========================================
+REGRA FUNDAMENTAL DE SAÍDA
+========================================
+
+"As saídas são regidas por regras de risco e
+confirmação de que o movimento perdeu força.
+Nunca por emoção. Nunca por feeling."
+
+========================================
+RÁCIO RISCO/RETORNO MÍNIMO
+========================================
+
+Mínimo obrigatório: 1:2
+  Arriscar $1 → alvo mínimo $2
+
+Preferencial: 1:3
+  Arriscar $1 → alvo preferido $3
+
+Regra: Se rácio < 1:2 → NO_ENTRY
+       Independentemente da qualidade do setup
+
+Cálculo:
+  Stop distance = ATR × 1.5
+  Target 1 = entrada + (stop distance × 2)
+  Target 2 = entrada + (stop distance × 3)
+
+========================================
+CRITÉRIOS DE SAÍDA — HIERARQUIA
+========================================
+
+PRIORIDADE 1 — STOP-LOSS ABSOLUTO
+  Preço abaixo do stop definido → SAIR IMEDIATAMENTE
+  Sem excepções. Sem "deixa ver se recupera".
+  Agente: Quant/Risk Officer
+
+PRIORIDADE 2 — EVENTO MACRO ADVERSO
+  News Sentinel detecta HIGH severity adverso
+  Regulação que afecta directamente o asset
+  → SAIR ou REDUZIR posição imediatamente
+  Agente: News Sentinel
+
+PRIORIDADE 3 — DIVERGÊNCIA TÉCNICA
+  OBV diverge do preço (volume não confirma alta)
+  RSI bearish divergence (preço sobe, RSI desce)
+  → AVALIAR SAÍDA ANTECIPADA
+  Agente: Flow Analyst
+
+PRIORIDADE 4 — MACD CROSSOVER NEGATIVO
+  Linha MACD cruza sinal para baixo
+  → REDUZIR posição ou sair
+  Agente: Flow Analyst
+
+PRIORIDADE 5 — SUPORTE PERDIDO
+  Preço fecha abaixo de suporte importante
+  → SAIR IMEDIATAMENTE
+  Agente: Scout
+
+PRIORIDADE 6 — TIME STOP
+  7 dias sem desenvolvimento do movimento
+  Capital preso = oportunidade perdida
+  → ENCERRAR posição
+  Agente: Journal/Auditor
+
+========================================
+GESTÃO DE POSIÇÃO — SAÍDAS PARCIAIS
+========================================
+
+MÓDULO 08 — 50% Securing
+  Quando: ROI ≥ 50%
+  Acção: liquidar 50% da posição
+  Resultado: custo da operação recuperado
+
+MÓDULO 10 — 10% Harvesting
+  Quando: ROI ≥ 300% (e a cada 300% adicional)
+  Acção: extrair 10% da posição restante
+  Exemplo: 300% → 10% out | 600% → 10% out | 900% → 10% out
+
+MÓDULO 09 — Fibonacci Matrix
+  Target 0.382: parcial + preparar para resistência
+  Target 0.500: segundo bloco de 10% extraído
+  Target 0.618: deixar core position correr infinitamente
+
+========================================
+TRAILING STOP
+========================================
+
+Regra de activação:
+  Quando posição atinge +1R de lucro:
+  → Mover stop para break-even
+
+  Quando posição atinge +2R de lucro:
+  → Mover stop para +1R
+
+  Quando posição atinge +3R de lucro:
+  → Mover stop para +2R
+
+Fórmula do trailing stop:
+  Stop = preço actual - (ATR × 1.5)
+  Actualizar a cada candle 4H fechado
+  Stop NUNCA desce — só sobe
+
+Agente: Execution Orchestrator
+
+========================================
+TIME STOP
+========================================
+
+Definição:
+  Se a operação não se desenvolve dentro de 7 dias
+  → encerrar independentemente do resultado
+
+Lógica:
+  Capital preso em operação morta =
+  oportunidade perdida noutro asset
+
+Excepções:
+  Posições Core (80% da carteira) — sem time stop
+  Posições MAC tácticas — time stop 7 dias activo
+  Posições de curto prazo — time stop 48-72h
+
+Agente: Journal/Auditor
+
+========================================
+SAÍDA POR NARRATIVA ESFRIADA
+========================================
+
+Sinais de que a narrativa perdeu força:
+  - Volume do sector cai para metade da média
+  - News Sentinel: 3 dias sem menção ao sector
+  - Principais tokens do sector -20% sem recuperação
+  - Analista Macro: rotação para outro sector detectada
+
+Acção:
+  Reduzir exposição ao sector em 50%
+  Manter apenas posições com ROI positivo
+  Não abrir novas entradas no sector
+
+Agente: News Sentinel + Scout
+
+========================================
+REGRAS ABSOLUTAS DE SAÍDA
+========================================
+
+1. Stop-loss NUNCA é movido para longe
+   (excepto trailing stop para cima)
+
+2. Nunca segurar posição perdedora "esperando recuperar"
+
+3. Nunca fechar posição vencedora por medo sem critério técnico
+
+4. Time stop aplica-se sempre a posições MAC tácticas
+
+5. Evento macro adverso HIGH → reavaliar imediatamente
+
+6. Divergência OBV + RSI simultânea = saída imediata
+
+========================================
+FLUXO DE SAÍDA COMPLETO
+========================================
+
+POSIÇÃO ABERTA
+↓
+A cada candle 4H:
+
+CHECK 1: Stop-loss atingido? → SIM → SAIR
+CHECK 2: Evento macro HIGH adverso? → SIM → REAVALIAR
+CHECK 3: OBV + RSI divergência? → SIM → SAIR
+CHECK 4: MACD crossover negativo? → SIM → REDUZIR
+CHECK 5: Suporte perdido? → SIM → SAIR
+CHECK 6: Time stop (7 dias)? → SIM → ENCERRAR
+
+A cada milestone:
+
+ROI ≥ 50%? → Liquidar 50% (Module 08)
+ROI ≥ 300%? → Harvesting 10% (Module 10)
+Fibonacci 0.382? → Parcial + ajusta stop
+Fibonacci 0.618? → Core position corre infinitamente
+
+Trailing stop:
++1R → stop para break-even
++2R → stop para +1R
++3R → stop para +2R
+
+========================================
+RESPONSABILIDADES POR AGENTE
+========================================
+
+Scout:           Detecta perda de suporte
+Flow Analyst:    OBV/RSI divergência + MACD crossover
+News Sentinel:   Eventos macro + narrativa esfriada
+Quant/Risk:      Stop-loss absoluto + position sizing saída
+Execution Orch:  Executa ordens de saída + trailing stop
+Journal/Auditor: Time stop + regista todas as saídas
+DevOps:          Monitoriza 24/7 durante posições abertas
+
+========================================
+Ficheiro gerado automaticamente pelo Euru OS
+Pasta: 07_OPERACAO
+========================================
