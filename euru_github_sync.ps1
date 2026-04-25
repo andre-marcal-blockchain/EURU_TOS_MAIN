@@ -1,4 +1,4 @@
-﻿Set-Location "C:\Users\andre\Desktop\EURO MAIN"
+Set-Location "C:\Users\andre\Desktop\EURU TOS MAIN"
 
 git add .
 
@@ -14,7 +14,14 @@ $message = "Euru OS — $date — $count files updated"
 
 git commit -m $message
 
-$pushResult = git push 2>&1
+$remote = git remote get-url origin 2>$null
+if (-not $remote) {
+    Write-Host "Committed locally — no origin remote configured." -ForegroundColor Yellow
+    exit 0
+}
+
+$branch = git branch --show-current
+$pushResult = git push origin $branch 2>&1
 if ($LASTEXITCODE -eq 0) {
     Write-Host "SUCCESS: $message" -ForegroundColor Green
 } else {
