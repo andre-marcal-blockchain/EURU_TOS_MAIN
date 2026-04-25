@@ -460,6 +460,10 @@ def build_report(
     )
 
     lines = [
+        "---",
+        "schema_type: scout_report",
+        "schema_version: 1.0",
+        "---",
         f"# Euru OS — Morning Scan Report",
         f"**Date:** {date_str}  ",
         f"**Time:** {time_str}  ",

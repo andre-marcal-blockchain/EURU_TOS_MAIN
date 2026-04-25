@@ -458,6 +458,10 @@ def generate_report(decisions: list, now: datetime.datetime, dry_run: bool) -> s
     mode = "DRY-RUN" if dry_run else "LIVE"
 
     lines = [
+        "---",
+        "schema_type: trade_monitor_report",
+        "schema_version: 1.0",
+        "---",
         f"# Euru OS — Trade Monitor Report",
         f"**Date:** {date_str}",
         f"**Time:** {time_str}",

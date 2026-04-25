@@ -1,3 +1,7 @@
+---
+schema_type: trade_monitor_report
+schema_version: 1.0
+---
 # Euru OS — Trade Monitor Report
 **Date:** 2026-04-18
 **Time:** 06:35 UTC

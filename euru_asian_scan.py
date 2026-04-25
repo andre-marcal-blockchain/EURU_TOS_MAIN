@@ -408,6 +408,10 @@ def build_report(
     )
 
     lines = [
+        "---",
+        "schema_type: asian_scan_report",
+        "schema_version: 1.0",
+        "---",
         "# Euru OS — Asian Session Scan Report",
         f"**Date:** {date_str}  ",
         f"**Time:** {time_str}  ",

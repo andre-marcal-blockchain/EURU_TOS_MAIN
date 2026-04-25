@@ -1,3 +1,7 @@
+---
+schema_type: scout_report
+schema_version: 1.0
+---
 # Euru OS — Morning Scan Report
 **Date:** 2026-04-19  
 **Time:** 06:09 UTC  

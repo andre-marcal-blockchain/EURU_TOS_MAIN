@@ -1,3 +1,7 @@
+---
+schema_type: asian_scan_report
+schema_version: 1.0
+---
 # Euru OS — Asian Session Scan Report
 **Date:** 2026-04-25  
 **Time:** 09:09 UTC  

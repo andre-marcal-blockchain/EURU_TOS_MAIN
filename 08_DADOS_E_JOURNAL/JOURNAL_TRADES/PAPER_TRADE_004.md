@@ -56,6 +56,34 @@ tags:
   - obv_two_day_confirmation
 ---
 
+# Trade Summary
+
+PAPER_TRADE_004 / XRPUSDT was opened and closed on 2026-04-18 during SIMULATE. It is a governance-breach record and remains excluded from official performance statistics, expectancy, win rate, and RR calculations.
+
+## Thesis
+
+Original thesis was trend continuation with two-day OBV confirmation, BTC supportive context, and score 26/35. The thesis is superseded by governance outcome because `news_severity_at_entry: high` violated an inviolable rule.
+
+## Entry Reasoning
+
+Entry was based on scan-driven XRP momentum, bullish MAC context, and Day 2 OBV RISING confirmation. Retrospective audit classifies the entry as invalid for official statistics due to Rule 8 / high news severity.
+
+## Risk Plan
+
+Planned risk used stop loss 1.3725, take profit 1.6650, planned RR 2.0, leverage 5, and notional 15.33 USDT. Risk plan is documented for audit only and does not validate the trade.
+
+## Management Notes
+
+Trade was closed shortly after the governance issue was detected. Original detailed incident record is preserved below.
+
+## Exit Notes
+
+Exit reason is `system_rule`. Trade closed at 1.4706 with +0.01 USDT, statistically irrelevant and excluded from official clean-trade metrics.
+
+## Lessons Learned
+
+Rules are literal. External AI input cannot open or authorize trades. High news severity blocks entry unless governance explicitly changes the rule in the future.
+
 # PAPER TRADE 004 — XRPUSDT
 **Euru OS — Simulate Phase Entry**
 
