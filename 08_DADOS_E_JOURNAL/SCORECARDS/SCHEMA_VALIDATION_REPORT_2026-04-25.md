@@ -1,9 +1,9 @@
 # EURU Schema Validation Report
 
-- generated_at: 2026-04-25T12:19:18+0200
+- generated_at: 2026-04-25T12:25:46+0200
 - root: `C:\Users\andre\Desktop\EURU TOS MAIN`
-- total_files: 70
-- valid_files: 70
+- total_files: 72
+- valid_files: 72
 - invalid_files: 0
 - warning_count: 0
 - error_count: 0
@@ -15,9 +15,9 @@
 | asian_scan_report | 9 | 9 | 0 |
 | breakout_scan_report | 1 | 1 | 0 |
 | daily_journal | 13 | 13 | 0 |
-| learning_report | 3 | 3 | 0 |
+| learning_report | 4 | 4 | 0 |
 | paper_trade | 4 | 4 | 0 |
-| scorecard | 18 | 18 | 0 |
+| scorecard | 19 | 19 | 0 |
 | scout_report | 12 | 12 | 0 |
 | trade_monitor_report | 10 | 10 | 0 |
 
@@ -128,10 +128,16 @@
 ### VALID — `C:\Users\andre\Desktop\EURU TOS MAIN\08_DADOS_E_JOURNAL\SCORECARDS\LEARNING_REPORT_2026-04-17.md`
 - no issues
 
+### VALID — `C:\Users\andre\Desktop\EURU TOS MAIN\08_DADOS_E_JOURNAL\SCORECARDS\LEARNING_REPORT_2026-04-25.md`
+- no issues
+
 ### VALID — `C:\Users\andre\Desktop\EURU TOS MAIN\08_DADOS_E_JOURNAL\SCORECARDS\SCORECARDS\SCORECARD_system_euru_tos_2026-W15.md`
 - no issues
 
 ### VALID — `C:\Users\andre\Desktop\EURU TOS MAIN\08_DADOS_E_JOURNAL\SCORECARDS\SCORECARDS\SCORECARD_system_euru_tos_2026-W16.md`
+- no issues
+
+### VALID — `C:\Users\andre\Desktop\EURU TOS MAIN\08_DADOS_E_JOURNAL\SCORECARDS\SCORECARDS\SCORECARD_system_euru_tos_2026-W17.md`
 - no issues
 
 ### VALID — `C:\Users\andre\Desktop\EURU TOS MAIN\08_DADOS_E_JOURNAL\SCORECARDS\SCOUT_REPORT_2026-04-01.md`
