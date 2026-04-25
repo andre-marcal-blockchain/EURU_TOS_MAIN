@@ -58,6 +58,7 @@ Scripts remain in the repository root because their current path logic expects t
 - `euru_schema_validator.py`
 - `euru_friday_cycle.py`
 - `euru_learning_engine.py`
+- `euru_trade_metrics_calculator.py`
 
 ## Archive
 

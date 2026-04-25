@@ -57,10 +57,11 @@ Exit criteria:
 
 ## Phase 4 — Trade Metrics Calculator
 
-Status: pending
+Status: initial implementation complete
 
 Deliverables:
 
+- Initial calculator created: `euru_trade_metrics_calculator.py`.
 - Read-only script for closed trade statistics.
 - Metrics by asset, setup type, BTC regime, news severity, score band, and exit reason.
 - Integration into Weekly Audit.
