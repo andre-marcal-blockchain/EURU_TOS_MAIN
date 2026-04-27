@@ -818,3 +818,116 @@ Sequencia: B0a verify -> B (manifest+migrate) -> C dry-run -> C apply
 -> D -> E -> E2 (T+24h e T+7d).
 
 Operador: Andre (Risk/Product Owner)
+
+## 2026-04-27 14:35 - MIGRACAO TYPE 3 EXECUTADA: EURU TOS MAIN agora operacional
+
+Tipo: Registo de execucao bem-sucedida
+Referencia: Type 3 aprovado 2026-04-27 13:37 (commit 6fe5477)
+Suplementos: Migration Runbook v0.3, Migration Rollback v0.3
+Data de execucao: 2026-04-27 13:37 - 14:35 (1 hora)
+
+STATUS: COMPLETED
+
+FASES EXECUTADAS:
+
+Fase B0a (Non-destructive checkpoint) - GREEN
+  - Backups SHA256 validados
+  - 9 XML exports das scheduled tasks
+  - Backup PS profile
+  - Tags Git em ambos repos
+  - Delta inventory CSV gerado
+
+Fase B-minimal (Operational delta) - GREEN
+  - 6 ficheiros operacionais de 26-27 Abr migrados
+  - + run_smoke_test.bat (suplemento descoberto durante validacao)
+  - + MIGRATION_PREFLIGHT_2026-04-27.md
+  - Commits: 3de0e28, ea506f7
+  - Migration manifest registado em B0 artifacts
+  - 1259 ficheiros legacy NAO migrados (deferred to post-migration triage)
+
+Fase C (Scheduled tasks) - GREEN
+  - 9 tasks migradas: paths EURO MAIN -> EURU TOS MAIN
+  - States preservados: 5 Disabled (Morning_Scan, Asian_Scan, GitHub_Sync,
+    Friday_Cycle, EuruLearningEngine), 4 Ready (Daily_Audit, Journal_Auditor,
+    Smoke_Test_Night, Weekly_Audit)
+  - Bug detectado no script: 'Applied' mascarando 'Acceso denegado' em
+    sessao nao-elevada. Mitigacao: re-execucao em PS Run as Administrator
+    real. Documentar como finding pos-migracao.
+
+Fase D (Archive + PS profile) - GREEN
+  - Pasta renomeada: EURO MAIN -> EURO MAIN_ARCHIVED_2026-04-27
+  - IsReadOnly attribute applicado (marcador apenas, nao protecao real)
+  - README_ARCHIVED.md criado dentro da pasta arquivada
+  - WindowsPowerShell profile actualizado: EURO MAIN -> EURU TOS MAIN
+  - PowerShell 7 profile nao existia (skip)
+  - Verificacao: nova janela PS abre directamente em EURU TOS MAIN
+
+Fase E (Validation manual) - GREEN
+  - Morning scan executado em EURU TOS MAIN com sucesso
+  - SCOUT_REPORT_2026-04-27.md e TRADE_MONITOR_REPORT_2026-04-27.md
+    gerados em paths novos
+  - Git sync automatico push commit 357e1fa para origin EURU_TOS_MAIN.git
+  - News Sentinel: LOW
+  - BTC Master Filter: SIDEWAYS
+  - 0 trades abertos, 0 setups validos
+
+Fase E2 (Post-migration audit) - PENDING
+  - T+24h checkpoint: 2026-04-28 manha
+  - T+7d checkpoint: 2026-05-04
+
+DESCOBERTAS DURANTE MIGRACAO:
+
+1. 5 das 9 tasks estavam Disabled antes do B0a (Morning_Scan, Asian_Scan,
+   GitHub_Sync, Friday_Cycle, EuruLearningEngine). Operador nao recordou
+   ter desactivado. Codex confirmou nao ter desactivado. Origem desconhecida.
+   IMPLICACAO: Pode explicar bug recorrente de NextRunTime saltar dias.
+   ACCAO: Reactivacao consciente como trabalho pos-migracao, decidindo
+   task a task.
+
+2. Task Euru_Smoke_Test_Night apontava para C:\Users\andre\Desktop\Euru_TOS\
+   (path legacy que ja nao existia). Ficheiro run_smoke_test.bat foi
+   localizado em EURO MAIN\Euru_TOS\scripts\ e migrado para EURU TOS MAIN\
+   scripts\. Fase C apply usou path correcto.
+
+3. Bug em phase_c_apply_paths.ps1: Set-ScheduledTask falhou com Acceso
+   denegado em sessao com IsInRole=True mas sem elevacao real. Script
+   continuou e imprimiu 'Applied' enganadoramente. Detectado por verificacao
+   pos-execucao via Get-ScheduledTask. Corrigido com re-execucao em janela
+   PS Run as Administrator.
+
+4. EURO MAIN continha 2123 ficheiros SOURCE_ONLY no delta inventory.
+   Apos filtrar __pycache__, _EURU_TOS_MAIN_BUILD, Euru_TOSOld, Euru_TOS_GITHUB,
+   restavam 1259. Maioria sao multiplas pastas legacy (Euru_TOS_FINAL,
+   Euru_TOS_MIGRATED, Euru_TOS_NEW, Euru_TOS, docxwork\node_modules,
+   ZIPs antigos). Decisao do operador: Phase B-minimal (6 ficheiros
+   operacionais), triagem detalhada deferred.
+
+ARTIFACTS GERADOS:
+
+- C:\Users\andre\Desktop\BACKUP_EURO_MAIN_2026-04-27_0934.zip (246 MB)
+- C:\Users\andre\Desktop\BACKUP_EURU_TOS_MAIN_2026-04-27_0936.zip (5 MB)
+- C:\Users\andre\Desktop\EURU_MIGRATION_B0_2026-04-27\ (B0a artifacts)
+- C:\Users\andre\Desktop\EURO MAIN_ARCHIVED_2026-04-27\ (legacy folder)
+- 4 commits em EURU_TOS_MAIN: 6fe5477, 3de0e28, ea506f7, 357e1fa
+
+ESTADO FINAL:
+
+- Repositorio operacional canonico: EURU TOS MAIN -> github.com/andre-marcal-blockchain/EURU_TOS_MAIN
+- Repositorio legacy READ-ONLY: EURO MAIN_ARCHIVED_2026-04-27 (folder) e
+  github.com/andre-marcal-blockchain/Euru_TOS (GitHub - sem novos commits)
+- 9 scheduled tasks operam contra EURU TOS MAIN
+- Sistema autonomo confirmado funcional (commit 357e1fa)
+
+PROXIMOS PASSOS POS-MIGRACAO:
+
+1. Submeter EURU AI Collaboration Policy v0.3 como Type 2 (24h cooling-off)
+2. T+24h checkpoint da E2 (manha 28 Abr)
+3. Decisao consciente sobre tasks Disabled (reactivar quais? quais ficam?)
+4. Triagem dos 1259 ficheiros legacy (manter? arquivar? descartar?)
+5. Investigar quem desactivou tasks pre-B0a (possivel incidente governanca)
+6. Corrigir bug do phase_c_apply_paths.ps1 (Applied mascarando errors)
+7. Adicionar __pycache__ ao .gitignore
+8. Reconciliar CLAUDE.md (READ_ONLY -> SIMULATE)
+9. Repair PT004 structure (heading missing)
+
+Operador: Andre (Risk/Product Owner)
