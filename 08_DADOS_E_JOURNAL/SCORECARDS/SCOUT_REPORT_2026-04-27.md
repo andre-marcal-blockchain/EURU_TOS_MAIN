@@ -1,6 +1,10 @@
+---
+schema_type: scout_report
+schema_version: 1.0
+---
 # Euru OS — Morning Scan Report
 **Date:** 2026-04-27  
-**Time:** 07:32 UTC  
+**Time:** 12:33 UTC  
 **Assets scanned:** 18  
 **Mode:** READ_ONLY  
 **BTC Master Filter (Module 01):** ACTIVE — BTC trend is SIDEWAYS; altcoin SETUP signals downgraded to WATCHLIST  
@@ -27,24 +31,24 @@ PIPELINE_STATUS:         HEALTHY
 
 | Symbol | Price (USDT) | 24h | vs 7D | RSI | MACD | OBV | Stop Dist | Score | Tier | State |
 |--------|-------------|-----|-------|-----|------|-----|-----------|-------|------|-------|
-| BTCUSDT |    77,634.72 | -0.43% | +0.20% | 60.85 | BULLISH | FLAT | 3,381.0382 | **23/35** | BOA | **NO_TRADE** |
-| ETHUSDT |     2,316.72 | -0.53% | -0.81% | 53.61 | BEARISH | FLAT | 137.8754 | **22/35** | BOA | **NO_TRADE** |
-| SOLUSDT |        85.47 | -1.19% | -0.88% | 49.79 | BULLISH | RISING | 5.1057 | **22/35** | BOA | **NO_TRADE** |
-| BNBUSDT |       625.60 | -0.90% | -1.31% | 50.11 | BULLISH | FALLING | 24.8676 | **21/35** | BOA | **WATCHLIST** |
-| AVAXUSDT |         9.24 | -1.91% | -1.37% | 48.30 | BEARISH | FLAT | 0.6351 | **20/35** | MEDIA | **WATCHLIST** |
-| DOTUSDT |         1.23 | -2.53% | -2.45% | 43.72 | BULLISH | FLAT | 0.0967 | **17/35** | MEDIA | **WATCHLIST** |
-| LINKUSDT |         9.31 | -0.96% | -0.55% | 52.23 | BULLISH | RISING | 0.5525 | **18/35** | MEDIA | **NO_TRADE** |
-| ADAUSDT |         0.25 | -1.67% | -1.10% | 47.11 | BULLISH | FLAT | 0.0164 | **19/35** | MEDIA | **WATCHLIST** |
-| XRPUSDT |         1.41 | -0.88% | -1.15% | 52.05 | BULLISH | FLAT | 0.0682 | **19/35** | MEDIA | **WATCHLIST** |
-| WLDUSDT |         0.25 | -3.03% | -3.48% | 40.00 | BEARISH | FLAT | 0.0271 | **17/35** | MEDIA | **WATCHLIST** |
-| SUIUSDT |         0.92 | -2.06% | -2.15% | 47.10 | BEARISH | FLAT | 0.0653 | **20/35** | MEDIA | **WATCHLIST** |
-| NEARUSDT |         1.37 | -2.98% | -1.95% | 52.07 | BEARISH | FLAT | 0.0915 | **20/35** | MEDIA | **WATCHLIST** |
-| INJUSDT |         3.67 | -10.02% | +7.51% | 68.33 | BULLISH | RISING | 0.3221 | **21/35** | BOA | **WATCHLIST** |
-| ARBUSDT |         0.13 | -4.40% | -1.56% | 60.55 | BEARISH | RISING | 0.0107 | **18/35** | MEDIA | **WATCHLIST** |
-| OPUSDT |         0.12 | -3.33% | -1.28% | 51.29 | BULLISH | FLAT | 0.0112 | **18/35** | MEDIA | **WATCHLIST** |
-| FETUSDT |         0.21 | -1.47% | -0.61% | 43.19 | BEARISH | RISING | 0.0199 | **19/35** | MEDIA | **NO_TRADE** |
-| TAOUSDT |       247.90 | +0.45% | +0.00% | 43.56 | BEARISH | FALLING | 26.2436 | **19/35** | MEDIA | **NO_TRADE** |
-| RENDERUSDT |         1.79 | -2.19% | -0.82% | 47.27 | BEARISH | RISING | 0.1460 | **18/35** | MEDIA | **NO_TRADE** |
+| BTCUSDT |    77,748.28 | -0.29% | +0.35% | 61.30 | BULLISH | FLAT | 3,381.0382 | **23/35** | BOA | **NO_TRADE** |
+| ETHUSDT |     2,316.78 | -0.62% | -0.81% | 53.61 | BEARISH | FLAT | 138.2590 | **23/35** | BOA | **NO_TRADE** |
+| SOLUSDT |        85.08 | -1.30% | -1.33% | 48.94 | BULLISH | RISING | 5.1453 | **25/35** | BOA | **WATCHLIST** |
+| BNBUSDT |       625.86 | -0.82% | -1.27% | 50.23 | BULLISH | FALLING | 24.8676 | **21/35** | BOA | **WATCHLIST** |
+| AVAXUSDT |         9.25 | -2.12% | -1.27% | 48.49 | BEARISH | FLAT | 0.6351 | **20/35** | MEDIA | **WATCHLIST** |
+| DOTUSDT |         1.24 | -2.14% | -2.13% | 44.16 | BULLISH | FLAT | 0.0967 | **19/35** | MEDIA | **WATCHLIST** |
+| LINKUSDT |         9.32 | -1.38% | -0.44% | 52.44 | BULLISH | FLAT | 0.5525 | **18/35** | MEDIA | **NO_TRADE** |
+| ADAUSDT |         0.25 | -2.06% | -0.98% | 47.32 | BULLISH | FLAT | 0.0164 | **17/35** | MEDIA | **NO_TRADE** |
+| XRPUSDT |         1.41 | -0.97% | -1.25% | 51.79 | BULLISH | FLAT | 0.0682 | **20/35** | MEDIA | **WATCHLIST** |
+| WLDUSDT |         0.25 | -2.20% | -3.17% | 40.24 | BEARISH | FLAT | 0.0272 | **18/35** | MEDIA | **WATCHLIST** |
+| SUIUSDT |         0.93 | -1.67% | -1.71% | 47.85 | BEARISH | FLAT | 0.0655 | **20/35** | MEDIA | **WATCHLIST** |
+| NEARUSDT |         1.37 | -2.00% | -1.73% | 52.49 | BEARISH | FLAT | 0.0915 | **20/35** | MEDIA | **WATCHLIST** |
+| INJUSDT |         3.57 | -1.38% | +4.46% | 63.10 | BULLISH | RISING | 0.3335 | **23/35** | BOA | **WATCHLIST** |
+| ARBUSDT |         0.13 | -3.07% | -1.41% | 60.84 | BEARISH | RISING | 0.0107 | **17/35** | MEDIA | **WATCHLIST** |
+| OPUSDT |         0.12 | -3.34% | -1.61% | 50.87 | BULLISH | FLAT | 0.0113 | **18/35** | MEDIA | **WATCHLIST** |
+| FETUSDT |         0.21 | -0.90% | -0.56% | 43.24 | BEARISH | FLAT | 0.0199 | **19/35** | MEDIA | **NO_TRADE** |
+| TAOUSDT |       251.40 | +1.95% | +1.41% | 45.05 | BEARISH | FLAT | 26.2650 | **22/35** | BOA | **WATCHLIST** |
+| RENDERUSDT |         1.80 | -0.61% | -0.26% | 48.03 | BEARISH | RISING | 0.1460 | **17/35** | MEDIA | **NO_TRADE** |
 
 ---
 
@@ -52,24 +56,24 @@ PIPELINE_STATUS:         HEALTHY
 
 | Rank | Symbol | Score | Tier | Liq | Vol | Str | Nar | RS | Exc | Pot |
 |------|--------|-------|------|-----|-----|-----|-----|----|-----|-----|
-| 1 | BTCUSDT | **23/35** (66%) | **BOA** | 5 | 3 | 0 | 5 | 3 | 5 | 2 |
-| 2 | ETHUSDT | **22/35** (63%) | **BOA** | 5 | 3 | 0 | 5 | 2 | 5 | 2 |
-| 3 | SOLUSDT | **22/35** (63%) | **BOA** | 4 | 4 | 0 | 5 | 2 | 5 | 2 |
-| 4 | BNBUSDT | **21/35** (60%) | **BOA** | 3 | 3 | 2 | 4 | 2 | 5 | 2 |
-| 5 | INJUSDT | **21/35** (60%) | **BOA** | 2 | 5 | 3 | 4 | 0 | 5 | 2 |
-| 6 | AVAXUSDT | **20/35** (57%) | **MEDIA** | 2 | 3 | 2 | 4 | 2 | 5 | 2 |
-| 7 | SUIUSDT | **20/35** (57%) | **MEDIA** | 2 | 3 | 2 | 4 | 2 | 5 | 2 |
-| 8 | NEARUSDT | **20/35** (57%) | **MEDIA** | 2 | 4 | 2 | 3 | 1 | 5 | 3 |
-| 9 | ADAUSDT | **19/35** (54%) | **MEDIA** | 2 | 3 | 2 | 3 | 2 | 5 | 2 |
-| 10 | XRPUSDT | **19/35** (54%) | **MEDIA** | 3 | 1 | 2 | 4 | 2 | 5 | 2 |
-| 11 | FETUSDT | **19/35** (54%) | **MEDIA** | 2 | 3 | 0 | 5 | 2 | 5 | 2 |
-| 12 | TAOUSDT | **19/35** (54%) | **MEDIA** | 2 | 2 | 0 | 5 | 3 | 5 | 2 |
+| 1 | SOLUSDT | **25/35** (71%) | **BOA** | 4 | 5 | 2 | 5 | 2 | 5 | 2 |
+| 2 | BTCUSDT | **23/35** (66%) | **BOA** | 5 | 3 | 0 | 5 | 3 | 5 | 2 |
+| 3 | ETHUSDT | **23/35** (66%) | **BOA** | 5 | 4 | 0 | 5 | 2 | 5 | 2 |
+| 4 | INJUSDT | **23/35** (66%) | **BOA** | 2 | 5 | 2 | 4 | 2 | 5 | 3 |
+| 5 | TAOUSDT | **22/35** (63%) | **BOA** | 2 | 3 | 2 | 5 | 4 | 5 | 1 |
+| 6 | BNBUSDT | **21/35** (60%) | **BOA** | 3 | 3 | 2 | 4 | 2 | 5 | 2 |
+| 7 | AVAXUSDT | **20/35** (57%) | **MEDIA** | 2 | 3 | 2 | 4 | 2 | 5 | 2 |
+| 8 | XRPUSDT | **20/35** (57%) | **MEDIA** | 3 | 2 | 2 | 4 | 2 | 5 | 2 |
+| 9 | SUIUSDT | **20/35** (57%) | **MEDIA** | 2 | 3 | 2 | 4 | 2 | 5 | 2 |
+| 10 | NEARUSDT | **20/35** (57%) | **MEDIA** | 2 | 4 | 2 | 3 | 2 | 5 | 2 |
+| 11 | DOTUSDT | **19/35** (54%) | **MEDIA** | 2 | 2 | 2 | 3 | 2 | 5 | 3 |
+| 12 | FETUSDT | **19/35** (54%) | **MEDIA** | 2 | 3 | 0 | 5 | 2 | 5 | 2 |
 | 13 | LINKUSDT | **18/35** (51%) | **MEDIA** | 2 | 3 | 0 | 4 | 2 | 5 | 2 |
-| 14 | ARBUSDT | **18/35** (51%) | **MEDIA** | 2 | 2 | 2 | 4 | 1 | 5 | 2 |
+| 14 | WLDUSDT | **18/35** (51%) | **MEDIA** | 2 | 2 | 4 | 2 | 2 | 3 | 3 |
 | 15 | OPUSDT | **18/35** (51%) | **MEDIA** | 1 | 2 | 2 | 4 | 1 | 5 | 3 |
-| 16 | RENDERUSDT | **18/35** (51%) | **MEDIA** | 1 | 3 | 0 | 5 | 2 | 5 | 2 |
-| 17 | DOTUSDT | **17/35** (49%) | **MEDIA** | 1 | 2 | 2 | 3 | 1 | 5 | 3 |
-| 18 | WLDUSDT | **17/35** (49%) | **MEDIA** | 2 | 2 | 4 | 2 | 1 | 3 | 3 |
+| 16 | ADAUSDT | **17/35** (49%) | **MEDIA** | 2 | 3 | 0 | 3 | 2 | 5 | 2 |
+| 17 | ARBUSDT | **17/35** (49%) | **MEDIA** | 1 | 2 | 2 | 4 | 1 | 5 | 2 |
+| 18 | RENDERUSDT | **17/35** (49%) | **MEDIA** | 1 | 2 | 0 | 5 | 2 | 5 | 2 |
 
 ---
 
@@ -77,12 +81,12 @@ PIPELINE_STATUS:         HEALTHY
 
 ```
 AGENT: News Sentinel
-DATE: 2026-04-27 07:32 UTC
-OVERALL_SEVERITY: HIGH
+DATE: 2026-04-27 12:33 UTC
+OVERALL_SEVERITY: LOW
 TOP_HEADLINES:
-  1. [HIGH] China’s new online marketing rules tighten ban on crypto promotions
-  2. [LOW] Western Union eyes May for its stablecoin USDPT rollout
-  3. [LOW] Aave asks Arbitrum to send 30K ETH from Kelp exploiter to ‘DeFi United’
+  1. [LOW] Kbank teams with Ripple on overseas blockchain remittance trial
+  2. [LOW] MiCA-licensed Banking Circle joins bank stablecoin settlement race in Europe
+  3. [LOW] Bitcoin leads $1.2B weekly inflows into crypto investment products
 ```
 
 ---
@@ -95,7 +99,7 @@ TOP_HEADLINES:
 AGENT: Scout
 SYMBOL: BTCUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: SIDEWAYS
 STRUCTURE: ABOVE_7D_AVG — upper half of range
 COMPRESSION: NO — normal range
@@ -103,16 +107,16 @@ KEY_LEVELS: R: 79,472.82 | S: 73,724.31 | 7D_AVG: 77,476.07
 INVALIDATION: Break outside week range (73,724.31 – 79,472.82)
 STATE: NO_TRADE
 SIGNAL: Price within ±1.0% of 7D avg — no clear bias
-REASON: Current price 77,634.72 is +0.20% vs 7D avg 77,476.07. 24h change: -0.43%. Trend: SIDEWAYS. 24h range: 2.60% vs avg daily range 2.53%.
+REASON: Current price 77,748.28 is +0.35% vs 7D avg 77,476.07. 24h change: -0.29%. Trend: SIDEWAYS. 24h range: 2.60% vs avg daily range 2.53%.
 --- Flow Analyst ---
-RSI_14: 60.85
+RSI_14: 61.30
 MACD_TREND: BULLISH
-MACD_HISTOGRAM: 173.819295
+MACD_HISTOGRAM: 181.066429
 OBV_TREND: FLAT
 VOLUME_FLOW: WEAK
 ATR_14: 2254.0255
 STOP_DIST (ATR×1.5): 3,381.0382
-SUGGESTED_STOP: 74,253.6818
+SUGGESTED_STOP: 74,367.2418
 ```
 
 ### ETHUSDT
@@ -121,7 +125,7 @@ SUGGESTED_STOP: 74,253.6818
 AGENT: Scout
 SYMBOL: ETHUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: SIDEWAYS
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
@@ -129,16 +133,16 @@ KEY_LEVELS: R: 2,423.75 | S: 2,259.67 | 7D_AVG: 2,335.61
 INVALIDATION: Break outside week range (2,259.67 – 2,423.75)
 STATE: NO_TRADE
 SIGNAL: Price within ±1.0% of 7D avg — no clear bias
-REASON: Current price 2,316.72 is -0.81% vs 7D avg 2,335.61. 24h change: -0.53%. Trend: SIDEWAYS. 24h range: 3.96% vs avg daily range 2.94%.
+REASON: Current price 2,316.78 is -0.81% vs 7D avg 2,335.61. 24h change: -0.62%. Trend: SIDEWAYS. 24h range: 4.11% vs avg daily range 2.94%.
 --- Flow Analyst ---
 RSI_14: 53.61
 MACD_TREND: BEARISH
-MACD_HISTOGRAM: -6.221030
+MACD_HISTOGRAM: -6.217201
 OBV_TREND: FLAT
 VOLUME_FLOW: WEAK
-ATR_14: 91.9169
-STOP_DIST (ATR×1.5): 137.8754
-SUGGESTED_STOP: 2,178.8446
+ATR_14: 92.1727
+STOP_DIST (ATR×1.5): 138.2590
+SUGGESTED_STOP: 2,178.5210
 ```
 
 ### SOLUSDT
@@ -147,24 +151,24 @@ SUGGESTED_STOP: 2,178.8446
 AGENT: Scout
 SYMBOL: SOLUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
-TREND: SIDEWAYS
+DATE: 2026-04-27 12:33 UTC
+TREND: BEARISH
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 89.32 | S: 83.34 | 7D_AVG: 86.23
-INVALIDATION: Break outside week range (83.34 – 89.32)
-STATE: NO_TRADE
-SIGNAL: Price within ±1.0% of 7D avg — no clear bias
-REASON: Current price 85.47 is -0.88% vs 7D avg 86.23. 24h change: -1.19%. Trend: SIDEWAYS. 24h range: 3.11% vs avg daily range 2.69%.
+INVALIDATION: Close above 7D_AVG (86.23)
+STATE: WATCHLIST
+SIGNAL: Price -1.33% from 7D avg — monitoring for continuation
+REASON: Current price 85.08 is -1.33% vs 7D avg 86.23. 24h change: -1.30%. Trend: BEARISH. 24h range: 3.56% vs avg daily range 2.69%.
 --- Flow Analyst ---
-RSI_14: 49.79
+RSI_14: 48.94
 MACD_TREND: BULLISH
-MACD_HISTOGRAM: 0.135371
+MACD_HISTOGRAM: 0.110482
 OBV_TREND: RISING
 VOLUME_FLOW: DIVERGENCE
-ATR_14: 3.4038
-STOP_DIST (ATR×1.5): 5.1057
-SUGGESTED_STOP: 80.3643
+ATR_14: 3.4302
+STOP_DIST (ATR×1.5): 5.1453
+SUGGESTED_STOP: 79.9347
 ```
 
 ### BNBUSDT
@@ -173,24 +177,24 @@ SUGGESTED_STOP: 80.3643
 AGENT: Scout
 SYMBOL: BNBUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: BEARISH
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 654.19 | S: 615.97 | 7D_AVG: 633.93
 INVALIDATION: Close above 7D_AVG (633.93)
 STATE: WATCHLIST
-SIGNAL: Price -1.31% from 7D avg — monitoring for continuation
-REASON: Current price 625.60 is -1.31% vs 7D avg 633.93. 24h change: -0.90%. Trend: BEARISH. 24h range: 2.34% vs avg daily range 2.14%.
+SIGNAL: Price -1.27% from 7D avg — monitoring for continuation
+REASON: Current price 625.86 is -1.27% vs 7D avg 633.93. 24h change: -0.82%. Trend: BEARISH. 24h range: 2.34% vs avg daily range 2.14%.
 --- Flow Analyst ---
-RSI_14: 50.11
+RSI_14: 50.23
 MACD_TREND: BULLISH
-MACD_HISTOGRAM: 1.282799
+MACD_HISTOGRAM: 1.300030
 OBV_TREND: FALLING
 VOLUME_FLOW: STRONG
 ATR_14: 16.5784
 STOP_DIST (ATR×1.5): 24.8676
-SUGGESTED_STOP: 600.7324
+SUGGESTED_STOP: 601.0024
 ```
 
 ### AVAXUSDT
@@ -199,24 +203,24 @@ SUGGESTED_STOP: 600.7324
 AGENT: Scout
 SYMBOL: AVAXUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: BEARISH
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 9.68 | S: 8.98 | 7D_AVG: 9.37
 INVALIDATION: Close above 7D_AVG (9.37)
 STATE: WATCHLIST
-SIGNAL: Price -1.37% from 7D avg — monitoring for continuation
-REASON: Current price 9.24 is -1.37% vs 7D avg 9.37. 24h change: -1.91%. Trend: BEARISH. 24h range: 3.90% vs avg daily range 3.24%.
+SIGNAL: Price -1.27% from 7D avg — monitoring for continuation
+REASON: Current price 9.25 is -1.27% vs 7D avg 9.37. 24h change: -2.12%. Trend: BEARISH. 24h range: 3.89% vs avg daily range 3.24%.
 --- Flow Analyst ---
-RSI_14: 48.30
+RSI_14: 48.49
 MACD_TREND: BEARISH
-MACD_HISTOGRAM: -0.005380
+MACD_HISTOGRAM: -0.004741
 OBV_TREND: FLAT
 VOLUME_FLOW: WEAK
 ATR_14: 0.4234
 STOP_DIST (ATR×1.5): 0.6351
-SUGGESTED_STOP: 8.6049
+SUGGESTED_STOP: 8.6149
 ```
 
 ### DOTUSDT
@@ -225,24 +229,24 @@ SUGGESTED_STOP: 8.6049
 AGENT: Scout
 SYMBOL: DOTUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: BEARISH
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 1.33 | S: 1.21 | 7D_AVG: 1.26
 INVALIDATION: Close above 7D_AVG (1.26)
 STATE: WATCHLIST
-SIGNAL: Price -2.45% from 7D avg — monitoring for continuation
-REASON: Current price 1.23 is -2.45% vs 7D avg 1.26. 24h change: -2.53%. Trend: BEARISH. 24h range: 3.82% vs avg daily range 3.79%.
+SIGNAL: Price -2.13% from 7D avg — monitoring for continuation
+REASON: Current price 1.24 is -2.13% vs 7D avg 1.26. 24h change: -2.14%. Trend: BEARISH. 24h range: 3.81% vs avg daily range 3.79%.
 --- Flow Analyst ---
-RSI_14: 43.72
+RSI_14: 44.16
 MACD_TREND: BULLISH
-MACD_HISTOGRAM: 0.003581
+MACD_HISTOGRAM: 0.003837
 OBV_TREND: FLAT
 VOLUME_FLOW: WEAK
 ATR_14: 0.0645
 STOP_DIST (ATR×1.5): 0.0967
-SUGGESTED_STOP: 1.1343
+SUGGESTED_STOP: 1.1383
 ```
 
 ### LINKUSDT
@@ -251,7 +255,7 @@ SUGGESTED_STOP: 1.1343
 AGENT: Scout
 SYMBOL: LINKUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: SIDEWAYS
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
@@ -259,16 +263,16 @@ KEY_LEVELS: R: 9.56 | S: 9.05 | 7D_AVG: 9.36
 INVALIDATION: Break outside week range (9.05 – 9.56)
 STATE: NO_TRADE
 SIGNAL: Price within ±1.0% of 7D avg — no clear bias
-REASON: Current price 9.31 is -0.55% vs 7D avg 9.36. 24h change: -0.96%. Trend: SIDEWAYS. 24h range: 3.22% vs avg daily range 2.69%.
+REASON: Current price 9.32 is -0.44% vs 7D avg 9.36. 24h change: -1.38%. Trend: SIDEWAYS. 24h range: 3.22% vs avg daily range 2.69%.
 --- Flow Analyst ---
-RSI_14: 52.23
+RSI_14: 52.44
 MACD_TREND: BULLISH
-MACD_HISTOGRAM: 0.005978
-OBV_TREND: RISING
-VOLUME_FLOW: DIVERGENCE
+MACD_HISTOGRAM: 0.006616
+OBV_TREND: FLAT
+VOLUME_FLOW: WEAK
 ATR_14: 0.3683
 STOP_DIST (ATR×1.5): 0.5525
-SUGGESTED_STOP: 8.7575
+SUGGESTED_STOP: 8.7675
 ```
 
 ### ADAUSDT
@@ -277,24 +281,24 @@ SUGGESTED_STOP: 8.7575
 AGENT: Scout
 SYMBOL: ADAUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
-TREND: BEARISH
+DATE: 2026-04-27 12:33 UTC
+TREND: SIDEWAYS
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 0.26 | S: 0.24 | 7D_AVG: 0.25
-INVALIDATION: Close above 7D_AVG (0.25)
-STATE: WATCHLIST
-SIGNAL: Price -1.10% from 7D avg — monitoring for continuation
-REASON: Current price 0.25 is -1.10% vs 7D avg 0.25. 24h change: -1.67%. Trend: BEARISH. 24h range: 3.97% vs avg daily range 2.92%.
+INVALIDATION: Break outside week range (0.24 – 0.26)
+STATE: NO_TRADE
+SIGNAL: Price within ±1.0% of 7D avg — no clear bias
+REASON: Current price 0.25 is -0.98% vs 7D avg 0.25. 24h change: -2.06%. Trend: SIDEWAYS. 24h range: 3.96% vs avg daily range 2.92%.
 --- Flow Analyst ---
-RSI_14: 47.11
+RSI_14: 47.32
 MACD_TREND: BULLISH
-MACD_HISTOGRAM: 0.000589
+MACD_HISTOGRAM: 0.000608
 OBV_TREND: FLAT
 VOLUME_FLOW: WEAK
 ATR_14: 0.0109
 STOP_DIST (ATR×1.5): 0.0164
-SUGGESTED_STOP: 0.2307
+SUGGESTED_STOP: 0.2310
 ```
 
 ### XRPUSDT
@@ -303,24 +307,24 @@ SUGGESTED_STOP: 0.2307
 AGENT: Scout
 SYMBOL: XRPUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: BEARISH
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 1.46 | S: 1.39 | 7D_AVG: 1.43
 INVALIDATION: Close above 7D_AVG (1.43)
 STATE: WATCHLIST
-SIGNAL: Price -1.15% from 7D avg — monitoring for continuation
-REASON: Current price 1.41 is -1.15% vs 7D avg 1.43. 24h change: -0.88%. Trend: BEARISH. 24h range: 2.38% vs avg daily range 2.14%.
+SIGNAL: Price -1.25% from 7D avg — monitoring for continuation
+REASON: Current price 1.41 is -1.25% vs 7D avg 1.43. 24h change: -0.97%. Trend: BEARISH. 24h range: 2.41% vs avg daily range 2.14%.
 --- Flow Analyst ---
-RSI_14: 52.05
+RSI_14: 51.79
 MACD_TREND: BULLISH
-MACD_HISTOGRAM: 0.001762
+MACD_HISTOGRAM: 0.001673
 OBV_TREND: FLAT
 VOLUME_FLOW: WEAK
-ATR_14: 0.0454
+ATR_14: 0.0455
 STOP_DIST (ATR×1.5): 0.0682
-SUGGESTED_STOP: 1.3459
+SUGGESTED_STOP: 1.3445
 ```
 
 ### WLDUSDT
@@ -329,24 +333,24 @@ SUGGESTED_STOP: 1.3459
 AGENT: Scout
 SYMBOL: WLDUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: BEARISH
 STRUCTURE: AT_WEEKLY_LOW — support zone
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 0.27 | S: 0.25 | 7D_AVG: 0.26
 INVALIDATION: Close above 7D_AVG (0.26)
 STATE: WATCHLIST
-SIGNAL: [BTC filter] Downgraded from SETUP — BTC trend is SIDEWAYS. Price -3.48% from 7D avg with aligned trend
-REASON: Current price 0.25 is -3.48% vs 7D avg 0.26. 24h change: -3.03%. Trend: BEARISH. 24h range: 4.86% vs avg daily range 3.68%.
+SIGNAL: [BTC filter] Downgraded from SETUP — BTC trend is SIDEWAYS. Price -3.17% from 7D avg with aligned trend
+REASON: Current price 0.25 is -3.17% vs 7D avg 0.26. 24h change: -2.20%. Trend: BEARISH. 24h range: 5.32% vs avg daily range 3.68%.
 --- Flow Analyst ---
-RSI_14: 40.00
+RSI_14: 40.24
 MACD_TREND: BEARISH
-MACD_HISTOGRAM: -0.000611
+MACD_HISTOGRAM: -0.000560
 OBV_TREND: FLAT
 VOLUME_FLOW: WEAK
 ATR_14: 0.0181
-STOP_DIST (ATR×1.5): 0.0271
-SUGGESTED_STOP: 0.2258
+STOP_DIST (ATR×1.5): 0.0272
+SUGGESTED_STOP: 0.2265
 ```
 
 ### SUIUSDT
@@ -355,24 +359,24 @@ SUGGESTED_STOP: 0.2258
 AGENT: Scout
 SYMBOL: SUIUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: BEARISH
 STRUCTURE: AT_WEEKLY_LOW — support zone
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 0.98 | S: 0.92 | 7D_AVG: 0.94
 INVALIDATION: Close above 7D_AVG (0.94)
 STATE: WATCHLIST
-SIGNAL: Price -2.15% from 7D avg — monitoring for continuation
-REASON: Current price 0.92 is -2.15% vs 7D avg 0.94. 24h change: -2.06%. Trend: BEARISH. 24h range: 4.29% vs avg daily range 2.96%.
+SIGNAL: Price -1.71% from 7D avg — monitoring for continuation
+REASON: Current price 0.93 is -1.71% vs 7D avg 0.94. 24h change: -1.67%. Trend: BEARISH. 24h range: 4.47% vs avg daily range 2.96%.
 --- Flow Analyst ---
-RSI_14: 47.10
+RSI_14: 47.85
 MACD_TREND: BEARISH
-MACD_HISTOGRAM: -0.001975
+MACD_HISTOGRAM: -0.001707
 OBV_TREND: FLAT
 VOLUME_FLOW: WEAK
-ATR_14: 0.0435
-STOP_DIST (ATR×1.5): 0.0653
-SUGGESTED_STOP: 0.8592
+ATR_14: 0.0437
+STOP_DIST (ATR×1.5): 0.0655
+SUGGESTED_STOP: 0.8632
 ```
 
 ### NEARUSDT
@@ -381,24 +385,24 @@ SUGGESTED_STOP: 0.8592
 AGENT: Scout
 SYMBOL: NEARUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: BEARISH
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 1.43 | S: 1.32 | 7D_AVG: 1.39
 INVALIDATION: Close above 7D_AVG (1.39)
 STATE: WATCHLIST
-SIGNAL: Price -1.95% from 7D avg — monitoring for continuation
-REASON: Current price 1.37 is -1.95% vs 7D avg 1.39. 24h change: -2.98%. Trend: BEARISH. 24h range: 3.37% vs avg daily range 3.10%.
+SIGNAL: Price -1.73% from 7D avg — monitoring for continuation
+REASON: Current price 1.37 is -1.73% vs 7D avg 1.39. 24h change: -2.00%. Trend: BEARISH. 24h range: 3.36% vs avg daily range 3.10%.
 --- Flow Analyst ---
-RSI_14: 52.07
+RSI_14: 52.49
 MACD_TREND: BEARISH
-MACD_HISTOGRAM: -0.003616
+MACD_HISTOGRAM: -0.003424
 OBV_TREND: FLAT
 VOLUME_FLOW: WEAK
 ATR_14: 0.0610
 STOP_DIST (ATR×1.5): 0.0915
-SUGGESTED_STOP: 1.2755
+SUGGESTED_STOP: 1.2785
 ```
 
 ### INJUSDT
@@ -407,24 +411,24 @@ SUGGESTED_STOP: 1.2755
 AGENT: Scout
 SYMBOL: INJUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: MIXED
 STRUCTURE: ABOVE_7D_AVG — upper half of range
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 4.19 | S: 3.17 | 7D_AVG: 3.42
 INVALIDATION: Break outside week range (3.17 – 4.19)
 STATE: WATCHLIST
-SIGNAL: Price +7.51% from 7D avg — monitoring for continuation
-REASON: Current price 3.67 is +7.51% vs 7D avg 3.42. 24h change: -10.02%. Trend: MIXED. 24h range: 13.01% vs avg daily range 6.98%.
+SIGNAL: Price +4.46% from 7D avg — monitoring for continuation
+REASON: Current price 3.57 is +4.46% vs 7D avg 3.42. 24h change: -1.38%. Trend: MIXED. 24h range: 9.77% vs avg daily range 6.98%.
 --- Flow Analyst ---
-RSI_14: 68.33
+RSI_14: 63.10
 MACD_TREND: BULLISH
-MACD_HISTOGRAM: 0.053162
+MACD_HISTOGRAM: 0.046525
 OBV_TREND: RISING
 VOLUME_FLOW: STRONG
-ATR_14: 0.2148
-STOP_DIST (ATR×1.5): 0.3221
-SUGGESTED_STOP: 3.3529
+ATR_14: 0.2223
+STOP_DIST (ATR×1.5): 0.3335
+SUGGESTED_STOP: 3.2375
 ```
 
 ### ARBUSDT
@@ -433,24 +437,24 @@ SUGGESTED_STOP: 3.3529
 AGENT: Scout
 SYMBOL: ARBUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: BEARISH
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 0.13 | S: 0.12 | 7D_AVG: 0.13
 INVALIDATION: Close above 7D_AVG (0.13)
 STATE: WATCHLIST
-SIGNAL: Price -1.56% from 7D avg — monitoring for continuation
-REASON: Current price 0.13 is -1.56% vs 7D avg 0.13. 24h change: -4.40%. Trend: BEARISH. 24h range: 5.63% vs avg daily range 5.12%.
+SIGNAL: Price -1.41% from 7D avg — monitoring for continuation
+REASON: Current price 0.13 is -1.41% vs 7D avg 0.13. 24h change: -3.07%. Trend: BEARISH. 24h range: 5.78% vs avg daily range 5.12%.
 --- Flow Analyst ---
-RSI_14: 60.55
+RSI_14: 60.84
 MACD_TREND: BEARISH
-MACD_HISTOGRAM: -0.000021
+MACD_HISTOGRAM: -0.000008
 OBV_TREND: RISING
 VOLUME_FLOW: DIVERGENCE
-ATR_14: 0.0071
+ATR_14: 0.0072
 STOP_DIST (ATR×1.5): 0.0107
-SUGGESTED_STOP: 0.1154
+SUGGESTED_STOP: 0.1156
 ```
 
 ### OPUSDT
@@ -459,24 +463,24 @@ SUGGESTED_STOP: 0.1154
 AGENT: Scout
 SYMBOL: OPUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: BEARISH
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 0.13 | S: 0.12 | 7D_AVG: 0.12
 INVALIDATION: Close above 7D_AVG (0.12)
 STATE: WATCHLIST
-SIGNAL: Price -1.28% from 7D avg — monitoring for continuation
-REASON: Current price 0.12 is -1.28% vs 7D avg 0.12. 24h change: -3.33%. Trend: BEARISH. 24h range: 5.81% vs avg daily range 5.37%.
+SIGNAL: Price -1.61% from 7D avg — monitoring for continuation
+REASON: Current price 0.12 is -1.61% vs 7D avg 0.12. 24h change: -3.34%. Trend: BEARISH. 24h range: 6.41% vs avg daily range 5.37%.
 --- Flow Analyst ---
-RSI_14: 51.29
+RSI_14: 50.87
 MACD_TREND: BULLISH
-MACD_HISTOGRAM: 0.000398
+MACD_HISTOGRAM: 0.000372
 OBV_TREND: FLAT
 VOLUME_FLOW: WEAK
 ATR_14: 0.0075
-STOP_DIST (ATR×1.5): 0.0112
-SUGGESTED_STOP: 0.1109
+STOP_DIST (ATR×1.5): 0.0113
+SUGGESTED_STOP: 0.1104
 ```
 
 ### FETUSDT
@@ -485,7 +489,7 @@ SUGGESTED_STOP: 0.1109
 AGENT: Scout
 SYMBOL: FETUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: SIDEWAYS
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
@@ -493,16 +497,16 @@ KEY_LEVELS: R: 0.22 | S: 0.20 | 7D_AVG: 0.21
 INVALIDATION: Break outside week range (0.20 – 0.22)
 STATE: NO_TRADE
 SIGNAL: Price within ±1.0% of 7D avg — no clear bias
-REASON: Current price 0.21 is -0.61% vs 7D avg 0.21. 24h change: -1.47%. Trend: SIDEWAYS. 24h range: 4.42% vs avg daily range 3.80%.
+REASON: Current price 0.21 is -0.56% vs 7D avg 0.21. 24h change: -0.90%. Trend: SIDEWAYS. 24h range: 4.42% vs avg daily range 3.80%.
 --- Flow Analyst ---
-RSI_14: 43.19
+RSI_14: 43.24
 MACD_TREND: BEARISH
-MACD_HISTOGRAM: -0.002435
-OBV_TREND: RISING
-VOLUME_FLOW: DIVERGENCE
+MACD_HISTOGRAM: -0.002428
+OBV_TREND: FLAT
+VOLUME_FLOW: WEAK
 ATR_14: 0.0133
 STOP_DIST (ATR×1.5): 0.0199
-SUGGESTED_STOP: 0.1883
+SUGGESTED_STOP: 0.1884
 ```
 
 ### TAOUSDT
@@ -511,24 +515,24 @@ SUGGESTED_STOP: 0.1883
 AGENT: Scout
 SYMBOL: TAOUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
-TREND: SIDEWAYS
-STRUCTURE: BELOW_7D_AVG — lower half of range
+DATE: 2026-04-27 12:33 UTC
+TREND: BULLISH
+STRUCTURE: ABOVE_7D_AVG — upper half of range
 COMPRESSION: NO — normal range
 KEY_LEVELS: R: 255.00 | S: 239.50 | 7D_AVG: 247.90
-INVALIDATION: Break outside week range (239.50 – 255.00)
-STATE: NO_TRADE
-SIGNAL: Price within ±1.0% of 7D avg — no clear bias
-REASON: Current price 247.90 is +0.00% vs 7D avg 247.90. 24h change: +0.45%. Trend: SIDEWAYS. 24h range: 4.68% vs avg daily range 3.93%.
+INVALIDATION: Close below 7D_AVG (247.90)
+STATE: WATCHLIST
+SIGNAL: Price +1.41% from 7D avg — monitoring for continuation
+REASON: Current price 251.40 is +1.41% vs 7D avg 247.90. 24h change: +1.95%. Trend: BULLISH. 24h range: 4.61% vs avg daily range 3.93%.
 --- Flow Analyst ---
-RSI_14: 43.56
+RSI_14: 45.05
 MACD_TREND: BEARISH
-MACD_HISTOGRAM: -0.366769
-OBV_TREND: FALLING
-VOLUME_FLOW: STRONG
-ATR_14: 17.4957
-STOP_DIST (ATR×1.5): 26.2436
-SUGGESTED_STOP: 221.6564
+MACD_HISTOGRAM: -0.143407
+OBV_TREND: FLAT
+VOLUME_FLOW: WEAK
+ATR_14: 17.5100
+STOP_DIST (ATR×1.5): 26.2650
+SUGGESTED_STOP: 225.1350
 ```
 
 ### RENDERUSDT
@@ -537,7 +541,7 @@ SUGGESTED_STOP: 221.6564
 AGENT: Scout
 SYMBOL: RENDERUSDT
 TIMEFRAME: 1D
-DATE: 2026-04-27 07:32 UTC
+DATE: 2026-04-27 12:33 UTC
 TREND: SIDEWAYS
 STRUCTURE: BELOW_7D_AVG — lower half of range
 COMPRESSION: NO — normal range
@@ -545,16 +549,16 @@ KEY_LEVELS: R: 1.87 | S: 1.73 | 7D_AVG: 1.80
 INVALIDATION: Break outside week range (1.73 – 1.87)
 STATE: NO_TRADE
 SIGNAL: Price within ±1.0% of 7D avg — no clear bias
-REASON: Current price 1.79 is -0.82% vs 7D avg 1.80. 24h change: -2.19%. Trend: SIDEWAYS. 24h range: 4.42% vs avg daily range 3.46%.
+REASON: Current price 1.80 is -0.26% vs 7D avg 1.80. 24h change: -0.61%. Trend: SIDEWAYS. 24h range: 4.39% vs avg daily range 3.46%.
 --- Flow Analyst ---
-RSI_14: 47.27
+RSI_14: 48.03
 MACD_TREND: BEARISH
-MACD_HISTOGRAM: -0.012882
+MACD_HISTOGRAM: -0.012307
 OBV_TREND: RISING
 VOLUME_FLOW: DIVERGENCE
 ATR_14: 0.0973
 STOP_DIST (ATR×1.5): 0.1460
-SUGGESTED_STOP: 1.6430
+SUGGESTED_STOP: 1.6520
 ```
 
 ---
@@ -563,277 +567,56 @@ SUGGESTED_STOP: 1.6430
 
 ## Breakout Intelligence Layer (4H)
 
-*Scan: 2026-04-27 07:32 UTC — BL-02 Structure Hunter + BL-03 Breakout Confirmation*  
+*Scan: 2026-04-27 12:33 UTC — BL-02 Structure Hunter + BL-03 Breakout Confirmation*  
 *Assets: 18 scanned*
 
 | Symbol | Price (USDT) | Zone | Breakout | Dir | Score | Key Level | Comp |
 |--------|-------------|------|----------|-----|-------|-----------|------|
-| DOTUSDT |       1.2300 | YES | **WEAK** | LONG | **63** | 1.2641 | YES |
-| OPUSDT |       0.1222 | YES | **CONFIRMED** | LONG | **60** | 0.1239 | NO |
-| SOLUSDT |      85.4800 | YES | **WEAK** | LONG | **58** | 86.0628 | NO |
-| NEARUSDT |       1.3670 | YES | **WEAK** | LONG | **57** | 1.3866 | NO |
-| XRPUSDT |       1.4140 | YES | **CONFIRMED** | LONG | **55** | 1.4297 | NO |
-| ETHUSDT |   2,316.3900 | YES | **CONFIRMED** | LONG | **54** | 2,329.1643 | NO |
-| SUIUSDT |       0.9250 | YES | **WEAK** | LONG | **54** | 0.9461 | NO |
-| LINKUSDT |       9.3100 | YES | **WEAK** | LONG | **52** | 9.3356 | NO |
-| BNBUSDT |     625.6600 | YES | **WEAK** | LONG | **51** | 632.6041 | NO |
-| ARBUSDT |       0.1261 | YES | **CONFIRMED** | LONG | **51** | 0.1280 | NO |
-| RENDERUSDT |       1.7900 | YES | **CONFIRMED** | LONG | **51** | 1.7965 | NO |
-| WLDUSDT |       0.2530 | YES | **WEAK** | LONG | **48** | 0.2623 | NO |
-| FETUSDT |       0.2083 | YES | **WEAK** | LONG | **48** | 0.2108 | NO |
-| ADAUSDT |       0.2472 | YES | **WEAK** | LONG | **46** | 0.2496 | NO |
-| AVAXUSDT |       9.2400 | YES | **WEAK** | LONG | **45** | 9.3545 | NO |
-| BTCUSDT |  77,629.5900 | YES | **NONE** | NONE | 0 | 77,022.8224 | NO |
-| INJUSDT |       3.6710 | YES | **NONE** | NONE | 0 | 3.3847 | NO |
-| TAOUSDT |     248.0000 | YES | **NONE** | NONE | 0 | 246.2316 | YES |
+| BTCUSDT |  77,748.2800 | YES | **NONE** | NONE | 0 | 77,127.9603 | NO |
+| ETHUSDT |   2,316.9700 | YES | **NONE** | NONE | 0 | 2,329.2653 | NO |
+| SOLUSDT |      85.0700 | YES | **NONE** | NONE | 0 | 86.0808 | NO |
+| BNBUSDT |     625.8600 | YES | **NONE** | NONE | 0 | 632.8469 | NO |
+| AVAXUSDT |       9.2600 | YES | **NONE** | NONE | 0 | 9.3569 | NO |
+| DOTUSDT |       1.2350 | YES | **NONE** | NONE | 0 | 1.2630 | NO |
+| LINKUSDT |       9.3200 | YES | **FAKEOUT** | LONG | 0 | 9.3424 | NO |
+| ADAUSDT |       0.2473 | YES | **NONE** | NONE | 0 | 0.2497 | NO |
+| XRPUSDT |       1.4127 | YES | **NONE** | NONE | 0 | 1.4293 | NO |
+| WLDUSDT |       0.2537 | YES | **NONE** | NONE | 0 | 0.2621 | NO |
+| SUIUSDT |       0.9286 | YES | **NONE** | NONE | 0 | 0.9456 | NO |
+| NEARUSDT |       1.3700 | YES | **NONE** | NONE | 0 | 1.3882 | NO |
+| INJUSDT |       3.5700 | YES | **NONE** | NONE | 0 | 3.4060 | NO |
+| ARBUSDT |       0.1263 | YES | **NONE** | NONE | 0 | 0.1281 | NO |
+| OPUSDT |       0.1217 | YES | **NONE** | NONE | 0 | 0.1238 | NO |
+| FETUSDT |       0.2083 | YES | **NONE** | NONE | 0 | 0.2106 | NO |
+| TAOUSDT |     251.4000 | YES | **NONE** | NONE | 0 | 246.5918 | NO |
+| RENDERUSDT |       1.7980 | YES | **FAKEOUT** | LONG | 0 | 1.7985 | NO |
 
-### Active Breakouts
+*No confirmed or weak breakouts in this scan.*
 
-**DOTUSDT** — `WEAK` `LONG` | Score: **63** | Key Level: 1.2641
 
-```
-BREAKOUT_STATUS:    WEAK
-DIRECTION:          LONG
-KEY_LEVEL:          1.264122
-BREAKOUT_RAW_SCORE: 63/100
-CANDLE_QUALITY:     0.5294  (body/range ratio)
-VOLUME_RATIO:       0.9440x  (vs 5-period avg)
-WICK_REJECTION:     0.6667  (<= 0.4 = clean)
-BEST_ZONE:          1.264122 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        True (Compression confirmed: 2 consecutive compressing pairs (tightest range = 64.0% of widest in window))
-ATR_4H:             0.02047408
-NOTES:              Close 1.269000 broke RESISTANCE 1.264122 — WEAK (high wick (0.67 > 0.4))
-```
+### Fakeout Alerts
 
-**OPUSDT** — `CONFIRMED` `LONG` | Score: **60** | Key Level: 0.1239
-
-```
-BREAKOUT_STATUS:    CONFIRMED
-DIRECTION:          LONG
-KEY_LEVEL:          0.123851
-BREAKOUT_RAW_SCORE: 60/100
-CANDLE_QUALITY:     0.6842  (body/range ratio)
-VOLUME_RATIO:       1.9926x  (vs 5-period avg)
-WICK_REJECTION:     0.2692  (<= 0.4 = clean)
-BEST_ZONE:          0.123851 (RESISTANCE, 97 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             0.00308229
-NOTES:              Close 0.128400 broke RESISTANCE 0.123851 — vol 1.99x avg, wick_reject 0.27 — CONFIRMED
-```
-
-**SOLUSDT** — `WEAK` `LONG` | Score: **58** | Key Level: 86.0628
-
-```
-BREAKOUT_STATUS:    WEAK
-DIRECTION:          LONG
-KEY_LEVEL:          86.062755
-BREAKOUT_RAW_SCORE: 58/100
-CANDLE_QUALITY:     0.5097  (body/range ratio)
-VOLUME_RATIO:       3.1056x  (vs 5-period avg)
-WICK_REJECTION:     0.4557  (<= 0.4 = clean)
-BEST_ZONE:          86.062755 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             1.05414966
-NOTES:              Close 87.720000 broke RESISTANCE 86.062755 — WEAK (high wick (0.46 > 0.4))
-```
-
-**NEARUSDT** — `WEAK` `LONG` | Score: **57** | Key Level: 1.3866
-
-```
-BREAKOUT_STATUS:    WEAK
-DIRECTION:          LONG
-KEY_LEVEL:          1.386571
-BREAKOUT_RAW_SCORE: 57/100
-CANDLE_QUALITY:     0.4762  (body/range ratio)
-VOLUME_RATIO:       1.3276x  (vs 5-period avg)
-WICK_REJECTION:     0.8000  (<= 0.4 = clean)
-BEST_ZONE:          1.386571 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 1 compressing pair(s) (need 2))
-ATR_4H:             0.02026512
-NOTES:              Close 1.405000 broke RESISTANCE 1.386571 — WEAK (high wick (0.80 > 0.4))
-```
-
-**XRPUSDT** — `CONFIRMED` `LONG` | Score: **55** | Key Level: 1.4297
-
-```
-BREAKOUT_STATUS:    CONFIRMED
-DIRECTION:          LONG
-KEY_LEVEL:          1.429663
-BREAKOUT_RAW_SCORE: 55/100
-CANDLE_QUALITY:     0.5493  (body/range ratio)
-VOLUME_RATIO:       1.8736x  (vs 5-period avg)
-WICK_REJECTION:     0.3504  (<= 0.4 = clean)
-BEST_ZONE:          1.429663 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             0.01436323
-NOTES:              Close 1.442500 broke RESISTANCE 1.429663 — vol 1.87x avg, wick_reject 0.35 — CONFIRMED
-```
-
-**ETHUSDT** — `CONFIRMED` `LONG` | Score: **54** | Key Level: 2,329.1643
-
-```
-BREAKOUT_STATUS:    CONFIRMED
-DIRECTION:          LONG
-KEY_LEVEL:          2,329.164286
-BREAKOUT_RAW_SCORE: 54/100
-CANDLE_QUALITY:     0.5656  (body/range ratio)
-VOLUME_RATIO:       1.6821x  (vs 5-period avg)
-WICK_REJECTION:     0.3748  (<= 0.4 = clean)
-BEST_ZONE:          2,329.164286 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             30.55728524
-NOTES:              Close 2,394.850000 broke RESISTANCE 2,329.164286 — vol 1.68x avg, wick_reject 0.37 — CONFIRMED
-```
-
-**SUIUSDT** — `WEAK` `LONG` | Score: **54** | Key Level: 0.9461
-
-```
-BREAKOUT_STATUS:    WEAK
-DIRECTION:          LONG
-KEY_LEVEL:          0.946120
-BREAKOUT_RAW_SCORE: 54/100
-CANDLE_QUALITY:     0.5812  (body/range ratio)
-VOLUME_RATIO:       1.5853x  (vs 5-period avg)
-WICK_REJECTION:     0.4054  (<= 0.4 = clean)
-BEST_ZONE:          0.946120 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             0.0148817
-NOTES:              Close 0.956700 broke RESISTANCE 0.946120 — WEAK (high wick (0.41 > 0.4))
-```
-
-**LINKUSDT** — `WEAK` `LONG` | Score: **52** | Key Level: 9.3356
-
-```
-BREAKOUT_STATUS:    WEAK
-DIRECTION:          LONG
-KEY_LEVEL:          9.335612
-BREAKOUT_RAW_SCORE: 52/100
-CANDLE_QUALITY:     0.4375  (body/range ratio)
-VOLUME_RATIO:       1.8420x  (vs 5-period avg)
-WICK_REJECTION:     0.7143  (<= 0.4 = clean)
-BEST_ZONE:          9.335612 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             0.12251216
-NOTES:              Close 9.550000 broke RESISTANCE 9.335612 — WEAK (high wick (0.71 > 0.4))
-```
-
-**BNBUSDT** — `WEAK` `LONG` | Score: **51** | Key Level: 632.6041
-
-```
-BREAKOUT_STATUS:    WEAK
-DIRECTION:          LONG
-KEY_LEVEL:          632.604082
-BREAKOUT_RAW_SCORE: 51/100
-CANDLE_QUALITY:     0.4119  (body/range ratio)
-VOLUME_RATIO:       1.9389x  (vs 5-period avg)
-WICK_REJECTION:     0.6160  (<= 0.4 = clean)
-BEST_ZONE:          632.604082 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             5.44499403
-NOTES:              Close 638.270000 broke RESISTANCE 632.604082 — WEAK (high wick (0.62 > 0.4))
-```
-
-**ARBUSDT** — `CONFIRMED` `LONG` | Score: **51** | Key Level: 0.1280
-
-```
-BREAKOUT_STATUS:    CONFIRMED
-DIRECTION:          LONG
-KEY_LEVEL:          0.128036
-BREAKOUT_RAW_SCORE: 51/100
-CANDLE_QUALITY:     0.7500  (body/range ratio)
-VOLUME_RATIO:       0.8890x  (vs 5-period avg)
-WICK_REJECTION:     0.2593  (<= 0.4 = clean)
-BEST_ZONE:          0.128036 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             0.00314281
-NOTES:              Close 0.132200 broke RESISTANCE 0.128036 — vol 0.89x avg, wick_reject 0.26 — CONFIRMED
-```
-
-**RENDERUSDT** — `CONFIRMED` `LONG` | Score: **51** | Key Level: 1.7965
-
-```
-BREAKOUT_STATUS:    CONFIRMED
-DIRECTION:          LONG
-KEY_LEVEL:          1.796500
-BREAKOUT_RAW_SCORE: 51/100
-CANDLE_QUALITY:     0.6957  (body/range ratio)
-VOLUME_RATIO:       1.0876x  (vs 5-period avg)
-WICK_REJECTION:     0.3750  (<= 0.4 = clean)
-BEST_ZONE:          1.796500 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             0.03365231
-NOTES:              Close 1.854000 broke RESISTANCE 1.796500 — vol 1.09x avg, wick_reject 0.38 — CONFIRMED
-```
-
-**WLDUSDT** — `WEAK` `LONG` | Score: **48** | Key Level: 0.2623
-
-```
-BREAKOUT_STATUS:    WEAK
-DIRECTION:          LONG
-KEY_LEVEL:          0.262332
-BREAKOUT_RAW_SCORE: 48/100
-CANDLE_QUALITY:     0.5472  (body/range ratio)
-VOLUME_RATIO:       1.3518x  (vs 5-period avg)
-WICK_REJECTION:     0.7241  (<= 0.4 = clean)
-BEST_ZONE:          0.262332 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             0.00468483
-NOTES:              Close 0.262700 broke RESISTANCE 0.262332 — WEAK (high wick (0.72 > 0.4))
-```
-
-**FETUSDT** — `WEAK` `LONG` | Score: **48** | Key Level: 0.2108
-
-```
-BREAKOUT_STATUS:    WEAK
-DIRECTION:          LONG
-KEY_LEVEL:          0.210799
-BREAKOUT_RAW_SCORE: 48/100
-CANDLE_QUALITY:     0.5122  (body/range ratio)
-VOLUME_RATIO:       1.1055x  (vs 5-period avg)
-WICK_REJECTION:     0.7619  (<= 0.4 = clean)
-BEST_ZONE:          0.210799 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             0.00377558
-NOTES:              Close 0.214100 broke RESISTANCE 0.210799 — WEAK (high wick (0.76 > 0.4))
-```
-
-**ADAUSDT** — `WEAK` `LONG` | Score: **46** | Key Level: 0.2496
-
-```
-BREAKOUT_STATUS:    WEAK
-DIRECTION:          LONG
-KEY_LEVEL:          0.249626
-BREAKOUT_RAW_SCORE: 46/100
-CANDLE_QUALITY:     0.4000  (body/range ratio)
-VOLUME_RATIO:       1.4228x  (vs 5-period avg)
-WICK_REJECTION:     1.1667  (<= 0.4 = clean)
-BEST_ZONE:          0.249626 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             0.00366539
-NOTES:              Close 0.254000 broke RESISTANCE 0.249626 — WEAK (high wick (1.17 > 0.4))
-```
-
-**AVAXUSDT** — `WEAK` `LONG` | Score: **45** | Key Level: 9.3545
-
-```
-BREAKOUT_STATUS:    WEAK
-DIRECTION:          LONG
-KEY_LEVEL:          9.354490
-BREAKOUT_RAW_SCORE: 45/100
-CANDLE_QUALITY:     0.3333  (body/range ratio)
-VOLUME_RATIO:       1.1075x  (vs 5-period avg)
-WICK_REJECTION:     1.2000  (<= 0.4 = clean)
-BEST_ZONE:          9.354490 (RESISTANCE, 98 touches, maturity=0.80)
-COMPRESSION:        False (No compression: 0 compressing pair(s) (need 2))
-ATR_4H:             0.14227738
-NOTES:              Close 9.510000 broke RESISTANCE 9.354490 — WEAK (high wick (1.20 > 0.4))
-```
+- **LINKUSDT**: LONG fakeout at 9.3424 — Wick pierced RESISTANCE at 9.342449 but closed back inside — FAKEOUT
+- **RENDERUSDT**: LONG fakeout at 1.7985 — Wick pierced RESISTANCE at 1.798520 but closed back inside — FAKEOUT
 
 
 ### Near-Zone Watchlist
 
-- **BTCUSDT**: price 77,629.5900 near SUPPORT at 77,022.8224 (0.8x ATR away)
-- **TAOUSDT**: price 248.0000 near SUPPORT at 246.2316 (0.4x ATR away)
+- **BTCUSDT**: price 77,748.2800 near SUPPORT at 77,127.9603 (0.9x ATR away)
+- **ETHUSDT**: price 2,316.9700 near RESISTANCE at 2,329.2653 (0.4x ATR away)
+- **SOLUSDT**: price 85.0700 near RESISTANCE at 86.0808 (1.0x ATR away)
+- **BNBUSDT**: price 625.8600 near RESISTANCE at 632.8469 (1.4x ATR away)
+- **AVAXUSDT**: price 9.2600 near RESISTANCE at 9.3569 (0.8x ATR away)
+- **DOTUSDT**: price 1.2350 near RESISTANCE at 1.2630 (1.5x ATR away)
+- **ADAUSDT**: price 0.2473 near RESISTANCE at 0.2497 (0.7x ATR away)
+- **XRPUSDT**: price 1.4127 near RESISTANCE at 1.4293 (1.3x ATR away)
+- **SUIUSDT**: price 0.9286 near RESISTANCE at 0.9456 (1.2x ATR away)
+- **NEARUSDT**: price 1.3700 near RESISTANCE at 1.3882 (0.9x ATR away)
+- **INJUSDT**: price 3.5700 near SUPPORT at 3.4060 (1.3x ATR away)
+- **ARBUSDT**: price 0.1263 near RESISTANCE at 0.1281 (0.6x ATR away)
+- **OPUSDT**: price 0.1217 near RESISTANCE at 0.1238 (0.8x ATR away)
+- **FETUSDT**: price 0.2083 near RESISTANCE at 0.2106 (0.6x ATR away)
+- **TAOUSDT**: price 251.4000 near SUPPORT at 246.5918 (1.0x ATR away)
 
 
 *Generated by euru_morning_scan.py — Euru OS READ_ONLY phase*
