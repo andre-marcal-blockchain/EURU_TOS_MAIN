@@ -746,3 +746,75 @@ CRITERIOS DE APROVACAO (apos 48h cooling-off):
 
 Operador: Andre (Risk/Product Owner)
 Status: PENDING (48h wait ate 2026-04-27 13:30)
+
+## 2026-04-27 13:37 - APROVACAO: Migracao Operacional para EURU TOS MAIN (Type 3)
+
+Tipo: Aprovacao de Type 3 apos cooling-off
+Referencia: Proposta 2026-04-25 13:30 (commit 10673d7)
+Suplementos:
+  - Migration Runbook v0.3 (produzido 2026-04-27 manha)
+  - Migration Rollback v0.3 (produzido 2026-04-27 manha)
+Data de aprovacao: 2026-04-27 13:37 (hora local Espanha)
+Cooling-off: cumprido (48h, expirou 2026-04-27 13:30)
+
+STATUS: APPROVED
+
+REFLEXAO APOS 48H:
+Durante o cooling-off, operador descansou domingo (sistema autonomo).
+Manha de 27 Abr foi dedicada a preparacao colaborativa Claude+Codex:
+
+- Codex executou validacao de backups (SHA256 GREEN), criou tags Git
+  pre-migration-2026-04-27-* em ambos os repos, exportou XMLs das 9
+  scheduled tasks, fez backup do PowerShell profile, produziu delta
+  inventory e MIGRATION_PREFLIGHT_2026-04-27.md.
+
+- Claude reformulou Fases A-E em formato de gates explicitos
+  (objetivo, comandos, sucesso, abort, evidencia, rollback) e adicionou
+  Fase B0a (non-destructive checkpoint) e Fase E2 (post-migration audit).
+
+- Tres rondas de revisao tecnica entre Claude e Codex produziram
+  Runbook v0.3 e Rollback v0.3 com 7 ajustes incorporados.
+
+DESCOBERTA OPERACIONAL DURANTE B0a:
+Cinco das nove scheduled tasks Euru_* estavam Disabled antes do B0a:
+  - Euru_Morning_Scan (Disabled)
+  - Euru_Asian_Scan (Disabled)
+  - Euru_GitHub_Sync (Disabled)
+  - Euru_Friday_Cycle (Disabled)
+  - EuruLearningEngine (Disabled)
+
+Operador confirmou nao ter desactivado. Codex confirmou apenas leitura
+no B0a (sem Disable). Origem desta desactivacao e desconhecida e sera
+investigada pos-migracao como possivel incidente de governanca.
+
+Implicacao para Fase C1: redesenhada para preservar estados originais.
+Migracao nao faz Enable/Disable. Tasks Disabled migram path mas continuam
+Disabled. Reactivacao consciente sera trabalho separado pos-migracao.
+
+ESTADO DE PRE-MIGRACAO CONFIRMADO:
+- Backups validados GREEN com SHA256:
+  * BACKUP_EURO_MAIN_2026-04-27_0934.zip (246 MB)
+    SHA256: 1216223F5434ED19EDCA7A9FD1A953475A5FC8E36E138274BAE6C61A82D39A99
+  * BACKUP_EURU_TOS_MAIN_2026-04-27_0936.zip (5 MB)
+    SHA256: 115D749B6303661E5B859D89C377598A03EDA34C7364A65A4531D34EF2C09EBA
+- B0a artifacts: C:\Users\andre\Desktop\EURU_MIGRATION_B0_2026-04-27\
+- Preflight report: 00_MASTER\MIGRATION_PREFLIGHT_2026-04-27.md (untracked esperado)
+- Git tags: pre-migration-2026-04-27-euro-main, pre-migration-2026-04-27-euru-tos-main
+- Scheduled tasks XML export: 9 ficheiros em scheduled_tasks_before/
+- PowerShell profile backup: WindowsPowerShell_profile.ps1 (PS7 nao existia)
+- Nenhuma task Euru_* em estado Running
+
+CRITERIOS DE APROVACAO CUMPRIDOS:
+- Operador confirma alinhamento apos 48h de reflexao: SIM
+- Codex confirmou alinhamento atraves do operador: SIM
+- Plano de execucao com refinamentos do Runbook v0.3 e Rollback v0.3: SIM
+- Warnings B0a aceites pelo operador: SIM (5 tasks Disabled identificadas)
+
+EXECUCAO IMEDIATA:
+A migracao inicia agora pela B0a verification. Cada fase passa pelos
+seus 6 gates. Fase seguinte so e iniciada apos a anterior estar GREEN.
+
+Sequencia: B0a verify -> B (manifest+migrate) -> C dry-run -> C apply
+-> D -> E -> E2 (T+24h e T+7d).
+
+Operador: Andre (Risk/Product Owner)
