@@ -931,3 +931,51 @@ PROXIMOS PASSOS POS-MIGRACAO:
 9. Repair PT004 structure (heading missing)
 
 Operador: Andre (Risk/Product Owner)
+
+## 2026-04-29 09:29 - Type 2 - Plano Fase 1 Observacao - EM COOLING-OFF
+
+Tipo: Proposta Type 2
+Documento: 00_MASTER/EURU_PLANO_FASE1_OBSERVACAO_2026-04-29_v0.3.1.md
+Commit do documento: 01d1a0e
+Versao: v0.3.1 (apos 4 iteracoes: v0.1, v0.2, v0.3, v0.3.1)
+
+STATUS: COOLING-OFF (24h)
+
+ESCOPO DA PROPOSTA:
+
+Reactivacao de scheduled tasks em modo READ_ONLY durante 14 dias para
+observacao do mercado conforme metodologia Bruno Aguiar / MAC, antes
+de qualquer enhancement tecnico ou paper trade.
+
+Tasks a reactivar (existentes, Enable-ScheduledTask):
+- Euru_Morning_Scan (daily 07:00 Europe/Madrid)
+- Euru_Asian_Scan (daily 02:00 Europe/Madrid)
+
+Task a criar (Register-ScheduledTask, Apendice A do plano):
+- Euru_Trade_Monitor (daily 07:30 Europe/Madrid, --dry-run obrigatorio)
+
+Tasks que permanecem Disabled (decisao consciente):
+- Euru_GitHub_Sync, Euru_Friday_Cycle, EuruLearningEngine
+
+CRITERIOS DE SUCESSO: 8 criterios (A-H)
+GATILHOS DE ABORT: 4 gatilhos (A-D)
+COMPROMISSO DO OPERADOR: revisao diaria antes 09:00 Europe/Madrid
+
+REVISAO PRE-APROVACAO:
+- Codex auditou v0.1, identificou 6 correcoes -> v0.2
+- Codex revisou v0.2, sugeriu validacao manual + comando completo -> v0.3
+- Codex apontou texto language-specific da janela PS -> v0.3.1
+- Codex aprovou tecnicamente v0.3.1
+- Operador revisou v0.3.1 e aprovou
+
+COOLING-OFF:
+- Inicio: 2026-04-29 09:29 Europe/Madrid
+- Fim previsto: 2026-04-30 09:29 Europe/Madrid
+- Acao na fase de cooling-off: aguardar, nao executar nenhum comando do
+  Apendice A nem Enable-ScheduledTask, nao criar tabela CANDIDATES_REVIEW.md
+
+PROXIMA ENTRADA: registar APROVACAO formal Type 2 apos cooling-off cumprido,
+incluindo timestamp da aprovacao e plano de execucao operacional para o
+mesmo dia.
+
+Operador: Andre (Risk/Product Owner)
