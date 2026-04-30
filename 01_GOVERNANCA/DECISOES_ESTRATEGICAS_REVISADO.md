@@ -1129,3 +1129,65 @@ PROXIMA ACCAO:
 - Sistema gera trilha de auditoria para 14 dias
 
 Operador: Andre (Risk/Product Owner)
+
+## 2026-04-30 14:43 - NOTA TECNICA: Corrupcao de encoding em v0.3.1 e v0.3.2
+
+Tipo: Nota tecnica nao-critica
+Status: Reconhecido, regeneracao adiada
+
+DESCOBERTA:
+
+Apos execucao da Fase 1, ao revisar v0.3.1 commitada (commit 01d1a0e),
+identificada corrupcao de encoding e markdown escapado:
+
+- Caracteres especiais corrompidos: 'â€"' em vez de '-', 'â†'' em vez 
+  de '->', 'Ã§' em vez de 'c-cedilha', etc.
+- Markdown escaped: '\#' em vez de '#', '\*\*' em vez de '**'
+
+CAUSA-RAIZ PROVAVEL:
+
+Encoding mismatch no momento da gravacao via Notepad em 2026-04-29.
+Conteudo colado do chat para Notepad gravou possivelmente em 
+Windows-1252 lido como UTF-8 ou similar. Markdown escaping pode 
+ter ocorrido em algum passo intermedio (chat -> clipboard -> Notepad).
+
+IMPACTO OPERACIONAL:
+
+Zero. Conteudo e legivel para auditor humano. Plano foi compreendido,
+discutido, revisado em multiplas iteracoes (v0.1, v0.2, v0.3, v0.3.1).
+Aprovacao Type 2 foi sobre conteudo substantivo, nao representacao
+visual.
+
+IMPACTO DE GOVERNANCA:
+
+Documento canonico fica feio quando renderizado em GitHub. Auditor 
+futuro consegue ler mas requer esforco visual extra.
+
+DECISAO PRAGMATICA:
+
+Direccao C (operador, 2026-04-30 ~14:45 Madrid):
+- Nao regenerar v0.3.1 (mantem-se como prova historica do que foi 
+  aprovado)
+- Nao criar v0.3.2 limpa hoje
+- v0.3.2 que Codex tinha criado (com mesma corrupcao herdada) 
+  apagada do filesystem (nao tinha sido commitada)
+- Regeneracao de v0.3.2 limpa adiada para data futura quando operador 
+  tiver bandwidth e metodo robusto (nao Notepad)
+
+ACCAO PENDENTE FUTURA:
+
+- Regenerar v0.3.2 limpa com metodo que preserve UTF-8 (Set-Content 
+  via PowerShell directo, ou VS Code com encoding explicito, etc.)
+- Manter v0.3.1 corrupta como historica
+- Cross-reference em ambos os documentos
+
+NOTA OPERACIONAL:
+
+Fase 1 esta ACTIVE e nao depende destes documentos serem cosmeticamente
+perfeitos. Sistema corre autonomamente amanha 1 Maio (Asian 02:00, 
+Morning 07:00, Trade Monitor 07:30, Journal 07:30, Daily Audit 08:30).
+
+Codex registou-se a si proprio para revisar metodo de criacao de 
+documentos no futuro (evitar Notepad sem encoding controlado).
+
+Operador: Andre (Risk/Product Owner)
