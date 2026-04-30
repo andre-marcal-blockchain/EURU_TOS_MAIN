@@ -979,3 +979,70 @@ incluindo timestamp da aprovacao e plano de execucao operacional para o
 mesmo dia.
 
 Operador: Andre (Risk/Product Owner)
+
+## 2026-04-30 14:00 - Type 2 - Plano Fase 1 Observacao - APROVADO
+
+Tipo: Aprovacao formal Type 2
+Documento: 00_MASTER/EURU_PLANO_FASE1_OBSERVACAO_2026-04-29_v0.3.1.md
+Commit do documento: 01d1a0e
+Registo COOLING-OFF: commit d4fad08 (2026-04-29 09:29 Madrid)
+
+STATUS: APROVADO - autorizada execucao operacional
+
+COOLING-OFF CUMPRIDO:
+- Inicio: 2026-04-29 09:29 Europe/Madrid
+- Fim cumprido: 2026-04-30 09:29 Europe/Madrid
+- Duracao: 24h conforme governanca Type 2
+- Sem alteracoes ao plano durante cooling-off
+- Sem accoes operacionais durante cooling-off
+- Aprovacao registada apos retorno do operador (~14:00 Madrid)
+
+NOTA DE TRANSPARENCIA - VALIDACAO MANUAL ANTECIPADA:
+
+Em 2026-04-30 (manha, antes da aprovacao formal), o Codex executou
+validacao manual do Trade Monitor:
+
+  python .\euru_trade_monitor.py --dry-run
+
+Resultado: schema valid, mode DRY-RUN, 0 open trades, gerou
+TRADE_MONITOR_REPORT_2026-04-30.md em SCORECARDS/.
+
+Esta validacao corresponde ao Passo 1 do plano operacional (Seccao 5.2.1),
+que tecnicamente devia preceder apenas o Passo 2 (Register-ScheduledTask),
+nao a aprovacao Type 2 inteira.
+
+Pragmatica: --dry-run e 100% READ-ONLY, sem efeito secundario, e o report
+gerado e identico ao que o scheduler produziria. Operador aceita esta
+validacao antecipada como pragmatica e zero-risco.
+
+Para futuro: validacoes manuais devem seguir ordem do plano (apos aprovacao
+Type 2). Codex registou recomendacao para si proprio.
+
+PROXIMOS PASSOS OPERACIONAIS (5 passos com pausa entre cada):
+
+Passo 1: Validacao manual python euru_trade_monitor.py --dry-run
+  -> JA FEITO PELO CODEX em 2026-04-30 manha. Report disponivel.
+
+Passo 2: Enable-ScheduledTask em PowerShell elevado real
+  -> Euru_Morning_Scan
+  -> Euru_Asian_Scan
+
+Passo 3: Register-ScheduledTask Euru_Trade_Monitor
+  -> Conforme Apendice A do plano (v0.3.1)
+  -> --dry-run obrigatorio
+  -> Daily 07:30 Europe/Madrid
+
+Passo 4: Verificacao consolidada com Get-ScheduledTask
+  -> Confirmar 3 tasks Ready, paths corretos
+
+Passo 5: Criar tabela EURU_FASE1_CANDIDATES_REVIEW.md em 00_MASTER/
+  -> Template da Seccao 11 do plano
+  -> Marcar inicio oficial Fase 1
+
+ESCOPO REAFIRMADO:
+- 14 dias de observacao READ_ONLY
+- 8 criterios de sucesso (A-H)
+- 4 gatilhos de abort (A-D)
+- Compromisso operador: revisao diaria antes 09:00 Europe/Madrid
+
+Operador: Andre (Risk/Product Owner)
