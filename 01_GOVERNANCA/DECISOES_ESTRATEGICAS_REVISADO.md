@@ -1046,3 +1046,86 @@ ESCOPO REAFIRMADO:
 - Compromisso operador: revisao diaria antes 09:00 Europe/Madrid
 
 Operador: Andre (Risk/Product Owner)
+
+## 2026-04-30 14:17 - INICIO FORMAL FASE 1 OBSERVACAO
+
+Tipo: Marco operacional (apos aprovacao Type 2)
+Referencia: Plano Fase 1 v0.3.1 (commit 01d1a0e), Aprovacao Type 2 (commit ba557b0)
+Tabela operacional: 00_MASTER/EURU_FASE1_CANDIDATES_REVIEW.md
+
+STATUS: FASE 1 ACTIVE
+
+PERIODO:
+- Inicio: 2026-04-30 14:17 Europe/Madrid
+- Checkpoint T+7d: 2026-05-07
+- Fim previsto T+14d: 2026-05-14
+
+5 PASSOS OPERACIONAIS EXECUTADOS:
+
+Passo 1 - Validacao manual python euru_trade_monitor.py --dry-run
+  -> Executado por Codex em 2026-04-30 manha (antes da aprovacao formal,
+     registado como nota de transparencia em entrada anterior).
+  -> Schema valid, mode DRY-RUN, 0 open trades.
+
+Passo 2 - Enable das tasks existentes (PowerShell elevado real)
+  -> Euru_Morning_Scan: Disabled -> Ready
+  -> Euru_Asian_Scan: Disabled -> Ready
+  -> Sem erros.
+
+Passo 3 - Register Euru_Trade_Monitor (PowerShell elevado real)
+  -> NOTA IMPORTANTE: comando do Apendice A original falhou com 
+     "Acceso denegado" mesmo em PS elevado.
+  -> Diagnostico: New-ScheduledTaskPrincipal com -RunLevel Highest 
+     requer credenciais explicitas (password) que nao temos como 
+     fornecer; UAC bloqueia criacao de task elevated sem password.
+  -> Solucao aplicada: removido  customizado. Task usa 
+     defaults (current interactive user, normal level).
+  -> Justificacao tecnica: Trade Monitor com --dry-run e READ-ONLY,
+     escreve apenas em pasta do user, nao requer privilegios elevados.
+     Equivalente operacional ao Daily Audit (que tambem nao corre 
+     elevated). Zero perda de capacidade.
+  -> Resultado: task criada com sucesso. State: Ready.
+  -> NextRun: 2026-05-01 07:30:00 Europe/Madrid.
+
+Passo 4 - Verificacao consolidada
+  -> 3 tasks da Fase 1 Ready, paths corretos para EURU TOS MAIN
+  -> Outras tasks Euru no estado esperado:
+     * Daily_Audit Ready, Journal_Auditor Ready, Smoke_Test Ready, 
+       Weekly_Audit Ready
+     * Friday_Cycle Disabled, GitHub_Sync Disabled, 
+       EuruLearningEngine Disabled (decisao consciente)
+
+Passo 5 - Tabela EURU_FASE1_CANDIDATES_REVIEW.md criada em 00_MASTER/
+  -> Template conforme Seccao 11 do plano
+  -> Status ACTIVE
+  -> Pronta para preenchimento diario antes 09:00 Madrid
+
+DESVIO DO PLANO REGISTADO:
+
+Apendice A do plano (v0.3.1) especificava New-ScheduledTaskPrincipal 
+com -RunLevel Highest. Esse parametro foi removido por incompatibilidade 
+com criacao via PS elevado sem credenciais explicitas. Resultado 
+operacional e tecnicamente equivalente para o objectivo (Trade Monitor 
+em dry-run nao precisa elevation).
+
+Acao corretiva futura: actualizar Apendice A do plano para v0.3.2 ou 
+nota de erratum, removendo Principal customizado. NAO criar Type 2 
+separado para isto - e desvio nao-substantive (mesmo comportamento 
+operacional, syntax diferente).
+
+Codex deve registar correccao para futura reutilizacao do template.
+
+GATILHOS DE ABORT ACTIVOS (4):
+- A: Falhas tecnicas criticas
+- B: Sinais metodologicos errados
+- C: Drift do operador (5+ dias sem leitura)
+- D: Modificacao nao-autorizada de codigo
+
+PROXIMA ACCAO:
+- 2026-05-01 manha: Daily Audit corre 08:30 (autonomo)
+- 2026-05-01 ~07:00-07:30: Asian Scan + Morning Scan + Trade Monitor 
+  rodam autonomamente
+- Operador le reports antes 09:00 e preenche tabela CANDIDATES_REVIEW
+- Sistema gera trilha de auditoria para 14 dias
+
+Operador: Andre (Risk/Product Owner)
