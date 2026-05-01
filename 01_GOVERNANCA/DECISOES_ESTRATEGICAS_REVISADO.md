@@ -1191,3 +1191,71 @@ Codex registou-se a si proprio para revisar metodo de criacao de
 documentos no futuro (evitar Notepad sem encoding controlado).
 
 Operador: Andre (Risk/Product Owner)
+
+## 2026-05-01 10:02 - DIA 1 FASE 1: timing imperfeito + decisao PC 24/7
+
+Tipo: Marco operacional + decisao de governanca
+Status: Fase 1 ACTIVE, dia 1/14
+
+OBSERVACAO TECNICA:
+
+Computador estava DESLIGADO durante a noite de 30 Abr para 1 Maio.
+Tasks scheduled (Asian 02:00, Morning 07:00, Trade Monitor 07:30, 
+Journal 07:30, Daily Audit 08:30) nao correram nas horas previstas.
+
+Quando operador ligou o PC em 2026-05-01 ~09:26 Madrid, todas as 
+5 tasks correram em batch devido a flag StartWhenAvailable.
+
+Resultados:
+- Todas com Result=0 (sucesso tecnico)
+- Reports gerados correctamente em paths esperados
+- Daily Audit detectou que Morning Scan e Asian Scan correram hoje
+  (mesmo que tarde) e nao reportou FAIL para 2026-05-01
+- Commits autonomos: bafca0f (audit), 22adf44 (asian), cba673c (morning)
+
+IMPACTO METODOLOGICO:
+
+Asian Scan e Morning Scan correm idealmente em horas fixas para 
+capturar momentos especificos do mercado:
+- Asian (02:00 Madrid = 00:00 UTC): captura sessao asiatica real
+- Morning (07:00 Madrid): captura overnight + pre-abertura europeia
+
+Correndo as 09:26, dados podem estar a analisar candles diferentes.
+BTC Master Filter funcionou correctamente (downgrade a WATCHLIST 
+em SIDEWAYS), mas valor analitico das sessoes especificas e reduzido.
+
+DECISAO: PC 24/7 durante Fase 1
+
+Para garantir que tasks correm nas horas previstas durante o resto
+da Fase 1 (2 Maio - 14 Maio):
+
+- Computador permanecera ligado 24/7
+- Custo eletrico estimado: 2-5 EUR para 14 dias
+- Zero configuracao adicional necessaria (vs Wake-on-Schedule)
+- Decisao temporaria, reavaliar pos-Fase 1
+
+ALTERNATIVAS REJEITADAS:
+
+- Wake-on-Schedule: exigiria configuracao BIOS + flag tasks, risco
+  de edge cases durante Fase 1, melhor explorar pos-Fase 1
+- Cloud/VPS: trabalho fora de escopo Fase 1, considerar Fase 2
+
+IMPACTO NOS CRITERIOS DE SUCESSO:
+
+- Criterio A (sem falhas criticas): PASS - tasks correram, Result=0
+- Criterio B (Daily Audit sem incidentes graves): PASS para 1 Maio
+- Criterio C (reports consistentes): PASS - reports gerados
+- Criterio D (git sync): PASS - commits autonomos pushed
+- Criterio E (avaliacao qualitativa): PENDING - operador vai 
+  preencher CANDIDATES_REVIEW
+- Criterio F (BTC Master Filter): PASS - filtro funcionou (BTC 
+  SIDEWAYS, todos sinais downgraded WATCHLIST)
+- Criterio G (CANDIDATES_REVIEW preenchido): PENDING - operador 
+  vai preencher hoje
+- Criterio H (zero modificacoes codigo): PASS
+
+Dia 1 conta como dia operacional valido apesar do timing imperfeito.
+A partir de 2 Maio, com PC 24/7, tasks deverao correr nas horas
+exactas previstas.
+
+Operador: Andre (Risk/Product Owner)
