@@ -30,6 +30,12 @@
 | 2026-05-01 | BNBUSDT | 1D | SIDEWAYS | WATCHLIST (22/35) | WATCHLIST | Compression YES, mas BTC filter dominante. Watchlist correcto. | YES |
 | 2026-05-01 | ADAUSDT | 4H | SIDEWAYS | WEAK breakout LONG (49/100) | WATCHLIST | Breakout fraco (wick 0.64 high) sobre resistance, sem compression. Score 49 baixo. Bruno-style: nao actuar. | YES |
 | 2026-05-01 | TAOUSDT | 1D | SIDEWAYS | WATCHLIST (21/35) | WATCHLIST | Unico BULLISH no scan (+1.66% 7D, MACD BULLISH). Mas FAKEOUT short detectado. Aguardar resolucao. | YES |
+| 2026-05-02 | BTCUSDT | 1D | BULLISH | WATCHLIST (26/35) | WATCHLIST | BTC virou BULLISH. OBV RISING confirma volume, MACD lag BEARISH. Aguardar viragem MACD ou breakout sobre 79,485. | YES |
+| 2026-05-02 | TAOUSDT | 1D | BULLISH | SETUP (28/35 PREMIUM) | NO_TRADE | OBV FLAT + VOLUME_FLOW WEAK = movimento sem confirmacao. Range 8.31% vs 5.25% medio = potencial fakeout. Bruno-style: WATCHLIST. | NO |
+| 2026-05-02 | INJUSDT | 1D | BULLISH | SETUP (21/35) | NO_TRADE | Subiu 8.17% 24h sem volume confirmacao. RSI 65.76 quase overbought. Late entry. OBV FLAT, VOLUME WEAK. | NO |
+| 2026-05-02 | WLDUSDT | 1D | BEARISH | SETUP (23/35) | BEARISH_WATCHLIST_PENDING_BREAKDOWN | Setup short tecnicamente valido AT_WEEKLY_LOW + Volume STRONG. Mas RSI 33.89 oversold = risco bounce. Aguardar quebra confirmada 4H. | PARCIAL |
+| 2026-05-02 | NEARUSDT | 1D | BEARISH | SETUP (22/35) | BEARISH_WATCHLIST | Similar a WLD mas momentum frouxo (-1% 24h). Volume STRONG mas movimento tepid. | PARCIAL |
+| 2026-05-02 | ARBUSDT | 1D | BEARISH | SETUP (20/35) | NO_TRADE | Score 20 baixo (MEDIA), RSI 54 nem oversold nem bearish forte, BELOW_7D mas nao AT_WEEKLY_LOW. Setup fraco. | NO |
 
 ---
 
@@ -59,9 +65,130 @@
 
 ---
 
+### Dia 2 - 2026-05-02 (PC 24/7 funcionou, timing perfeito; mercado mudou de regime)
+
+**Nota de timing:** PC permaneceu ligado durante a noite. Tasks correram nas horas exactas previstas (Asian 02:00:01, Morning 07:00:01, Trade Monitor 07:30:01, Journal 07:30:01, Daily Audit 08:30:01). Decisao PC 24/7 validada empiricamente. Critério F: PASS (timing).
+
+**Mudanca de regime BTC:**
+- Dia 1 (1 Mai): BTC 1D SIDEWAYS, Master Filter ACTIVE em ambos os scans
+- Dia 2 (2 Mai): BTC 1D BULLISH, BTC 4H WATCHLIST
+- Asian Master Filter: ACTIVE (BTC 4H WATCHLIST)
+- Morning Master Filter: INACTIVE (BTC 1D BULLISH)
+- Discrepancia 4H vs 1D - feature incompleta (ver Inconsistencias)
+
+**Sinais promovidos a SETUP (5):**
+- TAOUSDT (28/35 PREMIUM, +6.96% 7D, BULLISH, mas OBV FLAT + VOLUME WEAK)
+- INJUSDT (21/35, +8.17% 24h, BULLISH, mas OBV FLAT + VOLUME WEAK, RSI 65.76)
+- WLDUSDT (23/35, BEARISH, AT_WEEKLY_LOW, Volume STRONG, RSI 33.89 oversold)
+- NEARUSDT (22/35, BEARISH, AT_WEEKLY_LOW, Volume STRONG, momentum tepid)
+- ARBUSDT (20/35, BEARISH, BELOW_7D_AVG, score baixo)
+
+**News Sentinel:** (verificar morning report - pendente nesta nota)
+
+**CROSS-CHECK CLAUDE + CODEX (6/6 concordancia):**
+
+| Sinal | Claude | Codex | Final |
+|---|---|---|---|
+| BTC | YES | YES | YES |
+| TAO | NO | NO | NO |
+| INJ | NO | NO | NO |
+| WLD | PARCIAL | PARCIAL | PARCIAL |
+| NEAR | PARCIAL | PARCIAL | PARCIAL |
+| ARB | NO | NO | NO |
+
+Convergencia perfeita entre dois agentes Bruno-style independentes. Validacao do
+metodo de cross-check operador-Claude-Codex.
+
+**Concordancia operador-sistema Dia 2:** 1/6 YES + 2/6 PARCIAL + 3/6 NO. Contraste
+forte com Dia 1 (7/7 YES). **Primeira divergencia metodologica observada.**
+
+---
+
+### Sintese das respostas Codex (Dia 2 cross-check)
+
+**Pergunta 1 - Concordas com leitura Bruno-style?**
+> Codex confirma. Classificacao identica em 6/6 ativos. TAO e INJ classicos de 
+> "preco andou mas fluxo nao confirmou" - RSI/MACD bonitos mas OBV FLAT + 
+> VOLUME WEAK nao passam pelo olhar MAC. WLD/NEAR interessantes para continuation
+> bearish mas precisam quebra limpa do weekly low. ARB rejeitado por score 
+> insuficiente e localizacao ambigua.
+
+**Pergunta 2 - Discrepancia 4H vs 1D: bug ou feature?**
+> "Feature incompleta", nao bug. 4H = timing/curto prazo; 1D = clima/regime 
+> estrutural. Falta regra de reconciliacao multi-timeframe. Estado futuro 
+> desejado: MTF_ALIGNMENT = FULL/PARTIAL/CONFLICTING gerando "Final posture = 
+> WATCHLIST / reduced conviction" quando ha conflito. Hoje sistema trata 
+> filtros separadamente. Ambiguidade operacional esperada - Fase 1 deve 
+> capturar exactamente este tipo de coisa.
+
+**Pergunta 3 - Adicionar OBV/Volume check antes de SETUP?**
+> Sim mas NAO durante observacao. SETUP atual = movimento/estrutura. SETUP 
+> Bruno-style = movimento + aceleracao + confirmacao. Check ideal futuro: se 
+> OBV FLAT ou VOLUME_FLOW WEAK, downgrade automatico SETUP -> WATCHLIST ou 
+> SETUP_QUALITY = PARTIAL. Plus: MAC_VALID e Two-Day OBV explicitos. Por enquanto 
+> registar como finding, nao mexer no sistema. Divergencia operador-sistema e 
+> material de estudo da Fase 1.
+
+**Pergunta 4 - Entrarias em algum se fosse SIMULATE/EXECUTE?**
+> Nenhum dos 5. TAO: nao (movimento esticado sem volume). INJ: nao (RSI quase
+> overbought, late entry). WLD: nao ainda (watchlist bearish ate quebra weekly 
+> low). NEAR: nao ainda (momentum frouxo). ARB: nao (score/estrutura 
+> insuficientes). Se obrigado a escolher "menos ruim": WLD como 
+> BEARISH_WATCHLIST_PENDING_BREAKDOWN, nunca como entrada.
+
+**Pergunta 5 - Observacoes adicionais para CANDIDATES_REVIEW?**
+> Dia 2 mostra overpromotion de SETUP quando BTC 1D fica BULLISH e BTC filter 
+> desativa. Sistema confunde movimento de preco com confirmacao de fluxo em 
+> TAO/INJ. OBV FLAT + VOLUME WEAK deveria impedir SETUP no metodo MAC. SETUP 
+> bearish em WLD/NEAR/ARB e semanticamente ambiguo porque Core nao separa 
+> LONG_CANDIDATE vs SHORT_CANDIDATE. Discrepancia BTC 4H WATCHLIST vs BTC 1D 
+> BULLISH deve gerar MTF_ALIGNMENT = PARTIAL no futuro.
+
+**Conclusao Codex:** Dia 2 nao e mau sinal do sistema, e bom sinal da Fase 1. 
+Encontramos exactamente o que queriamos encontrar: onde o sistema actual ve 
+"setup" cedo demais comparado ao metodo Bruno/MAC.
+
+**Severidade do finding:** medium  
+**Accao recomendada agora:** observar, nao corrigir  
+**Critério F:** PASS (filtro Asian funcionou; Morning desactivou correctamente; ausencia de OBV/MAC check e finding, nao falha)  
+**Critério E:** PASS (revisao humana feita) com discordancia metodologica documentada
+
+---
 ## Inconsistencias Detectadas
 
-(Inputs para potential gatilho B - sinais metodologicos errados.)
+### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
+
+**Detectado em:** Dia 2 (2026-05-02), Morning Scan
+**Severidade:** medium
+**Reporters:** Claude + Codex (cross-check, 6/6 concordancia)
+**Status:** Observar, nao corrigir durante Fase 1
+
+**Descricao:**
+Quando BTC Master Filter desactiva (BTC 1D BULLISH), sistema promove ativos a SETUP
+baseando-se em estrutura/desvio/preco mas sem exigir confirmacao de fluxo (OBV,
+VOLUME_FLOW). Resultado: 5 SETUPs promovidos no Dia 2, mas 3/5 (TAO, INJ, ARB) com
+OBV FLAT + VOLUME_FLOW WEAK que Bruno-style classificaria WATCHLIST.
+
+**Lacuna metodologica:**
+- SETUP actual = movimento + estrutura
+- SETUP Bruno-style = movimento + aceleracao + confirmacao (MAC)
+
+**Discrepancia MTF (multi-timeframe):**
+- BTC 4H state WATCHLIST (Master Filter Asian ACTIVE)
+- BTC 1D state BULLISH (Master Filter Morning INACTIVE)
+- Falta regra de reconciliacao: MTF_ALIGNMENT = FULL/PARTIAL/CONFLICTING
+
+**Recomendacoes para Fase 2 (NAO accionar agora):**
+1. Implementar check explicito MAC_VALID = YES/PARTIAL/NO
+2. Implementar Two-Day OBV protocol explicito
+3. Adicionar campo SETUP_QUALITY (FULL/PARTIAL) baseado em OBV/Volume
+4. Implementar MTF_ALIGNMENT field para reconciliacao 4H/1D
+5. Separar LONG_CANDIDATE vs SHORT_CANDIDATE no Core (resolve ambiguidade
+   semantica de SETUP em ativos bearish como WLD/NEAR/ARB)
+
+**Accao Fase 1:** continuar observacao, acumular dados ate 14 Mai. Findings
+similares em dias subsequentes solidificam evidencia para Type 2 ou Type 3 pos-Fase 1.
+
 
 ---
 
