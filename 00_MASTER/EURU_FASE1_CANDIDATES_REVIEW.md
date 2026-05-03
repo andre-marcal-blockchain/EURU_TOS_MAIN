@@ -36,6 +36,12 @@
 | 2026-05-02 | WLDUSDT | 1D | BEARISH | SETUP (23/35) | BEARISH_WATCHLIST_PENDING_BREAKDOWN | Setup short tecnicamente valido AT_WEEKLY_LOW + Volume STRONG. Mas RSI 33.89 oversold = risco bounce. Aguardar quebra confirmada 4H. | PARCIAL |
 | 2026-05-02 | NEARUSDT | 1D | BEARISH | SETUP (22/35) | BEARISH_WATCHLIST | Similar a WLD mas momentum frouxo (-1% 24h). Volume STRONG mas movimento tepid. | PARCIAL |
 | 2026-05-02 | ARBUSDT | 1D | BEARISH | SETUP (20/35) | NO_TRADE | Score 20 baixo (MEDIA), RSI 54 nem oversold nem bearish forte, BELOW_7D mas nao AT_WEEKLY_LOW. Setup fraco. | NO |
+| 2026-05-03 | TAOUSDT | 1D | BULLISH | SETUP (29/35 PREMIUM) | YES como sinal / WATCH for entry quality | OBV virou RISING + Volume STRONG. MACD acelerando (+5.16). +10.31% 7D. RSI 60. Late confirmation valida. NAO automaticamente entrada - aguardar reteste/pullback. | YES (sinal) |
+| 2026-05-03 | INJUSDT | 1D | BULLISH | SETUP (23/35) | YES como sinal / cuidado RSI 64.89 | OBV/Volume mudaram para RISING/STRONG. COMPRESSION YES (range contracting). 24h apenas +0.27%. Pode ser expansion ou fakeout apos compression. | YES (sinal) |
+| 2026-05-03 | NEARUSDT | 1D | BEARISH | SETUP (20/35) | NO_TRADE | OBV passou de FALLING a FLAT, Volume WEAK. Setup bearish a perder forca. AT_WEEKLY_LOW mas momentum frouxo. | NO |
+| 2026-05-03 | ARBUSDT | 1D | BEARISH | SETUP (21/35) | PARCIAL - aguardar breakdown | -3.19% 24h, escalou de BELOW_7D a AT_WEEKLY_LOW. OBV FALLING, Volume STRONG. Bearish a acelerar. RSI 47 nao oversold. Aguardar quebra confirmada weekly low. | PARCIAL |
+| 2026-05-03 | BTCUSDT | 1D | MIXED | WATCHLIST (21/35) | YES como WATCHLIST | TREND virou MIXED de BULLISH (Dia 2). COMPRESSION YES. OBV RISING + Vol STRONG. Score caiu 5pts. BTC em compressao apos rally. | YES |
+| 2026-05-03 | WLDUSDT | 1D | MIXED | WATCHLIST (19/35) | YES - downgrade correcto | VALIDACAO Dia 2: bouce confirmou-se (+2.10% 24h). Score caiu 4pts. TREND virou MIXED. Sistema correctamente desactivou setup bearish. Nossa cautela Dia 2 acertou. | YES |
 
 ---
 
@@ -154,6 +160,132 @@ Encontramos exactamente o que queriamos encontrar: onde o sistema actual ve
 **Critério E:** PASS (revisao humana feita) com discordancia metodologica documentada
 
 ---
+### Dia 3 - 2026-05-03 (PC 24/7 funcionou 2o dia consecutivo; regime BTC MIXED)
+
+**Nota de timing:** Tasks correram nas horas exactas pelo 2o dia. Asian 02:00:01, Morning 07:00:01, Trade Monitor 07:30:01, Journal 07:30:01, Daily Audit 08:30:01. Critério F validado consecutivamente.
+
+**Mudanca de regime BTC (3 dias seguidos diferentes):**
+- Dia 1: BTC 1D SIDEWAYS, ambos filtros ACTIVE
+- Dia 2: BTC 1D BULLISH, Asian ACTIVE, Morning INACTIVE
+- Dia 3: BTC 1D MIXED, Asian ACTIVE, Morning INACTIVE
+- Asian 4H WATCHLIST hoje
+
+**Evolucao dos 5 SETUPs do Dia 2 em 24h:**
+
+| Asset | Dia 2 (Bruno-style) | Dia 3 (Bruno-style) | Evolucao |
+|-------|---------------------|---------------------|----------|
+| TAOUSDT | NO (OBV FLAT, Vol WEAK) | **YES** (OBV RISING, Vol STRONG) | Sistema acertou |
+| INJUSDT | NO (OBV FLAT) | **YES** (OBV RISING + Compression) | Sistema acertou |
+| WLDUSDT | PARCIAL (risco bounce) | YES (downgrade WATCHLIST) | Nossa cautela acertou |
+| NEARUSDT | PARCIAL (momentum frouxo) | **NO** (OBV ainda mais flat) | Setup falhou |
+| ARBUSDT | NO (score baixo) | **PARCIAL** (escalou AT_WEEKLY_LOW) | Setup ganhou forca |
+
+**Padrao revelado:** sistema "auto-corrige" via re-scan diario. SETUPs que pareciam prematuros Dia 2 ou (a) confirmaram-se Dia 3 com volume validacao (TAO, INJ), ou (b) foram correctamente downgraded (WLD).
+
+**Concordancia operador-sistema Dia 3:**
+- 4/6 YES + 1/6 PARCIAL + 1/6 NO
+- Recuperou comparado a Dia 2 (1/6 YES + 2/6 PARCIAL + 3/6 NO)
+- Mas inferior a Dia 1 (7/7 YES) - regime SIDEWAYS facilitava
+
+**CROSS-CHECK CLAUDE + CODEX (6/6 concordancia novamente):**
+
+| Sinal | Claude | Codex | Final |
+|---|---|---|---|
+| TAO | YES sinal | YES sinal / WATCH entry | YES sinal |
+| INJ | YES sinal | YES sinal / cuidado RSI | YES sinal |
+| NEAR | NO | NO | NO |
+| ARB | PARCIAL | PARCIAL | PARCIAL |
+| BTC | YES | YES | YES |
+| WLD | YES | YES | YES |
+
+Convergencia perfeita 2 dias seguidos. Cross-check valida abordagem.
+
+**INSIGHT METODOLOGICO PRINCIPAL DO DIA 3:**
+
+Codex introduziu distincao critica: **"YES como sinal" vs "YES como entrada"**.
+
+> "Hoje TAO/INJ ficaram muito melhores como sinais, mas eu ainda nao chamaria
+> isso automaticamente de entrada Bruno-style sem reteste, R/R e localizacao."
+
+Esta distincao recalibra o que entendiamos por concordancia. **YES Bruno-style = "está no radar, com triggers de entrada definidos"**, NAO "entrar a mercado".
+
+Implicacao: a hipotese de "sistema auto-corrige em 48h" e mais precisa quando reformulada como "sistema sinaliza estrutura cedo, fluxo confirma depois". Isto recalibra o Finding 001.
+
+---
+
+### Sintese das respostas Codex (Dia 3 cross-check)
+
+**Pergunta 1 - Concordas com leitura Bruno-style?**
+> Codex confirma 6/6 com nuance importante: separa "sinal valido para observacao"
+> de "entrada valida". TAO YES como sinal mas WATCH for entry quality. INJ YES
+> mas com ressalva RSI 64.89. NEAR NO. ARB PARCIAL. BTC YES. WLD YES (downgrade
+> correcto). YES significa "concordo com estado do sistema hoje", nao "entraria
+> agora".
+
+**Pergunta 2 - Sistema auto-corrige em 48h? Invalida Finding 001?**
+> Recalibra, nao invalida. Reformulacao mental:
+> - Versao original: "sistema promove setup errado"
+> - Versao recalibrada: "sistema promove SETUP estrutural cedo; precisa
+>   distinguir SETUP_EARLY vs SETUP_CONFIRMED"
+> 
+> Sistema talvez nao esteja errado - e incompleto semanticamente. Bruno-style,
+> distinguir estagios e crucial.
+> 
+> **Taxonomia futura proposta:**
+> - SETUP_EARLY = estrutura apareceu, fluxo ainda nao confirmou
+> - SETUP_CONFIRMED = estrutura + OBV/volume/MAC confirmados
+> - SETUP_REJECTED = estrutura perdeu confirmacao
+
+**Pergunta 3 - TAO ainda late entry?**
+> "Confirmacao tardia mas valida COMO SINAL. Entrada depende de localizacao."
+> 
+> Subiu 10% em 7 dias, RSI 60, MACD acelerando = forte mas aumenta risco de
+> entrar no meio do movimento. Nao comprar a mercado so porque confirmou.
+> 
+> Triggers para entrada real:
+> - Reteste
+> - Compressao curta apos movimento
+> - Pullback saudavel
+> - OBV continua rising
+> - R/R favoravel ate alvo
+> - BTC nao perder compressao para baixo
+> 
+> TAO saiu de NO para WATCH/YES, mas ainda nao automaticamente EXECUTION_ALLOWED.
+
+**Pergunta 4 - MTF_ALIGNMENT ainda apoiado?**
+> Sim, ainda mais. Hoje a divergencia BTC 4H WATCHLIST + BTC 1D MIXED nao e
+> ruido, e informacao:
+> - 1D MIXED = macro sem direccao limpa
+> - 4H WATCHLIST/compressao = timing indeciso
+> - Final posture = MTF_ALIGNMENT_PARTIAL / CAUTION
+> 
+> Filtro unificado simples esconderia nuance. MTF_ALIGNMENT preserva ambos
+> sinais (1D=clima, 4H=timing, alignment=FULL/PARTIAL/CONFLICT). Bruno-style
+> e mais fiel.
+
+**Pergunta 5 - Watch points proximos dias?**
+> 1. TAO confirma ou exaure? (OBV continua rising? Volume strong? RSI passa
+>    de 65/70? Reteste?)
+> 2. INJ rompe apos compressao ou falha? (Expansion vs fakeout)
+> 3. ARB quebra weekly low com volume? (Bearish candidate serio)
+> 4. BTC resolve compressao para cima ou baixo? (Decide se Morning permissivo
+>    era correcto ou cedo demais)
+> 5. WLD downgrade continua correcto? (Se cai outra vez, pode reentrar como
+>    bearish setup)
+
+**Conclusao Codex:** 
+> "Dia 3 recalibra Finding 001. Sistema pode estar detectando setups
+> estruturais 24h antes da confirmacao MAC. Nao e necessariamente
+> overpromotion; e ausencia de estagio semantico. Recomendacao Fase 2: nao
+> bloquear SETUP cedo, mas separar SETUP_EARLY de SETUP_CONFIRMED com
+> OBV/Volume/MAC. Hoje o sistema ganhou credito, mas ainda nao autorizacao."
+
+**Severidade Finding 001 actualizado:** medium-low (recalibrado de medium)
+**Accao agora:** observar 5 watch points nos proximos dias
+**Critério F Dia 3:** PASS (timing exacto + filtros funcionando)
+**Critério E Dia 3:** PASS (revisao feita, concordancia 4/6 + 1 PARCIAL)
+
+---
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
@@ -189,6 +321,61 @@ OBV FLAT + VOLUME_FLOW WEAK que Bruno-style classificaria WATCHLIST.
 **Accao Fase 1:** continuar observacao, acumular dados ate 14 Mai. Findings
 similares em dias subsequentes solidificam evidencia para Type 2 ou Type 3 pos-Fase 1.
 
+---
+
+### Finding 001a - 2026-05-03: Recalibracao do Finding 001
+
+**Detectado em:** Dia 3 (2026-05-03), apos 24h dos 5 SETUPs do Dia 2
+**Severidade:** medium-low (recalibrado de medium)
+**Reporters:** Codex (proposta) + Claude (concordancia, 6/6 cross-check)
+**Status:** Recalibracao do Finding 001 - sistema nao esta errado, esta incompleto
+
+**Reformulacao:**
+
+- Versao original (Finding 001): "Sistema promove SETUP estrutural sem MAC validation - overpromotion"
+- Versao recalibrada (001a): "Sistema promove SETUP estrutural CEDO; precisa distinguir SETUP_EARLY vs SETUP_CONFIRMED"
+
+**Evidencia:**
+
+Os 5 SETUPs do Dia 2 que parecemos "overpromoted" evoluiram em 24h:
+
+| SETUP Dia 2 | Bruno-style Dia 2 | Dia 3 | Bruno-style Dia 3 | Resultado |
+|-------------|-------------------|-------|-------------------|-----------|
+| TAOUSDT | NO (OBV FLAT) | OBV RISING + Vol STRONG | YES sinal | Sistema acertou |
+| INJUSDT | NO (OBV FLAT) | OBV RISING + Compression | YES sinal | Sistema acertou |
+| WLDUSDT | PARCIAL (bounce risk) | TREND MIXED, +2.10% | downgrade WATCHLIST | Sistema acertou tambem |
+| NEARUSDT | PARCIAL (frouxo) | OBV mais FLAT, Vol WEAK | NO | Setup falhou |
+| ARBUSDT | NO (score baixo) | AT_WEEKLY_LOW, OBV FALLING | PARCIAL | Setup ganhou forca |
+
+**Conclusao:** sistema **detecta estrutura** antes da **confirmacao de fluxo**. 24-48h depois, o fluxo confirma (TAO, INJ) ou rejeita (WLD). Isto e potencialmente uma **vantagem**, nao uma falha - permite ao operador **antecipar setups**.
+
+**Lacuna real:** sistema nao **comunica o estagio** do setup.
+
+**Recomendacao Fase 2 (NAO accionar agora):**
+
+Em vez de "bloquear SETUP cedo" (proposta original Finding 001), implementar:
+**Logica de transicao:**
+- Initial scan: SETUP_EARLY se estrutura sem confirmacao MAC
+- Re-scan diario: SETUP_EARLY -> SETUP_CONFIRMED se fluxo confirma
+- Re-scan diario: SETUP_EARLY -> SETUP_REJECTED se trend/score cai
+
+**Vantagem desta abordagem:**
+- Preserva capacidade de deteccao precoce do sistema
+- Da operador estagio claro para decisao
+- Bruno-style: SETUP_EARLY = WATCHLIST + alerta; SETUP_CONFIRMED = candidato real para entrada
+
+**Accao Fase 1:**
+- Continuar observacao
+- Validar hipotese 24-48h em mais dias (TAO/INJ continuam? ARB quebra? WLD recupera?)
+- Acumular evidencia ate 14 Mai
+- Considerar este Finding 001a + Finding 001 original como package para Type 2 pos-Fase 1
+
+**Watch points para validar (do Codex):**
+1. TAO: confirma ou exaure?
+2. INJ: rompe apos compressao ou falha?
+3. ARB: quebra weekly low com volume?
+4. BTC: resolve compressao para cima ou baixo?
+5. WLD: downgrade continua correcto?
 
 ---
 

@@ -8,3 +8,8 @@ venv/
 *.log
 desktop.ini
 
+
+
+# Legacy archived folder from Type 3 migration (2026-04-27)
+# Kept locally as historical reference, not tracked
+EURO MAIN_ARCHIVED_2026-04-27/
