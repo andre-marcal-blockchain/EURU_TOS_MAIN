@@ -1,0 +1,12 @@
+﻿# Migration manifest - Phase B-minimal
+# 2026-04-27 - Operator decision: Full data migration deferred.
+# Only 6 operational delta files migrated.
+# Legacy/historical triage deferred to post-migration workstream.
+
+08_DADOS_E_JOURNAL\AUDIT_REPORTS\DAILY_AUDIT_REPORT_2026-04-26.md
+08_DADOS_E_JOURNAL\AUDIT_REPORTS\DAILY_AUDIT_REPORT_2026-04-27.md
+08_DADOS_E_JOURNAL\JOURNAL_DAILY\JOURNAL_2026-04-26.md
+08_DADOS_E_JOURNAL\JOURNAL_DAILY\JOURNAL_2026-04-27.md
+08_DADOS_E_JOURNAL\SCORECARDS\SCOUT_REPORT_2026-04-27.md
+08_DADOS_E_JOURNAL\SCORECARDS\TRADE_MONITOR_REPORT_2026-04-27.md
+scripts\run_smoke_test.bat
