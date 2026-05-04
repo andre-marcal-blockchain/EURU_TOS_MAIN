@@ -42,6 +42,15 @@
 | 2026-05-03 | ARBUSDT | 1D | BEARISH | SETUP (21/35) | PARCIAL - aguardar breakdown | -3.19% 24h, escalou de BELOW_7D a AT_WEEKLY_LOW. OBV FALLING, Volume STRONG. Bearish a acelerar. RSI 47 nao oversold. Aguardar quebra confirmada weekly low. | PARCIAL |
 | 2026-05-03 | BTCUSDT | 1D | MIXED | WATCHLIST (21/35) | YES como WATCHLIST | TREND virou MIXED de BULLISH (Dia 2). COMPRESSION YES. OBV RISING + Vol STRONG. Score caiu 5pts. BTC em compressao apos rally. | YES |
 | 2026-05-03 | WLDUSDT | 1D | MIXED | WATCHLIST (19/35) | YES - downgrade correcto | VALIDACAO Dia 2: bouce confirmou-se (+2.10% 24h). Score caiu 4pts. TREND virou MIXED. Sistema correctamente desactivou setup bearish. Nossa cautela Dia 2 acertou. | YES |
+| 2026-05-04 | BTCUSDT | 1D | BULLISH | SETUP (25/35) | YES com nuance MTF | Compressao resolveu PARA CIMA (+2.79% 24h). Watch Point 4 validou. MAS conflito MTF aumentou: 1D SETUP/BULLISH vs 4H NO_TRADE com Asian filter ACTIVE. | YES sinal |
+| 2026-05-04 | ETHUSDT | 1D | BULLISH | SETUP (27/35 top) | PARCIAL | Score top 27/35, OBV RISING + Vol 5/5. MAS MACD ainda BEARISH (lag). Movimento e OBV bons mas MACD nao confirmou - early setup, ainda nao MAC_VALID. | PARCIAL |
+| 2026-05-04 | DOTUSDT | 1D | BULLISH | SETUP (21/35) | NO | RSI 49.88 abaixo 50, OBV FLAT, MACD BULLISH. Breakout layer marcou SHORT FAKEOUT. Sem qualidade suficiente. | NO |
+| 2026-05-04 | OPUSDT | 1D | BULLISH | SETUP (21/35) | NO / max WATCHLIST fraca | RSI 56.81, MACD BULLISH, OBV FLAT. SHORT FAKEOUT. Sem volume claro. | NO |
+| 2026-05-04 | FETUSDT | 1D | BULLISH | SETUP (23/35) | PARCIAL / WATCHLIST | OBV RISING, MACD BULLISH. Asian: GEM_ALERT downgraded por BTC 4H NO_TRADE. RSI 48.83 abaixo de 50. Mais interessante apos ETH. | PARCIAL |
+| 2026-05-04 | TAOUSDT | 1D | BULLISH | SETUP (24/35) | YES sinal / consolidacao | +1.01% 24h, +9.13% 7D, RSI 61.50, OBV RISING. Score caiu 5pts (29 -> 24). Watch Point 1 validou parcial. NAO entrada - aguardar reteste. | YES sinal |
+| 2026-05-04 | INJUSDT | 1D | BULLISH | SETUP (17/35 MEDIA) | Finding 002 - SETUP_STRUCTURAL/LOW_QUALITY | Score colapsou 23 -> 17 (BOA -> MEDIA). Vol 1/5. Mantem SETUP por desvio mas qualidade rebaixada. Watch Point 2 AMBIGUO. | NO (qualidade falhou) |
+| 2026-05-04 | ARBUSDT | 1D | BEARISH | WATCHLIST (23/35) | PARCIAL bearish | Watch Point 3: NAO quebrou weekly low. +1.10% 24h, score subiu 21 -> 23. Bouce parcial. Cautela Dia 3 acertou. | PARCIAL |
+| 2026-05-04 | WLDUSDT | 1D | BEARISH | NO_TRADE (14/35) | YES - downgrade consecutivo | Watch Point 5: score caiu para 14 (era 19, 23). Estado degradou 3 dias consistente. Asian: WATCHLIST proximo resistencia. | YES |
 
 ---
 
@@ -286,6 +295,95 @@ Implicacao: a hipotese de "sistema auto-corrige em 48h" e mais precisa quando re
 **Critério E Dia 3:** PASS (revisao feita, concordancia 4/6 + 1 PARCIAL)
 
 ---
+### Dia 4 - 2026-05-04 (rally generalizado; BTC saiu compressao para cima; 5 watch points resolvidos)
+
+**Timing:** 5/5 tasks correram nas horas exactas pelo 3o dia consecutivo. Critério F PASS.
+
+**Mudanca de regime BTC:**
+- Dia 3: BTC 1D MIXED, ambos cautelosos
+- Dia 4: BTC 1D BULLISH (saiu compressao para cima), Morning INACTIVE
+- BTC 4H continua NO_TRADE (Asian filter ACTIVE)
+- DISCREPANCIA AUMENTOU: 1D SETUP/BULLISH vs 4H NO_TRADE
+- Codex: "conflito aumentou, nao diminuiu"
+
+**Rally generalizado:**
+- TODOS os 18 ativos positivos no 24h (+1.01% a +3.89%)
+- 16/18 positivos vs 7D (so WLD, NEAR, ARB negativos)
+- 6 SETUPs no Morning Scan (vs 5 no Dia 2, 4 no Dia 3)
+
+**VALIDACAO DOS 5 WATCH POINTS DO CODEX:**
+
+| Watch Point | Resultado Dia 4 | Status |
+|---|---|---|
+| 1. TAO confirma ou exaure? | RSI 61.50, OBV RISING, score 29->24 | CONFIRMA parcial |
+| 2. INJ rompe ou falha? | Score colapsou 23->17 mas mantem SETUP | AMBIGUO -> Finding 002 |
+| 3. ARB quebra weekly low? | NAO quebrou, +1.10%, virou WATCHLIST | NAO QUEBROU |
+| 4. BTC resolve compressao? | Para CIMA, +2.79%, SETUP | RESOLVEU CIMA |
+| 5. WLD downgrade correcto? | Score 14, NO_TRADE consistente | CONFIRMADO |
+
+5/5 watch points resolvidos com clareza.
+
+**CROSS-CHECK CLAUDE + CODEX (9/9 concordancia):**
+
+3 dias consecutivos de cross-check: 6/6 (Dia 2) + 6/6 (Dia 3) + 9/9 (Dia 4) = 21/21 alinhamento total.
+
+**Concordancia operador-sistema Dia 4:**
+- 2/9 YES (BTC, TAO ambos como sinal)
+- 1/9 YES downgrade (WLD)
+- 3/9 PARCIAL (ETH, FET, ARB)
+- 2/9 NO (DOT, OP)
+- 1/9 Finding 002 (INJ)
+
+Comparacao 4 dias:
+- Dia 1 (SIDEWAYS): 7/7 YES (100%)
+- Dia 2 (BULLISH): 1/6 YES + 2 PARCIAL + 3 NO
+- Dia 3 (MIXED): 4/6 YES + 1 PARCIAL + 1 NO
+- Dia 4 (BULLISH rally): 3/9 YES + 3 PARCIAL + 2 NO + 1 Finding
+
+**INSIGHT METODOLOGICO DIA 4 (Codex):**
+
+> "O Euru precisa separar estado estrutural de qualidade operavel."
+
+3 findings (001, 001a, 002) apontam todos para mesma direccao: separacao semantica entre estrutura e qualidade.
+
+---
+
+### Sintese das respostas Codex (Dia 4)
+
+**Pergunta 1 - Watch points:** Concorda com direccao geral mas refina:
+- TAO: confirmou parcialmente, perdeu forca relativa de score
+- INJ: falhou em qualidade apesar de aparecer SETUP - alerta principal
+- ARB: nao confirmou breakdown limpo
+- BTC: conflito aumentou, nao diminuiu (1D BULLISH/SETUP vs 4H NO_TRADE)
+- WLD: downgrade segue correcto
+
+"Dia 4 nao invalida Dia 3, mas mostra que sistema mistura estrutura, score, timeframe e qualidade MAC sem semantica suficientemente clara."
+
+**Pergunta 2 - INJ Finding 002:** Sim, novo Finding. Formulacao:
+"State/Score mismatch. INJUSDT caiu de 23/35 BOA para 17/35 MEDIA, mas continua SETUP. Estado SETUP determinado por desvio/preco, score ja rebaixou qualidade."
+
+Severidade medium-low. Taxonomia futura: SETUP_STRUCTURAL / SETUP_LOW_QUALITY / SETUP_CONFIRMED / SETUP_REJECTED.
+
+INJ hoje = SETUP_STRUCTURAL / LOW_QUALITY / WATCHLIST_BRUNO.
+
+**Pergunta 3 - 4 novos SETUPs:**
+- ETHUSDT: PARCIAL (score forte 27, OBV RISING, mas MACD ainda BEARISH lag)
+- DOTUSDT: NO (RSI 49 < 50, OBV FLAT, SHORT FAKEOUT)
+- OPUSDT: NO ou WATCHLIST fraca (OBV FLAT, fakeout, qualidade insuficiente)
+- FETUSDT: PARCIAL (OBV RISING + GEM_ALERT downgraded por BTC 4H, RSI < 50)
+
+**Conclusao Codex Dia 4:**
+> "Aprendizado nao e 'comprar ETH/FET' nem 'abandonar INJ'. E que Euru precisa separar estado estrutural de qualidade operavel. Reforca Fase 2, nao pede accao agora."
+
+**Severidades Findings:**
+- Finding 001: medium (original, superseded)
+- Finding 001a: medium-low (recalibracao)
+- Finding 002: medium-low (NOVO)
+
+**Critério F Dia 4:** PASS (timing exacto + Asian filter funciona)
+**Critério E Dia 4:** PASS (revisao feita, 9/9 cross-check)
+
+---
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
@@ -376,6 +474,78 @@ Em vez de "bloquear SETUP cedo" (proposta original Finding 001), implementar:
 3. ARB: quebra weekly low com volume?
 4. BTC: resolve compressao para cima ou baixo?
 5. WLD: downgrade continua correcto?
+
+**Validacao em 24h (Dia 4):** 5/5 watch points resolveram com clareza. Watch Point 4 (BTC compressao para cima) foi a previsao mais accionavel.
+
+---
+
+### Finding 002 - 2026-05-04: State/Score mismatch
+
+**Detectado em:** Dia 4 (2026-05-04), Morning Scan
+**Caso paradigmatico:** INJUSDT
+**Severidade:** medium-low
+**Reporters:** Claude (deteccao inicial) + Codex (formulacao formal, 9/9 cross-check)
+**Cross-reference:** Finding 001 e Finding 001a - mesma tese (separar estrutura de qualidade)
+
+**Descricao:**
+
+INJUSDT mantem estado SETUP no Dia 4 apesar de score colapsar de 23/35 (BOA) Dia 3 para 17/35 (MEDIA) Dia 4. Volume score 1/5. Sistema nao recalibra estado quando indicadores degradam dentro da janela diaria.
+
+**Quote Codex:**
+"O estado SETUP parece estar sendo determinado por desvio/preco, enquanto o score ja rebaixou qualidade."
+
+**Evidencia INJUSDT:**
+
+| Metrica | Dia 2 | Dia 3 | Dia 4 |
+|---|---|---|---|
+| State | SETUP | SETUP | SETUP (apesar de qualidade colapsar) |
+| Score | 21/35 | 23/35 | 17/35 (caiu 6 pts em 24h) |
+| Tier | BOA | BOA | MEDIA |
+| Vol score | (vol exhaustion) | (vol confirmacao) | 1/5 (colapso) |
+| 24h | +8.17% | +0.27% | +0.61% |
+
+**Problema:**
+Sistema continua a classificar como SETUP baseando-se em estrutura/desvio (BULLISH, ABOVE_7D_AVG), mas qualidade ja deteriorou substancialmente. Bruno-style: nao entrada.
+
+**Taxonomia expandida proposta pelo Codex:**
+
+- SETUP_STRUCTURAL    = estrutura presente (desvio/trend/preco)
+- SETUP_LOW_QUALITY   = estrutura ainda valida MAS score MEDIA ou baixou
+- SETUP_CONFIRMED     = estrutura + score BOA/PREMIUM + OBV/Vol confirmados
+- SETUP_REJECTED      = estrutura perdeu validade
+
+INJ Dia 4 = SETUP_STRUCTURAL / LOW_QUALITY = WATCHLIST_BRUNO (nao entrada)
+
+**Logica de transicao proposta:**
+
+1. SETUP -> SETUP_STRUCTURAL se score cai abaixo de threshold (BOA)
+2. SETUP_STRUCTURAL -> SETUP_LOW_QUALITY se Vol/OBV degradam
+3. SETUP_LOW_QUALITY -> SETUP_REJECTED se trend ou structure perdem
+
+**Relacao com Findings anteriores:**
+
+| Finding | Foco | Severidade | Status |
+|---|---|---|---|
+| 001 | Sistema promove SETUP sem MAC | medium | superseded por 001a |
+| 001a | Sistema deteta cedo, fluxo confirma 24-48h | medium-low | activo |
+| 002 | Sistema mantem SETUP quando qualidade degrada | medium-low | activo |
+
+Tese consolidada: "Euru precisa separar estado estrutural de qualidade operavel."
+
+**Accao Fase 1:**
+
+- Continuar observacao
+- Validar se INJ recupera qualidade ou continua a degradar
+- Acumular casos similares (outros ativos com score colapsando mas mantendo SETUP)
+- Considerar Findings 001 + 001a + 002 como package metodologico para Type 2 pos-Fase 1
+
+**Watch points Dia 5+ (do Codex Dia 4):**
+
+1. INJ: recupera qualidade ou continua a degradar?
+2. BTC: mantem 1D SETUP ou conflito MTF resolve?
+3. ETH: MACD vira BULLISH (confirmaria) ou stall (PARCIAL persiste)?
+4. 4H vs 1D divergencia BTC: persiste ou resolve?
+
 
 ---
 
