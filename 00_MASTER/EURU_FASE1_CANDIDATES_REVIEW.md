@@ -60,6 +60,16 @@
 | 2026-05-05 | TAOUSDT | 1D | BULLISH | WATCHLIST (24/35) | YES downgrade | SETUP -> WATCHLIST. OBV virou FLAT (era RISING). Score 24 mantido. -1.21% 24h. Caso de score-state lag (Finding 002 v2). | YES downgrade |
 | 2026-05-05 | FETUSDT | 1D | BULLISH | WATCHLIST (21/35) | YES downgrade | SETUP -> WATCHLIST. OBV virou FALLING. Score 23 -> 21. -0.47% 24h. | YES downgrade |
 | 2026-05-05 | DOTUSDT | 1D | BULLISH | WATCHLIST (19/35) | YES downgrade | SETUP -> WATCHLIST. Score 21 -> 19. -0.96% 24h. OBV RISING mantido mas estado mudou por trend ambiguo. | YES downgrade |
+| 2026-05-06 | BTCUSDT | 1D | BULLISH | SETUP (27/35) | YES / BULLISH_EXTENDED_WATCH | RSI 68.66 zona critica (proximo 70). MACD BULLISH, OBV RISING, Vol STRONG. Asian 4H WATCHLIST (nao GEM_ALERT) - 1D bullish mas 4H nao limpo. Cautela vs aggressive entry-seeking. | YES com cautela |
+| 2026-05-06 | FETUSDT | 1D | BULLISH | SETUP (27/35 top) | Group A - YES com cautela 7D extended | RSI 56.80, MACD BULLISH, OBV RISING. +6.69% 24h, +9.76% 7D MUITO esticado. Score top dia. NAO entrada agora - aguardar reteste/pullback. | YES com cautela |
+| 2026-05-06 | LINKUSDT | 1D | BULLISH | SETUP (26/35) | Group A - YES escalou | Confirmou: score 24 -> 26. RSI 63.80 saudavel, MACD BULLISH, OBV RISING. +3.15% 24h, +6.29% 7D. Codex: "validacao do sinal long mais limpo" Dia 5. | YES |
+| 2026-05-06 | SOLUSDT | 1D | BULLISH | SETUP (26/35) | Group A - YES | RSI 55.66, MACD BULLISH, OBV RISING, Vol STRONG. +2.43% 24h, +3.29% 7D moderado. Mais saudavel que FET/OP por nao estar tao esticado. | YES |
+| 2026-05-06 | SUIUSDT | 1D | BULLISH | SETUP (26/35) | Group A - YES | RSI 60.65, MACD BULLISH, OBV RISING. +4.54% 24h, +6.19% 7D. Volume strong. Bom alinhamento MAC. | YES |
+| 2026-05-06 | OPUSDT | 1D | BULLISH | SETUP (25/35) | Group B - YES com cautela 7D extended | Validou Finding 001a magnificamente: SETUP_EARLY (D4 NO) -> SETUP_CONFIRMED (D5 PARCIAL) -> SETUP_CONFIRMED estavel (D6 score 25). MAS +7.03% 7D esticado. | YES com cautela |
+| 2026-05-06 | INJUSDT | 1D | BULLISH | SETUP (25/35) | Group C - NO Bruno-style | Score recuperou 17 -> 25 mas qualidade MAC ainda fraca: OBV FLAT, VOLUME WEAK, Asian NO_TRADE. Refina Finding 002b: score recupera rapido com rally, qualidade MAC nao. | NO |
+| 2026-05-06 | WLDUSDT | 1D | BULLISH | SETUP (20/35 MEDIA) | Group C - NO Bruno-style / SETUP_STRUCTURAL_LOW_QUALITY | Recuperou de NO_TRADE -> SETUP em 24h. Trend virou BULLISH. MAS RSI 45.24, OBV FLAT, VOLUME WEAK, Asian NO_TRADE. Score 20 MEDIA. Over-promotion por recuperacao de preco. | NO |
+| 2026-05-06 | ARBUSDT | 1D | BEARISH | NO_TRADE (20/35) | YES downgrade - bouce 3a vez | +3.43% 24h. RSI saiu de oversold (45 -> 51). Score caiu 24 -> 20. Suporte forte no weekly low - 3a tentativa short que falhou. Setup short repetidamente prematuro. | YES downgrade |
+| 2026-05-06 | TAOUSDT | 1D | BULLISH | WATCHLIST (24/35) | YES - Finding 002b validation | Mantem WATCHLIST e score 24 imutavel desde Dia 4 (24/24/24). Estado mudou Dia 5 mas score nao recalibrou. Caso paradigmatico Finding 002b (lag direccional). | YES |
 
 ---
 
@@ -515,6 +525,133 @@ SIM, caso bonito de SETUP_EARLY -> SETUP_CONFIRMED. Ontem OP era NO por OBV flat
 **Critério E Dia 5:** PASS (revisao feita, 9/9 cross-check)
 
 ---
+### Dia 6 - 2026-05-06 (rally massivo: 11 SETUPs simultaneos; risco over-promotion)
+
+**Timing:** 5/5 tasks correram nas horas exactas pelo 5o dia consecutivo. Critério F PASS.
+
+**EVENTO METODOLOGICO IMPORTANTE - Rally amplo:**
+
+11 ativos em SETUP simultaneamente (60% dos 18 monitorizados). Recorde da Fase 1.
+
+Trajectoria SETUPs:
+- Dia 1: 0
+- Dia 2: 5
+- Dia 3: 4
+- Dia 4: 6
+- Dia 5: 4
+- **Dia 6: 11** (DOBRO do Dia 5)
+
+**Mudanca de regime:**
+- Asian Master Filter voltou a ACTIVE (BTC 4H WATCHLIST - caiu de GEM_ALERT)
+- Morning Master Filter INACTIVE (BTC 1D BULLISH)
+- BTC 4H NAO fez breakout - resolveu lateralmente, voltou a divergencia 4H/1D
+
+**VALIDACAO DOS 6 WATCH POINTS DO DIA 5:**
+
+| WP | Resultado Dia 6 | Status |
+|---|---|---|
+| 1. INJ score acompanha downgrade? | RECUPEROU FORTE +8 pts (17 -> 25). Estado SETUP. | RECUPERACAO RAPIDA |
+| 2. TAO score acompanha downgrade? | NAO. Score 24 mantido (D4=D5=D6). Estado WATCHLIST. | VALIDACAO Finding 002b |
+| 3. LINK confirma como entrada? | SIM. Score 24 -> 26. RSI 63 saudavel. | CONFIRMOU |
+| 4. ARB quebra weekly low ou bouce? | BOUCE (+3.43% 24h). 3a tentativa short que falhou. | BOUCE DEFINITIVO |
+| 5. OP continua a confirmar? | SIM ESTAVEL. Score 22 -> 25. Validou Finding 001a forte. | SETUP_CONFIRMED estavel |
+| 6. BTC 4H GEM_ALERT resolve? | NAO. Voltou a WATCHLIST. Resolveu lateralmente. | NAO BREAKOUT |
+
+6/6 watch points resolvidos. Validacoes massivas de Finding 001a (OP) e Finding 002b (TAO + INJ refinamento).
+
+**CASOS PARADIGMATICOS DO DIA:**
+
+**OP (Finding 001a):** Trajectoria perfeita
+- Dia 4: state SETUP, Bruno-style NO (OBV FLAT, fakeout)
+- Dia 5: state SETUP, Bruno-style YES/PARCIAL (OBV RISING, MAC alinhado)
+- Dia 6: state SETUP, Bruno-style YES com cautela 7D extended
+
+**INJ (refinamento Finding 002b):** Score recupera rapido com rally
+- Score 17 -> 25 em 24h
+- MAS qualidade MAC ainda fraca (OBV FLAT, VOLUME WEAK)
+- Codex: "Score recupera rapido com rally, mas estado operavel ainda precisa OBV/volume"
+
+**TAO (validacao Finding 002b):** Score-state lag persistente
+- Score 24 imutavel desde Dia 4 (D4=24, D5=24, D6=24)
+- Estado mudou (SETUP -> WATCHLIST) mas score nao acompanhou
+
+**ARB (3a tentativa bearish):** Suporte forte no weekly low
+- Dia 3: SETUP bearish, PARCIAL aguardando breakdown
+- Dia 4: WATCHLIST (bouce parcial)
+- Dia 5: SETUP bearish novamente
+- Dia 6: NO_TRADE (bouce definitivo +3.43%)
+- Padrao: setup short repetidamente prematuro
+
+**CROSS-CHECK CLAUDE + CODEX (10/10 concordancia):**
+
+Acumulado Dias 2-6: 6/6 + 6/6 + 9/9 + 9/9 + **10/10** = **40/40 alinhamento total**.
+
+**Concordancia operador-sistema Dia 6 (10 entradas):**
+- 4/10 YES (LINK, SOL, SUI, TAO downgrade)
+- 3/10 YES com cautela (BTC RSI alto, FET/OP 7D extended)
+- 1/10 YES downgrade (ARB)
+- 2/10 NO Bruno-style (INJ, WLD - qualidade MAC fraca apesar de SETUP)
+
+**FINDING 003 EMERGENTE:**
+
+Codex propos novo finding:
+> "Quando BTC 1D esta BULLISH e o mercado sobe de forma ampla, o Core pode promover muitos ativos a SETUP simultaneamente, sem distinguir suficientemente regime bullish geral de setup individual acionavel."
+
+Severidade: medium. Accao: observar, nao corrigir durante Fase 1.
+
+Ver Finding 003 abaixo.
+
+---
+
+### Sintese das respostas Codex (Dia 6)
+
+**Pergunta 1 - 11 SETUPs e FOMO risk?**
+"Dia 6 e o primeiro dia com risco claro de over-promotion em rally amplo. Nao invalida findings anteriores, adiciona camada nova. Sistema esta correcto em reconhecer que mercado ficou bullish em 1D, mas pode estar tratando rally amplo como qualidade individual de setup."
+
+**Pergunta 2 - INJ score recuperou: invalida Finding 002b?**
+"Refina, nao invalida. Score recupera rapido com rally, mas estado operavel ainda precisa OBV/volume. Score e state podem voltar a parecer fortes antes de qualidade MAC voltar." 
+
+INJ Bruno-style: NO ou PARCIAL fraco. Tendencia: NO para entrada.
+
+**Pergunta 3 - WLD novo SETUP genuino?**
+NO. "Otimo exemplo de over-promotion por recuperacao de preco. Nao chamaria SETUP_CONFIRMED; chamaria SETUP_STRUCTURAL_LOW_QUALITY / NO Bruno-style."
+
+**Pergunta 4 - BTC RSI 68.66 - critical zone?**
+SIM mas como nota metodologica, nao abort trigger. "BTC RSI near 70 shifts posture from aggressive entry-seeking to confirmation/profit-protection/watchlist discipline."
+
+Como nao ha trades, efeito pratico: nao interpretar "muitos SETUPs" como permissao para agir.
+
+**Pergunta 5 - Classificacao 11 SETUPs?**
+
+Grupos sugeridos:
+- **Grupo A** (melhores observacionais): LINK, OP, FET, SOL, SUI, RENDER
+- **Grupo B** (cuidado por extensao 7D): BTC (+3.81%), LINK (+6.29%), OP (+7.03%), FET (+9.76%)
+- **Grupo C** (rejeitado Bruno/MAC): WLD, INJ
+- **Grupo D** (nao perseguir): qualquer ativo SETUP apenas por seguir rally amplo, sem confirmacao individual
+
+**Conclusao Codex Dia 6:**
+> "Hoje o sistema enxergou bem o regime. Ainda nao separa bem o que e rally do mercado versus setup individual acionavel."
+
+**Diagnostico refinado para 4 dimensoes:**
+> "Euru precisa separar:
+> 1. regime bullish amplo
+> 2. estrutura individual
+> 3. qualidade MAC
+> 4. timing operavel"
+
+(Antes era 1 problema "separar estrutura de qualidade". Agora 4 dimensoes - mais maduro.)
+
+**Severidades Findings:**
+- Finding 001: medium (original, superseded)
+- Finding 001a: medium-low (validado em OP D5+D6)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (refinado por INJ D6: lag direccional assimetrico)
+- **Finding 003: medium (NOVO) - rally-wide over-promotion**
+
+**Critério F Dia 6:** PASS (timing exacto + filter coerente para regime)
+**Critério E Dia 6:** PASS (revisao feita, 10/10 cross-check)
+
+---
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
@@ -759,6 +896,107 @@ Taxonomia expandida (consolida 001a + 002 + 002b):**Score recalibration logic ad
 4. ARB quebra weekly low ou bouce?
 5. OP continua a confirmar (SETUP_CONFIRMED estavel) ou degrada?
 6. BTC 4H GEM_ALERT resolve para breakout ou volta a NO_TRADE?
+
+**Validacao Dia 6:** BTC 4H NAO fez breakout. Voltou a WATCHLIST. Resolveu lateralmente. Pre-breakout regime persiste. Asian Master Filter voltou a ACTIVE.
+
+---
+
+### Finding 003 - 2026-05-06: Rally-wide SETUP over-promotion risk
+
+**Detectado em:** Dia 6 (2026-05-06), Morning Scan
+**Caso paradigmatico:** 11 SETUPs simultaneos no Morning Scan
+**Severidade:** medium
+**Reporters:** Codex (formulacao formal) + Claude (concordancia, 10/10 cross-check)
+**Status:** NOVO finding emergente
+
+**Cross-reference com Findings anteriores:**
+
+Finding 003 e relacionado mas tem natureza diferente dos anteriores:
+- 001/001a = estagio do setup e confirmacao posterior
+- 002/002b = desalinhamento entre state, score e qualidade operavel  
+- **003 = problema de contexto de mercado contaminando muitos ativos ao mesmo tempo**
+
+Nao e apenas score-state mismatch. E sobre regime bullish amplo afectando promocoes.
+
+**Tese curta:**
+
+"Quando BTC 1D esta BULLISH e o mercado sobe de forma ampla, o Core pode promover muitos ativos a SETUP simultaneamente, sem distinguir suficientemente regime bullish geral de setup individual acionavel."
+
+**Evidencia Dia 6:**
+
+| Asset | State | Score | Bruno-style | Razao |
+|---|---|---|---|---|
+| BTCUSDT | SETUP | 27 | YES com cautela | RSI 68.66 zona critica |
+| FETUSDT | SETUP | 27 | YES com cautela | +9.76% 7D MUITO esticado |
+| LINKUSDT | SETUP | 26 | YES | Confirmou metodicamente |
+| SOLUSDT | SETUP | 26 | YES | Saudavel |
+| SUIUSDT | SETUP | 26 | YES | Bom alinhamento MAC |
+| OPUSDT | SETUP | 25 | YES com cautela | +7.03% 7D extended |
+| INJUSDT | SETUP | 25 | NO | OBV FLAT, VOLUME WEAK |
+| ADAUSDT | SETUP | 24 | (Group D) | Rally-driven sem analise individual |
+| AVAXUSDT | SETUP | 24 | (Group D) | Rally-driven sem analise individual |
+| DOTUSDT | SETUP | 24 | (Group D) | Rally-driven sem analise individual |
+| WLDUSDT | SETUP | 20 MEDIA | NO | Recuperacao de preco sem MAC |
+
+**Padrao revelado:** sistema promoveu 11 ativos a SETUP em rally generalizado. Bruno-style:
+- 6 sao Bruno-style validos (Grupo A: LINK, SOL, SUI, OP) ou validos com cautela (Grupo B: BTC, FET, OP, LINK)
+- 2 sao Bruno-style NO (Grupo C: INJ, WLD) - qualidade MAC fraca
+- 3 sao "rally-driven" (Grupo D: ADA, AVAX, DOT) - sem confirmacao individual clara
+
+**Diagnostico refinado pelo Codex (4 dimensoes):**
+
+Euru precisa separar:
+1. **Regime bullish amplo** (BTC 1D BULLISH, mercado sobe)
+2. **Estrutura individual** (desvio/preco/trend de cada ativo)
+3. **Qualidade MAC** (OBV/volume confirmando ou nao)
+4. **Timing operavel** (RSI, distancia weekly avg, R:R)
+
+Atualmente o Core mistura 1 com 2 quando regime e bullish.
+
+**Quote Codex (sintese):**
+> "Hoje o sistema enxergou bem o regime. Ainda nao separa bem o que e rally do mercado versus setup individual acionavel."
+
+**Recomendacao Fase 2 (NAO accionar agora):**
+
+Logica futura proposta:**Vantagens desta abordagem:**
+- Distingue rally-rides genericos de setups individuais reais
+- Preserva capacidade do sistema detectar todos os movimentos
+- Da operador semantica clara para decisao
+- Bruno-style: SETUP_INDIVIDUAL = candidato real para entrada; SETUP_RALLY_DRIVEN = WATCHLIST passive
+
+**Relacao com Findings anteriores (consolidado):**
+
+| Finding | Foco | Severidade | Status | Validacao |
+|---|---|---|---|---|
+| 001 | Sistema promove SETUP sem MAC | medium | superseded por 001a | - |
+| 001a | Sistema deteta cedo, fluxo confirma 24-48h | medium-low | activo | OP D5+D6 |
+| 002 | Sistema mantem SETUP quando qualidade degrada | medium-low | superseded por 002b | - |
+| 002b | Lag entre score-estado-qualidade | medium-low | activo | TAO D5+D6, INJ D6 (refinamento direccional assimetrico) |
+| **003** | **Rally-wide over-promotion** | **medium** | **NOVO activo** | **Dia 6: 11 SETUPs simultaneos** |
+
+**Tese consolidada da Fase 1 (5 findings, 4 dimensoes):**
+
+Sistema mistura estrutura, score, timeframe, regime e qualidade MAC sem semantica suficientemente clara. Precisa de:
+1. Estados explicitos (SETUP_EARLY/CONFIRMED/LOW_QUALITY/REJECTED/RALLY_DRIVEN/EXTENDED)
+2. MTF_ALIGNMENT field (4H vs 1D)
+3. Score-state synchronization
+4. Regime-vs-individual separation (resolves Finding 003)
+
+**Accao Fase 1:**
+- Continuar observacao
+- Validar Finding 003 nos proximos dias com mais regimes diferentes
+- T+7d checkpoint amanha (7 Maio) - momento adequado para sintese intermedia
+- Acumular evidencia ate 14 Maio
+
+**Watch points para Dia 7 (T+7d checkpoint):**
+
+1. Rally Dia 6 mantem-se ou comeca a corrigir? (validacao Finding 003)
+2. INJ score continua a "subir com rally" sem MAC confirmar?
+3. WLD recupera qualidade MAC ou downgrade volta?
+4. BTC RSI continua subindo (overbought) ou consolida?
+5. Asian filter continua active ou volta a inactive?
+6. Algum SETUP do Dia 6 evolui para SETUP_CONFIRMED estavel ou degrada?
+
 
 
 
