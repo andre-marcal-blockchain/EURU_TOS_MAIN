@@ -1,4 +1,4 @@
-﻿# EURU_FASE1_CANDIDATES_REVIEW.md
+# EURU_FASE1_CANDIDATES_REVIEW.md
 
 **Periodo:** 2026-04-30 a 2026-05-14 (14 dias)
 **Operador:** Andre Marcal
@@ -70,6 +70,16 @@
 | 2026-05-06 | WLDUSDT | 1D | BULLISH | SETUP (20/35 MEDIA) | Group C - NO Bruno-style / SETUP_STRUCTURAL_LOW_QUALITY | Recuperou de NO_TRADE -> SETUP em 24h. Trend virou BULLISH. MAS RSI 45.24, OBV FLAT, VOLUME WEAK, Asian NO_TRADE. Score 20 MEDIA. Over-promotion por recuperacao de preco. | NO |
 | 2026-05-06 | ARBUSDT | 1D | BEARISH | NO_TRADE (20/35) | YES downgrade - bouce 3a vez | +3.43% 24h. RSI saiu de oversold (45 -> 51). Score caiu 24 -> 20. Suporte forte no weekly low - 3a tentativa short que falhou. Setup short repetidamente prematuro. | YES downgrade |
 | 2026-05-06 | TAOUSDT | 1D | BULLISH | WATCHLIST (24/35) | YES - Finding 002b validation | Mantem WATCHLIST e score 24 imutavel desde Dia 4 (24/24/24). Estado mudou Dia 5 mas score nao recalibrou. Caso paradigmatico Finding 002b (lag direccional). | YES |
+| 2026-05-07 | BTCUSDT | 1D | BULLISH | WATCHLIST (26/35) | YES downgrade | Sistema corrigiu RSI 68.66 -> 66.50. Score 27 -> 26. Estado SETUP -> WATCHLIST. -0.42% 24h. Validou nota Dia 6 BULLISH_EXTENDED_WATCH. | YES downgrade |
+| 2026-05-07 | SOLUSDT | 1D | BULLISH | SETUP (28/35 PREMIUM) | YES SETUP_CONFIRMED - sinal long mais limpo do dia | 1o PREMIUM da Fase 1. RSI 58.47 saudavel, MACD BULLISH, OBV RISING, Vol STRONG. +1.76% 24h, +4.04% 7D moderado. Mais limpo que LINK Dia 7 (RSI 65, 7D +6.14%). | YES |
+| 2026-05-07 | TAOUSDT | 1D | BULLISH | SETUP (29/35 PREMIUM) | YES com cautela - recalibracao rapida | WATCHLIST 24 -> SETUP 29 PREMIUM em 24h. RSI 66.81, +8.16% 24h, +9.06% 7D. Validou Finding 002b: score recalibra rapido para cima quando OBV/Volume confirmam. Ja extended - nao chase. | YES com cautela |
+| 2026-05-07 | FETUSDT | 1D | BULLISH | SETUP (27/35) | YES com cautela 7D extended | Score 27 mantido. RSI 56.80, MACD BULLISH, OBV RISING. +0.13% 24h, +7.85% 7D. Group B Codex - cautela por extensao. | YES com cautela |
+| 2026-05-07 | LINKUSDT | 1D | BULLISH | SETUP (26/35) | YES - menos limpo que SOL | Score 26 mantido. RSI 65.09, MACD BULLISH, OBV RISING. +1.22% 24h, +6.14% 7D. Codex: "ainda forte mas menos limpo que SOL por extensao maior". | YES |
+| 2026-05-07 | OPUSDT | 1D | BULLISH | SETUP (26/35) | SETUP_CONFIRMED_EXTENDED / HOLD-not-chase | RSI 70.73 cruzou overbought. +9.56% 24h, +14.25% 7D MUITO esticado. Finding 003 territory - rally-driven extension. Trajetoria 001a completa: D4 NO -> D5 PARCIAL -> D6 CONFIRMED -> D7 EXTENDED. Bruno-style: HOLD nao chase. | NO entrada / HOLD se em posicao |
+| 2026-05-07 | INJUSDT | 1D | BULLISH | SETUP (21/35) | NO entrada - Finding 002b inverso | Score caiu 25 -> 21 (D6 -> D7) mas mantem estado SETUP. RSI 65.76, OBV RISING. Caso classico Finding 002b direccional: score recalibra para baixo mais devagar que estado. | NO |
+| 2026-05-07 | WLDUSDT | 1D | BULLISH | SETUP (21/35 BOA) | DUVIDA / WATCHLIST | Score 20 MEDIA -> 21 BOA marginal. RSI 46.59 ainda nao saudavel-bullish. Recuperacao incompleta. | DUVIDA |
+| 2026-05-07 | AVAXUSDT | 1D | BULLISH | SETUP (25/35) | YES/PARCIAL - Group D rally breadth | RSI 56.92, MACD BULLISH, OBV RISING, Vol STRONG. Bom alinhamento mas Group D Codex (rally-driven). Finding 003 territory. | YES/PARCIAL |
+| 2026-05-07 | SUIUSDT | 1D | BULLISH | WATCHLIST (24/35) | YES downgrade | SETUP 26 -> WATCHLIST 24. -0.34% 24h. Sistema corrigiu sem MAC confirmation. | YES downgrade |
 
 ---
 
@@ -652,6 +662,127 @@ Grupos sugeridos:
 **Critério E Dia 6:** PASS (revisao feita, 10/10 cross-check)
 
 ---
+### Dia 7 - 2026-05-07 (rally selectivo; mixed regime; 1o PREMIUM da Fase 1; Operational Note 001)
+
+**Timing:** 4/5 tasks correram nas horas exactas. Daily Audit das 08:30 NAO correu por sleep do PC durante ausencia operador (8h-14h). Recuperou as 15:51:13 via StartWhenAvailable. Ver Operational Note 001 no checkpoint T+7D.
+
+**EVENTO METODOLOGICO IMPORTANTE - Mixed regime:**
+
+Apos rally amplo Dia 6 (11 SETUPs), Dia 7 mostra rally SELECTIVO:
+- BTC corrigiu (SETUP 27 -> WATCHLIST 26, RSI 68 -> 66)
+- Mas TAO/SOL/OP escalaram
+- 8 SETUPs (vs 11 Dia 6)
+- Asian filter INACTIVE (BTC 4H GEM_ALERT)
+- Morning filter INACTIVE mas BTC trend MIXED (era BULLISH Dia 6)
+
+Codex: "rally seletivo / mixed regime, exatamente ambiente em que Bruno-style exige selecao, nao euforia."
+
+**VALIDACAO DOS 6 WATCH POINTS DO DIA 6:**
+
+| WP | Resultado Dia 7 | Status |
+|---|---|---|
+| 1. Rally Dia 6 mantem ou corrige? | MIXED: BTC corrigiu, TAO/SOL/OP escalaram | RALLY SELECTIVO |
+| 2. INJ score continua a "subir com rally"? | Score CAIU 25 -> 21, mantem SETUP | Finding 002b direccional |
+| 3. WLD recupera qualidade MAC? | Marginal: score 20 -> 21, RSI 46.59 | NAO recuperou |
+| 4. BTC RSI continua subindo? | NAO. RSI 68.66 -> 66.50, downgrade | Sistema corrigiu |
+| 5. Asian filter active ou inactive? | INACTIVE (BTC 4H GEM_ALERT) | Accionavel novamente |
+| 6. SETUPs Dia 6 evoluem? | Mixed: 4 mantem/escalam, 2 downgrade, 2 caem score | Mixed evolution |
+
+6/6 watch points resolvidos.
+
+**CASOS PARADIGMATICOS DIA 7:**
+
+**SOLUSDT (1o PREMIUM da Fase 1):** 
+- Score SETUP 26 -> SETUP 28 PREMIUM
+- RSI 58.47 saudavel, MACD BULLISH, OBV RISING, Vol STRONG
+- +1.76% 24h, +4.04% 7D moderado
+- Codex: "SOL = melhor long signal do Dia 7, mais limpo que LINK"
+
+**TAOUSDT (Finding 002b refinement):**
+- WATCHLIST 24 -> SETUP 29 PREMIUM em 24h
+- Codex: "score-state recalibration is asymmetric AND fast on confirmation"
+- Quando OBV/Volume confirmam, score recalibra rapido para cima
+- Mas RSI 66.81 + 7D 9.06% ja extended - nao chase
+
+**OPUSDT (territorio Finding 003 + 001a evolucao):**
+- D4: NO (OBV FLAT) -> D5: PARCIAL -> D6: CONFIRMED -> D7: EXTENDED
+- RSI 70.73 cruzou overbought
+- +14.25% 7D MUITO esticado
+- Codex: "SETUP_CONFIRMED_EXTENDED / HOLD-not-chase. Se em posicao: protect/partial/trail. Se fora: nao chase."
+- Nova taxonomia emergiu: SETUP_CONFIRMED_EXTENDED
+
+**INJUSDT (Finding 002b direccional confirmado):**
+- Score 25 (D6) -> 21 (D7) mas mantem SETUP
+- Score recalibra para baixo MAIS DEVAGAR que estado
+- Lag direccional asymetrico
+
+**CROSS-CHECK CLAUDE + CODEX (12/12 concordancia):**
+
+Acumulado Dias 2-7: 6/6 + 6/6 + 9/9 + 9/9 + 10/10 + 12/12 = **52/52 alinhamento total**.
+
+**Concordancia operador-sistema Dia 7 (10 entradas):**
+- 3/10 YES (SOL, LINK, AVAX/PARCIAL)
+- 4/10 YES com cautela (BTC downgrade, TAO, FET, OP)
+- 2/10 YES downgrade (SUI, BTC)
+- 1/10 NO entrada (INJ Finding 002b)
+
+Comparacao 7 dias:
+- Dia 1 (SIDEWAYS): 7/7 YES
+- Dia 2 (BULLISH): 1/6 YES + 2 PARCIAL + 3 NO
+- Dia 3 (MIXED): 4/6 YES + 1 PARCIAL + 1 NO
+- Dia 4 (BULLISH rally): 3/9 YES + 3 PARCIAL + 2 NO
+- Dia 5 (BULLISH consolidacao): 8/9 YES (todos com matiz)
+- Dia 6 (BULLISH amplo): 8/10 + 2 NO + Finding 003
+- Dia 7 (MIXED selectivo): 7/10 + 3 PARCIAL/cautela
+
+**OPERATIONAL NOTE 001 (Daily Audit sleep recovery):**
+
+PC entrou em sleep durante ausencia operador 8h-14h. Daily Audit recuperou as 15:51:13 via StartWhenAvailable flag.
+
+- Critério F (timing): PASS com nota separada
+- Script saudavel: 0 FAIL / 0 WARN / 7 PASS
+- Falha foi hardware availability, nao script health
+- Implicacao Fase 2 backlog: monitorizacao separada hardware vs script
+
+**Severidades Findings (sem alteracoes Dia 7, refinamento Finding 002b):**
+- Finding 001: medium (superseded)
+- Finding 001a: medium-low (validado em OP D4-D7)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (REFINADO Dia 7 - "asymmetric AND fast on confirmation")
+- Finding 003: medium (validado em OP D7 RSI 70 + 14.25% 7D)
+
+**Critério F Dia 7:** PASS (com Operational Note 001)
+**Critério E Dia 7:** PASS (revisao feita, 12/12 cross-check)
+**Critério G Dia 7:** PASS (preenchido pos-checkpoint)
+### Sintese das respostas Codex (Dia 7)
+
+**Pergunta 1 - Rally manteve ou corrigiu?**
+"MIXED, nao continuacao bullish limpa nem correccao ampla. BTC aliviou para WATCHLIST, mas TAO/SOL/OP/FET/LINK continuam ou escalam. ETH NO_TRADE. Asian: BTC 4H GEM_ALERT. Rally nao acabou, ficou seletivo. Bruno-style exige selecao, nao euforia."
+
+**Pergunta 2 - TAO 24 -> 29 PREMIUM refina Finding 002b?**
+SIM. "Finding 002b refinement: score-state recalibration is asymmetric AND fast on confirmation." TAO saiu de WATCHLIST (OBV flat/weak) para SETUP PREMIUM quando OBV/volume confirmaram. RSI 66.81 + 7D +9.06% ja perto de SETUP_CONFIRMED_EXTENDED.
+
+**Pergunta 3 - OPUSDT RSI 70.73:**
+"OPUSDT = SETUP_CONFIRMED_EXTENDED / HOLD-not-chase". Confirmou estrutura e fluxo, mas entrou Finding 003 territory. RSI 70.73, +14.25% 7D, +9.56% 24h. Bruno-style: se em posicao, protect/partial/trail. Se fora, nao perseguir.
+
+**Pergunta 4 - SOL 1o PREMIUM:**
+SIM, YES claro. Mais limpo que LINK Dia 7. SOL: 28/35 PREMIUM, RSI 58.47, 7D +4.04%. LINK: 26/35 BOA, RSI 65.09, 7D +6.14%. SOL menos esticado, score maior. "SOL = melhor long signal do Dia 7. LINK = ainda forte mas menos limpo que SOL por extensao maior."
+
+**Pergunta 5 - Daily Audit sleep:**
+PASS com Operational Note 001 (nao FAIL). "Daily Audit gerou report do dia. 0 FAIL / 0 WARN / 7 PASS. StartWhenAvailable funcionou. Falha foi logistica/hardware sleep, nao falha do script ou task. PC 24/7 policy not fully immune to sleep. Daily Audit recovered via StartWhenAvailable at 15:51. No data loss, but timing exactness criterion should distinguish script health from hardware availability."
+
+**Sobre ADA / AVAX / DOT:**
+- AVAX: SETUP 25, RSI 56.92, MACD BULLISH, OBV RISING, Volume STRONG -> YES/PARCIAL
+- DOT: SETUP 24, RSI 58.24, MACD BULLISH, OBV RISING, Volume STRONG -> YES/PARCIAL
+- ADA: SETUP 24, RSI 61.81, MACD BULLISH, OBV RISING, Volume STRONG -> YES/PARCIAL
+
+Todos bons sinais de rally breadth, Group D contexto Finding 003.
+
+**Sintese Codex Dia 7:**
+"Dia 7 = rally seletivo / mixed regime. BTC alivia para WATCHLIST, mas 4H continua GEM_ALERT. SOL surge como melhor SETUP_CONFIRMED do dia. TAO valida recalibracao rapida para cima, mas ja extended. OP entra em SETUP_CONFIRMED_EXTENDED / HOLD-not-chase. INJ recupera score, mas precisa cuidado por historico recente. Daily Audit atraso = PASS com operational note sobre sleep."
+
+**Decisao Codex (mantida):**
+"Continuar Fase 1 sem alteracao ate T+14d. Findings para backlog Fase 2. Sem novas tasks. Sem paper trades."
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
