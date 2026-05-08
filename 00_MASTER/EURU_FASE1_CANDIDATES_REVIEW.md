@@ -80,6 +80,15 @@
 | 2026-05-07 | WLDUSDT | 1D | BULLISH | SETUP (21/35 BOA) | DUVIDA / WATCHLIST | Score 20 MEDIA -> 21 BOA marginal. RSI 46.59 ainda nao saudavel-bullish. Recuperacao incompleta. | DUVIDA |
 | 2026-05-07 | AVAXUSDT | 1D | BULLISH | SETUP (25/35) | YES/PARCIAL - Group D rally breadth | RSI 56.92, MACD BULLISH, OBV RISING, Vol STRONG. Bom alinhamento mas Group D Codex (rally-driven). Finding 003 territory. | YES/PARCIAL |
 | 2026-05-07 | SUIUSDT | 1D | BULLISH | WATCHLIST (24/35) | YES downgrade | SETUP 26 -> WATCHLIST 24. -0.34% 24h. Sistema corrigiu sem MAC confirmation. | YES downgrade |
+| 2026-05-08 | BTCUSDT | 1D | SIDEWAYS | NO_TRADE (24/35) | YES gate active | BTC trend BULLISH -> SIDEWAYS (1a vez fora Dia 1). Master Filter Morning ACTIVE 2a vez na Fase 1. -1.64% 24h, -0.02% 7D. Score 26 -> 24. Macro gate fechou correctamente. | YES |
+| 2026-05-08 | ETHUSDT | 1D | BEARISH | WATCHLIST (27/35 LIDER) | WATCHLIST forca relativa | Score subiu 23 -> 27 (lider do dia). MAS MACD BEARISH + OBV FALLING + -1.97% 24h, -1.93% 7D. Sem BTC 1D bullish, nao entrada. Codex: "forca relativa interessante" - observacao, nao Finding 004 (ainda). | WATCHLIST observacao |
+| 2026-05-08 | SOLUSDT | 1D | BULLISH | WATCHLIST (26/35) | WATCHLIST forte / retest candidate | PREMIUM 28 -> BOA 26. -0.20% 24h, +2.89% 7D moderado. Corrigiu MENOS que TAO/LINK - manteve qualidade relativa. Se mercado voltar bullish, retest candidate. | WATCHLIST forte |
+| 2026-05-08 | TAOUSDT | 1D | BULLISH | WATCHLIST (21/35) | POST_EXTENSION_COOLDOWN | Score colapsou 29 PREMIUM -> 21 BOA em 24h (-8 pts). Validou cautela "nao chase" Dia 7. -1.78% 24h. Refinamento 002b: regime-sensitive descendente. SETUP_CONFIRMED_EXTENDED -> POST_EXTENSION_COOLDOWN. | YES cautela acertou |
+| 2026-05-08 | LINKUSDT | 1D | BULLISH | WATCHLIST (20/35 MEDIA) | WATCHLIST perdeu qualidade | Score 26 BOA -> 20 MEDIA (-6 pts). -1.10% 24h. Recalibracao descendente rapida. Refinamento 002b: regime-sensitive descendente. | YES downgrade |
+| 2026-05-08 | OPUSDT | 1D | BULLISH | WATCHLIST (25/35) | EXTENDED_WATCH / DISTRIBUTION_RISK | RSI 73.28 (subiu de 70.73 D7 mesmo com Master Filter). +3.11% 24h, +14.33% 7D. Estado WATCHLIST mas qualidade preservada. Caso paradigmatico Finding 002b refinement v2 (lag persistente). Codex: "extended risk, nao chase". | NO entrada |
+| 2026-05-08 | FETUSDT | 1D | BULLISH | WATCHLIST (26/35) | WATCHLIST qualidade preservada | Score 27 -> 26 marginal. RSI 56.80, MACD BULLISH, OBV RISING. +0.54% 24h, +6.58% 7D. Caso similar OP de qualidade preservada apesar de Master Filter. | WATCHLIST |
+| 2026-05-08 | INJUSDT | 1D | BULLISH | WATCHLIST (22/35) | WATCHLIST lag direccional | Score 21 -> 22 (+1 marginal). RSI 65.87, OBV RISING. Caso de lag direccional indeterminado - nada confirmou claramente nem para cima nem para baixo. Finding 002b refinement v2 evidencia. | WATCHLIST |
+| 2026-05-08 | ARBUSDT | 1D | BEARISH | WATCHLIST (23/35) | VIRADA - novo padrao | Apos 3 tentativas short falhadas (D3, D4, D5 bouce), ARB virou positivo. +2.55% 24h, +5.50% 7D. MACD BEARISH mas OBV RISING. Validacao adicional "suporte forte weekly low". Reversal completo? | OBSERVAR |
 
 ---
 
@@ -780,6 +789,142 @@ Todos bons sinais de rally breadth, Group D contexto Finding 003.
 
 **Sintese Codex Dia 7:**
 "Dia 7 = rally seletivo / mixed regime. BTC alivia para WATCHLIST, mas 4H continua GEM_ALERT. SOL surge como melhor SETUP_CONFIRMED do dia. TAO valida recalibracao rapida para cima, mas ja extended. OP entra em SETUP_CONFIRMED_EXTENDED / HOLD-not-chase. INJ recupera score, mas precisa cuidado por historico recente. Daily Audit atraso = PASS com operational note sobre sleep."
+
+**Decisao Codex (mantida):**
+"Continuar Fase 1 sem alteracao ate T+14d. Findings para backlog Fase 2. Sem novas tasks. Sem paper trades."
+### Dia 8 - 2026-05-08 (mudanca de regime BULLISH->SIDEWAYS; Master Filter ACTIVE; 0 SETUPs; validacao Finding 003)
+
+**Timing:** 5/5 tasks correram nas horas exactas. Daily Audit 08:30:01 sem sleep. Operational Note 001 isolada (apenas Dia 7). Critério F PASS sem nota.
+
+**EVENTO METODOLOGICO MAJOR - Mudanca de regime BTC:**
+
+Pela 1a vez na Fase 1 (excepto Dia 1 inicial), BTC trend saiu de BULLISH:
+- Dia 7: BTC trend BULLISH (Master Filter Morning INACTIVE)
+- Dia 8: BTC trend SIDEWAYS (Master Filter Morning ACTIVE 2a vez na Fase 1)
+- Asian Master Filter INACTIVE (BTC 4H GEM_ALERT continua)
+- MTF conflict voltou: 1D SIDEWAYS + 4H GEM_ALERT
+
+**Sintese Codex:** "Dia 8 é o primeiro dia que realmente valida o valor da Fase 1: o sistema passou por rally amplo, rally seletivo e agora voltou para filtro macro defensivo sem precisar mexer em nada."
+
+**EVOLUCAO DOS SETUPs - VALIDACAO MASSIVA FINDING 003:**
+
+| Dia | Regime | SETUPs |
+|---|---|---|
+| Dia 6 | BULLISH amplo | 11 SETUPs |
+| Dia 7 | MIXED selectivo | 8 SETUPs |
+| Dia 8 | SIDEWAYS | 0 SETUPs |
+
+Codex: "Dia 8 validou Finding 003: quando o regime macro saiu de bullish para sideways, a quantidade de SETUPs caiu de 8 para 0, confirmando que parte relevante dos SETUPs anteriores dependia do breadth do rally, nao apenas de qualidade individual."
+
+**VALIDACAO DOS 8 WATCH POINTS DO T+7D CHECKPOINT:**
+
+| WP | Resultado Dia 8 | Status |
+|---|---|---|
+| 1. Daily Audit volta normal? | 08:30:01 sem sleep | RESOLVIDO |
+| 2. Sistema autonomo? | 5/5 commits | OK |
+| 3. Rally continua/corrige? | CORRIGIU AMPLO | Validacao Finding 003 |
+| 4. OPUSDT pullback? | WATCHLIST 25, RSI 73.28 (subiu mais) | Lag persistente |
+| 5. TAO mantem PREMIUM? | NAO - 29 -> 21 (-8 pts) | Recalibracao descendente |
+| 6. BTC WATCHLIST resolve? | DEGRADOU NO_TRADE 24 | Cautela RSI acertou |
+| 7. INJ score continua cair? | +1 marginal lag indeterminado | Lag direccional |
+| 8. SOL mantem PREMIUM? | NAO - 28 -> 26 | Master Filter cobriu |
+
+8/8 watch points resolvidos.
+
+**EVOLUCAO DE SCORES D7 -> D8:**
+
+| Asset | D7 | D8 | Δ | Categoria |
+|---|---|---|---|---|
+| TAO | 29 PREMIUM | 21 BOA | -8 | Rapido descendente |
+| LINK | 26 BOA | 20 MEDIA | -6 | Rapido descendente |
+| SOL | 28 PREMIUM | 26 BOA | -2 | Moderado |
+| BTC | 26 BOA | 24 BOA | -2 | Moderado |
+| OP | 26 BOA | 25 BOA | -1 | Lag persistente (RSI 73!) |
+| FET | 27 BOA | 26 BOA | -1 | Lag persistente |
+| INJ | 21 BOA | 22 BOA | +1 | Lag indeterminado |
+| ETH | 23 BOA | 27 BOA | +4 | Forca relativa |
+
+**REFINAMENTO FINDING 002b v2 (do Codex):**
+
+> "Score-state recalibration nao e apenas assimetrica; e regime-sensitive e asset-dependent. TAO e LINK recalibraram rapido para baixo apos BTC voltar SIDEWAYS, enquanto OP/FET mantiveram score alto apesar de extensao/risco. O problema central permanece o mesmo: score, estado estrutural e qualidade operavel ainda nao estao semanticamente separados."
+
+Refinamento incluido como nota dentro do Finding 002b (nao novo Finding 002c).
+
+**ETH ANOMALIA - Codex declinou Finding 004:**
+
+ETH 23 -> 27 com BTC SIDEWAYS, mas MACD BEARISH + OBV FALLING. Codex: "forca relativa interessante; sem BTC 1D bullish, ainda watchlist, nao entrada."
+
+Nao criar Finding 004 ainda - apenas 1 dia de evidencia. Disciplina correcta - aguardar mais regimes.
+
+**OPUSDT TRAJECTORIA COMPLETA Dia 4-8:**
+
+Caso paradigmatico Finding 001a + 002b + 003:
+- D4: state SETUP, NO Bruno-style (OBV FLAT)
+- D5: state SETUP, PARCIAL (OBV virou RISING)
+- D6: state SETUP, CONFIRMED Bruno-style
+- D7: state SETUP, CONFIRMED_EXTENDED (RSI 70.73)
+- D8: state WATCHLIST, EXTENDED_WATCH / DISTRIBUTION_RISK (RSI 73.28)
+
+Sequencia ilustra TODA a evolucao tipica: estrutura cedo -> confirmacao -> extensao -> distribution risk.
+
+**ARBUSDT VIRADA:**
+
+Apos 3 tentativas short falhadas, ARB +5.50% 7D, OBV RISING. Apos validacao de "suporte forte" multipla (D3-D5), agora reversal completo? Watch para Dia 9+.
+
+**CROSS-CHECK CLAUDE + CODEX (9/9 concordancia):**
+
+Acumulado Dias 2-8: 6+6+9+9+10+12+9 = **61/61 alinhamento total**.
+
+**Concordancia operador-sistema Dia 8 (9 entradas):**
+- 1/9 YES gate active (BTC NO_TRADE)
+- 2/9 YES (TAO cooldown, LINK downgrade)
+- 5/9 WATCHLIST observacao (ETH, SOL, FET, INJ, ARB)
+- 1/9 NO entrada (OP DISTRIBUTION_RISK)
+
+Comparacao 8 dias - distribuicao varia drasticamente com regime:
+- D1 (SIDEWAYS): 7/7 YES
+- D2 (BULLISH chegada): 1/6 YES + 2 PARCIAL + 3 NO
+- D3 (MIXED): 4/6 YES + 1 PARCIAL + 1 NO
+- D4 (BULLISH rally): 3/9 YES + 3 PARCIAL + 2 NO
+- D5 (BULLISH consolidacao): 8/9 YES (todos com matiz)
+- D6 (BULLISH amplo): 8/10 + 2 NO + Finding 003
+- D7 (MIXED selectivo): 7/10 + 3 PARCIAL/cautela
+- D8 (SIDEWAYS): 1/9 YES gate + 7/9 WATCHLIST + 1/9 NO
+
+Padrao revelado: distribuicao depende profundamente do regime. Validacao adicional necessidade separacao 4 dimensoes (regime, estrutura, qualidade, timing).
+
+**Severidades Findings (Dia 8):**
+- Finding 001: medium (superseded)
+- Finding 001a: medium-low (validado em OP D4-D8)
+- Finding 002: medium-low (superseded por 002b)
+- **Finding 002b: medium-low (REFINADO v2 Dia 8 - regime-sensitive + asset-dependent)**
+- Finding 003: medium (VALIDADO MASSIVAMENTE Dia 8 - 11->8->0 SETUPs)
+
+**Critérios A-H Dia 8:** 8/8 PASS.
+### Sintese das respostas Codex (Dia 8)
+
+**Pergunta 1 - Finding 003 validation:**
+"Validacao forte do Finding 003. Dia 6 nao era 'erro', mas era rally breadth. Quando BTC voltou para SIDEWAYS, Master Filter fez o trabalho correcto: retirou permissividade operacional. Sistema precisa distinguir rally breadth de setup individual operavel."
+
+**Pergunta 2 - Finding 002b descendente:**
+"Refino: score-state recalibration is asset-dependent and regime-sensitive. TAO/LINK recalibraram rapido para baixo. OP/FET mantiveram score alto apesar de extensao. Hipotese 'assimetrica e rapido para cima' (Dia 7) era incompleta. Refinamento v2 mais preciso."
+
+**Pergunta 3 - ETH high score - Finding 004?**
+"NAO criar Finding 004 ainda. Apenas 1 dia de evidencia. ETH 23->27 com BTC sideways = forca relativa interessante; sem BTC 1D bullish, ainda watchlist, nao entrada. Disciplina: aguardar mais regimes."
+
+**Pergunta 4 - OPUSDT 001a fim natural?**
+"Estado downgrade mas qualidade preservada. RSI 73.28 com Master Filter ACTIVE. EXTENDED_WATCH / DISTRIBUTION_RISK. Trajectoria 001a chegou a fase de extensao (D7) e agora distribution risk (D8). Bruno-style: nao chase. Caso paradigmatico de Finding 002b lag persistente."
+
+**Pergunta 5 - ARB virada:**
+"Validacao adicional 'suporte forte weekly low' (D3-D5 bouce 3 vezes). +5.50% 7D, OBV RISING. Possivel reversal completo. Observar Dia 9+."
+
+**MASTER FILTER ACTIVE no Morning - feature, nao bug:**
+"Dia 8 mostra exatamente por que o BTC 1D deve mandar no pipeline principal. Mesmo com 4H em GEM_ALERT, o 1D SIDEWAYS forca downgrade. Bruno-style: BTC 4H pode mostrar oportunidade tatica, mas se o diario nao confirma, altcoins nao viram entrada; viram observacao."
+
+Classificacao: 1D SIDEWAYS + 4H GEM_ALERT = MTF_ALIGNMENT_PARTIAL / tactical watch. Nao e entrada automatica. Ambiente para preparar lista, nao executar.
+
+**Sintese Codex Dia 8:**
+"Dia 8 e o primeiro dia que realmente valida o valor da Fase 1: o sistema passou por rally amplo, rally seletivo e agora voltou para filtro macro defensivo sem precisar mexer em nada. Finding 003 validated + MTF conflict returned + Master Filter performed correctly."
 
 **Decisao Codex (mantida):**
 "Continuar Fase 1 sem alteracao ate T+14d. Findings para backlog Fase 2. Sem novas tasks. Sem paper trades."
