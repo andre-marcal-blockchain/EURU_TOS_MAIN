@@ -89,6 +89,15 @@
 | 2026-05-08 | FETUSDT | 1D | BULLISH | WATCHLIST (26/35) | WATCHLIST qualidade preservada | Score 27 -> 26 marginal. RSI 56.80, MACD BULLISH, OBV RISING. +0.54% 24h, +6.58% 7D. Caso similar OP de qualidade preservada apesar de Master Filter. | WATCHLIST |
 | 2026-05-08 | INJUSDT | 1D | BULLISH | WATCHLIST (22/35) | WATCHLIST lag direccional | Score 21 -> 22 (+1 marginal). RSI 65.87, OBV RISING. Caso de lag direccional indeterminado - nada confirmou claramente nem para cima nem para baixo. Finding 002b refinement v2 evidencia. | WATCHLIST |
 | 2026-05-08 | ARBUSDT | 1D | BEARISH | WATCHLIST (23/35) | VIRADA - novo padrao | Apos 3 tentativas short falhadas (D3, D4, D5 bouce), ARB virou positivo. +2.55% 24h, +5.50% 7D. MACD BEARISH mas OBV RISING. Validacao adicional "suporte forte weekly low". Reversal completo? | OBSERVAR |
+| 2026-05-09 | BTCUSDT | 1D | SIDEWAYS | NO_TRADE (23/35) | YES gate active | BTC SIDEWAYS continua. +0.91% 24h, +0.53% 7D. Score 24 -> 23. Master Filter Morning ACTIVE 3o dia consecutivo. Decoupling claro vs altcoins explodindo. | YES |
+| 2026-05-09 | ETHUSDT | 1D | BEARISH | NO_TRADE (25/35) | NO_TRADE - BEARISH unico | Score 27 -> 25 (perdeu lideranca). MACD BEARISH continua. OBV FALLING. -0.68% 7D. Codex Dia 8 tinha razao em declinar Finding 004 - era apenas 1 dia. | NO entrada |
+| 2026-05-09 | SOLUSDT | 1D | BULLISH | WATCHLIST (28/35 PREMIUM) | WATCHLIST_HIGH_MOMENTUM | Voltou a PREMIUM. RSI 67.86 ainda nao overbought. +5.72% 24h, +7.30% 7D moderado. Mais saudavel que OP/INJ/LINK por nao estar overbought. | WATCHLIST forte |
+| 2026-05-09 | TAOUSDT | 1D | BULLISH | WATCHLIST (25/35) | WATCHLIST recuperacao parcial | Score 21 -> 25 (+4 pts apos cooldown). RSI 64.77, OBV RISING. +2.73% 24h, +4.90% 7D. Recuperacao moderada vs LINK/INJ explosivos. | WATCHLIST |
+| 2026-05-09 | LINKUSDT | 1D | BULLISH | WATCHLIST (27/35) | TACTICAL_MOMENTUM_WATCH | Score 20 MEDIA -> 27 BOA em 24h (+7 pts!). Recalibracao ascendente espectacular. RSI 71.47 overbought. Caso paradigmatico Finding 002b v3 (flow-velocity-sensitive). | WATCHLIST |
+| 2026-05-09 | OPUSDT | 1D | BULLISH | WATCHLIST (29/35 PREMIUM) | EXTENSION_DISTRIBUTION_RISK / NO CHASE | RSI 76.30 MUITO overbought. +12.07% 24h, +21.44% 7D! Score subiu 25 -> 29 PREMIUM. Trajectoria 001a fim natural (D4 NO -> D9 PEAK_DANGER). Codex: "score premia momentum, nao penaliza extensao". | NO entrada / cobrir se em posicao |
+| 2026-05-09 | INJUSDT | 1D | BULLISH | WATCHLIST (26/35) | TACTICAL_MOMENTUM_WATCH | Score 22 -> 26 (+4 pts). RSI 73.76 overbought. +9.85% 24h, +11.15% 7D. Lag direccional do D8 era de facto indeterminado - quando volume virou, recalibrou rapido. Validou Finding 002b v3. | WATCHLIST |
+| 2026-05-09 | FETUSDT | 1D | BULLISH | WATCHLIST (27/35) | WATCHLIST_HIGH_MOMENTUM | Score 26 -> 27. RSI 63.36 razoavel. +6.45% 24h, +10.77% 7D. Mais saudavel que OP/INJ/LINK por RSI nao overbought. | WATCHLIST |
+| 2026-05-09 | ARBUSDT | 1D | BULLISH | WATCHLIST (26/35) | VIRADA CONFIRMADA - TACTICAL_MOMENTUM_WATCH | Trend virou BULLISH (era BEARISH D3-D8). +11.40% 24h, +15.06% 7D. RSI 71.47 overbought. Score 23 -> 26. Suporte forte weekly low validado. Reversal completo. | WATCHLIST |
 
 ---
 
@@ -928,6 +937,165 @@ Classificacao: 1D SIDEWAYS + 4H GEM_ALERT = MTF_ALIGNMENT_PARTIAL / tactical wat
 
 **Decisao Codex (mantida):**
 "Continuar Fase 1 sem alteracao ate T+14d. Findings para backlog Fase 2. Sem novas tasks. Sem paper trades."
+### Dia 9 - 2026-05-09 (sabado; rally explosivo altcoins; Master Filter ACTIVE; 0 SETUPs; Finding 002b v3)
+
+**Timing:** 5/5 tasks correram nas horas exactas + 1 audit extra 09:00. Sleep do Dia 7 confirmado isolado. Critério F PASS.
+
+**EVENTO METODOLOGICO MAJOR - Paradoxo MTF + Rally explosivo:**
+
+Pela 1a vez na Fase 1, observamos rally explosivo nas altcoins COM Master Filter Morning ACTIVE:
+- BTC trend continua SIDEWAYS (3o dia consecutivo)
+- BTC 4H GEM_ALERT (Asian filter INACTIVE)
+- MTF conflict mantido
+- 0 SETUPs (3o dia consecutivo)
+- MAS altcoins explodiram em 24h: OP +12%, ARB +11%, INJ +9.85%, LINK +6.80%
+
+**RSI ALERTAS overbought (>70) em 4 ativos:**
+- OPUSDT 76.30 (+21.44% 7D!)
+- INJUSDT 73.76 (+11.15% 7D)
+- LINKUSDT 71.47 (+8.93% 7D)
+- ARBUSDT 71.47 (+15.06% 7D)
+
+**SINTESE CODEX (3 validacoes simultaneas):**
+> "Dia 9 valida tres coisas:
+> 1. Master Filter disciplinado: 0 SETUPs com BTC 1D SIDEWAYS, mesmo em rally explosivo
+> 2. Score engine sensivel a forca/fluxo, talvez ate demais quando RSI/extensao perigosos
+> 3. Proxima taxonomia precisa estados intermediarios: WATCHLIST_HIGH_MOMENTUM, 
+>    EXTENSION_DISTRIBUTION_RISK, POST_CONFIRMATION_NO_CHASE"
+
+> "Master Filter discipline validated; score/operability separation gap intensified."
+
+**EVOLUCAO DE SCORES D8 -> D9:**
+
+| Asset | D8 | D9 | Δ | Categoria 002b |
+|---|---|---|---|---|
+| LINK | 20 MEDIA | 27 BOA | +7 | Flow-velocity-sensitive (NOVO v3) |
+| OP | 25 BOA | 29 PREMIUM | +4 | Score sobe com extensao (gap) |
+| INJ | 22 BOA | 26 BOA | +4 | Recuperacao apos lag direccional |
+| TAO | 21 BOA | 25 BOA | +4 | Cooldown parcial |
+| ARB | 23 BOA | 26 BOA | +3 | Virada confirmada |
+| SOL | 26 BOA | 28 PREMIUM | +2 | Voltou PREMIUM |
+| FET | 26 BOA | 27 BOA | +1 | Estavel |
+| BTC | 24 BOA | 23 BOA | -1 | Decoupling |
+| ETH | 27 BOA | 25 BOA | -2 | Perdeu lideranca |
+
+**CASOS PARADIGMATICOS DIA 9:**
+
+**OPUSDT trajectoria COMPLETA D4-D9 (caso unico de evolucao por todos os findings):**
+- D4: state SETUP, NO Bruno-style (OBV FLAT)
+- D5: state SETUP, PARCIAL (OBV virou)
+- D6: state SETUP, CONFIRMED Bruno-style
+- D7: state SETUP, CONFIRMED_EXTENDED (RSI 70.73)
+- D8: state WATCHLIST, DISTRIBUTION_RISK suprimido (RSI 73.28)
+- D9: state WATCHLIST, EXTENSION_DISTRIBUTION_RISK / NO CHASE (RSI 76.30, +21.44% 7D, score PREMIUM 29)
+
+Sequencia ilustra TODA evolucao tipica + peak danger. Possivelmente o caso mais valioso da Fase 1.
+
+**LINKUSDT recalibracao ascendente espectacular (Finding 002b v3):**
+- D7: 26 BOA
+- D8: 20 MEDIA (-6 em 24h)
+- D9: 27 BOA (+7 em 24h)
+- Reversao maior que queda
+- Validou hipotese flow-velocity-sensitive
+
+**ARBUSDT virada confirmadissima:**
+- D3-D5: 3 tentativas short falhadas (suporte forte)
+- D6-D8: bouce e WATCHLIST
+- D9: rally +11.40% 24h, RSI 71, MACD virou BULLISH
+- Reversal completo do downtrend
+
+**ETHUSDT (Finding 004 declinado validado):**
+- D8: lider score 27 BOA com BTC SIDEWAYS
+- D9: 25 BOA, perdeu lideranca, MACD continua BEARISH
+- Codex Dia 8 tinha razao - "forca relativa interessante" foi temporaria
+- Disciplina de NAO criar Finding 004 confirmada como correcta
+
+**FINDING 002b REFINEMENT v3 (do Codex):**
+
+> "Score-state recalibration tambem e flow-velocity-sensitive. Confirmacao 
+> subita de volume/OBV pode repricing score rapidamente, mesmo com Master 
+> Filter ACTIVE e BTC 1D SIDEWAYS. LINKUSDT (20 -> 27 em 24h) e OPUSDT 
+> (25 -> 29 com RSI 76.30) mostram que score tecnico pode subir enquanto 
+> qualidade operavel deteriora por extensao."
+
+Trail completo Finding 002b:
+- v1 (Dia 5): lag entre score, estado e qualidade operavel
+- v2 (Dia 8): regime-sensitive + asset-dependent
+- v3 (Dia 9): + flow-velocity-sensitive
+
+Nucleo permanece: separar score, estado, permissao macro e qualidade de entrada.
+
+**TAXONOMIA FUTURA EXPANDIDA (Fase 2 backlog):**
+
+Estados intermediarios novos identificados Dia 9:
+- WATCHLIST_HIGH_MOMENTUM (movimento forte, BTC nao confirma)
+- TACTICAL_MOMENTUM_WATCH (alerta tactical)
+- EXTENSION_DISTRIBUTION_RISK (RSI > 70 + 7D > 15%)
+- SETUP_PEAK_DANGER (RSI > 75)
+- POST_CONFIRMATION_NO_CHASE (apos extensao)
+
+Regra futura proposta pelo Codex:
+> "If RSI > 70 AND 7D move > 15%, cap operable_quality <= EXTENDED / no fresh entry"
+
+**CROSS-CHECK CLAUDE + CODEX (9/9 concordancia):**
+
+Acumulado Dias 2-9: 6+6+9+9+10+12+9+9 = **70/70 alinhamento total**.
+
+**Concordancia operador-sistema Dia 9 (9 entradas):**
+- 1/9 YES gate active (BTC NO_TRADE)
+- 1/9 NO entrada (ETH BEARISH)
+- 7/9 WATCHLIST (varias categorias: HIGH_MOMENTUM, TACTICAL, EXTENSION_DISTRIBUTION_RISK)
+
+Comparacao 9 dias:
+- D1 (SIDEWAYS): 7/7 YES
+- D2 (BULLISH chegada): 1/6 YES + 2 PARCIAL + 3 NO
+- D3 (MIXED): 4/6 YES + 1 PARCIAL + 1 NO
+- D4 (BULLISH rally): 3/9 YES + 3 PARCIAL + 2 NO
+- D5 (BULLISH consolidacao): 8/9 YES (todos com matiz)
+- D6 (BULLISH amplo): 8/10 + 2 NO + Finding 003
+- D7 (MIXED selectivo): 7/10 + 3 PARCIAL/cautela
+- D8 (SIDEWAYS): 1/9 YES gate + 7/9 WATCHLIST + 1 NO
+- D9 (SIDEWAYS rally): 1/9 YES gate + 7/9 WATCHLIST + 1 NO
+
+Padrao revelado: SIDEWAYS regime gera WATCHLIST predominante - sistema corretamente bloqueia execucao.
+
+**Severidades Findings (Dia 9):**
+- Finding 001: medium (superseded)
+- Finding 001a: medium-low (validado em OP D4-D9 trajectoria peak)
+- Finding 002: medium-low (superseded por 002b)
+- **Finding 002b: medium-low (REFINADO v3 Dia 9 - + flow-velocity-sensitive)**
+- Finding 003: medium (VALIDADO MAXIMAMENTE Dia 8+9 - Master Filter discipline)
+
+**Critérios A-H Dia 9:** 8/8 PASS.
+### Sintese das respostas Codex (Dia 9)
+
+**Pergunta 1 - Master Filter ACTIVE com rally explosivo - validacao ou falso negativo?**
+"Validacao FORTE do Master Filter, nao falso negativo. Bruno-style: se BTC 1D SIDEWAYS, altcoins podem explodir, mas sistema nao deve transformar isso em entrada automatica. Movimento pode ser rotacao, short squeeze, beta rally, caca de liquidez ou antecipacao BTC. Sem confirmacao BTC diario, manter WATCHLIST."
+
+NUANCE: "Nao e ignorar. E tactical watch. Sistema fez bem em bloquear SETUP, mas scores altos e movimentos fortes devem alimentar fila de observacao. Em Fase 2: WATCHLIST_HIGH_MOMENTUM ou TACTICAL_MOMENTUM_WATCH."
+
+"Nao e falso negativo operacional, mas pode revelar falta de semantica intermediaria entre WATCHLIST e SETUP."
+
+**Pergunta 2 - OPUSDT na peak extension:**
+"EXTENSION_DISTRIBUTION_RISK ou SETUP_PEAK_DANGER. Bruno-style: nao e entrada. Se ja em posicao desde D5/D6, exigiria proteger, realizar parcial, trailing stop ou nao aumentar exposicao. Se fora, NO CHASE absoluto."
+
+GAP CRITICO: "Score 29 PREMIUM com RSI 76.30 e +21.44% 7D mostra gap semantico real. Score esta premiando momentum/volume/forca, mas nao penalizando extensao suficientemente. Reforca Finding 002b v2 e prepara regra futura: If RSI > 70 AND 7D > 15%, cap operable_quality <= EXTENDED / no fresh entry."
+
+**Pergunta 3 - LINK +7 pts em 24h:**
+"Refina mais Finding 002b v2. Hipotese boa: falta dimensao flow-confirmation-velocity. Score recalibrou rapido porque fluxo confirmou violentamente, mesmo com BTC 1D SIDEWAYS. Formularia como Finding 002b v3."
+
+NAO criar Finding novo: "Mais uma camada no 002b. Problema central continua igual: sistema mistura score estrutural, qualidade operavel e permissao macro."
+
+**Sintese Codex Dia 9:**
+"Dia 9 valida tres coisas ao mesmo tempo:
+1. Master Filter disciplinado (0 SETUPs em rally explosivo)
+2. Score engine sensivel a forca/fluxo, talvez demais quando RSI/extensao perigosos
+3. Proxima taxonomia precisa estados intermediarios"
+
+"Master Filter discipline validated; score/operability separation gap intensified."
+
+**Decisao Codex (mantida):**
+"Continuar Fase 1 sem alteracao ate T+14d. Findings vao para backlog Fase 2. Sem reactivar tasks. Sem paper trades."
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
