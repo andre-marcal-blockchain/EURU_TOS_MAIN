@@ -98,6 +98,15 @@
 | 2026-05-09 | INJUSDT | 1D | BULLISH | WATCHLIST (26/35) | TACTICAL_MOMENTUM_WATCH | Score 22 -> 26 (+4 pts). RSI 73.76 overbought. +9.85% 24h, +11.15% 7D. Lag direccional do D8 era de facto indeterminado - quando volume virou, recalibrou rapido. Validou Finding 002b v3. | WATCHLIST |
 | 2026-05-09 | FETUSDT | 1D | BULLISH | WATCHLIST (27/35) | WATCHLIST_HIGH_MOMENTUM | Score 26 -> 27. RSI 63.36 razoavel. +6.45% 24h, +10.77% 7D. Mais saudavel que OP/INJ/LINK por RSI nao overbought. | WATCHLIST |
 | 2026-05-09 | ARBUSDT | 1D | BULLISH | WATCHLIST (26/35) | VIRADA CONFIRMADA - TACTICAL_MOMENTUM_WATCH | Trend virou BULLISH (era BEARISH D3-D8). +11.40% 24h, +15.06% 7D. RSI 71.47 overbought. Score 23 -> 26. Suporte forte weekly low validado. Reversal completo. | WATCHLIST |
+| 2026-05-10 | BTCUSDT | 1D | SIDEWAYS | NO_TRADE (20/35 MEDIA) | YES gate active | BTC SIDEWAYS continua 4o dia. +0.47% 24h, +0.65% 7D. Score 23 -> 20 (caiu de tier BOA para MEDIA). Master Filter Morning ACTIVE 4o dia consecutivo. | YES |
+| 2026-05-10 | ETHUSDT | 1D | BEARISH | NO_TRADE (20/35 MEDIA) | NO_TRADE | Score 25 -> 20 (caiu de BOA para MEDIA). MACD BEARISH continua, mas OBV virou RISING. +0.69% 24h, -0.05% 7D. | NO entrada |
+| 2026-05-10 | SOLUSDT | 1D | BULLISH | WATCHLIST (22/35) | WATCHLIST recuperacao mais saudavel | Score 28 PREMIUM -> 22 BOA (-6). RSI 67.86 -> 68.13 (estavel, nao overbought). +0.15% 24h, +5.92% 7D. Mais saudavel que OP/INJ/LINK por nao estar overbought no D9. | WATCHLIST |
+| 2026-05-10 | TAOUSDT | 1D | BULLISH | WATCHLIST (21/35) | WATCHLIST cooldown continua | Score 25 -> 21. RSI 64.01 estavel. +0.10% 24h, +3.96% 7D. Pullback moderado. | WATCHLIST |
+| 2026-05-10 | LINKUSDT | 1D | BULLISH | WATCHLIST (18/35 MEDIA) | RECALIBRACAO DESCENDENTE - Finding 002b v3b | Score 27 BOA -> 18 MEDIA (-9 pts em 24h!). RSI 71.47 -> 69.46. -1.52% 24h. Caso paradigmatico flow-velocity-sensitive bidirectional: D9 +7 / D10 -9. | YES NO CHASE |
+| 2026-05-10 | OPUSDT | 1D | BULLISH | WATCHLIST (19/35 MEDIA) | EXTENSION_DISTRIBUTION_RISK VALIDADO | Score 29 PREMIUM -> 19 MEDIA (-10 pts em 24h!). RSI 76.30 -> 71.67. -2.81% 24h. RULE CANDIDATE 001 validada: RSI > 70 + 7D > 15% (D9: 21.44%) = pullback rapido. | YES NO CHASE acertou |
+| 2026-05-10 | INJUSDT | 1D | BULLISH | WATCHLIST (18/35 MEDIA) | RECALIBRACAO DESCENDENTE - regra auxiliar | Score 26 -> 18 MEDIA (-8 pts). RSI 73.76 -> 67.59. -3.79% 24h. Validou regra auxiliar (RSI > 70 alone = caution). 7D D9 era 11.15% (abaixo 15% threshold). | YES NO CHASE |
+| 2026-05-10 | FETUSDT | 1D | BULLISH | WATCHLIST (21/35) | WATCHLIST pullback moderado | Score 27 -> 21. RSI 63.36 -> 59.26. -3.34% 24h. RSI nao estava overbought - validacao indirecta da regra (sem trigger D9, queda menor relativa). | WATCHLIST |
+| 2026-05-10 | ARBUSDT | 1D | BULLISH | WATCHLIST (22/35) | WATCHLIST_REVERSAL_UNDER_TEST | Score 26 -> 22 (caiu menos que peers). -2.23% 24h, mas 7D ainda +9.99%. RSI 71.47 -> 67.66 (no limbo). OBV virou FALLING (alerta). 5 criterios Codex pullback saudavel vs falha follow-through. | OBSERVAR |
 
 ---
 
@@ -1096,6 +1105,227 @@ NAO criar Finding novo: "Mais uma camada no 002b. Problema central continua igua
 
 **Decisao Codex (mantida):**
 "Continuar Fase 1 sem alteracao ate T+14d. Findings vao para backlog Fase 2. Sem reactivar tasks. Sem paper trades."
+### Dia 10 - 2026-05-10 (domingo; pullback amplo; Rule Candidate 001 validada empiricamente)
+
+**Timing:** 5/5 tasks correram nas horas exactas. Daily Audit 08:30:01. Sem sleep. Critério F PASS sem nota.
+
+**EVENTO METODOLOGICO IMPORTANTE - Validacao empirica primeira regra:**
+
+Dia 10 testou a regra que Codex propos no Dia 9:
+> "If RSI > 70 AND 7D move > 15%, cap operable_quality <= EXTENDED / no fresh entry."
+
+**Resultado:** os 4 ativos overbought do D9 (RSI > 70) caíram em uníssono em 24h:
+
+| Asset | D9 RSI | D9 7D | D10 24h | Score Δ |
+|---|---|---|---|---|
+| OPUSDT | 76.30 | +21.44% | **-2.81%** | 29 -> 19 (-10!) |
+| INJUSDT | 73.76 | +11.15% | **-3.79%** | 26 -> 18 (-8) |
+| LINKUSDT | 71.47 | +8.93% | **-1.52%** | 27 -> 18 (-9) |
+| ARBUSDT | 71.47 | +15.06% | **-2.23%** | 26 -> 22 (-4) |
+
+OP cumpriu regra forte (RSI 76 + 7D 21%). ARB cumpriu (RSI 71 + 7D 15%). INJ/LINK cumpriram regra auxiliar (RSI > 70 alone).
+
+**Status:** Rule Candidate 001 — PROVISIONALLY_VALIDATED. Ver seccao "Rules Candidate Backlog (Fase 2)".
+
+**MASTER FILTER 4o dia consecutivo ACTIVE:**
+
+- BTC trend SIDEWAYS continua
+- Asian filter INACTIVE (BTC 4H GEM_ALERT)
+- 0 SETUPs (4o dia consecutivo)
+- Validacao continua da disciplina governance
+
+**SINTESE CODEX:**
+> "Dia 10 validou a disciplina do Dia 9: NO CHASE foi correto. A regra de 
+> extensão ganhou primeira validação empírica, o Finding 002b v3 ficou 
+> bidirecional, e ARB virou o melhor caso para observar se existe 
+> reversão real ou só bounce forte."
+
+**EVOLUCAO DE SCORES D9 -> D10:**
+
+| Asset | D9 | D10 | Δ | Categoria 002b |
+|---|---|---|---|---|
+| OP | 29 PREMIUM | 19 MEDIA | -10 | Flow-velocity-sensitive descendente extreme |
+| LINK | 27 BOA | 18 MEDIA | -9 | Bidirectional D9 +7 / D10 -9 (caso mais limpo) |
+| INJ | 26 BOA | 18 MEDIA | -8 | Recalibracao descendente |
+| FET | 27 BOA | 21 BOA | -6 | Sem trigger overbought |
+| SOL | 28 PREMIUM | 22 BOA | -6 | Healthier - RSI nao estava overbought D9 |
+| ETH | 25 BOA | 20 MEDIA | -5 | NO_TRADE BEARISH |
+| ARB | 26 BOA | 22 BOA | -4 | Reversal under test |
+| TAO | 25 BOA | 21 BOA | -4 | Cooldown continua |
+| BTC | 23 BOA | 20 MEDIA | -3 | NO_TRADE macro gate |
+
+Pullback amplo: 9/9 ativos com score caindo. Master Filter discipline pre-empted FOMO entries que teriam perdido em 24h.
+
+**CASOS PARADIGMATICOS DIA 10:**
+
+**OPUSDT - EXTENSION_DISTRIBUTION_RISK validado:**
+Trajectoria completa D4-D10:
+- D4: NO (OBV FLAT)
+- D5: PARCIAL
+- D6: SETUP_CONFIRMED
+- D7: SETUP_CONFIRMED_EXTENDED (RSI 70.73)
+- D8: DISTRIBUTION_RISK suprimido (RSI 73.28)
+- D9: PEAK_DANGER (RSI 76.30, +21.44% 7D, score 29 PREMIUM)
+- **D10: -2.81% 24h, score 19 MEDIA (-10 pts!)**
+
+OP perdeu 35% do score em 24h. Validou Rule Candidate 001 + Finding 002b v3b extreme.
+
+**LINKUSDT - Finding 002b v3b caso mais limpo:**
+- D7: 26 BOA
+- D8: 20 MEDIA (-6 em 24h - regime change descendente)
+- D9: 27 BOA (+7 em 24h - flow-velocity ascendente)
+- D10: 18 MEDIA (-9 em 24h - flow-velocity descendente bidirectional)
+
+Reversao maior que recuperacao. Bidireccionalidade extrema.
+
+**ARBUSDT - WATCHLIST_REVERSAL_UNDER_TEST:**
+Caso unico de reversal apos suporte (vs extensao de OP/INJ/LINK):
+- Trajectoria D3-D5: 3 tentativas short falhadas
+- D6-D8: bouce e WATCHLIST
+- D9: rally +11.40% 24h, RSI 71, MACD virou BULLISH
+- **D10: -2.23% (caiu menos que peers), 7D ainda +9.99%, OBV virou FALLING**
+
+5 criterios Codex para distinguir pullback saudavel vs falha follow-through:
+
+**Pullback saudavel SE:**
+1. RSI estabiliza 55-65
+2. OBV nao volta a FALLING
+3. Preco segura acima do antigo weekly low
+4. Proximo candle 4H/1D nao devolve movimento inteiro
+5. Score estabiliza acima de 20-22
+
+**Falha de follow-through SE:**
+1. Perde novamente zona de suporte
+2. OBV vira FALLING
+3. Score cai para <20
+4. Volta a trend BEARISH
+5. Rally D9 totalmente devolvido em 24-48h
+
+**Estado actual ARB Dia 10:**
+- RSI 67.66 (acima 65 - "no limbo")
+- OBV FALLING ⚠️
+- Score 22 (limite inferior)
+- Trend ainda BULLISH
+
+Codex: "Pullback saudavel possivel, mas ainda nao confirmado."
+
+**FINDING 002b v3b - bidirecionalidade (do Codex):**
+
+> "Flow-velocity-sensitive is bidirectional. O score recalibra rapidamente 
+> quando o fluxo muda de direção, tanto para cima quanto para baixo. 
+> LINK D9 +7 e D10 -9 é o caso mais limpo; OP D9 +4 e D10 -10 mostra que 
+> extensão extrema pode gerar compressão/reversão violenta do score."
+
+Trail completo Finding 002b:
+- v1 (Dia 5): lag entre score, estado e qualidade operavel
+- v2 (Dia 8): regime-sensitive + asset-dependent
+- v3 (Dia 9): + flow-velocity-sensitive
+- **v3b (Dia 10): bidirectional**
+
+Codex: "Isto não resolve o problema, só descreve melhor o motor. O score é responsivo, mas ainda não separa 'força técnica' de 'qualidade de entrada'."
+
+**CROSS-CHECK CLAUDE + CODEX (9/9 concordancia):**
+
+Acumulado Dias 2-10: 6+6+9+9+10+12+9+9+9 = **79/79 alinhamento total**.
+
+**Concordancia operador-sistema Dia 10 (9 entradas):**
+- 1/9 YES gate active (BTC NO_TRADE)
+- 1/9 NO entrada (ETH BEARISH)
+- 3/9 YES NO CHASE acertou (OP/LINK/INJ - validacao Rule Candidate 001)
+- 4/9 WATCHLIST (SOL, FET, TAO, BTC degradado)
+- 1/9 OBSERVAR (ARB reversal under test)
+
+Comparacao 10 dias:
+- D8 (SIDEWAYS): 1/9 YES gate + 7/9 WATCHLIST + 1 NO
+- D9 (SIDEWAYS rally): 1/9 YES gate + 7/9 WATCHLIST + 1 NO
+- D10 (SIDEWAYS pullback): 1/9 YES gate + 4/9 WATCHLIST + 3 YES NO CHASE + 1 NO
+
+Padrao revelado: SIDEWAYS regime + Master Filter ACTIVE = sistema bloqueia execucao corretamente. Pullback amplo confirma decisoes anteriores foram corretas.
+
+**Severidades Findings (Dia 10):**
+- Finding 001: medium (superseded)
+- Finding 001a: medium-low (validado em OP D4-D10 trajectoria peak completa)
+- Finding 002: medium-low (superseded por 002b)
+- **Finding 002b: medium-low (REFINADO v3b Dia 10 - bidirectional)**
+- Finding 003: medium (VALIDADO MAXIMAMENTE D8-D10)
+- **Rule Candidate 001: PROVISIONALLY_VALIDATED (NOVO)**
+
+**Critérios A-H Dia 10:** 8/8 PASS.
+### Sintese das respostas Codex (Dia 10)
+
+**Pergunta 1 - Regra "RSI > 70 + 7D > 15%" validada empiricamente?**
+
+Sim - Rule Candidate 001 - PROVISIONALLY_VALIDATED.
+Nao mais forte ainda porque foi 1 amostra de 24h dentro do mesmo micro-regime.
+
+Codex separou em 2 camadas:
+- **Regra forte:** RSI > 70 AND 7D > 15% = no fresh entry / EXTENSION_DISTRIBUTION_RISK
+- **Regra auxiliar:** RSI > 70 alone = caution / no chase unless retest
+
+Para validacao definitiva: precisa 2-3 ocorrencias em regimes diferentes (BULLISH confirmado, SIDEWAYS, BEARISH/correccao).
+
+**Pergunta 2 - Finding 002b v3 bidirecional?**
+
+Sim. Codex adicionou nota interna v3b:
+> "flow-velocity-sensitive is bidirectional. O score recalibra rapidamente quando o fluxo muda de direção, tanto para cima quanto para baixo."
+
+LINK D9 +7 / D10 -9 = caso mais limpo. OP D9 +4 / D10 -10 = extensao extrema gera compressao violenta.
+
+NUANCE: "Isto nao resolve o problema, so descreve melhor o motor. O score e responsivo, mas ainda nao separa 'forca tecnica' de 'qualidade de entrada'."
+
+**Pergunta 3 - ARB pullback saudavel ou falha?**
+
+WATCHLIST_REVERSAL_UNDER_TEST. Ainda nao confirmado.
+
+ARB diferente de OP/INJ/LINK: veio de virada apos suporte, nao so extensao.
+
+5 criterios distincao (ver Notas Dia 10 acima).
+
+Estado actual ARB: pullback saudavel possivel mas nao confirmado. RSI 67.66 (no limbo), OBV FALLING (alerta), score 22 (limite inferior).
+
+**Sintese Codex Dia 10:**
+"Dia 10 validou a disciplina do Dia 9: NO CHASE foi correto. A regra de extensao ganhou primeira validacao empirica, o Finding 002b v3 ficou bidirecional, e ARB virou o melhor caso para observar se existe reversao real ou so bounce forte."
+
+**Decisao Codex (mantida):**
+"Continuar Fase 1 sem alteracao ate T+14d. Findings vao para backlog Fase 2. Sem reactivar tasks. Sem paper trades."
+## Rules Candidate Backlog (Fase 2)
+
+Esta seccao documenta regras candidatas para implementacao na Fase 2. Diferente dos Findings (que descrevem limitacoes do sistema), Rules Candidate descrevem possíveis regras futuras testaveis.
+
+### Rule Candidate 001 — Extension No-Chase Cap
+
+**Status:** PROVISIONALLY_VALIDATED  
+**Proposta:** 2026-05-09 (Codex Dia 9)  
+**Primeira validacao empirica:** 2026-05-10 (Dia 10)  
+
+**Regra forte:**
+> If RSI > 70 AND 7D move > 15%, cap operable_quality <= EXTENDED / no fresh entry.
+
+**Regra auxiliar:**
+> RSI > 70 alone = caution / no chase unless retest.
+
+**Evidencia:**
+
+Dia 9 (proposta): OPUSDT RSI 76.30 + 7D +21.44%, ARBUSDT RSI 71.47 + 7D +15.06% atingiram threshold. INJ/LINK cumpriram apenas regra auxiliar (RSI > 70).
+
+Dia 10 (validacao em 24h):
+- OP: -2.81% 24h, score 29 -> 19 (-10 pts) - regra forte validada
+- ARB: -2.23% 24h, score 26 -> 22 (-4 pts) - regra forte validada
+- INJ: -3.79% 24h, score 26 -> 18 (-8 pts) - regra auxiliar validada
+- LINK: -1.52% 24h, score 27 -> 18 (-9 pts) - regra auxiliar validada
+
+Todos os 4 ativos overbought do D9 caíram em 24h. NO CHASE Bruno-style acertou.
+
+**Precisa de:**
+- Mais 2-3 ocorrencias em regimes distintos antes de virar regra oficial
+- Especialmente: ambiente BEARISH/correccao (ainda nao observado na Fase 1)
+- BULLISH confirmado (BTC 1D BULLISH com Master Filter INACTIVE) tambem util
+
+**Implicacao Fase 2:**
+- Estados novos propostos: EXTENSION_DISTRIBUTION_RISK, SETUP_PEAK_DANGER, POST_CONFIRMATION_NO_CHASE
+- Logica: se trigger forte = bloquear "fresh entry" automaticamente
+- Logica: se trigger auxiliar = adicionar flag "caution"
+- NAO accionar agora - apenas backlog
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
