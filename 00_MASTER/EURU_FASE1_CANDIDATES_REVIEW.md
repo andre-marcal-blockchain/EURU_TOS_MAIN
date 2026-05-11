@@ -107,6 +107,15 @@
 | 2026-05-10 | INJUSDT | 1D | BULLISH | WATCHLIST (18/35 MEDIA) | RECALIBRACAO DESCENDENTE - regra auxiliar | Score 26 -> 18 MEDIA (-8 pts). RSI 73.76 -> 67.59. -3.79% 24h. Validou regra auxiliar (RSI > 70 alone = caution). 7D D9 era 11.15% (abaixo 15% threshold). | YES NO CHASE |
 | 2026-05-10 | FETUSDT | 1D | BULLISH | WATCHLIST (21/35) | WATCHLIST pullback moderado | Score 27 -> 21. RSI 63.36 -> 59.26. -3.34% 24h. RSI nao estava overbought - validacao indirecta da regra (sem trigger D9, queda menor relativa). | WATCHLIST |
 | 2026-05-10 | ARBUSDT | 1D | BULLISH | WATCHLIST (22/35) | WATCHLIST_REVERSAL_UNDER_TEST | Score 26 -> 22 (caiu menos que peers). -2.23% 24h, mas 7D ainda +9.99%. RSI 71.47 -> 67.66 (no limbo). OBV virou FALLING (alerta). 5 criterios Codex pullback saudavel vs falha follow-through. | OBSERVAR |
+| 2026-05-11 | BTCUSDT | 1D | SIDEWAYS | NO_TRADE (22/35) | YES gate active - BEARISH_WATCH | 5o dia SIDEWAYS. Score 20 -> 22 (recuperou tier BOA). BTC 4H NO_TRADE (1a vez!). Master Filter Asian ACTIVE + Morning ACTIVE = MACRO_DEFENSIVE_MODE. | YES |
+| 2026-05-11 | ETHUSDT | 1D | BEARISH | NO_TRADE (24/35) | NO_TRADE | Score 20 -> 24 (voltou tier BOA). MACD BEARISH continua, OBV RISING. +0.18% 24h. | NO entrada |
+| 2026-05-11 | SOLUSDT | 1D | BULLISH | WATCHLIST (28/35 PREMIUM) | WATCHLIST forte - voltou PREMIUM | Score 22 -> 28 PREMIUM (+6)! RSI 67.66 saudavel. +1.71% 24h, +5.58% 7D. Recuperacao mais limpa de todos. | WATCHLIST forte |
+| 2026-05-11 | TAOUSDT | 1D | BULLISH | WATCHLIST (26/35) | WATCHLIST recuperacao saudavel | Score 21 -> 26 (+5). RSI 65.08 saudavel. +1.96% 24h, +4.42% 7D. Cooldown D10 terminou. | WATCHLIST |
+| 2026-05-11 | LINKUSDT | 1D | BULLISH | WATCHLIST (24/35) | WATCHLIST recalibracao ascendente | Score 18 MEDIA -> 24 BOA (+6). RSI 71.47 -> 68.48 (saiu overbought). +1.64% 24h. 002b v3b: bidirectional confirmation. | WATCHLIST |
+| 2026-05-11 | INJUSDT | 1D | BULLISH | WATCHLIST (23/35) | WATCHLIST + RSI 70 alerta | Score 18 -> 23 BOA (+5). +2.40% 24h, +5.76% 7D. RSI 70.05 tocou threshold mas 7D abaixo 15% - regra auxiliar trigger nao forte. | WATCHLIST |
+| 2026-05-11 | OPUSDT | 1D | BULLISH | WATCHLIST (21/35) | WATCHLIST lag persistente | Score 19 -> 21 (+2 marginal vs +5/+6 peers). RSI 69.34 ainda alto. -1.29% 24h (unico negativo!). Recuperacao mais lenta apos colapso D10. | WATCHLIST |
+| 2026-05-11 | FETUSDT | 1D | BULLISH | WATCHLIST (24/35) | WATCHLIST moderado | Score 21 -> 24 (+3). RSI 59.55 saudavel. +1.56% 24h, +4.57% 7D. Sem extremos. | WATCHLIST |
+| 2026-05-11 | ARBUSDT | 1D | BULLISH | WATCHLIST (25/35) | WATCHLIST_REVERSAL_UNDER_TEST improving | Score 22 -> 25 (+3). OBV virou RISING (era FALLING D10). +0.57% 24h. 3/5 criterios Codex validados. Improving but not confirmed. Falta 4/5 mininum + RSI alivio. | OBSERVAR |
 
 ---
 
@@ -1326,6 +1335,181 @@ Todos os 4 ativos overbought do D9 caíram em 24h. NO CHASE Bruno-style acertou.
 - Logica: se trigger forte = bloquear "fresh entry" automaticamente
 - Logica: se trigger auxiliar = adicionar flag "caution"
 - NAO accionar agora - apenas backlog
+### Dia 11 - 2026-05-11 (segunda; MACRO_DEFENSIVE_MODE; ambos filters ACTIVE; recuperacao broad moderada)
+
+**Timing:** 5/5 tasks correram nas horas exactas. Daily Audit 08:30:01 sem sleep. Critério F PASS sem nota.
+
+**EVENTO METODOLOGICO IMPORTANTE - Ambos Master Filters ACTIVE (1a vez fora Dia 1):**
+
+- BTC trend SIDEWAYS continua (5o dia consecutivo)
+- BTC 4H state NO_TRADE (1a vez na Fase 1!)
+- Master Filter Morning ACTIVE (5o dia consecutivo)
+- Master Filter Asian ACTIVE (NOVO - BTC 4H NO_TRADE)
+- 0 SETUPs (5o dia consecutivo)
+
+Codex classificou Bruno-style: **MACRO_DEFENSIVE_MODE / BEARISH_WATCH**
+
+Nao e panico, nao e short automatico, nao e execute. E: "nao confiar na recuperacao das alts sem BTC voltar a confirmar."
+
+**MATRIZ DE DECISAO BTC PARA DIAS 12-14 (do Codex):**
+
+| Cenario | Trigger | Interpretacao |
+|---|---|---|
+| Cenario A | BTC 1D BEARISH ou score < 20 | Bearish emergente CONFIRMADO |
+| Cenario B | BTC 4H volta WATCHLIST/GEM_ALERT, 1D SIDEWAYS | Reset curto / tactical watch |
+| Cenario C | BTC 1D volta BULLISH | D11 foi limpeza / bear trap |
+| Cenario D | BTC 1D SIDEWAYS + 4H NO_TRADE persiste | MACRO_DEFENSIVE_MODE continua |
+
+Hipotese registada, NAO regra oficial. Decisao Type 2 sobre interpretacao apenas pos-T+14d.
+
+**RECUPERACAO AMPLA D10 -> D11:**
+
+| Asset | D10 -> D11 score | Δ | D11 24h |
+|---|---|---|---|
+| SOL | 22 -> 28 PREMIUM | +6 | +1.71% |
+| LINK | 18 -> 24 | +6 | +1.64% |
+| TAO | 21 -> 26 | +5 | +1.96% |
+| INJ | 18 -> 23 | +5 | +2.40% |
+| ETH | 20 -> 24 | +4 | +0.18% |
+| FET | 21 -> 24 | +3 | +1.56% |
+| ARB | 22 -> 25 | +3 | +0.57% |
+| BTC | 20 -> 22 | +2 | +0.06% |
+| OP | 19 -> 21 | +2 | -1.29% |
+
+9/9 ativos com score subindo. SOL voltou PREMIUM. LINK/ETH voltaram tier BOA. SOL recuperacao mais limpa.
+
+**MAGNITUDES BIDIRECCIONAIS (Finding 002b v3b refinamento Dia 11):**
+
+| Asset | D9->D10 (descendente) | D10->D11 (ascendente) | Asymmetric ratio |
+|---|---|---|---|
+| OP | -10 | +2 | -5:1 |
+| LINK | -9 | +6 | -1.5:1 |
+| INJ | -8 | +5 | -1.6:1 |
+| SOL | -6 | +6 | 1:1 |
+| FET | -6 | +3 | -2:1 |
+| TAO | -4 | +5 | 1.25:1 |
+| ARB | -4 | +3 | -1.3:1 |
+
+Padrao: queda rapida e violenta (4 ativos -8 a -10 pts), recuperacao moderada (max +6). Magnitude asymmetric documentada.
+
+**Finding 002b v3b note — Dia 11 (do Codex):**
+
+> "Bidirectional recalibration appears magnitude-asymmetric. Scores recover after pullback, but recovery magnitude is more gradual than the prior risk-off compression. D9-D10 showed violent downside repricing (-10/-9/-8), while D10-D11 recovery was broader but capped (+6 max)."
+
+Insight Codex: "Pode ser bom sinal - sistema parece mais rapido em remover premio quando risco aparece do que em restaurar premio depois."
+
+Trail completo Finding 002b:
+- v1 (Dia 5): lag entre score, estado e qualidade operavel
+- v2 (Dia 8): regime-sensitive + asset-dependent
+- v3 (Dia 9): + flow-velocity-sensitive
+- v3b (Dia 10): bidirectional
+- **v3b note Dia 11: magnitude-asymmetric**
+
+Nucleo permanece: separar score, estado, permissao macro e qualidade de entrada.
+
+**ARBUSDT - WATCHLIST_REVERSAL_UNDER_TEST improving:**
+
+Critérios pullback saudavel validados D11:
+- ✓ OBV virou RISING (era FALLING D10)
+- ✓ Score estabiliza acima de 22 (25)
+- ✓ Proximo candle nao devolveu movimento (+0.57%)
+- ⚠️ RSI 67.32 ainda no limbo (acima 65 threshold)
+- ❓ Suporte/weekly low (precisa verificar)
+
+**Status: 3/5 validados, 2 ambiguos. Improving, not confirmed.**
+
+Codex sistematizou para sair de REVERSAL_UNDER_TEST:
+- Minimo 4/5 criterios
+- OBRIGATORIO: OBV RISING/nao FALLING + Preço acima zona suporte + Score >= 22 +1 close + candle sem devolver
+- RSI > 65 nao invalida mas impede fresh entry
+- Para REVERSAL_CONFIRMED_WATCH: +1 close diario sem perder suporte + OBV continuar RISING + score manter >=25 ou nao cair <22 + RSI aliviar 55-65
+
+**SOLUSDT - recuperacao mais limpa:**
+- Score 22 -> 28 PREMIUM (+6)
+- RSI 67.66 saudavel (nao overbought)
+- 7D +5.58% moderado
+- Sem extremos D9 (RSI 67.86 vs 76/73/71 de OP/INJ/LINK)
+- Validacao Rule Candidate 001: ativos SEM trigger overbought recuperam mais limpo
+
+Codex Dia 7+9: "SOL = melhor long signal".
+
+**OPUSDT - lag persistente:**
+- Score 19 -> 21 (apenas +2)
+- RSI 69.34 ainda alto
+- -1.29% 24h (UNICO negativo D11)
+- Recuperacao significativamente mais lenta que peers
+- Trajectoria completa D4-D11: NO -> PARCIAL -> CONFIRMED -> EXTENDED -> PEAK_DANGER -> COLAPSO -> recuperacao lenta
+
+Validacao Rule Candidate 001 + Finding 002b v3b magnitude-asymmetric: extensao extrema = recuperacao mais lenta.
+
+**CROSS-CHECK CLAUDE + CODEX (9/9 concordancia):**
+
+Acumulado Dias 2-11: 79 + 9 = **88/88 alinhamento total**.
+
+**Concordancia operador-sistema Dia 11 (9 entradas):**
+- 1/9 YES gate active BEARISH_WATCH (BTC NO_TRADE)
+- 1/9 NO entrada (ETH BEARISH)
+- 6/9 WATCHLIST (varias categorias)
+- 1/9 OBSERVAR (ARB improving but under test)
+
+Comparacao 11 dias - regime distribution:
+- D1, D8, D9, D10, D11: SIDEWAYS dominante (5 dias)
+- D2-D7: BULLISH variantes (6 dias)
+- D11: MACRO_DEFENSIVE_MODE (1a vez nivel maximo)
+
+Padrao revelado: sistema mantem disciplina identica em SIDEWAYS (D8: pullback, D9: rally, D10: pullback amplo, D11: recovery). Master Filter ACTIVE = 0 SETUPs independentemente de direccao do movimento das alts.
+
+**Severidades Findings (Dia 11):**
+- Finding 001: medium (superseded)
+- Finding 001a: medium-low (validado D4-D11 trajectoria OP completa)
+- Finding 002: medium-low (superseded por 002b)
+- **Finding 002b: medium-low (NOTA Dia 11 - magnitude-asymmetric)**
+- Finding 003: medium (VALIDADO MAXIMAMENTE D8-D11)
+- Rule Candidate 001: PROVISIONALLY_VALIDATED (1 evidencia D9->D10)
+
+**Critérios A-H Dia 11:** 8/8 PASS.
+### Sintese das respostas Codex (Dia 11)
+
+**Pergunta 1 - Master Filter ambos ACTIVE - disciplina ou bearish emergente?**
+
+(a) disciplina macro reforcada, com alerta de bearish emergente ainda NAO confirmado.
+
+"Nao chamaria bearish confirmado ainda porque BTC 1D continua SIDEWAYS, nao BEARISH. Mas BTC 4H NO_TRADE pela primeira vez muda o tom: antes o 4H estava sugerindo oportunidade tatica (GEM_ALERT); agora nem o curto prazo ajuda. Sistema esta certo em modo defensivo total."
+
+Classificacao: **MACRO_DEFENSIVE_MODE / BEARISH_WATCH**.
+
+Matriz 4 cenarios para Dias 12-14 (ver Notas).
+
+**Pergunta 2 - Recuperacao moderada - 002b v3b magnitude-asymmetric?**
+
+SIM. Codex preservou disciplina (nota dentro v3b, nao novo finding):
+"Bidirectional recalibration appears magnitude-asymmetric. Scores recover after pullback, but recovery magnitude is more gradual than the prior risk-off compression."
+
+INSIGHT POSITIVO: "Pode ser bom sinal: o sistema parece mais rapido em remover premio quando risco aparece do que em restaurar premio depois. Mas ainda precisa separar score de qualidade operavel."
+
+**Pergunta 3 - ARB quando declarar reversal confirmed?**
+
+NAO confirmado ainda. Manter WATCHLIST_REVERSAL_UNDER_TEST mas com melhora clara.
+
+Para sair: minimo 4/5 criterios, obrigatoriamente:
+- OBV RISING/nao FALLING
+- Preco segurando acima suporte/weekly low
+- Score >= 22 por +1 close
+- Candle 4H/1D sem devolver movimento
+
+RSI > 65 nao invalida mas impede fresh entry.
+
+Para REVERSAL_CONFIRMED_WATCH: +1 close diario sem perder suporte + OBV continuar RISING + score manter >=25 ou nao cair <22 + idealmente RSI aliviar 55-65.
+
+Hoje: ARB = WATCHLIST_REVERSAL_UNDER_TEST, improving, not confirmed.
+
+**Sintese Codex Dia 11:**
+"Macro defensive mode validated; recovery broad but not executable; 002b v3b gains magnitude-asymmetric note; ARB improves but remains under test."
+
+"Mesmo com 9/9 scores recuperando, ambos Master Filters ficaram ACTIVE e o sistema manteve 0 SETUPs. Isso e correto Bruno-style. A recuperacao das alts e observavel, mas nao acionavel sem BTC."
+
+**Decisao Codex (mantida):**
+"Continuar Fase 1 sem alteracao ate T+14d. Findings vao para backlog Fase 2. Sem reactivar tasks. Sem paper trades."
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
