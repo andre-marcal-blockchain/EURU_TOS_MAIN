@@ -125,6 +125,15 @@
 | 2026-05-12 | OPUSDT | 1D | BULLISH | WATCHLIST (19/35 MEDIA) | WATCHLIST descendente persistente | Score 21 -> 19. -2.93% 24h (UNICO grande negativo). Continuacao do colapso D10. Trajectoria D4-D12: NO -> CONFIRMED -> EXTENDED -> PEAK_DANGER -> COLAPSO -> RECUPERACAO LENTA -> DESCENDENTE PERSISTENTE. | NO entrada |
 | 2026-05-12 | FETUSDT | 1D | BULLISH | WATCHLIST (20/35 MEDIA) | WATCHLIST pullback | Score 24 -> 20 MEDIA. RSI 57.58. -1.19% 24h. Pullback dentro da media. | WATCHLIST |
 | 2026-05-12 | ARBUSDT | 1D | BULLISH | WATCHLIST (18/35 MEDIA) | WATCHLIST_REVERSAL_FAILED | Score 25 -> 18 MEDIA (-7!). OBV virou FALLING (era RISING D11). -1.98% 24h. 7D caiu 9.99% -> 2.60%. 3/5 criterios falha confirmados. NAO bearish resumed ainda (trend ainda BULLISH, MACD BULLISH). Encerra REVERSAL_UNDER_TEST. | YES failed |
+| 2026-05-13 | BTCUSDT | 1D | SIDEWAYS | NO_TRADE (22/35) | TACTICAL_RESET weakening / REJECTION_WATCH | 7o dia SIDEWAYS. Score 22 mantido. MACD virou BEARISH + OBV FALLING (1a vez ambos!). Trend ainda SIDEWAYS, score nao caiu. -0.00% 24h. Master Filter Morning ACTIVE 7o dia. Cenario B enfraquecendo. | YES |
+| 2026-05-13 | ETHUSDT | 1D | BEARISH | NO_TRADE (20/35 MEDIA) | NO_TRADE | Score 22 -> 20 MEDIA. MACD BEARISH + OBV FALLING. -0.16% 24h, -0.69% 7D. | NO entrada |
+| 2026-05-13 | SOLUSDT | 1D | BULLISH | WATCHLIST (23/35) | WATCHLIST pullback continua | Score 27 -> 23 (-4). RSI 65.83. -0.91% 24h, +2.70% 7D. Continuacao pullback D12. | WATCHLIST |
+| 2026-05-13 | TAOUSDT | 1D | BULLISH | NO_TRADE (18/35 MEDIA) | NO_TRADE - downgrade tier | Score 22 -> 18 MEDIA (-4)! RSI 60.68. -2.82% 24h (MAIOR negativo do dia). Caiu para NO_TRADE. | NO entrada |
+| 2026-05-13 | LINKUSDT | 1D | BULLISH | WATCHLIST (21/35) | WATCHLIST marginal | Score 20 -> 21 (+1). RSI 64.94. -0.10% 24h. OBV virou FALLING. Recuperacao parou. | WATCHLIST |
+| 2026-05-13 | INJUSDT | 1D | BULLISH | WATCHLIST (27/35) | WATCHLIST_BLOW_OFF_RISK / NO_CHASE | **EVENTO CRITICO**: RSI saltou 78.53 -> 83.15!! +9.07% 24h (3o dia consecutivo subindo!), +18.08% 7D (acima 15% threshold). Score 26 -> 27. AMBAS regras RC001 trigger (forte + auxiliar). Sub-cenario 3 materializou: BLOW_OFF_RISK. | NO CHASE |
+| 2026-05-13 | OPUSDT | 1D | BULLISH | WATCHLIST (20/35 MEDIA) | WATCHLIST estabilizou | Score 19 -> 20 (+1 marginal). RSI 63.14. -0.64% 24h. OBV ainda FALLING. Recuperacao muito lenta apos colapso D10. | WATCHLIST |
+| 2026-05-13 | FETUSDT | 1D | BULLISH | WATCHLIST (21/35) | WATCHLIST marginal | Score 20 -> 21 (+1). RSI 54.47. -1.94% 24h. OBV FALLING. Estabilidade fraca. | WATCHLIST |
+| 2026-05-13 | ARBUSDT | 1D | BULLISH | WATCHLIST (22/35) | WATCHLIST_REVERSAL_FAILED standby | Score 18 -> 22 (+4). +2.17% 24h. OBV ainda FALLING. Trend BULLISH, MACD BULLISH. Criterios RESUMED_BEARISH NAO materializaram. Fica REVERSAL_FAILED em standby. | OBSERVAR |
 
 ---
 
@@ -1718,6 +1727,199 @@ Criterios para RESUMED_BEARISH (lista para validar D13+):
 
 **Sintese Codex Dia 12:**
 "D12 confirma Cenario B: TACTICAL_RESET / MACRO_STILL_LOCKED. INJ cria refinement candidate importante para Rule Candidate 001: RSI > 75 = PEAK_DANGER even without 7D > 15%. ARB fecha o arco de reversal como REVERSAL_FAILED, mas ainda sem confirmacao de bearish resumed."
+
+**Decisao Codex (mantida):**
+"Continuar Fase 1 sem alteracao ate T+14d. Findings vao para backlog Fase 2. Sem reactivar tasks. Sem paper trades."
+### Dia 13 - 2026-05-13 (quarta; D-1 T+14D; INJ BLOW_OFF + BTC REJECTION_WATCH; preparacao Avaliacao Final)
+
+**Timing:** 5/5 tasks correram nas horas exactas. Daily Audit 08:30:02 sem sleep. Critério F PASS sem nota.
+
+**EVENTOS CRITICOS DIA 13 (3 ao mesmo tempo):**
+
+**1) INJUSDT - BLOW_OFF_RISK em desenvolvimento:**
+
+Trajectoria 3 dias consecutivos:
+- D11: RSI 70.05, +2.40% 24h
+- D12: RSI 78.53, +9.53% 24h, +12.11% 7D (RC001-R1 emergente)
+- **D13: RSI 83.15!!, +9.07% 24h, +18.08% 7D!! score 27**
+
+AMBAS regras RC001 agora trigger (1a vez em INJ):
+- Rule Candidate 001 regra forte: RSI > 70 + 7D > 15% ✓
+- RC001-R1 refinement: RSI > 75 standalone ✓ (2o dia consecutivo)
+- Sub-cenario 3 Codex Dia 12 materializou: continuar subindo com RSI > 80
+
+**Codex classificacao D13: WATCHLIST_BLOW_OFF_RISK / NO_CHASE**
+
+Taxonomia observacional (formalizacao no documento T+14D amanha):
+
+| Taxonomia | Criterios |
+|---|---|
+| PEAK_DANGER | RSI > 75 OU extensao forte |
+| BLOW_OFF_RISK | RSI > 80 + 2-3 candles consecutivos fortes + score alto + macro nao confirma |
+
+Diferenca: PEAK_DANGER cobre sobre-extensao; BLOW_OFF_RISK comunica aceleracao terminal especifica. INJ nao e so "esticado"; esta em aceleracao terminal potencial.
+
+Codex: "Nao e entrada. Se fosse posicao ja aberta, seria zona de proteccao agressiva."
+
+**2) BTC TECHNICALS BEARISH dentro SIDEWAYS:**
+
+- D12: BTC MACD BULLISH, OBV RISING
+- **D13: BTC MACD BEARISH + OBV FALLING (1a vez Fase 1 ambos BEARISH simultaneamente)**
+- Trend ainda SIDEWAYS (NAO BEARISH)
+- Score mantido 22/22
+- Master Filter Morning ACTIVE 7o dia consecutivo
+
+**Codex classificacao D13: TACTICAL_RESET weakening / REJECTION_WATCH**
+
+Ainda nao BEARISH_EMERGING confirmado, mas Cenario B enfraquecendo.
+
+**4 sinais refinados para Dia 14 (do Codex):**
+
+| Cenario D14 | Sinais |
+|---|---|
+| TACTICAL_RESET prolongado | BTC 4H GEM_ALERT/WATCHLIST + 1D SIDEWAYS + score 21-23 + OBV estabiliza/RISING |
+| REJECTION confirmado | BTC 4H volta NO_TRADE + OBV FALLING continua + MACD BEARISH + alts perdem score + 0 SETUPs |
+| BEARISH_EMERGING | BTC 1D vira BEARISH ou score < 20 + suporte falha + alts devolvem forte |
+| Bear trap / retomada | BTC 1D volta BULLISH + OBV RISING + Morning desactiva + alts sustentam |
+
+**3) ARBUSDT - REVERSAL_FAILED estabilizou:**
+
+- D12: WATCHLIST_REVERSAL_FAILED, score 18, OBV FALLING
+- D13: WATCHLIST, score 22 (+4), +2.17%, OBV ainda FALLING
+
+Criterios RESUMED_BEARISH NAO materializaram:
+- Trend ainda BULLISH (nao BEARISH)
+- MACD ainda BULLISH
+- OBV FALLING (apenas 1/3 sinais)
+- Score recuperou (nao manteve <20)
+- Suporte nao perdido
+
+**ARB fica WATCHLIST_REVERSAL_FAILED em standby.** Sem confirmacao bearish resumed.
+
+**DECISAO ESTRUTURAL T+14D (do Codex):**
+
+Avaliacao Final amanha sera **DOCUMENTO STANDALONE**, como T+7D.
+
+Path: `00_MASTER/EURU_FASE1_FINAL_EVALUATION_T14D_2026-05-14.md`
+
+**Justificativa:**
+- T+14D e marco formal de fechamento da Fase 1
+- Material suficiente para auditor futuro: findings, rule candidates, taxonomia, casos paradigmaticos, criterios A-H, cross-check 106/106
+- Decisao pos-Fase 1 provavelmente Type 2 - precisa referencia limpa
+- CANDIDATES_REVIEW e diario/empirico; T+14D e arquitetura
+
+**Estrutura proposta (10 seccoes):**
+
+1. Executive Decision
+2. Operational Reliability (tasks, timing, sleep, commits, A-H)
+3. Market Regimes Observed (bullish, mixed, sideways, macro defensive, tactical reset)
+4. Findings Finalizados (001, 001a, 002, 002b v1-v3b, 003)
+5. Rule Candidate Backlog (RC001, RC001-R1, status + evidencias)
+6. Taxonomia Fase 2 Proposta (SETUP_EARLY, CONFIRMED, EXTENDED, BLOW_OFF_RISK, REJECTION_WATCH, etc.)
+7. Casos Paradigmaticos (OP trajetoria, INJ blow-off, ARB failed, BTC filter discipline)
+8. Decisao Recomendada para Fase 2
+9. Open Questions / Guardrails
+10. Approvals / Cross-checks
+
+**EVOLUCAO D12 -> D13:**
+
+| Asset | D12 | D13 | Δ | D13 24h |
+|---|---|---|---|---|
+| INJ | 26 | 27 | +1 | +9.07% (3o dia consecutivo!) |
+| ARB | 18 | 22 | +4 | +2.17% (recuperacao marginal) |
+| OP | 19 | 20 | +1 | -0.64% (estabilizou) |
+| LINK | 20 | 21 | +1 | -0.10% (marginal) |
+| FET | 20 | 21 | +1 | -1.94% (marginal) |
+| BTC | 22 | 22 | 0 | -0.00% (mas technicals BEARISH!) |
+| ETH | 22 | 20 | -2 | -0.16% |
+| SOL | 27 | 23 | -4 | -0.91% |
+| TAO | 22 | 18 | -4 | -2.82% (MAIOR negativo, NO_TRADE) |
+
+Padrao: INJ isolado positivo extremo. TAO maior queda (downgrade NO_TRADE). BTC technicals deteriorando mas score resiliente.
+
+**CROSS-CHECK CLAUDE + CODEX (9/9 concordancia):**
+
+Acumulado Dias 2-13: 97 + 9 = **106/106 alinhamento total**.
+
+**Concordancia operador-sistema Dia 13 (9 entradas):**
+- 2/9 YES gate active (BTC REJECTION_WATCH, ETH BEARISH)
+- 1/9 NO entrada (TAO NO_TRADE downgrade)
+- 4/9 WATCHLIST (SOL, LINK, OP, FET)
+- 1/9 WATCHLIST_BLOW_OFF_RISK / NO CHASE (INJ)
+- 1/9 OBSERVAR (ARB REVERSAL_FAILED standby)
+
+Comparacao 13 dias - taxonomia evoluiu (lista completa para T+14D):
+- D1-D7: SETUP/WATCHLIST/NO_TRADE basico
+- D8-D11: + MACRO_DEFENSIVE_MODE, REVERSAL_UNDER_TEST, EXTENSION_DISTRIBUTION_RISK
+- D12: + TACTICAL_RESET / MACRO_STILL_LOCKED, REVERSAL_FAILED, WATCHLIST_PEAK_DANGER
+- **D13: + WATCHLIST_BLOW_OFF_RISK, REJECTION_WATCH (formalizacao no T+14D)**
+
+**Severidades Findings (Dia 13):**
+- Finding 001: medium (superseded)
+- Finding 001a: medium-low (validado D4-D13 trajectoria OP completa)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (v3b note Dia 11 magnitude-asymmetric)
+- Finding 003: medium (VALIDADO D8-D13)
+- **Rule Candidate 001: PROVISIONALLY_VALIDATED** (INJ valida regra forte D13 - 1a vez em INJ)
+- **RC001-R1: UNDER_OBSERVATION continua** (INJ ainda subindo, nao testou descida ainda)
+
+**Critérios A-H Dia 13:** 8/8 PASS.
+
+**T+14D MARCO:** 1 dia restante. Material acumulado:
+- 13 dias observacao completa
+- 5 findings consolidados
+- 1 Rule Candidate (RC001) PROVISIONALLY_VALIDATED
+- 1 Refinement Candidate (RC001-R1) UNDER_OBSERVATION
+- 11+ taxonomias novas a formalizar
+- 106/106 cross-check
+- 7 dias consecutivos Master Filter ACTIVE
+- 7 dias consecutivos 0 SETUPs
+- 3 casos paradigmaticos (OP, INJ, ARB)
+### Sintese das respostas Codex (Dia 13)
+
+**Pergunta 1 - INJ BLOW_OFF_RISK nova taxonomia?**
+
+SIM. Codex classificou:
+- BLOW_OFF_RISK (nome principal)
+- EXTREME_PEAK_DANGER (descricao/nivel, nao nome)
+
+Motivo: "PEAK_DANGER cobre sobre-extensao. BLOW_OFF_RISK comunica melhor o comportamento especifico: aceleracao final, RSI extremo, multiplos dias consecutivos, risco de reversao violenta ou wick."
+
+Para Fase 2:
+- PEAK_DANGER: RSI > 75 ou extensao forte
+- BLOW_OFF_RISK: RSI > 80 + 2-3 candles consecutivos fortes + score ainda alto + macro nao confirma
+
+INJ D13 = WATCHLIST_BLOW_OFF_RISK / NO_CHASE. Nao e entrada. Se fosse posicao aberta = zona protecao agressiva.
+
+**Pergunta 2 - BTC technicals BEARISH dentro SIDEWAYS?**
+
+TACTICAL_RESET weakening / REJECTION_WATCH.
+
+Ainda NAO BEARISH_EMERGING confirmado porque:
+- Trend segue SIDEWAYS
+- Score nao caiu
+- Nao virou 1D BEARISH
+
+Mas MACD BEARISH + OBV FALLING e mudanca seria. Cenario B esta enfraquecendo e pode virar Sub-cenario 3 amanha.
+
+4 sinais refinados para Dia 14 (matriz 4 cenarios atualizada).
+
+**Pergunta 3 - T+14D documento standalone ou seccao?**
+
+DOCUMENTO STANDALONE, como T+7D.
+
+Justificativa:
+- T+14D e marco formal de fechamento da Fase 1
+- Material suficiente para auditor futuro
+- Decisao pos-Fase 1 provavelmente Type 2 - precisa referencia limpa
+- CANDIDATES_REVIEW e diario/empirico; T+14D e arquitetura
+
+Path proposto: `00_MASTER/EURU_FASE1_FINAL_EVALUATION_T14D_2026-05-14.md`
+
+Estrutura proposta 10 seccoes (ver Notas Dia 13).
+
+**Sintese Codex Dia 13:**
+"INJ vira WATCHLIST_BLOW_OFF_RISK / NO_CHASE. BTC entra em REJECTION_WATCH, mas ainda nao bearish confirmado. Para amanha, eu faria documento standalone T+14D, porque a Fase 1 virou um corpo de evidencia formal, nao so uma nota de revisao."
 
 **Decisao Codex (mantida):**
 "Continuar Fase 1 sem alteracao ate T+14d. Findings vao para backlog Fase 2. Sem reactivar tasks. Sem paper trades."
