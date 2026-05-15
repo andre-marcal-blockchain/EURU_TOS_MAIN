@@ -21,7 +21,7 @@ target_chat_name: "Euru OS - Fase 2 Design + Stress-test"
 
 Esta e a continuacao de um trabalho Euru OS de varios meses. O operador Andre Marcal ja te conhece (de outras conversas via memoria persistente Claude) e ja trabalhamos em conjunto com Codex (OpenAI) durante toda a Fase 1.
 
-Para te re-onboardar rapidamente, le os seguintes ficheiros (na ordem) no folder C:\Users\andre\Desktop\EURO MAIN\00_MASTER\:
+Para te re-onboardar rapidamente, le os seguintes ficheiros (na ordem) no folder C:\Users\andre\Desktop\EURU TOS MAIN\00_MASTER\:
 
 1. Este ficheiro (estas a ler) - contexto compacto + protocolo
 2. EURU_TYPE2_DECISION_FASE2_2026-05-14.md (197 linhas) - decisao formal Fase 1 -> Fase 2
@@ -61,7 +61,7 @@ Apos leitura, confirma:
 **Plataforma:** Binance Perpetual Futures (read-only durante toda Fase 1 e Fase 2)
 
 **Paths:**
-- Folder local oficial: C:\Users\andre\Desktop\EURO MAIN
+- Folder local oficial: C:\Users\andre\Desktop\EURU TOS MAIN
 - Repositorio canonico: github.com/andre-marcal-blockchain/EURU_TOS_MAIN
 
 **Watchlist:** 18 ativos (BTC, ETH, SOL, INJ, OP, LINK, TAO, FET, ARB + outros 9)
