@@ -2119,6 +2119,138 @@ Status RC001-R1: UNDER_OBSERVATION + stress-test active. Validacao retrospectiva
 "Continuar Fase 1 sem alteracao ate T+14d. Findings vao para backlog Fase 2. Sem reactivar tasks. Sem paper trades."
 
 T+14D atingido. Type 2 Governance Decision proxima sobre implementacao Fase 2.
+
+### Dia 15 - 2026-05-15 (sexta; T+15D PRIMEIRO DIA FASE 2; bounce parcial sem macro unlock; BTC TACTICAL_RESET sob Master Filter ACTIVE; INJ BLOW_OFF reversal pressure under test; OP+FET expandem bearish-emerging set; SCORE DIRECTIONALITY GAP persiste)
+
+**Timing:** 5/5 tasks correram nas horas exactas (Asian 02:00:01, Morning 07:00:01, Trade Monitor 07:30:01, Journal Auditor 07:30:01, Daily Audit 08:30:01), todas result 0. Critério F operacional PASS; sem evidência de falha nos restantes critérios com os dados disponíveis.
+
+**T+15D MARCO:** Primeiro dia operacional Fase 2 (Design) após Type 2 Decision T2-FASE2-2026-05-14 (commit a7d16df). Modo READ_ONLY mantido. EXCLUDE list ativa. Commit canônico atual: feca91d.
+
+**Master Filter:** Asian ACTIVE (BTC 4H state WATCHLIST), Morning ACTIVE (BTC trend 1D SIDEWAYS) — **9º dia consecutivo Morning ACTIVE**. Sem permissão operacional para altcoin SETUP.
+
+**3 EVENTOS MAJORES DIA 15:**
+
+**1) BTC TACTICAL_RESET — BEARISH_EMERGING under test, não invalidado:**
+
+- D14: trend BEARISH, -2.21% 24h, score 27, OBV FALLING, state WATCHLIST
+- **D15: trend 1D SIDEWAYS, +1.61% 24h, RSI 58.36, MACD BEARISH mantido, OBV FLAT, score 25, state NO_TRADE**
+
+Matriz BTC D14 (Codex Dia 11/12 → materializou em A no D14): no D15 não confirma continuação BEARISH (sem novo low, MACD ainda BEARISH mas trend recuou para SIDEWAYS) e também não libera macro (Master Filter Morning ACTIVE persiste).
+
+Codex classificação D15: **TACTICAL_RESET / MACRO_STILL_LOCKED / NO_TRADE**
+
+> "D15 não confirma BEARISH continuation e também não libera macro. Master Filter segue ACTIVE por BTC SIDEWAYS; não há permissão operacional para altcoin SETUP apesar do bounce parcial."
+
+BEARISH_EMERGING D14 permanece **under test**. Resolução pendente próximos 1-3 dias: novo low → confirma BEARISH; close > resistência + MACD BULLISH → reversão para regime anterior; continuação SIDEWAYS → consolidação prolongada.
+
+**2) INJ BLOW_OFF reversal pressure under test — 3/7 sinais acionados:**
+
+- D14: RSI 84.86, +4.19% 24h, +18.04% 7D, score 27, OBV RISING
+- **D15: RSI 80.88, -2.94% 24h, +9.85% 7D, score 21 (Δ-6), MACD BULLISH, OBV RISING, trend MIXED**
+
+7 sinais transição BLOW_OFF → REVERSAL (referência Codex D14):
+1. ✓ Primeiro close vermelho forte (-2.94%)
+2. ✓ RSI vira para baixo saindo de >80 (84.86 → 80.88)
+3. ✗ OBV ainda RISING (não virou FALLING)
+4. — Volume climático seguido de candle fraco (pendente verificação volume)
+5. — Perda do low do candle anterior em 4H (pendente verificação intra-day)
+6. ✓ Score comprime forte (Δ-6, acima do threshold -5)
+7. — Wick superior grande ou falha de continuação após novo high (pendente verificação)
+
+**3/7 sinais confirmados, 4/7 pendentes/não-acionados.** OBV RISING + MACD BULLISH = fluxo ainda não rompeu. Trend 1D MIXED reflete a transição em curso.
+
+Codex classificação D15: **WATCHLIST_BLOW_OFF_RISK_ACTIVE / WICK_TERRITORY / NO_CHASE** (mantido conservador).
+
+> "BLOW_OFF reversal pressure under test; validation pending D16-D17."
+
+**Status RC001-R1:** UNDER_OBSERVATION + stress-test active. **NÃO validado retrospectivamente no D15** — 3/7 sinais não é evidência suficiente. Validação retrospectiva forte requer confirmação adicional D16-D17, especialmente OBV/estrutura/continuação de queda.
+
+**3) OP + FET — mini-cluster BEARISH_EMERGING sob Master Filter ACTIVE:**
+
+OP (caso mais forte — trajetória descendente persistente desde D10 PEAK_DANGER):
+- D14: trend BULLISH, -5.89% 24h, -7.61% 7D, score 22, MACD BULLISH
+- **D15: trend 1D BEARISH (confirmado), -2.27% 24h, -9.51% 7D, score 22 mantido, MACD BEARISH, OBV FALLING**
+
+Codex classificação: **WATCHLIST_BEARISH_EMERGING**.
+
+FET (novo no set bearish-emerging):
+- D14: trend BULLISH, -7.16% 24h, -7.57% 7D, score 25, MACD BULLISH
+- **D15: trend 1D BEARISH (confirmado), -0.14% 24h, -7.30% 7D, score 26 (Δ+1), MACD BEARISH, OBV FALLING**
+
+Codex classificação: **BEARISH_EMERGING watch** (sem elevar a Finding/RC/taxonomia nova).
+
+Padrão observado: trend virou BEARISH durante bounce 24h dos outros 12 ativos. Sob Master Filter Morning ACTIVE = sem pipeline short, sem signal acionável.
+
+> "Tratar OP+FET como mini-cluster bearish emerging under active Master Filter, não como nova evidência suficiente para Finding 004."
+
+**ARB observação suplementar (não evento majór novo):**
+
+ARB mantém WATCHLIST_RESUMED_BEARISH (D14). D15: 24h -0.08% (estagnação após -8.42% D14), 7D piorou (-6.07% → -6.68%), trend BEARISH mantido, score 22 → 24 (**Δ+2**). Padrão direction-agnostic do Finding 002b FINAL reforçado: preço estagnado/pior, score sobe. Sem ação — apenas observar e registar.
+
+**SCORE DIRECTIONALITY GAP D15 — persiste, não resolveu:**
+
+Tabela cross-asset D14 → D15 (9 priorizados + RENDER pela materialidade):
+
+| Asset | D14 Score | D15 Score | Δ | D15 24h | RSI | Trend/Nota D15 |
+|---|---|---|---|---|---|---|
+| INJ | 27 | 21 | -6 | -2.94% | 80.88 | MIXED — BLOW_OFF reversal under test |
+| RENDER | 28 | 23 | -5 | +1.83% | 51.50 | Tier PREMIUM → BOA |
+| TAO | 25 | 21 | -4 | +3.36% | 56.86 | Preço sobe, score cai |
+| NEAR | 20 | 16 | -4 | +0.90% | 63.72 | Score mais baixo dos 18 |
+| BTC | 27 | 25 | -2 | +1.61% | 58.36 | SIDEWAYS — TACTICAL_RESET |
+| SOL | 27 | 25 | -2 | +0.91% | 55.46 | — |
+| LINK | 24 | 22 | -2 | +1.37% | 60.71 | State → NO_TRADE |
+| ARB | 22 | 24 | +2 | -0.08% | 52.01 | BEARISH — RESUMED_BEARISH, score sobe |
+| OP | 22 | 22 | 0 | -2.27% | 53.40 | BEARISH — BEARISH_EMERGING (novo) |
+| FET | 25 | 26 | +1 | -0.14% | 45.57 | BEARISH — BEARISH_EMERGING (novo) |
+| ETH | 25 | 25 | 0 | +0.28% | 46.25 | — |
+
+**Padrão direction-agnostic reforçado D15:**
+- 4 ativos com preço subindo + score caindo: RENDER, TAO, NEAR, BTC (compressão durante bounce)
+- 2 ativos com preço caindo/estagnado + score subindo: ARB (-0.08% 24h, 7D piorou, score +2), FET (-0.14% 24h, trend virou BEARISH, score +1)
+- INJ compressão -6 sob movimento técnico ainda BULLISH (MACD/OBV)
+
+Finding 002b FINAL (direction-agnostic under bearish): **evidência adicional D15, sem novo refinement**. Núcleo permanece: technical_strength + directional_bias + macro_permission + operable_quality precisam ser separados antes de qualquer lógica acionável.
+
+**CROSS-CHECK CLAUDE + CODEX:**
+
+Cross-check limitado D15: 3/3 alinhado. Acumulado documentado passa a 118/118 se mantida a mesma métrica.
+
+3 perguntas (INJ classificação, BTC sub-cenário, OP+FET cluster) — todas respondidas com classificação conservadora, sem criação de label/Finding/RC novo. Disciplina governance preservada.
+
+**Concordância operador-sistema Dia 15 (9 entradas):**
+- BTC: NO_TRADE / TACTICAL_RESET
+- LINK: NO_TRADE
+- ETH, SOL, TAO: WATCHLIST bounce/pullback
+- INJ: WATCHLIST_BLOW_OFF_RISK_ACTIVE / NO_CHASE
+- ARB: WATCHLIST_RESUMED_BEARISH
+- OP: WATCHLIST_BEARISH_EMERGING
+- FET: BEARISH_EMERGING watch
+
+**Severidades Findings (Dia 15 — sem mudança):**
+- Finding 001: medium (superseded por 001a)
+- Finding 001a: medium-low (validado D4-D14; observado D15)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (FINAL REFINEMENT D14 — evidência adicional D15, sem novo refinement)
+- Finding 003: medium (VALIDADO D8-D14; observado D15)
+- Rule Candidate 001: PROVISIONALLY_VALIDATED (sem mudança; precisa 2-3 ocorrências adicionais para promoção)
+- RC001-R1: UNDER_OBSERVATION + stress-test active — **NÃO validado retrospectivamente D15** (3/7 sinais; validação pending D16-D17)
+
+**WATCH POINTS PARA D16:**
+
+| Watch point | Status D15 | O que monitorar D16 |
+|---|---|---|
+| **INJ BLOW_OFF reversal under test** | 3/7 sinais; OBV RISING; MACD BULLISH; RSI 80.88 | Sinais 3-7 (OBV virar FALLING, volume climático, perda low 4H, wick superior). Confirmação OBV/estrutura/continuação de queda → fortalece validação retrospectiva RC001-R1. |
+| **BTC TACTICAL_RESET sob Master Filter** | Trend SIDEWAYS, MACD BEARISH, OBV FLAT, score 25, NO_TRADE | Resolução D16-D18: novo low (confirma BEARISH) / close > resistência + MACD BULLISH (reversão) / continuação SIDEWAYS. Master Filter Morning desativa? |
+| **OP BEARISH_EMERGING** | Trend BEARISH confirmado, 7D -9.51%, MACD BEARISH, OBV FALLING, score 22 | Continuação BEARISH ou bounce técnico? Score reage? |
+| **FET BEARISH_EMERGING watch** | Trend BEARISH (novo), 7D -7.30%, MACD BEARISH, OBV FALLING, score 26 | Confirma BEARISH ou reverte rapidamente? Se 2-3 dias confirmados, possível classificação como WATCHLIST_BEARISH_EMERGING formal. |
+| **ARB RESUMED_BEARISH** | Trend BEARISH, -6.68% 7D, score 24 (Δ+2) | Continua a afundar ou consolida? Sem pipeline short — apenas observar. |
+| **Master Filter Morning 9º dia ACTIVE** | ACTIVE (BTC trend SIDEWAYS) | Quando desativa? BTC precisa virar BULLISH ou WATCHLIST 4H sair. |
+| **Mini-cluster bearish emerging (OP+FET+ARB+BTC under test)** | 4 ativos em estados bearish distintos | Cluster expande (mais ativos viram BEARISH) ou dissolve? |
+
+**Frase Codex que define o dia:**
+
+> "D15 delivered a partial market bounce, but not a macro unlock: BTC reset to SIDEWAYS/NO_TRADE, Master Filter stayed ACTIVE, INJ began the blow-off reversal stress-test without full validation, and OP/FET expanded the bearish-emerging set. Score-directionality gap remains active, not resolved."
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
