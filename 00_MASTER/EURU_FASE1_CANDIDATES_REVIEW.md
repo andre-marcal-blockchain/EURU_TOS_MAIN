@@ -2598,6 +2598,188 @@ Cross-check D17: 3/3 alinhado. Acumulado documentado passa a **124/124** se mant
 **Frase Codex que define o dia:**
 
 > "D17 broadened the bearish expansion from 11/18 to 15/18 MACD BEARISH while BTC continued BEARISH_CONFIRMED under an active Morning Master Filter. INJ's RC001-R1 risk-flag validation remains intact but structurally unconfirmed; the 4H GEM_ALERT is only tactical compression, not a daily unlock. Score-directionality remains unstable, with partial normalization but no architectural resolution."
+
+### Dia 18 - 2026-05-18 (segunda; T+18D; BTC technical SETUP macro-vetoed no long action; INJ RC001-R1 risk flag structurally reinforced (OBV FALLING); 17/18 MACD BEARISH near-universal expansion; 4 priorizados PREMIUM em queda; SCORE DIRECTIONALITY GAP amplificado)
+
+**Timing:** 5/5 tasks correram nas horas exactas (Asian 02:00:01, Morning 07:00:01, Trade Monitor 07:30:01, Journal Auditor 07:30:01, Daily Audit 08:30:01), todas result 0. Critério F operacional PASS; sem evidência de falha nos restantes critérios com os dados disponíveis.
+
+**T+18D MARCO:** Quarto dia operacional Fase 2 (Design). Modo READ_ONLY mantido. EXCLUDE list ativa. Commit canônico atual: 2ea5dd3 (audit 2026-05-18 08:30); commits do dia: 8ac8c8b (Asian) → 1410d0e (Morning) → 2ea5dd3 (Audit). Próximo checkpoint informal: T+21D (Quinta 2026-05-21), em 3 dias.
+
+**Master Filter D18 — CONVERGÊNCIA 4H/1D:**
+- Asian: **ACTIVE** — BTC 4H state NO_TRADE (header: "altcoin GEM_ALERTs downgraded to WATCHLIST")
+- Morning: **ACTIVE** — BTC trend 1D BEARISH (**12º dia consecutivo Morning ACTIVE**)
+
+**Convergência 4H/1D D18:** GEM_ALERT D16-D17 resolveu para NO_TRADE D18 (degradação, não breakout direcional). Ambos timeframes agora ACTIVE. Divergência tactical descritiva do D17 dissolveu — 4H também bloqueia.
+
+**3 EVENTOS MAJORES DIA 18:**
+
+**1) BTC technical SETUP / macro-vetoed / no long action — caso mais limpo do score-state-operability gap:**
+
+D18 BTC state passou de **WATCHLIST (D17) → SETUP (D18)** — primeiro state SETUP na janela documentada D14-D18.
+
+Estado D18 detalhado:
+- Trend 1D BEARISH D4 (D14, D16, D17, D18 com D15 SIDEWAYS interlude)
+- MACD BEARISH, OBV FALLING
+- Preço **77,038 = novo low** (D14: 79,436 → D15: 80,716 → D16: 79,035 → D17: 78,158 → D18: 77,038)
+- RSI 45.24, 24h -1.43%, 7D -3.25% (piorou de -2.67% D17)
+- Score 25 → 27 (Δ+2 paradoxal — volta padrão Finding 002b após normalização D17)
+- Master Filter Asian ACTIVE + Morning ACTIVE
+- State SETUP em ativo com regime BEARISH multi-dia
+
+Codex classificação D18: **BTC technical SETUP / macro-vetoed / no long action.**
+
+State SETUP é estado técnico direction-agnostic. Em BTC 1D BEARISH com OBV FALLING e Master Filters ACTIVE, não é setup long acionável. **State SETUP ≠ macro permission.** BTC não é "filtrado por si mesmo" no mesmo sentido das altcoins, mas o regime BTC 1D controla a permissão macro.
+
+> "D18 exposed the cleanest score-state-operability gap so far: BTC printed SETUP while both Master Filters were ACTIVE and the 1D regime stayed BEARISH."
+
+**Caso paradigmático Finding 002b FINAL:** o Core mistura technical_strength (SETUP printed), directional_bias (BEARISH), macro_permission (Master Filters ACTIVE), operable_quality (no long action). Exatamente o gap arquitetural que Fase 2 deve resolver.
+
+Sem criar label nova (SETUP_MACRO_VETOED declinado). Registo como descrição canônica para futuras ocorrências.
+
+**2) INJ — RC001-R1 risk flag structurally reinforced (OBV FALLING confirmed); MACD pending:**
+
+Trajetória 5 dias completa:
+- D14: RSI 84.86, +4.19%, score 27, OBV RISING, MACD BULLISH, state WATCHLIST
+- D15: RSI 80.88, -2.94%, score 21, OBV RISING, MACD BULLISH
+- D16: RSI 68.11, -6.48%, score 17, OBV RISING, MACD BULLISH, NO_TRADE
+- D17: RSI 69.09, +1.83%, score 20, OBV FLAT, MACD BULLISH, NO_TRADE
+- **D18: RSI 63.52, -3.79%, score 22, OBV FALLING, MACD BULLISH, WATCHLIST**
+
+Cumulativo D14→D18: RSI Δ-21.34, score Δ-5 (com recuperação parcial D17-D18). State NO_TRADE → WATCHLIST D18 (menos extremo, mas não invalidado).
+
+**7 sinais BLOW_OFF → REVERSAL — status D18:**
+1. ✓ Primeiro vermelho forte (D15)
+2. ✓ RSI virou para baixo saindo de >80 (84.86 → 63.52)
+3. **✓ OBV virou FALLING (confirmado D18)** — era △ parcial D17 (RISING→FLAT)
+4. — Volume climático (pendente verificação volume)
+5. — Perda low candle anterior 4H (pendente verificação intra-day)
+6. ✓ Score comprime forte (cumulativo D14→D16 Δ-10; com recuperação parcial)
+7. — Wick superior (pendente verificação)
+
+**4/7 sinais confirmados.** MACD BULLISH = único elemento estrutural firme remanescente.
+
+Queda retomou D18 -3.79% após bounce D17 +1.83%. Não foi reversão do bounce nem retomada do BLOW_OFF — é cooling com queda direcional.
+
+Codex classificação D18: **WATCHLIST_BLOW_OFF_RISK_ACTIVE / NO_CHASE** mantido (state WATCHLIST agora, não NO_TRADE).
+
+> "INJ's RC001-R1 risk flag was structurally reinforced by OBV turning FALLING, but remains non-official pending fuller confirmation."
+
+**Status RC001-R1 D18: PROVISIONALLY_VALIDATED como risk flag; não regra oficial.**
+
+**Nota D18:** structurally reinforced D18 — OBV confirmed FALLING; MACD pending.
+
+D18 fortalece bastante a validação (4/7 sinais + OBV FALLING), mas MACD ainda BULLISH impede chamar reversão estrutural completa. Status principal preservado (sem enum maior); apenas nota qualificadora adicionada.
+
+**3) Near-universal bearish expansion — 17/18 MACD BEARISH:**
+
+D18 expansão bearish near-universal — descrição narrativa, **não label oficial nova** (BEARISH_REGIME_NEAR_UNIVERSAL declinado).
+
+**17/18 MACD BEARISH:** BTC, ETH, SOL, AVAX, DOT, LINK, ADA, XRP, WLD, SUI, ARB, OP, FET, TAO, RENDER, NEAR, BNB.
+**1/18 MACD não-BEARISH:** INJ (BULLISH, mas OBV FALLING — também sob pressão).
+
+Transições D17 → D18 (MACD BULLISH → BEARISH) — 2 novos D1:
+- NEAR (D1)
+- BNB (D1) — confirmação do enfraquecimento factual D17 (OBV RISING→FALLING + state NO_TRADE→WATCHLIST sem trend BEARISH ainda)
+
+**Promoções de classificação D18:**
+
+Não-priorizados — DOT/XRP/WLD/SUI confirmaram D2 trend BEARISH. **Promovem a non-prioritized WATCHLIST_BEARISH_EMERGING** (label existente da taxonomia Fase 1, mesmo critério aplicado a OP/FET D16, SOL/LINK/TAO/AVAX/ADA D17).
+
+Não-priorizados — AVAX/ADA confirmaram D3 trend BEARISH. **Robustecem non-prioritized WATCHLIST_BEARISH_EMERGING.**
+
+Não-priorizados — BNB e NEAR entraram D1 BEARISH D18. **New BEARISH_EMERGING watch D1**, ainda sem promoção formal. Aguardam D2 confirmação.
+
+Priorizados — SOL/LINK/TAO confirmaram D3 BEARISH (WATCHLIST_BEARISH_EMERGING formal robustecido).
+Priorizados — OP/FET confirmaram D4 BEARISH (WATCHLIST_BEARISH_EMERGING formal robustíssimo).
+
+**SCORE DIRECTIONALITY GAP D18 — amplificado (não normalizou):**
+
+8/9 priorizados: preço cai + score sobe (ou mantém). 4 escalaram a PREMIUM tier durante regime BEARISH D4.
+
+| Asset | D17 Score | D18 Score | Δ | D18 24h | 7D | Tier D17 → D18 |
+|---|---|---|---|---|---|---|
+| **ARB** | 23 | 28 | **+5** | -2.50% | -9.23% (piorou) | BOA → **PREMIUM** |
+| **TAO** | 24 | 28 | **+4** | -2.97% | -10.92% (piorou) | BOA → **PREMIUM** |
+| BTC | 25 | 27 | +2 | -1.43% | -3.25% (piorou) | BOA mantido |
+| ETH | 26 | 28 | +2 | -2.87% | -5.22% (piorou) | BOA → **PREMIUM** |
+| FET | 24 | 26 | +2 | -2.55% | -9.33% (piorou) | BOA mantido |
+| INJ | 20 | 22 | +2 | -3.79% | -3.64% (piorou) | BOA mantido |
+| SOL | 27 | 28 | +1 | -1.84% | -6.16% (piorou) | BOA → **PREMIUM** |
+| LINK | 25 | 26 | +1 | -2.05% | -5.55% (piorou) | BOA mantido |
+| OP | 23 | 23 | 0 | -3.45% | -9.68% (piorou) | BOA mantido |
+
+**Caso saliente D18:** ARB score 23 → 28 (Δ+5), -2.50% 24h, 7D -9.23% (piorou), tier BOA → PREMIUM. Maior delta de score do dia em direção contrária ao preço.
+
+**Padrão observado:** todos os 9 priorizados com 7D piorando D18 vs. D17. 4 escalaram a PREMIUM tier. Direction-agnostic amplificado em regime BEARISH multi-dia confirmado. **Não normalização do D17, mas amplificação D18.**
+
+ETH oscilação tier: D16 PREMIUM (28) → D17 BOA (26) → D18 PREMIUM (28). Volatilidade tier dentro do regime BEARISH multi-dia.
+
+**Finding 002b FINAL — observação adicional D18 (sem novo refinement):**
+
+> "Score directionality gap amplified under mature bearish regime: 8/9 priorizados caíram enquanto score subiu ou manteve; 4 ativos bearish em queda foram promovidos a PREMIUM. Caso saliente: ARB 23→28 (+5), -2.50% 24h, 7D -9.23%, PREMIUM."
+
+Finding 002b mantém status FINAL REFINEMENT D14, sem revisão. D18 contribui evidência adicional sem mudar a tese: technical_strength + directional_bias + macro_permission + operable_quality precisam ser separados antes de qualquer lógica acionável. Caso D18 (BTC SETUP em BEARISH com Master Filters ACTIVE) é a ilustração mais limpa do gap.
+
+**Tabela cross-asset D17 → D18 (9 priorizados):**
+
+| Asset | D17 Score | D18 Score | Δ | D18 24h | RSI | Trend/Nota D18 |
+|---|---|---|---|---|---|---|
+| BTC | 25 | 27 | +2 | -1.43% | 45.24 | BEARISH — technical SETUP / macro-vetoed / no long action; novo low |
+| ETH | 26 | 28 | +2 | -2.87% | 34.83 | BEARISH — tier BOA → PREMIUM, RSI <35 |
+| SOL | 27 | 28 | +1 | -1.84% | 43.37 | BEARISH — WATCHLIST_BEARISH_EMERGING formal D3; tier → PREMIUM |
+| LINK | 25 | 26 | +1 | -2.05% | 46.33 | BEARISH — WATCHLIST_BEARISH_EMERGING formal D3 |
+| INJ | 20 | 22 | +2 | -3.79% | 63.52 | BULLISH MACD / OBV FALLING — RC001-R1 risk flag structurally reinforced |
+| ARB | 23 | 28 | +5 | -2.50% | 40.37 | BEARISH — caso saliente paradoxo; tier → PREMIUM, 7D -9.23% |
+| OP | 23 | 23 | 0 | -3.45% | 44.19 | BEARISH — WATCHLIST_BEARISH_EMERGING formal robustíssimo D4 |
+| FET | 24 | 26 | +2 | -2.55% | 36.68 | BEARISH — WATCHLIST_BEARISH_EMERGING formal robustíssimo D4; RSI <37 |
+| TAO | 24 | 28 | +4 | -2.97% | 41.15 | BEARISH — WATCHLIST_BEARISH_EMERGING formal D3; tier → PREMIUM, 7D -10.92% |
+
+**CROSS-CHECK CLAUDE + CODEX:**
+
+Cross-check D18: 3/3 alinhado. Acumulado documentado passa a **127/127** se mantida a mesma métrica.
+
+3 perguntas (BTC state SETUP classificação, INJ RC001-R1 status update, regime near-universal + paradoxo amplificado + promoções) — todas respondidas com classificação conservadora. Disciplina governance preservada: BTC SETUP descritivo sem label nova; RC001-R1 status principal preservado com nota qualificadora; bearish near-universal narrativa sem taxonomia; promoções a labels existentes.
+
+**Concordância operador-sistema Dia 18 (9 entradas):**
+- BTC: technical SETUP / macro-vetoed / no long action / BEARISH_CONFIRMED continuation D4
+- ETH: WATCHLIST / BEARISH (tier PREMIUM recuperado, RSI <35)
+- SOL: WATCHLIST / WATCHLIST_BEARISH_EMERGING formal D3 (tier → PREMIUM)
+- LINK: WATCHLIST / WATCHLIST_BEARISH_EMERGING formal D3
+- INJ: WATCHLIST / RC001-R1 risk flag structurally reinforced (OBV FALLING; MACD pending)
+- ARB: WATCHLIST / RESUMED_BEARISH; caso saliente paradoxo D18 (Δ+5 tier PREMIUM)
+- OP: WATCHLIST / WATCHLIST_BEARISH_EMERGING formal robustíssimo D4
+- FET: WATCHLIST / WATCHLIST_BEARISH_EMERGING formal robustíssimo D4
+- TAO: WATCHLIST / WATCHLIST_BEARISH_EMERGING formal D3 (tier → PREMIUM)
+
+**Severidades Findings / Rule Candidates (Dia 18):**
+- Finding 001: medium (superseded por 001a)
+- Finding 001a: medium-low (validado D4-D14; observado D15-D18)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (FINAL REFINEMENT D14 — evidência adicional D15-D18, com **observação D18 "amplified under mature bearish regime"**, sem novo refinement; status FINAL mantido)
+- Finding 003: medium (VALIDADO D8-D14; near-universal bearish expansion D18 reforça observação histórica rally-wide over-promotion)
+- Rule Candidate 001: PROVISIONALLY_VALIDATED (sem mudança; precisa 2-3 ocorrências adicionais para promoção a regra oficial)
+- **RC001-R1: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. Nota D18: structurally reinforced — OBV confirmed FALLING; MACD pending.**
+
+**WATCH POINTS PARA D19:**
+
+| Watch point | Status D18 | O que monitorar D19 |
+|---|---|---|
+| **INJ MACD structural confirmation** | 4/7 sinais; OBV FALLING D18; MACD ainda BULLISH | MACD vira BEARISH? Seria 5/7 e fortalecimento maior de RC001-R1. Continuação queda ou novo bounce? |
+| **BTC technical SETUP persistência** | State SETUP D18; trend BEARISH D4; Master Filters ACTIVE | State volta WATCHLIST/NO_TRADE ou mantém SETUP? Master Filter Morning 13º dia ACTIVE? 4H sai de NO_TRADE? |
+| **DOT/XRP/WLD/SUI WATCHLIST_BEARISH_EMERGING — D19 testará D3** | Promovidos formal D18; D2 confirmado | Confirmam D3 ou bounce técnico? Status formal robustece. |
+| **BNB/NEAR new BEARISH_EMERGING watch — D19 testará D2** | D1 BEARISH D18 | Confirma D2? Promoção a non-prioritized WATCHLIST_BEARISH_EMERGING. |
+| **AVAX/ADA non-prioritized WATCHLIST_BEARISH_EMERGING D4** | D3 confirmado | Mantém-se BEARISH ou reverte? |
+| **SOL/LINK/TAO WATCHLIST_BEARISH_EMERGING D4** | D3 confirmado (priorizados) | Continuação D4 ou bounce? Tier PREMIUM persiste? |
+| **OP/FET D5 confirmação** | WATCHLIST_BEARISH_EMERGING formal robustíssimo D4 | Continuação D5 ou bounce? |
+| **ARB caso saliente paradoxo** | Tier → PREMIUM, 7D -9.23%, score Δ+5 | Score continua subir ou normaliza? Tier PREMIUM persiste em regime BEARISH? |
+| **Master Filter Morning** | ACTIVE 12º dia D18 | D19 testará 13º dia ACTIVE. Desativa? Requer BTC virar BULLISH 1D. |
+| **Master Filter Asian** | ACTIVE D1 (BTC 4H NO_TRADE) | Mantém-se ACTIVE ou volta INACTIVE (GEM_ALERT ou outra compressão)? |
+| **Bearish expansion (narrativa)** | 17/18 MACD BEARISH D18 (near-universal) | Expande para 18/18 (INJ vira BEARISH)? Consolida em 17? INJ MACD pode virar D19. |
+| **T+21D checkpoint informal** | 3 dias até quinta 2026-05-21 | Preparar síntese 7 dias D15-D21; esboço preliminar Fase 2 design 3-dimensional |
+
+**Frase Codex que define o dia:**
+
+> "D18 exposed the cleanest score-state-operability gap so far: BTC printed SETUP while both Master Filters were ACTIVE and the 1D regime stayed BEARISH. INJ's RC001-R1 risk flag was structurally reinforced by OBV turning FALLING, but remains non-official pending fuller confirmation. With 17/18 assets MACD BEARISH and four bearish decliners in PREMIUM tier, the score-directionality gap amplified under a near-universal bearish expansion."
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
