@@ -2780,6 +2780,192 @@ Cross-check D18: 3/3 alinhado. Acumulado documentado passa a **127/127** se mant
 **Frase Codex que define o dia:**
 
 > "D18 exposed the cleanest score-state-operability gap so far: BTC printed SETUP while both Master Filters were ACTIVE and the 1D regime stayed BEARISH. INJ's RC001-R1 risk flag was structurally reinforced by OBV turning FALLING, but remains non-official pending fuller confirmation. With 17/18 assets MACD BEARISH and four bearish decliners in PREMIUM tier, the score-directionality gap amplified under a near-universal bearish expansion."
+### Dia 19 - 2026-05-19 (terça; T+19D; BTC SETUP 1-day reverteu; INJ RC001-R1 weakened to 3/7 signals; paradoxo D18 reverteu 4 PREMIUMs → 2; Asian oscillation ressurge; T+21D em 2 dias)
+
+**Timing:** 5/5 tasks correram nas horas exactas (Asian 02:00:01, Morning 07:00:01, Trade Monitor 07:30:01, Journal Auditor 07:30:01, Daily Audit 08:30:02), todas result 0. Critério F operacional PASS; sem evidência de falha nos restantes critérios com os dados disponíveis.
+
+**T+19D MARCO:** Quinto dia operacional Fase 2 (Design). Modo READ_ONLY mantido. EXCLUDE list ativa. Commit canônico atual: 48675fb (audit 2026-05-19 08:30); commits do dia: feb4f5d (Asian) → b423e29 (Morning) → 48675fb (Audit). **T+21D checkpoint informal em 2 dias** (Quinta 2026-05-21).
+
+**Master Filter D19 — DIVERGÊNCIA 4H/1D RESSURGE:**
+- Asian: **INACTIVE** — BTC 4H state GEM_ALERT (volta após D18 NO_TRADE)
+- Morning: **ACTIVE** — BTC trend 1D BEARISH (**13º dia consecutivo Morning ACTIVE**)
+
+**Asian Master Filter oscillation D14-D19** (registo descritivo, sem label nova):
+- D14-D15: ACTIVE (BTC 4H WATCHLIST)
+- D16-D17: INACTIVE (GEM_ALERT)
+- D18: ACTIVE (NO_TRADE)
+- D19: INACTIVE (GEM_ALERT)
+
+> "Asian Master Filter remains tactically unstable across D14-D19, alternating ACTIVE/INACTIVE as BTC 4H oscillates GEM_ALERT ↔ NO_TRADE without directional resolution. D19 restores the D17-like divergence: Asian INACTIVE on 4H GEM_ALERT while Morning remains ACTIVE on 1D BEARISH. Descriptive tracking only; no new oscillation taxonomy."
+
+**3 EVENTOS MAJORES DIA 19:**
+
+**1) INJ — bounce material +9.95%; RC001-R1 weakened to 3/7 (Signal 6 downgraded ✓ → △):**
+
+Trajetória 6 dias completa:
+- D14: RSI 84.86, +4.19%, score 27, OBV RISING, MACD BULLISH
+- D15: RSI 80.88, -2.94%, score 21, OBV RISING, MACD BULLISH
+- D16: RSI 68.11, -6.48%, score 17, NO_TRADE, OBV RISING, MACD BULLISH
+- D17: RSI 69.09, +1.83%, score 20, NO_TRADE, OBV FLAT, MACD BULLISH
+- D18: RSI 63.52, -3.79%, score 22, WATCHLIST, OBV FALLING, MACD BULLISH
+- **D19: RSI 69.99, +9.95%, score 23, WATCHLIST, OBV FALLING, MACD BULLISH**
+
+7D D14→D19 trajectory: +18.04% → +9.85% → +0.70% → +0.98% → -3.64% → **+4.26%** (voltou positivo).
+Preço D14→D19: 5.25 → 5.09 → 4.76 → 4.85 → 4.67 → **5.13** (Δ-0.12 vs. D14 base; bounce não recuperou totalmente).
+Cumulativo score D14→D19: 27 → 23 = **Δ-4** (recuperou de Δ-10 mínimo D16).
+
+**7 sinais BLOW_OFF → REVERSAL — status D19:**
+1. ✓ Primeiro vermelho forte (D15)
+2. ✓ RSI virou para baixo saindo de >80 (mas D19 retomou subida: 63.52 → 69.99, novamente perto do limiar)
+3. ✓ OBV FALLING (mantido D18-D19; não retornou RISING apesar do bounce)
+4. — Volume climático (pendente verificação volume)
+5. — Perda low candle anterior 4H (pendente verificação intra-day)
+6. **△ Score compression weakened by recovery** — cumulativo D14→D19 Δ-4, abaixo do threshold estrito -5
+7. — Wick superior (pendente verificação)
+
+**3/7 sinais estritamente confirmados D19** (vs. 4/7 D18 sob critério mais permissivo).
+
+> "Signal 6 downgraded from ✓ to △ on D19 under strict threshold discipline. Cumulative score compression D14→D19 is Δ-4, below the -5 compression threshold. RC001-R1 therefore shifts from 4/7 confirmed signals on D18 to 3/7 confirmed signals on D19, with Signal 6 weakened by score recovery. This weakens validation strength but does not invalidate the rule candidate as a retrospective risk flag."
+
+Codex classificação D19: **WATCHLIST_BLOW_OFF_RISK_ACTIVE / NO_CHASE** mantido (state WATCHLIST). RSI 69.99 = re-entrada potencial em zona overheat se cruzar 70.
+
+Bounce +9.95% é **compatível** com RC001-R1 (drawdown brutal pós-RSI>75 já materializou D16; bounce subsequente não devolve oportunidade aos que ficaram fora), **mas não confirmação plena**. OBV/MACD divergence e recovery score impedem chamar validation strength máxima.
+
+> "RC001-R1 remains PROVISIONALLY_VALIDATED as a retrospective risk flag. D19 reversed the cooling phase with a material +9.95% bounce, but the structure remains divergent: RSI recovered to 69.99 near renewed >70 overheat, OBV stayed FALLING, MACD remained BULLISH, and cumulative score compression recovered from Δ-10 D16 to only Δ-4 D19. The bounce does not invalidate RC001-R1, but validation strength remains qualified and under continued observation."
+
+**Status RC001-R1 D19: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. 3/7 sinais (Signal 6 △).** Nota: validation strength weakened D19 by score recovery and bounce; structure remains divergent; under continued observation.
+
+**2) BTC — SETUP 1-day event reverteu para WATCHLIST:**
+
+- D17: WATCHLIST
+- D18: **SETUP** (1ª vez na janela documentada; classificação técnica direction-agnostic / macro-vetoed)
+- **D19: WATCHLIST** (state reverteu sem confirmação direcional)
+
+Estado D19:
+- Trend 1D BEARISH D5 mantido, MACD BEARISH, OBV FALLING
+- Preço 77,038 → **76,927** (-0.14%, marginalmente novo low; baixo da janela D14-D19)
+- RSI 44.90, score 27 mantido, 7D -2.56% (melhorou ligeiramente de -3.25%)
+- Master Filter Asian INACTIVE (GEM_ALERT) + Morning ACTIVE
+
+> "BTC SETUP was a one-day factual state event: SETUP on D18 reverted to WATCHLIST on D19 without directional confirmation. Record as short-lived setup condition only; no SETUP_EPHEMERAL or new state label introduced."
+
+Caso paradigmático D18 Finding 002b FINAL (SETUP técnico em regime BEARISH com Master Filters ACTIVE) materializou de forma compatível com o previsto: setup técnico sem permissão operacional não acionou nada e foi efémero. Confirmação descritiva do gap arquitetural.
+
+**3) Paradoxo D18 reverteu em massa D19 — observação Finding 002b post-final:**
+
+D17 partial normalization. D18 amplified under mature bearish regime. **D19 reverteu materialmente em 24h:**
+
+| Asset | D18 Score | D19 Score | Δ | D19 24h | Tier D18 → D19 |
+|---|---|---|---|---|---|
+| **ARB** | 28 | 23 | **-5** | +0.09% | **PREMIUM → BOA** |
+| **TAO** | 28 | 25 | **-3** | +0.73% | **PREMIUM → BOA** |
+| **LINK** | 26 | 23 | **-3** | +1.78% | BOA mantido |
+| FET | 26 | 25 | -1 | +1.10% | BOA mantido |
+| BTC | 27 | 27 | 0 | -0.14% | BOA mantido |
+| OP | 23 | 23 | 0 | +0.08% | BOA mantido |
+| SOL | 28 | 28 | 0 | -0.14% | PREMIUM mantido |
+| ETH | 28 | 29 | +1 | +0.44% | PREMIUM mantido |
+| INJ | 22 | 23 | +1 | +9.95% | BOA mantido |
+
+**PREMIUM count: 4 (D18) → 2 (D19).** ARB e TAO desinflaram tier.
+
+Bounce universal pequeno D19 (8/9 priorizados com 24h positivo, +0.08% a +1.78%; INJ outlier +9.95%) e score collapse simultâneo nos 3 outliers D18 (ARB, TAO, LINK).
+
+**Finding 002b FINAL — D19 Post-Final Observation (sem refinement novo):**
+
+> "D19 Post-Final Observation: Finding 002b remains FINAL. D19 adds a transient/day-to-day instability dimension to the score directionality gap. The D18 amplification reversed sharply within 24h: ARB Δ+5→Δ-5, TAO Δ+4→Δ-3, LINK Δ+1→Δ-3, and PREMIUM count compressed from 4 to 2. This confirms that the paradox is not only regime-dependent or amplified under mature bearish conditions; it can also oscillate materially day-to-day. No new refinement or Finding required."
+
+> "Score directionality gap can materially reverse within 24h even when price action is broadly positive."
+
+Finding 002b status: **FINAL D14 mantido**. D15 partial normalization + D18 amplified + D19 transient = 3 observações pós-final acumuladas sem revisar a tese. Núcleo arquitetural confirma necessidade de separação 4-D (technical_strength / directional_bias / macro_permission / operable_quality) **across regimes AND across days**.
+
+**Bearish state D19 — breadth check pendente:**
+
+8/9 priorizados permanecem MACD BEARISH; INJ é a exceção com MACD BULLISH. Verificação não-priorizados D19 pendente.
+
+> "D19 breadth check required: verify non-prioritized MACD BEARISH count against D18 17/18. Classify as expanding, consolidating, or regressing only after confirming whether any D1 D17-D18 BEARISH names reverted to BULLISH."
+
+**Promoções pendentes D19 — carry-over (sem label nova):**
+
+Não-priorizados (carry-over D18 watch points):
+- **DOT/XRP/WLD/SUI**: se D3 BEARISH confirmado D19, robustecem non-prioritized WATCHLIST_BEARISH_EMERGING (não promoção formal nova, apenas robustez/duração).
+- **BNB/NEAR**: se D2 BEARISH confirmado D19, promovem a non-prioritized WATCHLIST_BEARISH_EMERGING (mesmo critério aplicado D18).
+- **AVAX/ADA**: D4 robustecido (se estado/MACD persistem).
+
+Priorizados (carry-over):
+- **SOL/LINK/TAO**: D4 robustecido. Nota: LINK e TAO com score Δ-3 D19 (desinflação paradoxo); SOL score mantido + OBV FALLING → FLAT (estabilização fluxo).
+- **OP/FET**: D5 ultra-robustecido. OP OBV FALLING → FLAT D19.
+
+Verificação real dos não-priorizados D19 (BNB/NEAR/DOT/XRP/WLD/SUI/AVAX/ADA/RENDER) depende do breadth check. Resultado entra como nota de breadth no D19 ou no D20 conforme dados.
+
+**OBV transitions D19:**
+
+Outros priorizados mantêm OBV FALLING, exceto SOL e OP que estabilizaram para FLAT. INJ permanece OBV FALLING apesar do bounce +9.95%, reforçando divergência fluxo/preço.
+
+Sinais de estabilização de fluxo em SOL e OP, mas trend MACD BEARISH mantém.
+
+**Tabela cross-asset D18 → D19 (9 priorizados):**
+
+| Asset | D18 Score | D19 Score | Δ | D19 24h | RSI | Trend/Nota D19 |
+|---|---|---|---|---|---|---|
+| BTC | 27 | 27 | 0 | -0.14% | 44.90 | BEARISH — SETUP 1-day reverteu para WATCHLIST; marginalmente novo low |
+| ETH | 28 | 29 | +1 | +0.44% | 35.72 | BEARISH — único priorizado a subir score; PREMIUM mantido, RSI <36 |
+| SOL | 28 | 28 | 0 | -0.14% | 43.18 | BEARISH — WATCHLIST_BEARISH_EMERGING D4 robustecido; OBV FALLING → FLAT |
+| LINK | 26 | 23 | -3 | +1.78% | 49.64 | BEARISH — WATCHLIST_BEARISH_EMERGING D4; paradoxo desinflou Δ-3 |
+| INJ | 22 | 23 | +1 | +9.95% | 69.99 | BULLISH MACD / OBV FALLING — bounce material; RC001-R1 weakened 3/7 (Signal 6 △) |
+| ARB | 28 | 23 | -5 | +0.09% | 40.69 | BEARISH — paradoxo D18 reverteu completamente; tier PREMIUM → BOA |
+| OP | 23 | 23 | 0 | +0.08% | 44.34 | BEARISH — WATCHLIST_BEARISH_EMERGING D5; OBV FALLING → FLAT |
+| FET | 25 | 25 | 0 | +1.10% | 38.28 | BEARISH — WATCHLIST_BEARISH_EMERGING D5 ultra-robustecido; RSI <39 |
+| TAO | 28 | 25 | -3 | +0.73% | 42.03 | BEARISH — WATCHLIST_BEARISH_EMERGING D4; tier PREMIUM → BOA |
+
+**CROSS-CHECK CLAUDE + CODEX:**
+
+Cross-check D19: 4/4 alinhado (P1 + P1a, P2, P3 com sub-itens). Acumulado documentado passa a **131/131**, contando as 4 perguntas internas D19.
+
+4 perguntas internas (INJ bounce + Signal 6 status, paradoxo transient, BTC SETUP 1-day + Asian oscillation + breadth check + promoções) — todas respondidas com leitura conservadora. Disciplina governance preservada: RC001-R1 enum mantido com qualifier; Signal 6 △ sob disciplina quantitativa rigorosa; Finding 002b FINAL mantido com D19 post-final observation; BTC SETUP descritivo; Asian oscillation descritivo; promoções a labels existentes.
+
+**Concordância operador-sistema Dia 19 (9 entradas):**
+- BTC: WATCHLIST / SETUP 1-day reverteu / BEARISH_CONFIRMED continuation D5
+- ETH: WATCHLIST / BEARISH (PREMIUM mantido D2, RSI <36)
+- SOL: WATCHLIST / WATCHLIST_BEARISH_EMERGING D4 robustecido (OBV FALLING → FLAT)
+- LINK: WATCHLIST / WATCHLIST_BEARISH_EMERGING D4 (paradoxo desinflou Δ-3)
+- INJ: WATCHLIST / RC001-R1 weakened D19 (3/7 sinais, Signal 6 △); bounce material +9.95%
+- ARB: WATCHLIST / RESUMED_BEARISH; paradoxo D18 reverteu completamente D19
+- OP: WATCHLIST / WATCHLIST_BEARISH_EMERGING D5 (OBV FALLING → FLAT)
+- FET: WATCHLIST / WATCHLIST_BEARISH_EMERGING D5 ultra-robustecido
+- TAO: WATCHLIST / WATCHLIST_BEARISH_EMERGING D4 (tier PREMIUM → BOA)
+
+**Severidades Findings / Rule Candidates (Dia 19):**
+- Finding 001: medium (superseded por 001a)
+- Finding 001a: medium-low (validado D4-D14; observado D15-D19)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (FINAL REFINEMENT D14 — D19 post-final observation "transient/day-to-day instability", sem refinement novo; FINAL status mantido)
+- Finding 003: medium (VALIDADO D8-D14; near-universal bearish expansion D18-D19 reforça observação histórica)
+- Rule Candidate 001: PROVISIONALLY_VALIDATED (sem mudança)
+- **RC001-R1: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. D18 status update: structurally reinforced (OBV FALLING, 4/7 sinais). D19 status update: weakened by bounce/recovery (3/7 sinais, Signal 6 △; validation strength qualified; under continued observation).**
+
+**WATCH POINTS PARA D20:**
+
+| Watch point | Status D19 | O que monitorar D20 |
+|---|---|---|
+| **INJ — re-overheat ou cool again** | RSI 69.99 (perto >70); bounce +9.95%; OBV FALLING mantido; MACD BULLISH; 3/7 sinais | RSI cruza 70 (re-overheat)? Bounce continua ou reverte? OBV → RISING (invalidaria validation) ou mantém FALLING? Signal 6 recupera ✓ ou consolida △? |
+| **BTC continuation D6** | Trend BEARISH D5, marginalmente novo low 76,927; state WATCHLIST; Master Filters split | Novo low D6 ou consolidação? 4H GEM_ALERT resolve ou continua oscillation? Morning ACTIVE 14º dia? |
+| **DOT/XRP/WLD/SUI — D20 testará D4** | D3 BEARISH confirmado se D19 mantém (pendente breadth check) | Confirmam D4? Status formal ultra-robustecido. |
+| **BNB/NEAR — D20 testará D3** | D2 BEARISH se D19 confirmado (pendente breadth check) | Confirmam D3? |
+| **AVAX/ADA D5** | D4 robustecido se persistem | D5 confirmado? |
+| **SOL/LINK/TAO D5** | D4 robustecido (priorizados); paradoxo LINK/TAO desinflou D19 | D5? Score normaliza completamente ou volta a paradoxo? |
+| **OP/FET D6** | D5 ultra-robustecido | D6 confirmado? |
+| **ARB paradoxo follow-up** | Reverteu D19 completamente (Δ-5, tier → BOA); 7D -6.73% mantém negativo | Score consolida normalizado ou volta a paradoxo? |
+| **Master Filter Morning** | ACTIVE 13º dia D19 | D20 testará 14º dia ACTIVE. BTC vira BULLISH 1D? |
+| **Master Filter Asian** | INACTIVE D19 (GEM_ALERT) | D20: GEM_ALERT continua / resolve para NO_TRADE / breakout direcional? |
+| **Bearish breadth** | 8/9 priorizados BEARISH D19; não-priorizados pendente | Breadth check 18 ativos D19/D20. Cluster expande (>17), consolida (=17), ou regrediu (<17)? |
+| **Finding 002b transient pattern** | D19 reverteu paradoxo D18 em massa | Pattern persiste D20 (estabilização) ou volta a oscilar? |
+| **T+21D checkpoint** | 2 dias (Quinta 2026-05-21) | Síntese 7 dias D15-D21 será preparada D20-D21. Esboço preliminar Fase 2 design 3-dimensional. |
+
+**Frase Codex que define o dia:**
+
+> "D19 weakens but does not invalidate RC001-R1. INJ produced a material bounce after cooling, but OBV/MACD divergence and strict Signal 6 downgrade reduce confirmed signals from 4/7 to 3/7. RC001-R1 remains PROVISIONALLY_VALIDATED as a risk flag under continued observation."
+
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
