@@ -2966,6 +2966,164 @@ Cross-check D19: 4/4 alinhado (P1 + P1a, P2, P3 com sub-itens). Acumulado docume
 
 > "D19 weakens but does not invalidate RC001-R1. INJ produced a material bounce after cooling, but OBV/MACD divergence and strict Signal 6 downgrade reduce confirmed signals from 4/7 to 3/7. RC001-R1 remains PROVISIONALLY_VALIDATED as a risk flag under continued observation."
 
+### Dia 20 - 2026-05-20 (quarta; T+20D; véspera T+21D; INJ score window-low 16 NO_TRADE tier MEDIA bounce D19 efémero; compressão convergente PREMIUM 4→0; breadth regrediu 17/18 → 16/18 NEAR reversal; Signal 6 △ re-cross instável; hipótese maturação regime para T+21D)
+
+**Timing:** 5/5 tasks correram nas horas exactas (Asian 02:00:01, Morning 07:00:01, Trade Monitor 07:30:01, Journal Auditor 07:30:01, Daily Audit 08:30:01), todas result 0. Critério F operacional PASS; sem evidência de falha nos restantes critérios com os dados disponíveis.
+
+**T+20D MARCO:** Sexto dia operacional Fase 2 (Design). Modo READ_ONLY mantido. EXCLUDE list ativa. Commit canônico atual: e63bd9b (audit 2026-05-20 08:30); commits do dia: ad8b55d (Asian) → 85630b8 (Morning) → e63bd9b (Audit). **T+21D checkpoint informal AMANHÃ (Quinta 2026-05-21).** Síntese 7 dias D15-D21 em preparação como draft observacional fora do bloco diário.
+
+**Master Filter D20:**
+- Asian: **INACTIVE** — BTC 4H state GEM_ALERT (**D2 consecutivo**; oscilação D14-D20 continua sem resolução direcional)
+- Morning: **ACTIVE** — BTC trend 1D BEARISH (**14º dia consecutivo Morning ACTIVE**)
+- Divergência 4H/1D mantém (tipo D17/D19)
+
+**3 EVENTOS MAJORES DIA 20:**
+
+**1) INJ — bounce D19 efémero; score window-low 16; NO_TRADE; tier MEDIA:**
+
+Trajetória 7 dias completa:
+- D14: RSI 84.86, +4.19%, score 27, OBV RISING, MACD BULLISH, WATCHLIST
+- D15: RSI 80.88, -2.94%, score 21, OBV RISING, MACD BULLISH
+- D16: RSI 68.11, -6.48%, score 17, NO_TRADE, OBV RISING, MACD BULLISH
+- D17: RSI 69.09, +1.83%, score 20, NO_TRADE, OBV FLAT, MACD BULLISH
+- D18: RSI 63.52, -3.79%, score 22, WATCHLIST, OBV FALLING, MACD BULLISH
+- D19: RSI 69.99, +9.95%, score 23, WATCHLIST, OBV FALLING, MACD BULLISH
+- **D20: RSI 65.23, -2.85%, score 16, NO_TRADE, OBV FALLING, MACD BULLISH, tier MEDIA**
+
+**Score 16 = mínimo absoluto da janela** (anterior 17 D16). Tier BOA → MEDIA (1ª vez na janela). State WATCHLIST → NO_TRADE.
+Cumulativo score D14→D20: 27 → 16 = **Δ-11** (abaixo do mínimo anterior D16 de Δ-10).
+RSI 69.99 → 65.23 (não cruzou 70 — sem re-overheat). OBV FALLING mantido. MACD ainda BULLISH.
+
+O bounce D19 (+9.95%) foi **efémero (1 dia)** — D20 reverteu -2.85% e o cooling retomou mais fundo.
+
+> "D20 strengthens RC001-R1 as a retrospective risk flag by showing that the D19 bounce was one-day and failed to restore structure. INJ fell back to NO_TRADE, score 16 marked the window low, tier compressed to MEDIA, and OBV remained FALLING. However, MACD remains BULLISH and Signal 6 is unstable, so RC001-R1 stays PROVISIONALLY_VALIDATED, not official and not upgraded."
+
+Codex classificação D20: **WATCHLIST_BLOW_OFF_RISK_ACTIVE / NO_CHASE** (state NO_TRADE).
+
+**Status RC001-R1 D20: PROVISIONALLY_VALIDATED como risk flag; não regra oficial.** Nota D20: bounce failed / cooling resumed / score window-low. Sem mudança de enum, sem upgrade.
+
+**Signal 6 — re-cross instável (mantém △):**
+
+D18 ✓ (compressão clara) → D19 △ (recuperou Δ-4) → **D20 re-cross threshold (Δ-11) mas mantém △**.
+
+> "Signal 6 remains △ on D20 despite re-crossing the -5 threshold, because the D18-D20 sequence shows threshold instability rather than stable confirmation: D18 ✓, D19 △, D20 re-cross. Record as oscillating/unstable score compression pending T+21D synthesis. This avoids day-to-day flip-flop while preserving the quantitative fact that D14→D20 compression reached Δ-11."
+
+Contagem D20: **3/7 strict stable + Signal 6 △ (re-crossed threshold, unstable)**. Não chamar 4/7 canônico hoje — resolução deferida para síntese T+21D que revê o path D15-D21 completo.
+
+**2) Compressão convergente — espelho invertido do D18:**
+
+D18 amplificação (4 PREMIUMs, scores subindo durante queda). D19 reversão parcial. **D20 compressão convergente** — scores e preços alinham para baixo simultaneamente.
+
+| Asset | D19 Score | D20 Score | Δ | D20 24h | Tier D19 → D20 |
+|---|---|---|---|---|---|
+| **INJ** | 23 | 16 | **-7** | -2.85% | BOA → **MEDIA** |
+| **ETH** | 29 | 25 | **-4** | -0.93% | **PREMIUM → BOA** |
+| **SOL** | 28 | 25 | **-3** | -1.06% | **PREMIUM → BOA** |
+| BTC | 27 | 25 | -2 | -0.18% | BOA mantido |
+| LINK | 23 | 22 | -1 | -2.46% | BOA mantido |
+| ARB | 23 | 22 | -1 | -3.16% | BOA mantido |
+| OP | 23 | 23 | 0 | -2.02% | BOA mantido |
+| FET | 25 | 25 | 0 | -1.91% | BOA mantido |
+| TAO | 25 | 25 | 0 | -1.98% | BOA mantido |
+
+**PREMIUM count: 4 (D18) → 2 (D19) → 0 (D20).** Todos os 9 priorizados ≤25/35. Todos com 24h negativo D20.
+
+**Finding 002b FINAL — D20 Post-Final Observation (sem refinement novo):**
+
+> "D20 Post-Final Observation: Finding 002b remains FINAL. After D18 amplification and D19 transient reversal, D20 shows convergent compression: scores and prices aligned downward simultaneously, PREMIUM count compressed from 4 D18 to 2 D19 to 0 D20, and all prioritized assets fell to ≤25/35. This raises a Fase 2 design question: whether the score-directionality gap contracts as bearish regimes mature, or whether convergence is itself transient. No new refinement or Finding required; carry forward as design-phase investigation."
+
+Finding 002b status: **FINAL D14 mantido**. Sequência observações pós-final: D15 partial normalization → D17 partial normalization → D18 amplified → D19 transient → D20 convergent compression. "Convergent compression" usado como descrição factual, **não taxonomia** (CONVERGENT_COMPRESSION declinado). A pergunta "gap contrai em regime maduro?" é **candidata a investigação Fase 2 design, NÃO conclusão D20**.
+
+**3) BTC — continuation D6; novo low marginal:**
+
+- D19: trend BEARISH D5, score 27, preço 76,927
+- **D20: trend BEARISH D6, score 25 (Δ-2), preço 76,797 (novo low marginal -0.18%), RSI 44.46, OBV FALLING, MACD BEARISH, state WATCHLIST**
+- 7D -2.07% (melhorou ligeiramente de -2.56%)
+
+State WATCHLIST (SETUP D18 não voltou; confirmou ser 1-day event). Score comprimiu junto com o basket (parte da compressão convergente).
+
+**Breadth D20 — factual contraction, no regime conclusion:**
+
+**16/18 MACD BEARISH:** BTC, ETH, SOL, BNB, AVAX, DOT, LINK, ADA, XRP, WLD, SUI, ARB, OP, FET, TAO, RENDER.
+**2/18 MACD BULLISH:** NEAR, INJ.
+
+Classificação cluster (factual): **regrediu** vs. D18 17/18. NEAR reverteu BULLISH (era D1 BEARISH no D18); único reversal do cluster. BNB manteve BEARISH; INJ continua BULLISH (nunca virou).
+
+> "D20 adds a hypothesis for T+21D, not a conclusion: breadth regressed 17/18 → 16/18 via NEAR reversal, PREMIUM count compressed to zero, and OBV FLAT spread to 4/9 prioritized assets. These may indicate regime maturation/exhaustion at the edges, but remain observational only."
+
+Sem declarar reversão de regime. Sem label nova. Alimenta a síntese T+21D como hipótese observacional.
+
+**OBV transitions D20:** SOL, LINK, OP, FET em FLAT (4/9 priorizados; LINK e FET juntaram-se a SOL/OP do D19). BTC, ARB, TAO, INJ mantêm FALLING. MACD BEARISH em 8/9 priorizados (INJ exceção). Fluxo vendedor desacelera (FLAT espalhou), mas trend não inverteu.
+
+**Promoções/carry-overs D20 (robustez/duração, sem label nova):**
+
+- **NEAR:** reversal factual BULLISH D20; sai do bearish set; sem promoção.
+- **BNB:** BEARISH persistent D20; duration pending D19 confirmation (não-priorizado não verificado D19).
+- **DOT/XRP/WLD/SUI:** persistência confirmada D20; robustez/duração.
+- **AVAX/ADA/RENDER:** persistência factual D20.
+- **SOL/LINK/TAO:** D5 priorizados (BEARISH persistente; scores comprimiram na convergência).
+- **OP/FET:** D6 priorizados (BEARISH persistente; OBV → FLAT).
+- **ARB:** RESUMED_BEARISH mantém; paradoxo D18 totalmente dissipado D20 (score 22, normalizado); 7D -7.27%.
+
+**Tabela cross-asset D19 → D20 (9 priorizados):**
+
+| Asset | D19 Score | D20 Score | Δ | D20 24h | RSI | Trend/Nota D20 |
+|---|---|---|---|---|---|---|
+| BTC | 27 | 25 | -2 | -0.18% | 44.46 | BEARISH — continuation D6; novo low marginal 76,797 |
+| ETH | 29 | 25 | -4 | -0.93% | 34.15 | BEARISH — PREMIUM → BOA; maior queda score basket; RSI <35 |
+| SOL | 28 | 25 | -3 | -1.06% | 41.50 | BEARISH — D5; PREMIUM → BOA; OBV FLAT |
+| LINK | 23 | 22 | -1 | -2.46% | 45.41 | BEARISH — D5; OBV → FLAT |
+| INJ | 23 | 16 | -7 | -2.85% | 65.23 | BULLISH MACD / OBV FALLING — score window-low; NO_TRADE; tier MEDIA; bounce D19 efémero |
+| ARB | 23 | 22 | -1 | -3.16% | 37.61 | BEARISH — RESUMED_BEARISH; paradoxo D18 dissipado |
+| OP | 23 | 23 | 0 | -2.02% | 42.66 | BEARISH — D6; OBV FLAT |
+| FET | 25 | 25 | 0 | -1.91% | 36.91 | BEARISH — D6; OBV → FLAT; RSI <37 |
+| TAO | 25 | 25 | 0 | -1.98% | 40.32 | BEARISH — D5; OBV FALLING |
+
+**CROSS-CHECK CLAUDE + CODEX:**
+
+Cross-check D20: 4/4 alinhado (Signal 6 oscillation, INJ score-low, Finding 002b convergent compression, breadth + carry-overs). Acumulado documentado passa a **135/135**, contando as 4 perguntas internas D20.
+
+4 perguntas — todas respondidas com leitura conservadora. Disciplina governance preservada: Signal 6 mantém △ (re-cross instável, resolução deferida T+21D); RC001-R1 enum preservado sem upgrade; Finding 002b FINAL mantido com D20 post-final observation; convergent compression descritivo; breadth contraction factual sem conclusão de regime; NEAR reversal sem promoção; carry-overs como robustez/duração.
+
+**Concordância operador-sistema Dia 20 (9 entradas):**
+- BTC: WATCHLIST / BEARISH continuation D6 / novo low marginal
+- ETH: WATCHLIST / BEARISH (PREMIUM → BOA, maior queda score basket)
+- SOL: WATCHLIST / WATCHLIST_BEARISH_EMERGING D5 (PREMIUM → BOA; OBV FLAT)
+- LINK: WATCHLIST / WATCHLIST_BEARISH_EMERGING D5 (OBV → FLAT)
+- INJ: NO_TRADE / RC001-R1 risk flag; score window-low 16; tier MEDIA; bounce D19 efémero
+- ARB: WATCHLIST / RESUMED_BEARISH; paradoxo dissipado
+- OP: WATCHLIST / WATCHLIST_BEARISH_EMERGING D6 (OBV FLAT)
+- FET: WATCHLIST / WATCHLIST_BEARISH_EMERGING D6 (OBV → FLAT)
+- TAO: WATCHLIST / WATCHLIST_BEARISH_EMERGING D5
+
+**Severidades Findings / Rule Candidates (Dia 20):**
+- Finding 001: medium (superseded por 001a)
+- Finding 001a: medium-low (validado D4-D14; observado D15-D20)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (FINAL REFINEMENT D14 — D20 post-final observation "convergent compression"; pergunta design "gap contrai em regime maduro?" deferida para Fase 2 design; FINAL status mantido)
+- Finding 003: medium (VALIDADO D8-D14; bearish expansion D16-D20 reforça observação histórica)
+- Rule Candidate 001: PROVISIONALLY_VALIDATED (sem mudança)
+- **RC001-R1: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. D18: reinforced 4/7. D19: weakened 3/7 (Signal 6 △). D20: bounce failed / cooling resumed / score window-low; 3/7 strict stable + Signal 6 △ (re-cross instável); resolução de contagem deferida para síntese T+21D.**
+
+**WATCH POINTS PARA D21 (T+21D checkpoint):**
+
+| Watch point | Status D20 | O que monitorar D21 / síntese |
+|---|---|---|
+| **T+21D CHECKPOINT INFORMAL** | Amanhã (Quinta 2026-05-21) | Síntese 7 dias D15-D21; esboço Fase 2 design 3-dimensional; cross-check Codex progresso; resolução Signal 6 com visão 7 dias |
+| **INJ — cooling profundidade** | Score 16 window-low; NO_TRADE; OBV FALLING; MACD BULLISH | MACD vira BEARISH (5/7)? Score novo low <16? Ou estabiliza? |
+| **Signal 6 resolução** | △ re-cross instável (D18 ✓ / D19 △ / D20 re-cross) | Síntese 7 dias resolve ✓/△/contagem final RC001-R1 |
+| **Hipótese maturação regime** | Breadth 16/18 (regrediu); PREMIUM 0; OBV FLAT 4/9; NEAR reversal | Breadth recupera (17-18) ou continua a contrair (<16)? Mais reversals BULLISH? Hipótese ganha ou perde força? |
+| **BTC continuation D7** | Trend BEARISH D6; novo low 76,797; score 25 | Novo low D7 ou estabiliza? Morning ACTIVE 15º dia? 4H GEM_ALERT resolve? |
+| **Compressão convergente follow-up** | PREMIUM 0; scores ≤25; preços e scores alinham para baixo | Compressão persiste (gap contrai) ou scores re-divergem (gap reabre)? Material para pergunta design |
+| **NEAR reversal follow-up** | Reverteu BULLISH D20 (saiu do bearish set) | Confirma reversão D2 ou volta BEARISH? 1º teste da hipótese contração de bordas |
+| **Master Filter Morning** | ACTIVE 14º dia | D21 testará 15º dia. BTC vira BULLISH 1D? |
+| **Master Filter Asian** | INACTIVE D2 (GEM_ALERT) | GEM_ALERT resolve ou continua oscillation? |
+| **Carry-overs duração** | SOL/LINK/TAO D5, OP/FET D6, DOT/XRP/WLD/SUI persistência, AVAX/ADA/RENDER, BNB pending | Persistência ou primeiras reversões (como NEAR)? |
+
+**Frase Codex que define o dia:**
+
+> "D20 strengthened RC001-R1 as a risk flag but did not stabilize it: INJ's D19 bounce failed, score collapsed to a window-low 16, and NO_TRADE returned, yet MACD stayed BULLISH and Signal 6 remains oscillatory. Across the basket, D20 showed convergent compression rather than paradox amplification: prices and scores aligned downward, PREMIUM count fell to zero, and the Finding 002b gap becomes a T+21D design question rather than a new refinement."
+
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
