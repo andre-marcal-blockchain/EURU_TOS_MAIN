@@ -3284,6 +3284,149 @@ Disciplina governance preservada e confirmada explicitamente pelo Codex: Signal 
 
 > "D21 provides the first material relief signal, but not a regime reversal: BTC shifted from BEARISH to SIDEWAYS, OBV RISING appeared in four prioritized assets, and breadth held at 16/18, yet Morning remains ACTIVE, Asian stays GEM_ALERT, and 16/18 assets remain MACD BEARISH. RC001-R1 remains PROVISIONALLY_VALIDATED with Signal 6 △ oscillating, while Finding 002b remains FINAL as the score-directionality gap re-diverged after D20 compression."
 
+## Síntese 7 Dias D15-D21 — T+21D Checkpoint Informal
+
+> **Registo observacional do checkpoint informal T+21D (2026-05-21). Não decisório — o gate formal é T+28D (2026-05-28). Esta síntese documenta padrões observados D15-D21 sem promover Finding, Rule Candidate, label ou taxonomia nova, e sem mudar enum (RC001-R1 mantém PROVISIONALLY_VALIDATED; Finding 002b mantém FINAL). Validada por cross-check Claude+Codex no D21. Hipóteses marcadas como OPEN não constituem conclusão.**
+
+### 1. Escopo e governance
+
+Janela de observação: Fase 2 Design, dias operacionais D15-D21 (2026-05-15 a 2026-05-21), 7 dias completos pós-transição Fase 1→Fase 2 (Type 2 Decision T2-FASE2-2026-05-14).
+
+Modo: READ_ONLY em todos os 7 dias. EXCLUDE list ativa e respeitada sem exceção. Critério F operacional PASS em 7/7 dias (**35/35 tasks**, todas Result 0, zero sleep recovery).
+
+Natureza do checkpoint: T+21D é informal/observacional/preparatório, NÃO decisório. Gate formal (continuar Fase 2 / transitar Fase 3 / prolongar) é T+28D (2026-05-28).
+
+Cross-check Claude+Codex: acumulado documentado 143/143 ao fim do D21 (115/115 no T+14D; +28 perguntas internas D15-D21, todas alinhadas).
+
+Disciplina governance ao longo da janela: zero criação de Finding 004+, zero RC002+, zero label/taxonomia nova. Labels candidatas declinadas: SETUP_EPHEMERAL, BTC_4H_OSCILLATION, BEARISH_REGIME_NEAR_UNIVERSAL, CONVERGENT_COMPRESSION, PRE_BEARISH_WATCH, PARADOXO_TRANSIENT_DAILY, entre outras. Promoções limitadas a labels existentes da taxonomia Fase 1 (WATCHLIST_BEARISH_EMERGING).
+
+### 2. RC001-R1 lifecycle D14-D21
+
+Arco completo do stress-test INJ, caso vivo central da janela:
+
+| Dia | Evento INJ | Estado RC001-R1 |
+|---|---|---|
+| D14 | RSI 84.86, blow-off topo, +18.04% 7D, score 27 | UNDER_OBSERVATION + stress-test active |
+| D15 | -2.94%, primeiro vermelho, RSI 80.88, score 21 | UNDER_OBSERVATION (reversal pressure under test) |
+| D16 | -6.48%, drawdown forte, RSI 68.11, score 17, NO_TRADE | PROVISIONALLY_VALIDATED como risk flag |
+| D17 | +1.83% bounce parcial, OBV FLAT | risk flag intact, structurally unconfirmed |
+| D18 | -3.79%, OBV FALLING confirmado | structurally reinforced — 4/7 sinais (Signal 6 ✓) |
+| D19 | +9.95% bounce material, score Δ-4 | weakened — 3/7 sinais (Signal 6 △) |
+| D20 | -2.85%, bounce falhou, score 16 window-low, NO_TRADE, MEDIA | bounce failed; 3/7 + Signal 6 △ re-cross instável |
+| D21 | +0.84%, score 19 recovery, RSI 64.75, WATCHLIST | 3/7 stable confirmed; Signal 6 △ oscillating |
+
+**Resolução de síntese (S1):** RC001-R1 remains PROVISIONALLY_VALIDATED; stable confirmed count = 3/7, with Signal 6 recorded as △ oscillating / threshold-unstable across D18-D21. D21 confirma que a compressão de score é real mas instável — 4/7 não restaurado.
+
+Leitura do arco: RC001-R1 (RSI>75 = peak danger) recebeu validação retrospectiva **material mas não estrutural plena**. O drawdown pós-RSI>75 materializou-se (D16, mais fundo D20), confirmando a zona perigosa. Confirmação estrutural completa nunca chegou a 5+/7 — MACD manteve-se BULLISH toda a janela; Signal 6 oscilou em torno do threshold (✓/△/re-cross/recovery). Enum preservado todos os dias; nunca promovido a regra oficial (governance: precisa 2-3 ocorrências adicionais).
+
+### 3. Finding 002b — observações pós-final D15-D21
+
+Finding 002b atingiu FINAL REFINEMENT no D14 (score is direction-agnostic under bearish movement). Durante D15-D21 acumulou observações pós-final sem nenhum refinement novo:
+
+| Dia | Observação pós-final |
+|---|---|
+| D15 | partial normalization (BTC paradoxo dissipou parcialmente) |
+| D17 | partial normalization (gap dissipa em regime confirmado, persiste em emerging) |
+| D18 | amplified under mature bearish regime (4 PREMIUMs em queda; ARB Δ+5) |
+| D19 | transient/day-to-day (paradoxo reverteu em 24h; ARB Δ+5→Δ-5) |
+| D20 | convergent compression (scores e preços alinham para baixo; PREMIUM 4→0) |
+| D21 | re-divergence (TAO → PREMIUM, ARB Δ+5 novamente; PREMIUM 0→1) |
+
+**Resolução de síntese (S2):** Finding 002b remains FINAL. The D15-D21 arc shows the score-directionality gap is multi-state and oscillatory: partial normalization, amplification, transient reversal, convergent compression, and re-divergence. The gap was not resolved; it changed shape across regimes and days, reinforcing the need for architectural separation between technical_strength, directional_bias, macro_permission, and operable_quality.
+
+A pergunta levantada no D20 ("o gap fecha quando o regime BEARISH amadurece?") foi resolvida no D21: **a convergent compression foi transient, não fechamento estrutural.** A re-divergence D21 mostra que a convergência foi mais um estado de oscilação dentro do gap.
+
+**ARB — caso paradigmático de instabilidade:** D18 Δ+5, D19 Δ-5, D20 Δ-1, D21 Δ+5. O ativo mais oscilante/paradoxal da janela, ilustração viva de por que score isolado é enganoso como sinal operacional.
+
+### 4. Master Filter behavior D14-D21
+
+| Dia | Asian (4H) | Morning (1D) |
+|---|---|---|
+| D14 | ACTIVE (WATCHLIST) | ACTIVE (BEARISH) — 8º dia |
+| D15 | ACTIVE (WATCHLIST) | ACTIVE despite BTC 1D SIDEWAYS tactical reset — 9º dia |
+| D16 | INACTIVE (GEM_ALERT) | ACTIVE (BEARISH) — 10º dia |
+| D17 | INACTIVE (GEM_ALERT) | ACTIVE (BEARISH) — 11º dia |
+| D18 | ACTIVE (NO_TRADE) | ACTIVE (BEARISH) — 12º dia |
+| D19 | INACTIVE (GEM_ALERT) | ACTIVE (BEARISH) — 13º dia |
+| D20 | INACTIVE (GEM_ALERT) | ACTIVE (BEARISH) — 14º dia |
+| D21 | INACTIVE (GEM_ALERT) | ACTIVE despite BTC 1D SIDEWAYS — 15º dia |
+
+Leitura do arco:
+- **Morning Master Filter:** ACTIVE contínuo toda a janela (8º→15º dia consecutivo). Regime 1D nunca permitiu SETUP de altcoin. Duas vezes ACTIVE por SIDEWAYS (D15, D21) sem desativar — o filtro trata SIDEWAYS como bloqueio, não unlock.
+- **Asian Master Filter:** oscilante. GEM_ALERT ↔ NO_TRADE ↔ WATCHLIST sem resolução direcional. O 4H comprimiu (GEM_ALERT = compressão+volume exhaustion) mas nunca rompeu em breakout nem confirmou em NO_TRADE estável. D19-D21 = GEM_ALERT D3 consecutivo.
+- **Divergência 4H/1D:** recorrente (D16-D17, D19-D21). Descritiva, sem label. 4H tactical; 1D controla permissão macro.
+
+GEM_ALERT canonizado D16: compressão + volume exhaustion / breakout candidate tático no 4H. Não é breakout, não libera o diário, não invalida Morning Master Filter.
+
+### 5. Case studies
+
+Cinco casos paradigmáticos, cada um ilustrando uma faceta da tese arquitetural:
+
+**BTC SETUP one-day (D18→D19):** state WATCHLIST → SETUP → WATCHLIST em regime BEARISH com Master Filters ACTIVE. O caso mais limpo do score-state-operability gap: technical_strength gerou SETUP sem permissão operacional (macro_permission ACTIVE) nem direção favorável (directional_bias BEARISH). Efémero, não acionou nada. technical_strength ≠ operable signal.
+
+**INJ RC001-R1 (D14-D21):** stress-test central. Ver secção 2. Ativo tecnicamente "forte" no topo (RSI 84, score 27, OBV RISING) = pior momento operacional (blow-off → drawdown). Caso vivo de por que peak danger precisa de flag.
+
+**ARB/TAO/LINK paradoxo (D18-D21):** scores subiram a PREMIUM durante quedas, reverteram, re-divergiram. ARB o mais oscilante (D18-D21: +5/-5/-1/+5). Ilustra instabilidade do gap e por que score isolado engana.
+
+**NEAR reversal (D20-D21):** edge case factual. Entrou D1 BEARISH D18, reverteu BULLISH D20, manteve D21. Único reversal sustentado do cluster. Primeiro ativo a sair do bearish set — alimenta a maturation hypothesis (OPEN), sem conclusão.
+
+**BTC SIDEWAYS relief (D21):** trend BEARISH→SIDEWAYS após 5 dias BEARISH. Primeiro alívio material da janela. Mas state NO_TRADE, MACD BEARISH, Morning ACTIVE — alívio tático, não virada. Ilustra a diferença entre "preço alivia" e "regime reverte".
+
+### 6. Breadth / regime maturation hypothesis — OPEN
+
+Trajetória breadth D16-D21:
+
+| Dia | MACD BEARISH | Nota |
+|---|---|---|
+| D16 | 11/18 | expansão inicial |
+| D17 | 15/18 | +4 (DOT/XRP/WLD/SUI D1) |
+| D18 | 17/18 | +2 (NEAR/BNB D1) — pico |
+| D19 | 17/18 | pendente no bloco diário; confirmado posteriormente como 17/18 |
+| D20 | 16/18 | -1 (NEAR reverteu BULLISH) — regrediu |
+| D21 | 16/18 | mantido (não re-expandiu) |
+
+**Resolução de síntese (S3):** D21 provides the first material relief evidence, not reversal confirmation. BTC moved BEARISH→SIDEWAYS, OBV RISING appeared in 4 prioritized assets, breadth held at 16/18 instead of re-expanding, and NEAR maintained its BULLISH reversal. However MACD remains BEARISH in 16/18, Morning Master Filter remains ACTIVE for day 15, Asian remains GEM_ALERT D3, and several states are NO_TRADE. Classify as temporary edge relief / bounce under active macro filter. **Maturation hypothesis remains OPEN — not confirmed, not rejected — and carries forward to T+28D.**
+
+Sinais a favor de maturação/alívio: BTC SIDEWAYS, OBV RISING 4 priorizados, bounce generalizado, breadth não re-expandiu, NEAR sustentou reversal. Sinais contra reversão: MACD 16/18 BEARISH, Morning ACTIVE 15º, Asian GEM_ALERT D3, states NO_TRADE, altcoins priorizados sem MACD BULLISH.
+
+### 7. Preliminary Fase 2 design 3-D sketch — conceptual decomposition only
+
+> **T+21D design sketch is a conceptual decomposition only; no implementation change, no thresholds, and no production behavior changes until a later gate.**
+
+Versão mínima 3-D do Plano Fase 2 (resposta ao Finding 002b FINAL), separando o score monolítico atual em três outputs distintos:
+
+**Dimensão 1 — `technical_strength_score`**
+Força técnica isolada, direction-agnostic. Mede "quão forte é o movimento técnico" sem dizer se é bom para operar.
+Inputs candidatos: estrutura, momentum, RSI, volume, OBV.
+Caso vivo: BTC D18 tinha technical_strength alto (gerou SETUP) — isolado não é acionável.
+
+**Dimensão 2 — `directional_bias`**
+Viés direcional explícito: bullish / bearish / sideways, com confiança.
+Inputs candidatos: trend 1D, MACD, estrutura de máximos/mínimos.
+Caso vivo: ARB/TAO/LINK D18 — technical_strength alto + directional_bias BEARISH = score alto enganoso; com dimensões separadas, o BEARISH bias vetaria a leitura "oportunidade long".
+
+**Dimensão 3 — `operable_quality`**
+Qualidade operacional local: long / short / no-trade, considerando entry quality, risk context, and veto state in the 3-D draft.
+Inputs candidatos: liquidez, R:R, Master Filter state, veto local.
+Caso vivo: INJ D14-D16 — technical_strength altíssimo (RSI 84) mas operable_quality = no-trade (blow-off, peak danger). RC001-R1 vive aqui.
+
+**Regra de composição (esboço, não spec):** os três outputs ficam separados; nenhum signal é actionable sem os três alinharem. Um movimento bearish tecnicamente forte (technical_strength alto + directional_bias bearish + operable_quality no-trade/short) é reconhecido como tal, não como setup long — resolvendo diretamente o score directionality gap do Finding 002b.
+
+**Caminho 3-D → 4-D:** In the ideal 4-D version, macro_permission should be extracted from operable_quality into its own independent dimension (long_score / short_score / macro_permission / entry_quality). A janela D14-D21 mostrou por que macro_permission merece dimensão própria: o Master Filter Morning esteve ACTIVE por 15 dias consecutivos até D21, vetando tudo — uma dimensão macro explícita tornaria esse veto legível em vez de embutido.
+
+Perguntas em aberto para Fase 2 design (não resolver no T+21D): thresholds de cada dimensão; regra de veto formal; como os estados oscilatórios do gap (normalization/amplification/transient/convergent/re-divergence) informam a composição.
+
+### 8. Carry-forward para T+28D (gate formal)
+
+Itens observacionais a reavaliar no checkpoint formal T+28D:
+- Maturation hypothesis: OPEN → confirmar/rejeitar com mais 7 dias de dados
+- RC001-R1: Signal 6 estabiliza (✓/△) ou continua oscillating? Ocorrências adicionais para promoção?
+- Finding 002b: o gap continua oscilatório ou encontra estado estável?
+- Design 3-D: validação conceptual → decisão sobre avançar para spec (decisão de gate, não de checkpoint informal)
+- Regime: BEARISH retoma, SIDEWAYS prolonga, ou BULLISH emerge?
+
+T+28D é o gate decisório. T+21D apenas preparou o terreno observacional.
+
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
