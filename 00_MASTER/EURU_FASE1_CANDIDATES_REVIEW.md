@@ -3555,6 +3555,145 @@ Disciplina governance preservada: maturation hypothesis OPEN com first follow-th
 
 > "D22 delivered the first follow-through evidence for the T+21D maturation hypothesis, with breadth contracting to 14/18 and OBV RISING spreading to 7/9 prioritized assets, but no regime reversal is confirmed: BTC remains SIDEWAYS, Morning stays ACTIVE, Asian remains GEM_ALERT, and MACD is still BEARISH across the majority. INJ's score recovery nearly closed Signal 6 compression, so RC001-R1 remains PROVISIONALLY_VALIDATED with Signal 6 △ oscillating."
 
+### Dia 23 - 2026-05-23 (sábado; T+23D; alívio D21-D22 reverteu; BTC SIDEWAYS→BEARISH novo low 75,539; breadth re-expandiu 14/18→15/18 RENDER voltou BEARISH; maturation hypothesis OPEN, weakened/contested; Finding 002b amplification again; Asian GEM_ALERT resolveu WATCHLIST)
+
+**Timing:** 5/5 tasks correram nas horas exactas (Asian 02:00:01, Morning 07:00:01, Trade Monitor 07:30:01, Journal Auditor 07:30:01, Daily Audit 08:30:01), todas result 0. Critério F operacional PASS; sem evidência de falha nos restantes critérios com os dados disponíveis.
+
+**T+23D MARCO:** Nono dia operacional Fase 2 (Design); segundo dia pós-checkpoint T+21D (rotina normal; próximo checkpoint formal T+28D em 5 dias). Modo READ_ONLY mantido. EXCLUDE list ativa. Commit canônico atual: 7a2b4a9 (audit 2026-05-23 08:30); commits do dia: 2e93e70 (Asian) → f1c8459 (Morning) → 7a2b4a9 (Audit).
+
+**Master Filter D23 — DUPLA MUDANÇA:**
+- Asian: **ACTIVE** — BTC 4H state WATCHLIST (**GEM_ALERT terminou após D4** D19-D22; 4H resolveu para WATCHLIST, não breakout)
+- Morning: **ACTIVE** — BTC trend 1D **BEARISH** (**17º dia consecutivo ACTIVE**; SIDEWAYS D21-D22 reverteu para BEARISH)
+
+> "Asian GEM_ALERT resolved after D4 into WATCHLIST, making the Asian Master Filter ACTIVE. This is a compression resolution into WATCHLIST, not a breakout and not a directional unlock."
+
+**3 EVENTOS MAJORES DIA 23:**
+
+**1) Alívio D21-D22 reverteu — primeira counter-evidence à maturation hypothesis:**
+
+O first follow-through de D22 (breadth 14/18, OBV RISING 7/9) NÃO persistiu:
+- BTC trend SIDEWAYS → **BEARISH** (alívio durou 2 dias: D21-D22)
+- Breadth 14/18 → **15/18** (re-expandiu; RENDER voltou BEARISH após 1 dia fora do set)
+- Preços: bounce reverteu, **9/9 priorizados 24h NEGATIVO** (-0.96% a -6.23%)
+- BTC **novo low da janela: 75,539** (de 76,797 D20)
+- MACD nunca confirmou os OBV RISING de D22
+
+> "D23 provides first counter-evidence against the D22 follow-through. The maturation hypothesis remains OPEN but weakened/contested: D22's breadth contraction and OBV improvement did not persist, BTC reverted SIDEWAYS→BEARISH, breadth re-expanded from 14/18 to 15/18, RENDER returned to BEARISH after one day, and 9/9 prioritized assets closed negative. This supports the reading that D21-D22 was a technical bounce, not confirmed maturation. No final rejection before T+28D."
+
+Maturation hypothesis: **OPEN but weakened/contested.** Evidência agora dos dois lados (follow-through D22 vs. reversão D23). Suporta a leitura de que D21-D22 foi bounce técnico, não maturação confirmada. NÃO rejeitada (resolução só no T+28D). NÃO reversão de regime — o BEARISH ainda manda.
+
+**2) Score paradox em massa — Finding 002b amplification again:**
+
+Apesar de 9/9 preços negativos, vários scores SUBIRAM:
+
+| Asset | D22 Score | D23 Score | Δ | D23 24h |
+|---|---|---|---|---|
+| **BTC** | 22 | 26 | **+4** | -2.72% |
+| **ETH** | 22 | 26 | **+4** | -3.11% |
+| **LINK** | 20 | 24 | **+4** | -4.51% |
+| ARB | 24 | 25 | +1 | -4.55% |
+| SOL | 23 | 24 | +1 | -2.94% |
+| INJ | 25 | 25 | 0 | -0.96% |
+| OP | 22 | 21 | -1 | -4.94% |
+| FET | 27 | 22 | -5 | -3.13% |
+| TAO | 27 | 22 | -5 | -6.23% |
+
+BTC, ETH, LINK cada um +4 com 24h de -2.7% a -4.5%. Repete o padrão de amplificação D18 (score sobe durante queda de preço).
+
+> "D23 Post-Final Observation: Finding 002b remains FINAL. The score-directionality gap amplified again under broad price decline: 9/9 prioritized assets were negative, yet BTC, ETH, and LINK each gained +4 score points, with SOL and ARB also rising. This repeats the D18 pattern of score inflation during bearish price action and confirms the gap remains recurrent, multi-state, and unresolved. No new refinement or Finding required."
+
+Sequência Finding 002b pós-final: D15/D17 normalization → D18 amplification → D19 transient → D20 convergent compression → D21 re-divergence → D22 design evidence (OBV/MACD) → **D23 amplification again**. Finding 002b **FINAL D14 mantido**; gap recorrente, multi-state, não resolvido. Reforça a tese, sem refinement.
+
+**3) BTC alívio falhado + dupla transição de Master Filter:**
+
+- BTC trend: SIDEWAYS (D21-D22) → BEARISH (D23). Alívio tático de 2 dias falhou.
+- BTC preço: 77,641 (D22) → **75,539** (D23, -2.72%), novo low da janela
+- BTC score: 22 → 26 (Δ+4, parte do paradoxo), RSI 40.47, MACD BEARISH, OBV RISING, state WATCHLIST (de NO_TRADE)
+- 4H: GEM_ALERT (D4) → WATCHLIST, Asian filter ACTIVE
+
+> "D23 confirms that the D21-D22 relief was tactical and temporary. The 4H compression resolved to WATCHLIST, while 1D SIDEWAYS reverted to BEARISH. Both are descriptive state transitions under active filters; no new taxonomy."
+
+Análogo em natureza ao SETUP 1-day D18 (estado transitório sob filtro ativo), mas registado como reversão descritiva simples, não nova categoria. O alívio SIDEWAYS foi tático e efémero (2 dias).
+
+**INJ — estável num dia vermelho; Signal 6 compression mantém-se quase fechada:**
+
+INJ D23: score 25→25 (Δ0), -0.96% 24h (o menos negativo dos 9), RSI 62.45, MACD BULLISH, OBV FALLING, tier BOA, WATCHLIST. 7D +2.17%.
+
+INJ aguentou melhor que o resto (único quase-flat num dia de quedas -3% a -6%). Cumulativo score D14→D23 = Δ-2 (compression mantém-se quase fechada, estável vs. D22). OBV FALLING continua a única divergência fluxo/preço restante. Signal 6 △ "compression nearly closed" sem mudança.
+
+**Status RC001-R1 D23: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. Sem mudança vs. D22.** Núcleo = drawdown realizado pós-RSI>75 (D16, D20). Signal 6 △ oscillating / compression nearly closed.
+
+**OBV transitions D23 — divergência inverteu de sinal:**
+RISING: BTC, ETH, SOL, FET, TAO (5/9). FLAT: LINK, OP. FALLING: INJ, ARB. No D22 eram 7/9 RISING com preço a subir (bounce); D23 vários RISING mas com preço a cair (o "improvement" de fluxo não se traduziu em sustentação de preço). Divergência fluxo/preço inverteu de sinal.
+
+**Carry-overs D23 (robustez/duração, sem label nova):**
+- SOL/LINK/TAO: D8 priorizados (MACD BEARISH; scores subiram no paradoxo)
+- OP/FET: D9 priorizados (MACD BEARISH)
+- DOT/XRP/SUI/AVAX/ADA/BNB: persistência BEARISH (não-priorizados)
+- RENDER: voltou BEARISH D23 (reversal D22 durou 1 dia; de volta ao bearish set)
+- WLD, NEAR: sustentam BULLISH (fora do bearish set)
+- INJ: BULLISH MACD mantido (único priorizado)
+- ARB: RESUMED_BEARISH; paradoxo leve Δ+1 com -4.55%
+
+**Tabela cross-asset D22 → D23 (9 priorizados):**
+
+| Asset | D22 Score | D23 Score | Δ | D23 24h | RSI | Trend/Nota D23 |
+|---|---|---|---|---|---|---|
+| BTC | 22 | 26 | +4 | -2.72% | 40.47 | BEARISH — SIDEWAYS reverteu; novo low 75,539; paradoxo +4; OBV RISING |
+| ETH | 22 | 26 | +4 | -3.11% | 31.81 | BEARISH — paradoxo +4; RSI <32; OBV RISING |
+| SOL | 23 | 24 | +1 | -2.94% | 43.09 | BEARISH — D8; OBV RISING |
+| LINK | 20 | 24 | +4 | -4.51% | 43.64 | BEARISH — D8; paradoxo +4; OBV FLAT |
+| INJ | 25 | 25 | 0 | -0.96% | 62.45 | BULLISH MACD / OBV FALLING — estável; menos negativo dos 9; Signal 6 △ |
+| ARB | 24 | 25 | +1 | -4.55% | 35.96 | BEARISH — paradoxo leve; OBV FALLING |
+| OP | 22 | 21 | -1 | -4.94% | 44.00 | BEARISH — D9; OBV FLAT |
+| FET | 27 | 22 | -5 | -3.13% | 45.71 | BEARISH — D9; maior queda score; OBV RISING |
+| TAO | 27 | 22 | -5 | -6.23% | 44.34 | BEARISH — maior queda 24h; NO_TRADE; OBV RISING |
+
+**CROSS-CHECK CLAUDE + CODEX:**
+
+Cross-check D23: 3/3 alinhado (maturation counter-evidence, Finding 002b amplification, Master Filter dupla mudança). Acumulado documentado passa a **149/149**, contando as 3 perguntas internas D23.
+
+Disciplina governance preservada: maturation hypothesis OPEN but weakened/contested (não rejeitada antes do T+28D, não reversão); Finding 002b FINAL (D23 post-final observation amplification again, sem refinement); RC001-R1 enum preservado sem mudança; Master Filter dupla transição descritiva sem label; RENDER reversal factual; sem promoção.
+
+**Concordância operador-sistema Dia 23 (9 entradas):**
+- BTC: WATCHLIST / BEARISH (SIDEWAYS reverteu); novo low 75,539; paradoxo +4
+- ETH: WATCHLIST / BEARISH; paradoxo +4; RSI <32
+- SOL: WATCHLIST / WATCHLIST_BEARISH_EMERGING D8; OBV RISING
+- LINK: WATCHLIST / WATCHLIST_BEARISH_EMERGING D8; paradoxo +4
+- INJ: WATCHLIST / RC001-R1 risk flag; estável; Signal 6 △ compression nearly closed
+- ARB: WATCHLIST / RESUMED_BEARISH; paradoxo leve
+- OP: WATCHLIST / WATCHLIST_BEARISH_EMERGING D9; OBV FLAT
+- FET: WATCHLIST / WATCHLIST_BEARISH_EMERGING D9; maior queda score
+- TAO: NO_TRADE / WATCHLIST_BEARISH_EMERGING; maior queda 24h
+
+**Severidades Findings / Rule Candidates (Dia 23):**
+- Finding 001: medium (superseded por 001a)
+- Finding 001a: medium-low (validado D4-D14; observado D15-D23)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (FINAL REFINEMENT D14 — D23 post-final observation "amplification again under broad decline", repete padrão D18; FINAL mantido, sem refinement)
+- Finding 003: medium (VALIDADO D8-D14; breadth re-expandiu 15/18 D23 após contração D22, mantém-se elevada; reforça observação histórica sem nova conclusão)
+- Rule Candidate 001: PROVISIONALLY_VALIDATED (sem mudança)
+- **RC001-R1: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. Núcleo = drawdown realizado pós-RSI>75 (D16, D20). Signal 6 △ oscillating / compression nearly closed (estável vs. D22). Sem mudança D23.**
+
+**WATCH POINTS PARA D24:**
+
+| Watch point | Status D23 | O que monitorar D24 |
+|---|---|---|
+| **Maturation hypothesis (OPEN but weakened)** | Counter-evidence D23: bounce reverteu, BTC BEARISH, breadth re-expandiu | Continua a enfraquecer (BEARISH aprofunda) ou novo alívio? Evidência líquida rumo a T+28D. |
+| **BTC continuation** | Trend BEARISH de volta; novo low 75,539; OBV RISING | Novo low D24 ou estabiliza? OBV RISING sustenta ou vira FALLING? |
+| **Breadth** | Re-expandiu 14→15; RENDER voltou | Continua a expandir (>15, regime reforça) ou contrai (maturation ressurge)? |
+| **Score paradox (Finding 002b)** | Amplification again (BTC/ETH/LINK +4 com queda) | Persiste, normaliza, ou inverte? Mais um estado oscilatório a documentar. |
+| **INJ Signal 6** | Estável (Δ0, ~Δ-2); OBV FALLING; MACD BULLISH | Mantém estável, score sobe (gap fecha) ou cai? MACD vira BEARISH? |
+| **Master Filter Morning** | ACTIVE 17º dia (BEARISH de volta) | 18º dia? |
+| **Master Filter Asian** | ACTIVE (4H WATCHLIST após GEM_ALERT) | 4H volta GEM_ALERT, mantém WATCHLIST, ou outro estado? |
+| **WLD/NEAR vs RENDER** | WLD/NEAR sustentam; RENDER voltou BEARISH | WLD/NEAR aguentam ou seguem RENDER de volta? |
+| **OBV/preço divergência** | Inverteu: RISING com preço a cair | Resolve (OBV vira FALLING) ou persiste a divergência? |
+| **T+28D gate formal** | 5 dias (Quinta 2026-05-28) | Evidência líquida maturation (D22 a favor vs D23 contra) acumula para a decisão |
+
+**Frase Codex que define o dia:**
+
+> "D23 reversed the D21-D22 relief: BTC returned SIDEWAYS→BEARISH with a new window low, breadth re-expanded to 15/18, RENDER returned to BEARISH, and 9/9 prioritized assets fell. The maturation hypothesis remains OPEN but weakened/contested, while Finding 002b gained another post-final observation as scores inflated again during broad price decline."
+
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
