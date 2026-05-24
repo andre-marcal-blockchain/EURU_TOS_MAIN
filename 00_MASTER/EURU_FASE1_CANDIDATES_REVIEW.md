@@ -3694,6 +3694,123 @@ Disciplina governance preservada: maturation hypothesis OPEN but weakened/contes
 
 > "D23 reversed the D21-D22 relief: BTC returned SIDEWAYS→BEARISH with a new window low, breadth re-expanded to 15/18, RENDER returned to BEARISH, and 9/9 prioritized assets fell. The maturation hypothesis remains OPEN but weakened/contested, while Finding 002b gained another post-final observation as scores inflated again during broad price decline."
 
+### Dia 24 - 2026-05-24 (domingo; T+24D; maturation re-fortalece sem confirmar; FET 1º priorizado além de INJ a virar MACD BULLISH; breadth novo mínimo 13/18; OBV RISING 9/9; INJ OBV virou RISING stress dissipa; evidência oscilante D22+/D23-/D24+)
+
+**Timing:** 5/5 tasks correram nas horas exactas (Asian 02:00:01, Morning 07:00:01, Trade Monitor 07:30:01, Journal Auditor 07:30:01, Daily Audit 08:30:01), todas result 0. Critério F operacional PASS; sem evidência de falha nos restantes critérios com os dados disponíveis.
+
+**T+24D MARCO:** Décimo dia operacional Fase 2 (Design); terceiro dia pós-checkpoint T+21D (rotina normal; próximo checkpoint formal T+28D em 4 dias). Modo READ_ONLY mantido. EXCLUDE list ativa. Commit canônico atual: c215894 (audit 2026-05-24 08:30); commits do dia: 11960eb (Asian) → a053678 (Morning) → c215894 (Audit).
+
+**Master Filter D24:**
+- Asian: **ACTIVE** — BTC 4H state NO_TRADE (4H D19-D24: GEM_ALERT ×4 → WATCHLIST D23 → NO_TRADE D24; oscila sem direção)
+- Morning: **ACTIVE** — BTC trend 1D SIDEWAYS (**18º dia consecutivo ACTIVE**; trend oscila BEARISH↔SIDEWAYS: D21-22 SIDEWAYS, D23 BEARISH, D24 SIDEWAYS)
+
+**3 EVENTOS MAJORES DIA 24:**
+
+**1) FET virou MACD BULLISH — 1º priorizado além de INJ a confirmar; maturation re-fortalece:**
+
+FET D24: MACD BEARISH → **BULLISH**, +6.01% 24h, 7D +9.31%, score 22→26 (Δ+4), RSI 53.31 (único priorizado RSI >50 além de INJ). É o **primeiro priorizado além de INJ a virar MACD BULLISH em toda a janela D14-D24.** Quebra o argumento dominante "contra" usado até agora: os OBV RISING dos priorizados nunca tinham confirmação MACD.
+
+Combinado com: breadth novo mínimo 13/18, INJ OBV virou RISING (ver abaixo), 8/9 priorizados positivos, OBV RISING 9/9.
+
+> "D24 re-strengthens the maturation hypothesis but does not confirm it. Evidence is oscillating day-to-day: D22 pro-maturation, D23 counter-evidence, D24 pro-maturation again. The strongest new fact is FET becoming the first prioritized asset beyond INJ to turn MACD BULLISH, while breadth reached a new window low at 13/18 and OBV RISING spread to 9/9. However, BTC remains SIDEWAYS, Morning remains ACTIVE, and 13/18 assets are still MACD BEARISH. Maturation hypothesis remains OPEN, now with oscillating evidence and renewed pro-maturation support."
+
+Maturation hypothesis: **OPEN, com evidência oscilante e suporte pró-maturação renovado.** A própria oscilação dia-a-dia (D22+/D23−/D24+) é um dado relevante para o T+28D — o regime está indeciso, não em virada limpa. NÃO confirmada, NÃO reversão (13/18 maioria BEARISH, BTC SIDEWAYS não BULLISH, Morning ACTIVE 18º, RSI maioria <50, só FET confirmou MACD entre priorizados além de INJ).
+
+**2) INJ OBV virou RISING — divergência fluxo/preço fechou; stress dissipa:**
+
+INJ esteve OBV FALLING desde D18 (última divergência fluxo/preço dos priorizados). **D24 virou RISING.** Score 25→23 (Δ-2), RSI 62.37 estável, +1.56% 24h, 7D +1.99%, MACD BULLISH, tier BOA, WATCHLIST. Cumulativo score D14→D24: 27→23 = Δ-4 (mexeu de Δ-2 D22-D23).
+
+> "INJ's OBV recovery on D24 closes the remaining flow/price divergence from the post-blow-off stress window. This indicates the acute stress structure is dissipating, but it does not invalidate RC001-R1 retrospectively: the core validation remains the realized drawdown after RSI>75 on D16/D20. RC001-R1 remains PROVISIONALLY_VALIDATED as a historical risk flag; no enum change and no rule promotion."
+
+O quadro de stress agudo pós-blow-off de INJ está a dissipar-se (OBV recuperou, score recuperou parcial, RSI 62.37 sem re-overheat desde D14). Não invalida a validação retrospectiva — apenas fecha um dos sinais de stress que ainda estavam abertos. "The stress has cooled; the historical risk flag remains."
+
+**Status RC001-R1 D24: PROVISIONALLY_VALIDATED como risk flag; não regra oficial.** Núcleo = drawdown realizado pós-RSI>75 (D16, D20). Signal 6 △ oscillating: cumulativo D14→D24 = Δ-4, novamente abaixo do threshold estrito -5, confirmando instabilidade, não confirmação estável.
+
+**3) Breadth 13/18 novo mínimo + score paradox inverteu parcial:**
+
+Breadth: 15/18 (D23) → **13/18 (D24)**. Novo mínimo da janela (anterior 14/18 D22). Trajetória: D18 17/18 (pico) → D20-21 16/18 → D22 14/18 → D23 15/18 → D24 13/18.
+
+**13/18 MACD BEARISH:** BTC, ETH, SOL, BNB, AVAX, DOT, LINK, ADA, XRP, SUI, ARB, OP, TAO.
+**5/18 MACD BULLISH:** WLD, NEAR, INJ, FET, RENDER. (FET virou; RENDER voltou — oscilou BULLISH D22 / BEARISH D23 / BULLISH D24.)
+
+Score paradox D23 (BTC/ETH/LINK +4 com quedas) inverteu D24: BTC -2, ETH -2, LINK -3 (scores caíram com preços a subir). TAO +5 e FET +4 acompanham bounces fortes (menos paradoxal).
+
+> "D24 Post-Final Observation: Finding 002b remains FINAL. After D23 amplification during broad decline, D24 showed partial inversion/normalization: BTC, ETH, and LINK scores fell while prices bounced, while FET and TAO scores rose alongside stronger price bounces. This adds another oscillation state to the score-directionality gap rather than resolving it. No new refinement or Finding required."
+
+Sequência Finding 002b pós-final atualizada: normalization → amplification → transient reversal → convergent compression → re-divergence → OBV/MACD design evidence → amplification again → **partial inversion/normalization**. Finding 002b **FINAL D14 mantido**; gap recorrente, multi-state, não resolvido.
+
+Breadth: novo mínimo 13/18 confirma contração de bordas mais forte, **mas não reversão** — maioria BEARISH mantém-se.
+
+**OBV transitions D24:** **9/9 priorizados RISING** (incluindo INJ, RISING pela 1ª vez desde D18; ARB também virou RISING). Fluxo comprador agora universal nos priorizados, com preço a subir (8/9 positivos) — ao contrário de D23 (RISING com preço a cair). 2º bounce em 4 dias (D21-22 foi o 1º).
+
+**Carry-overs D24 (robustez/duração, sem label nova):**
+- SOL/LINK/TAO: D9 priorizados (MACD BEARISH; TAO +5 score com bounce)
+- OP/FET: D10 priorizados — **FET virou MACD BULLISH** (sai do bearish set entre priorizados); OP MACD BEARISH mantido (tier MEDIA)
+- DOT/XRP/SUI/AVAX/ADA/BNB: persistência BEARISH (não-priorizados)
+- RENDER: voltou BULLISH D24 (oscilante)
+- WLD, NEAR: sustentam BULLISH
+- INJ: BULLISH MACD mantido; OBV virou RISING
+- ARB: RESUMED_BEARISH; score flat Δ0; OBV virou RISING
+
+**Tabela cross-asset D23 → D24 (9 priorizados):**
+
+| Asset | D23 Score | D24 Score | Δ | D24 24h | RSI | Trend/Nota D24 |
+|---|---|---|---|---|---|---|
+| BTC | 26 | 24 | -2 | +1.65% | 45.88 | SIDEWAYS / MACD BEARISH — recuperou do low; score caiu com preço a subir (inversão) |
+| ETH | 26 | 24 | -2 | +2.56% | 39.28 | BEARISH — inversão paradoxo; OBV RISING |
+| SOL | 24 | 23 | -1 | +1.79% | 46.71 | BEARISH — D9; OBV RISING |
+| LINK | 24 | 21 | -3 | +1.66% | 46.69 | BEARISH — D9; maior queda score; OBV RISING |
+| INJ | 25 | 23 | -2 | +1.56% | 62.37 | BULLISH MACD / OBV RISING — divergência fechou; stress dissipa; Signal 6 △ |
+| ARB | 25 | 25 | 0 | -0.09% | 36.08 | BEARISH — único negativo; OBV virou RISING |
+| OP | 21 | 20 | -1 | +1.10% | 45.45 | BEARISH — D10; tier MEDIA; OBV RISING |
+| FET | 22 | 26 | +4 | +6.01% | 53.31 | BULLISH MACD (virou!) — 1º priorizado além de INJ; maior 7D +9.31%; RSI >53 |
+| TAO | 22 | 27 | +5 | +5.43% | 49.98 | BEARISH — maior score; bounce forte; OBV RISING |
+
+**CROSS-CHECK CLAUDE + CODEX:**
+
+Cross-check D24: 3/3 alinhado (FET MACD + maturation re-fortalece, INJ OBV divergência fechou, breadth novo mínimo + paradoxo inverteu). Acumulado documentado passa a **152/152**, contando as 3 perguntas internas D24.
+
+Disciplina governance preservada: maturation hypothesis OPEN com evidência oscilante e suporte pró-maturação renovado (não confirmada, não reversão; oscilação dia-a-dia registada como dado); RC001-R1 enum preservado (stress dissipa mas validação retrospectiva intacta); Finding 002b FINAL (D24 post-final observation partial inversion, sem refinement); Signal 6 △ oscillating (Δ-4); breadth factual; FET/RENDER reversals factuais; sem promoção.
+
+**Concordância operador-sistema Dia 24 (9 entradas):**
+- BTC: NO_TRADE / BEARISH (SIDEWAYS de novo); recuperou do low; inversão paradoxo
+- ETH: NO_TRADE / BEARISH; inversão paradoxo; OBV RISING
+- SOL: NO_TRADE / WATCHLIST_BEARISH_EMERGING D9; OBV RISING
+- LINK: NO_TRADE / WATCHLIST_BEARISH_EMERGING D9; maior queda score
+- INJ: WATCHLIST / RC001-R1 risk flag; OBV divergência fechou; stress dissipa; Signal 6 △
+- ARB: WATCHLIST / RESUMED_BEARISH; único negativo; OBV virou RISING
+- OP: NO_TRADE / WATCHLIST_BEARISH_EMERGING D10; tier MEDIA
+- FET: WATCHLIST / MACD BULLISH (1º priorizado além de INJ); maior 7D
+- TAO: WATCHLIST / WATCHLIST_BEARISH_EMERGING; maior score; bounce forte
+
+**Severidades Findings / Rule Candidates (Dia 24):**
+- Finding 001: medium (superseded por 001a)
+- Finding 001a: medium-low (validado D4-D14; observado D15-D24)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (FINAL REFINEMENT D14 — D24 post-final observation "partial inversion/normalization"; arco oscilatório 8 estados; FINAL mantido, sem refinement)
+- Finding 003: medium (VALIDADO D8-D14; breadth contraiu a novo mínimo 13/18 D24, mas maioria BEARISH mantém-se; observação histórica permanece relevante sem nova conclusão)
+- Rule Candidate 001: PROVISIONALLY_VALIDATED (sem mudança)
+- **RC001-R1: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. Núcleo = drawdown realizado pós-RSI>75 (D16, D20). D24: divergência OBV fechou, stress agudo dissipa; validação retrospectiva intacta. Signal 6 △ oscillating (Δ-4).**
+
+**WATCH POINTS PARA D25:**
+
+| Watch point | Status D24 | O que monitorar D25 |
+|---|---|---|
+| **Maturation hypothesis (OPEN, oscilante)** | D22+/D23−/D24+; FET MACD confirmou; breadth 13/18 | Mais priorizados viram MACD BULLISH (maturação ganha corpo) ou FET fica isolado/reverte? Evidência líquida rumo a T+28D. |
+| **MACD confirmation spread** | FET 1º priorizado além de INJ; 5/18 BULLISH | Spread (>5 BULLISH) ou recua? BTC vira BULLISH? |
+| **BTC trend oscilação** | SIDEWAYS↔BEARISH (D21-24); SIDEWAYS D24 | Resolve para BULLISH, fixa BEARISH, ou continua a oscilar? Morning desativa? |
+| **Breadth** | Novo mínimo 13/18 | Contrai mais (<13, maturação) ou re-expande (regime reforça)? |
+| **INJ pós-stress** | OBV virou RISING; stress dissipa; Signal 6 △ | Score estabiliza/sobe (stress digerido) ou novo movimento? RSI cruza 70 outra vez? |
+| **Score paradox (Finding 002b)** | Inversão parcial D24 | Mais um estado oscilatório ou estabiliza? |
+| **Master Filter Morning** | ACTIVE 18º dia (SIDEWAYS) | 19º dia? Desativa se BTC BULLISH? |
+| **Master Filter Asian** | ACTIVE (4H NO_TRADE) | 4H resolve direção ou continua a oscilar? |
+| **FET/RENDER/WLD/NEAR** | 4 BULLISH além de INJ; RENDER oscilante | Sustentam (edge contraction consolida) ou revertem? |
+| **T+28D gate formal** | 4 dias (Quinta 2026-05-28) | Evidência oscilante (D22+/D23−/D24+) acumula; padrão D25-D27 decide a leitura do gate |
+
+**Frase Codex que define o dia:**
+
+> "D24 re-strengthened the maturation hypothesis without confirming it: breadth contracted to a new window low at 13/18, OBV RISING spread to 9/9 prioritized assets, and FET became the first prioritized asset beyond INJ to turn MACD BULLISH. But BTC remains SIDEWAYS, Morning stays ACTIVE, and the majority remains MACD BEARISH; evidence is oscillating, not resolved. INJ's OBV recovery shows the acute post-blow-off stress is dissipating, while RC001-R1 remains PROVISIONALLY_VALIDATED as a retrospective risk flag."
+
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
