@@ -3811,6 +3811,124 @@ Disciplina governance preservada: maturation hypothesis OPEN com evidência osci
 
 > "D24 re-strengthened the maturation hypothesis without confirming it: breadth contracted to a new window low at 13/18, OBV RISING spread to 9/9 prioritized assets, and FET became the first prioritized asset beyond INJ to turn MACD BULLISH. But BTC remains SIDEWAYS, Morning stays ACTIVE, and the majority remains MACD BEARISH; evidence is oscillating, not resolved. INJ's OBV recovery shows the acute post-blow-off stress is dissipating, while RC001-R1 remains PROVISIONALLY_VALIDATED as a retrospective risk flag."
 
+### Dia 25 - 2026-05-25 (segunda; T+25D; D24 pro-maturation evidence reverteu; INJ perdeu MACD BULLISH 1ª vez na janela; FET sustentou mas isolado; breadth re-expandiu 13/18→14/18; OBV RISING colapsou 9/9→2/9; net read leans against confirmed maturation; T+28D em 3 dias)
+
+**Timing:** 5/5 tasks correram nas horas exactas (Asian 02:00:01, Morning 07:00:01, Trade Monitor 07:30:01, Journal Auditor 07:30:01, Daily Audit 08:30:01), todas result 0. Critério F operacional PASS; sem evidência de falha nos restantes critérios com os dados disponíveis.
+
+**T+25D MARCO:** Décimo-primeiro dia operacional Fase 2 (Design); quarto dia pós-checkpoint T+21D (rotina normal; próximo checkpoint formal T+28D em 3 dias). Modo READ_ONLY mantido. EXCLUDE list ativa. Commit canônico atual: f2e4cde (audit 2026-05-25 08:30); commits do dia: b809a64 (Asian) → e24c891 (Morning) → f2e4cde (Audit).
+
+**Master Filter D25:**
+- Asian: **ACTIVE** — BTC 4H state WATCHLIST (4H continua a oscilar: GEM_ALERT → WATCHLIST D23 → NO_TRADE D24 → WATCHLIST D25; sem direção)
+- Morning: **ACTIVE** — BTC trend 1D SIDEWAYS (**19º dia consecutivo ACTIVE**; SIDEWAYS 2 dias D24-D25)
+
+**3 EVENTOS MAJORES DIA 25:**
+
+**1) INJ perdeu MACD BULLISH — 1ª vez na janela; stress reativou:**
+
+INJ foi MACD BULLISH toda a janela D14-D24 (último pilar estrutural bullish que vinha desde antes do blow-off). **D25 virou BEARISH.** Score 23→17 (Δ-6), tier BOA→MEDIA, RSI 62.59 estável, OBV RISING→FLAT, state NO_TRADE. Cumulativo D14→D25: 27→17 = Δ-10 (voltou perto do mínimo D20 de Δ-11).
+
+> "D25 reverses the D24 'stress dissipating' read for INJ. OBV recovery did not persist, MACD lost BULLISH for the first time in the D14-D25 window, score collapsed back to 17, and INJ returned near the D20 stress zone. This does not invalidate the D24 observation; it shows the stress relief was transient."
+
+O "stress dissipating" de D24 (OBV virou RISING) era correto com os dados de então, mas não persistiu — D25 reativou o stress (OBV→FLAT, MACD→BEARISH, score -6). INJ voltou a estado próximo do D20 window-low.
+
+> "RC001-R1 remains PROVISIONALLY_VALIDATED as a retrospective risk flag. The core validation remains the realized post-RSI>75 drawdown, now reinforced by D25 returning close to the D20 stress low. No enum change and no rule promotion."
+
+**Status RC001-R1 D25: PROVISIONALLY_VALIDATED como risk flag; não regra oficial.** Núcleo = drawdown realizado pós-RSI>75 (D16, D20), agora reforçado pelo D25 voltar perto do stress low D20. Signal 6 △ oscillating: cumulativo Δ-10 re-cruzou o threshold -5, mas a sequência D18✓/D19△/D20 re-cross/D21-22 recovery/D23-24 near-closed/**D25 re-cross** mostra instabilidade repetida — não restaurar a ✓.
+
+**2) Confirmação MACD não espalhou — FET isolado, INJ saiu; maturation pende contra:**
+
+A peça pró-maturação mais forte de D24 (FET 1º priorizado a virar MACD BULLISH; OBV RISING 9/9) **não espalhou D25:**
+- FET sustentou BULLISH mas ficou **isolado** entre priorizados
+- Nenhum outro priorizado confirmou MACD BULLISH
+- **INJ perdeu BULLISH** (saiu)
+- Breadth re-expandiu 13/18 → 14/18
+- OBV RISING colapsou 9/9 → 2/9 (só BTC, FET)
+- Bounce desinflou outra vez (igual D21-22)
+- Morning ACTIVE 19º dia
+
+> "D25 shifts the maturation hypothesis back toward weakness/contestation. The strongest D24 pro-maturation evidence did not spread: FET held MACD BULLISH but remained isolated, INJ lost BULLISH, breadth re-expanded to 14/18, and OBV RISING collapsed from 9/9 to 2/9. The dominant D22-D25 pattern is now oscillation: pro-maturation evidence appears and fades within 24h. Maturation hypothesis remains OPEN, but not confirmed; current net read leans toward repeated technical bounces under a persistent active/bearish regime."
+
+**Sequência de evidência maturation: D22+ / D23− / D24+ / D25−.** A oscilação dia-a-dia é agora o **padrão dominante** — e é provavelmente a observação mais importante do período D22-D25 para a síntese do gate T+28D: evidência pró-maturação aparece e desvanece em 24h. Maturation hypothesis **OPEN, currently weakened/contested; net read leans against confirmed maturation** (não rejeitada — resolução só no T+28D; não reversão de regime).
+
+**3) Score compression generalizada durante bounce fade — Finding 002b:**
+
+9/9 priorizados com score em queda/flat (TAO -8, INJ -6, LINK -5, FET -5, ETH -4, BTC -3, SOL -2, ARB -2, OP -1). OBV recuou de 9/9 RISING (D24) para 2/9 (D25). Vários tiers caíram para MEDIA (ETH, LINK, INJ, OP, TAO). O 2º bounce (D24) desinflou rápido, igual ao 1º (D21-22).
+
+> "D25 Post-Final Observation: Finding 002b remains FINAL. D25 showed generalized score compression during bounce fade: 9/9 prioritized assets had scores flat/down, while price action was mixed and OBV RISING collapsed from 9/9 to 2/9. This differs from D20 convergent compression, where scores and prices aligned downward; D25 is compression as the relief bounce fades. It adds another oscillation state to the score-directionality gap without resolving it. No new refinement or Finding required."
+
+Distinção D20 vs. D25: D20 = convergent compression (scores e preços alinham para baixo); **D25 = compression durante fade de bounce** (preços mistos, scores caem amplo). Variante, não repetição.
+
+Sequência Finding 002b pós-final atualizada: normalization → amplification → transient reversal → convergent compression → re-divergence → OBV/MACD design evidence → amplification again → partial inversion/normalization → **generalized compression on bounce fade**. Finding 002b **FINAL D14 mantido**; gap recorrente, multi-state (9 estados), não resolvido.
+
+**OBV transitions D25 — fluxo comprador recuou:** RISING só BTC, FET (2/9). FLAT: ETH, SOL, LINK, INJ, OP (5/9). FALLING: ARB, TAO (2/9). De 9/9 RISING D24 para 2/9 D25 — o fluxo comprador do bounce não se sustentou.
+
+**Carry-overs D25 (robustez/duração, sem label nova):**
+- SOL/LINK/TAO: D10 priorizados (MACD BEARISH; scores comprimiram; LINK/TAO tier MEDIA)
+- OP/FET: D11 priorizados — FET MACD BULLISH sustentado (isolado); OP MACD BEARISH (tier MEDIA)
+- INJ: **perdeu MACD BULLISH** → BEARISH; score colapso; tier MEDIA; stress reativou
+- DOT/XRP/SUI/AVAX/ADA/BNB: persistência BEARISH (não-priorizados)
+- WLD, NEAR, RENDER: sustentam BULLISH (fora do bearish set)
+- ARB: RESUMED_BEARISH; OBV FALLING; -2.48% (maior queda 24h dos priorizados)
+
+**Tabela cross-asset D24 → D25 (9 priorizados):**
+
+| Asset | D24 Score | D25 Score | Δ | D25 24h | RSI | Trend/Nota D25 |
+|---|---|---|---|---|---|---|
+| BTC | 24 | 21 | -3 | +0.79% | 48.39 | SIDEWAYS / MACD BEARISH — score caiu; OBV RISING (1 de 2) |
+| ETH | 24 | 20 | -4 | -0.71% | 38.24 | BEARISH — tier MEDIA; OBV FLAT |
+| SOL | 23 | 21 | -2 | -0.12% | 46.75 | BEARISH — D10; OBV FLAT |
+| LINK | 21 | 16 | -5 | -0.57% | 45.95 | BEARISH — D10; score window-low; tier MEDIA |
+| INJ | 23 | 17 | -6 | +0.23% | 62.59 | BEARISH (perdeu BULLISH!) — stress reativou; Δ-10 cumulativo; tier MEDIA |
+| ARB | 25 | 23 | -2 | -2.48% | 34.36 | BEARISH — maior queda 24h; OBV FALLING |
+| OP | 20 | 19 | -1 | -1.40% | 44.30 | BEARISH — D11; tier MEDIA |
+| FET | 26 | 21 | -5 | +0.05% | 53.59 | BULLISH MACD (sustentou, isolado) — score caiu mas manteve MACD; OBV RISING (2 de 2) |
+| TAO | 27 | 19 | -8 | -1.72% | 48.23 | BEARISH — maior queda score; tier MEDIA; OBV FALLING |
+
+**CROSS-CHECK CLAUDE + CODEX:**
+
+Cross-check D25: 3/3 alinhado (INJ perdeu BULLISH + RC001-R1, MACD não espalhou + maturation pende contra, score compression on bounce fade). Acumulado documentado passa a **155/155**, contando as 3 perguntas internas D25.
+
+Disciplina governance preservada: maturation hypothesis OPEN, weakened/contested, net read leans against confirmed maturation (não rejeitada antes do T+28D, não reversão); oscilação D22-D25 destacada como padrão dominante para a síntese do gate; RC001-R1 enum preservado (stress reativou, validação retrospectiva reforçada); Signal 6 △ oscillating (re-cross Δ-10, instável); Finding 002b FINAL (D25 post-final observation generalized compression on bounce fade, distinto do D20, sem refinement); sem promoção.
+
+**Concordância operador-sistema Dia 25 (9 entradas):**
+- BTC: NO_TRADE / SIDEWAYS; MACD BEARISH; score caiu
+- ETH: NO_TRADE / BEARISH; tier MEDIA
+- SOL: NO_TRADE / WATCHLIST_BEARISH_EMERGING D10
+- LINK: NO_TRADE / WATCHLIST_BEARISH_EMERGING D10; score window-low 16
+- INJ: NO_TRADE / RC001-R1 risk flag; perdeu MACD BULLISH; stress reativou; Signal 6 △ re-cross
+- ARB: WATCHLIST / RESUMED_BEARISH; maior queda 24h
+- OP: WATCHLIST / WATCHLIST_BEARISH_EMERGING D11; tier MEDIA
+- FET: WATCHLIST / MACD BULLISH sustentado (isolado); score caiu
+- TAO: WATCHLIST / WATCHLIST_BEARISH_EMERGING; maior queda score; tier MEDIA
+
+**Severidades Findings / Rule Candidates (Dia 25):**
+- Finding 001: medium (superseded por 001a)
+- Finding 001a: medium-low (validado D4-D14; observado D15-D25)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (FINAL REFINEMENT D14 — D25 post-final observation "generalized compression on bounce fade", distinto do D20; arco oscilatório 9 estados; FINAL mantido, sem refinement)
+- Finding 003: medium (VALIDADO D8-D14; breadth re-expandiu 14/18 D25 e oscilou 13-15 desde D22; observação histórica permanece relevante sem nova conclusão)
+- Rule Candidate 001: PROVISIONALLY_VALIDATED (sem mudança)
+- **RC001-R1: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. Núcleo = drawdown realizado pós-RSI>75 (D16, D20), reforçado pelo D25 voltar perto do stress low. D25: INJ perdeu MACD BULLISH, stress reativou. Signal 6 △ oscillating (re-cross Δ-10).**
+
+**WATCH POINTS PARA D26:**
+
+| Watch point | Status D25 | O que monitorar D26 |
+|---|---|---|
+| **Maturation hypothesis (OPEN, net leans against)** | D22+/D23−/D24+/D25−; oscilação = padrão dominante | Oscilação persiste (confirma "bounces técnicos") ou resolve para um lado? Leitura líquida rumo a T+28D (2 dias). |
+| **MACD confirmation** | FET isolado; INJ saiu; 4/18 BULLISH | FET reverte (fica 0 priorizados confirmados) ou ganha companhia? |
+| **INJ pós-reativação** | Perdeu BULLISH; Δ-10; tier MEDIA; stress reativou | Novo window-low (<16)? MACD volta BULLISH? RSI mantém ~62? Aproxima-se do D20 low? |
+| **BTC trend** | SIDEWAYS 2 dias; score caiu; NO_TRADE | Resolve (BULLISH/BEARISH) ou SIDEWAYS prolongado? Morning 20º dia? |
+| **Breadth** | Re-expandiu 13→14 | Continua a expandir (regime reforça) ou contrai (maturação ressurge)? |
+| **OBV** | Colapsou 9/9→2/9 RISING | Recupera (novo bounce) ou continua baixo (regime BEARISH)? |
+| **Score compression (Finding 002b)** | Generalized on bounce fade (9/9 down/flat) | Persiste, normaliza, ou novo estado? |
+| **Master Filter Morning** | ACTIVE 19º dia | 20º dia? |
+| **Master Filter Asian** | ACTIVE (4H WATCHLIST) | 4H resolve ou continua a oscilar? |
+| **T+28D gate formal** | 3 dias (Quinta 2026-05-28) | Padrão D26-D27 fecha a leitura observacional; preparar síntese do gate |
+
+**Frase Codex que define o dia:**
+
+> "D25 reversed much of D24's pro-maturation evidence: INJ lost MACD BULLISH, OBV RISING collapsed from 9/9 to 2/9, breadth re-expanded to 14/18, and score compression returned across the prioritized basket. FET held its MACD BULLISH confirmation but remained isolated. The maturation hypothesis stays OPEN, but the net read now leans toward repeated technical bounces under a persistent active/bearish regime rather than confirmed maturation."
+
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
