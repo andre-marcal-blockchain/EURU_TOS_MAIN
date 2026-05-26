@@ -3929,6 +3929,130 @@ Disciplina governance preservada: maturation hypothesis OPEN, weakened/contested
 
 > "D25 reversed much of D24's pro-maturation evidence: INJ lost MACD BULLISH, OBV RISING collapsed from 9/9 to 2/9, breadth re-expanded to 14/18, and score compression returned across the prioritized basket. FET held its MACD BULLISH confirmation but remained isolated. The maturation hypothesis stays OPEN, but the net read now leans toward repeated technical bounces under a persistent active/bearish regime rather than confirmed maturation."
 
+
+### Dia 26 - 2026-05-26 (terça; T+26D; oscilação persiste com persistência seletiva; INJ re-heating RSI 68.33 pre-threshold watch; FET sustained isolated strength MACD BULLISH D3 PREMIUM; breadth 13/18; BTC SIDEWAYS D3 Morning ACTIVE 20º; maturation OPEN unconfirmed; T+28D em 2 dias)
+
+**Timing:** 5/5 tasks correram nas horas exactas (Asian 02:00:01, Morning 07:00:01, Trade Monitor 07:30:01, Journal Auditor 07:30:01, Daily Audit 08:30:01), todas result 0. Critério F operacional PASS; sem evidência de falha nos restantes critérios com os dados disponíveis.
+
+**T+26D MARCO:** Décimo-segundo dia operacional Fase 2 (Design); quinto dia pós-checkpoint T+21D (rotina normal; gate formal T+28D em 2 dias). Modo READ_ONLY mantido. EXCLUDE list ativa. Commit canônico atual: 5d33cc1 (audit 2026-05-26 08:30); commits do dia: e46631d (Asian) → 50adc09 (Morning) → 5d33cc1 (Audit).
+
+**Master Filter D26:**
+- Asian: **INACTIVE** — BTC 4H state GEM_ALERT (voltou a GEM_ALERT; estava WATCHLIST D25; 4H oscila D19-D26 sem direção)
+- Morning: **ACTIVE** — BTC trend 1D SIDEWAYS (**20º dia consecutivo ACTIVE**; SIDEWAYS 3 dias D24-D25-D26)
+
+**3 EVENTOS MAJORES DIA 26:**
+
+**1) INJ re-heating — RSI 68.33 pre-threshold watch (não muda RC001-R1):**
+
+INJ disparou +9.59% 24h (maior salto da janela), score 17→27 (Δ+10), RSI 68.33 (perto de 70 pela 1ª vez desde o blow-off D14), MACD recuperou BULLISH (tinha perdido D25, durou 1 dia), OBV RISING, tier BOA, WATCHLIST. Cumulativo D14→D26: 27→27 = **Δ0** (recuperou totalmente do Δ-10 D25; voltou ao score exato do topo D14).
+
+**Limiares (clarificação de governança):**
+- RC001 forte exige RSI >70 **E** 7D >15%. INJ: RSI 68.33 (<70), 7D +8.59% (<15%) → **não ativa RC001**.
+- RC001-R1 é o refinement RSI >75. INJ RSI 68.33 → longe do limiar.
+
+> "INJ re-heating / pre-threshold watch. Potential second extension-risk episode if RSI >70 and/or >75 develops, but no RC001-R1 status change D26."
+
+Cruzar 70 seria **pré-alerta** (RC001, mas só com 7D>15% junto — que não está). Cruzar 75 seria potencial **2º episódio RC001-R1**, ainda sem regra oficial. **D26 não muda o status RC001-R1.**
+
+**Status RC001-R1 D26: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. Sem mudança de enum.** Núcleo = drawdown realizado pós-RSI>75 (D16, D20). D26: INJ re-heating, RSI 68.33 pre-threshold watch — monitorizar potencial 2º episódio se RSI >70/>75 nos próximos dias. Signal 6 △ oscillating: cumulativo Δ0 (compression totalmente fechada; de Δ-10 D25 para Δ0 D26 em 1 dia — instabilidade máxima confirmada).
+
+**2) FET — sustained isolated strength; MACD BULLISH D3; PREMIUM:**
+
+FET +11.19% 24h (maior gainer), score 21→28 (Δ+7), 7D +16.92%, RSI 64.83, MACD BULLISH 3º dia consecutivo (D24-D25-D26), tier BOA→**PREMIUM**, WATCHLIST.
+
+Ao contrário dos bounces anteriores (D21-22, D24) que desinflavam em 24h, FET **sustentou MACD BULLISH 3 dias e acelerou para PREMIUM.** Em D25 parecia "isolado em risco"; D26 mostra persistência, não soluço.
+
+> "FET sustained isolated strength / MACD BULLISH D3 / PREMIUM, but not regime maturation."
+
+**Mas não confirma maturação:** a força está concentrada (nos 9 priorizados, o núcleo é INJ/FET; no universo completo há também WLD, NEAR, RENDER) — **selective strength, not broad maturation.** 13/18 ainda BEARISH; BTC SIDEWAYS/NO_TRADE; Morning ACTIVE 20º. Regime macro não cedeu.
+
+**3) Oscilação persiste (D26+) com persistência seletiva emergente:**
+
+Sequência maturation: D22+ / D23− / D24+ / D25− / **D26+**. A oscilação persiste (mais um swing pró). MAS D26 difere dos swings pró anteriores: FET sustentou 3 dias (não desinflou) e INJ re-aquece.
+
+> "D26 adds pro-maturation evidence, but concentrated and not regime-level. The dominant pattern remains oscillation, with FET showing sustained isolated confirmation and INJ re-heating near extension thresholds. T+28D gate remains OPEN."
+
+**Evolução da leitura do gate:** de "net leans against confirmed maturation" (D25) para **"oscillation remains dominant; selective persistence emerging, but maturation remains unconfirmed"** (D26). Força concentrada, não generalizada; regime macro intacto. Maturation hypothesis OPEN — não confirmada nem rejeitada antes do T+28D.
+
+**Breadth D26 — 13/18 (volta ao mínimo):**
+
+**13/18 MACD BEARISH:** BTC, ETH, SOL, BNB, AVAX, DOT, LINK, ADA, XRP, SUI, ARB, OP, TAO.
+**5/18 MACD BULLISH:** WLD, NEAR, INJ, FET, RENDER. (INJ recuperou — virou BEARISH só D25, durou 1 dia; FET 3º dia; WLD/NEAR/RENDER mantêm.)
+
+Trajetória: D18 17/18 (pico) → D22 14/18 → D23 15/18 → D24 13/18 → D25 14/18 → D26 13/18. Oscilação 13-15 desde D22 mantém-se; volta ao mínimo, mas maioria BEARISH intacta.
+
+**OBV transitions D26 — recuperou:** 8/9 priorizados RISING (só SOL FALLING). De 2/9 (D25) para 8/9 (D26). Fluxo comprador voltou com o swing pró.
+
+**Score movements salientes D26:**
+- **INJ +10** (17→27): maior salto da janela; re-heating; ver evento 1.
+- **FET +7** (21→28): PREMIUM; MACD D3; ver evento 2.
+- **TAO +7** (19→26): +4.15% 24h; bounce forte (MACD ainda BEARISH).
+- Restantes pequenos movimentos (BTC/ETH +1, SOL/LINK +2, ARB/OP -1).
+
+**Carry-overs D26 (robustez/duração, sem label nova):**
+- SOL/LINK/TAO: bearish-watch persistente desde D17
+- OP/FET: bearish-watch persistente desde D16
+- INJ: **recuperou MACD BULLISH** (D25 BEARISH durou 1 dia); re-heating RSI 68.33
+- DOT/XRP/SUI/AVAX/ADA/BNB: persistência BEARISH (não-priorizados)
+- WLD, NEAR, RENDER: sustentam BULLISH (fora do bearish set)
+- ARB: RESUMED_BEARISH; +1.70% mas score Δ-1; OBV RISING
+
+**Tabela cross-asset D25 → D26 (9 priorizados):**
+
+| Asset | D25 Score | D26 Score | Δ | D26 24h | RSI | Trend/Nota D26 |
+|---|---|---|---|---|---|---|
+| BTC | 21 | 22 | +1 | -0.81% | 45.86 | SIDEWAYS / MACD BEARISH — D3 lateral; NO_TRADE; OBV RISING |
+| ETH | 20 | 21 | +1 | -0.55% | 37.56 | BEARISH — OBV RISING; RSI <38 |
+| SOL | 21 | 23 | +2 | -1.71% | 43.33 | BEARISH — bearish-watch persistente; OBV FALLING (único) |
+| LINK | 16 | 18 | +2 | -0.18% | 45.69 | BEARISH — bearish-watch persistente; tier MEDIA; recuperou do window-low |
+| INJ | 17 | 27 | +10 | +9.59% | 68.33 | BULLISH MACD (recuperou) — re-heating; RSI rumo a 70; pre-threshold watch; Δ0 cumulativo |
+| ARB | 23 | 22 | -1 | +1.70% | 37.16 | BEARISH — score caiu com preço a subir; OBV RISING |
+| OP | 19 | 18 | -1 | +1.74% | 46.33 | BEARISH — bearish-watch persistente; tier MEDIA |
+| FET | 21 | 28 | +7 | +11.19% | 64.83 | BULLISH MACD D3 — PREMIUM; maior gainer; 7D +16.92%; sustained isolated strength |
+| TAO | 19 | 26 | +7 | +4.15% | 52.61 | BEARISH — bounce forte; MACD ainda BEARISH; RSI >52 |
+
+**CROSS-CHECK CLAUDE + CODEX:**
+
+Cross-check D26: 3/3 alinhado (INJ re-heating pre-threshold + correção de limiares RC001/RC001-R1, FET sustained isolated strength, oscilação persiste + evolução leitura do gate). Acumulado documentado passa a **158/158**, contando as 3 perguntas internas D26.
+
+Disciplina governance preservada: RC001-R1 enum preservado SEM promoção apesar do re-heating INJ (RSI 68.33 ainda <70; mesmo cruzando 70 seria pré-alerta RC001 só com 7D>15%; cruzar 75 seria potencial 2º episódio RC001-R1, ainda sem regra oficial); FET sustained isolated strength registado como estruturalmente distinto de bounce sem promover maturação; maturation OPEN, leitura do gate evoluiu para "oscillation dominant + selective persistence emerging, unconfirmed"; Finding 002b sem nova observação saliente D26 (scores subiram com swing pró, dentro do arco já documentado); sem Finding/RC/label nova.
+
+**Concordância operador-sistema Dia 26 (9 entradas):**
+- BTC: NO_TRADE / SIDEWAYS D3; MACD BEARISH; Morning ACTIVE 20º
+- ETH: NO_TRADE / BEARISH; OBV RISING
+- SOL: WATCHLIST / WATCHLIST_BEARISH_EMERGING persistente; OBV FALLING
+- LINK: NO_TRADE / WATCHLIST_BEARISH_EMERGING persistente; recuperou do window-low; tier MEDIA
+- INJ: WATCHLIST / RC001-R1 risk flag; re-heating RSI 68.33 pre-threshold watch; MACD recuperou
+- ARB: WATCHLIST / RESUMED_BEARISH; score caiu com preço a subir
+- OP: NO_TRADE / WATCHLIST_BEARISH_EMERGING persistente; tier MEDIA
+- FET: WATCHLIST / sustained isolated strength; MACD BULLISH D3; PREMIUM
+- TAO: WATCHLIST / WATCHLIST_BEARISH_EMERGING; bounce forte; MACD ainda BEARISH
+
+**Severidades Findings / Rule Candidates (Dia 26):**
+- Finding 001: medium (superseded por 001a)
+- Finding 001a: medium-low (validado D4-D14; observado D15-D26)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (FINAL REFINEMENT D14 — arco oscilatório 9 estados D15-D25; D26 sem nova observação saliente, swing pró dentro do arco; FINAL mantido, sem refinement)
+- Finding 003: medium (VALIDADO D8-D14; breadth 13/18 D26, oscilou 13-15 desde D22; observação histórica permanece relevante sem nova conclusão)
+- Rule Candidate 001: PROVISIONALLY_VALIDATED (sem mudança)
+- **RC001-R1: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. Núcleo = drawdown realizado pós-RSI>75 (D16, D20). D26: INJ re-heating RSI 68.33 pre-threshold watch; sem mudança de status; monitorizar potencial 2º episódio se RSI >70 (pré-alerta) / >75 (RC001-R1). Signal 6 △ oscillating (Δ0).**
+
+**WATCH POINTS PARA D27 (véspera do gate):**
+
+| Watch point | Status D26 | O que monitorar D27 |
+|---|---|---|
+| **INJ pre-threshold watch** | RSI 68.33 rumo a 70; score 27 (Δ0); MACD BULLISH | RSI cruza 70 (pré-alerta) / 75 (potencial 2º episódio RC001-R1)? 7D chega a 15%? Watch evidence para o gate. |
+| **FET sustained strength** | MACD BULLISH D3; PREMIUM; +11.19% | Sustenta D4 (estrutural) ou desinfla? Espalha a outros priorizados? |
+| **Maturation hypothesis (OPEN)** | Oscilação dominante + persistência seletiva; D22-D26 +/−/+/−/+ | Oscila de novo (D27−?) ou persistência seletiva ganha? Penúltima observação antes do gate. |
+| **BTC trend** | SIDEWAYS D3; NO_TRADE; MACD BEARISH | Resolve antes do gate ou SIDEWAYS prolongado? Morning 21º dia? |
+| **Breadth** | 13/18 (mínimo) | Contrai (<13, persistência ganha) ou re-expande (regime reforça)? |
+| **Master Filter Morning** | ACTIVE 20º dia (SIDEWAYS) | 21º dia? |
+| **Master Filter Asian** | INACTIVE (4H GEM_ALERT) | 4H resolve ou continua a oscilar? |
+| **T+28D gate formal** | 2 dias (Quinta 2026-05-28) | D27 é a penúltima observação antes do gate formal; D28 fecha a leitura. |
+
+**Frase Codex que define o dia:**
+
+> "D26 did not resolve the maturation question; it sharpened it. FET now looks like sustained isolated strength rather than a one-day bounce, and INJ re-heated back toward extension-risk territory, but breadth remains 13/18 BEARISH and BTC keeps the Morning Filter ACTIVE. The gate should arrive at T+28D with oscillation still dominant and selective persistence emerging, not with a confirmed regime transition."
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
