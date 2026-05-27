@@ -4053,6 +4053,123 @@ Disciplina governance preservada: RC001-R1 enum preservado SEM promoção apesar
 **Frase Codex que define o dia:**
 
 > "D26 did not resolve the maturation question; it sharpened it. FET now looks like sustained isolated strength rather than a one-day bounce, and INJ re-heated back toward extension-risk territory, but breadth remains 13/18 BEARISH and BTC keeps the Morning Filter ACTIVE. The gate should arrive at T+28D with oscillation still dominant and selective persistence emerging, not with a confirmed regime transition."
+
+### Dia 27 - 2026-05-27 (quarta; T+27D; véspera do gate; BTC SIDEWAYS→BEARISH retoma; oscilação fecha com regime macro reafirmado + persistência seletiva consolidada; INJ pre-threshold mantido RSI 68.44; FET MACD BULLISH D4 PREMIUM; ANOMALIA: Asian Scan Result 0 mas ASIAN_REPORT não gerado; maturation OPEN entra no gate; T+28D amanhã)
+
+**Timing:** 5/5 tasks correram nas horas exactas (Asian 02:00:02, Morning 07:00:02, Trade Monitor 07:30:02, Journal Auditor 07:30:02, Daily Audit 08:30:02), todas Result 0. Critério F operacional PASS na métrica de execução de task; **artifact integrity PARTIAL** por ausência do ASIAN_REPORT.
+
+**OPERATIONAL NOTE — falha silenciosa de artefacto (Asian Scan D27):** A task Euru_Asian_Scan correu (LastRun 02:00:02, Result 0) mas NÃO gerou o ficheiro ASIAN_REPORT_2026-05-27.md, não produziu commit Asian, e o report não aparece na lista do dia (presentes: Scout, Journal, Trade Monitor, Daily Audit — 4 de 5). Discrepância entre "task Result 0" e "artefacto esperado não produzido" — falha silenciosa de output, não falha de scheduler. **1ª falha de artefacto da janela D15-D27.** Consequência: BTC 4H state e Asian Master Filter INDISPONÍVEIS para D27. Registo factual; sem investigação técnica (READ_ONLY preservado na véspera do gate); diagnóstico de causa-raiz fica como carry-forward pós-gate. Critério F mede execução de task (PASS), não produção de artefacto — esta anomalia é um gap não-capturado pelo Critério F, item para a síntese do gate (secção Operational integrity).
+
+**T+27D MARCO:** Décimo-terceiro dia operacional Fase 2 (Design); sexto dia pós-checkpoint T+21D; **véspera do gate formal T+28D (amanhã, Quinta 2026-05-28)**. Modo READ_ONLY mantido. EXCLUDE list ativa. Commit canônico atual: 1e512c3 (audit 2026-05-27 08:30); commits do dia: ccc6cb3 (Morning) → 1e512c3 (Audit). [Nota: sem commit Asian devido à anomalia acima.]
+
+**Master Filter D27:**
+- Asian: **INDISPONÍVEL** — ASIAN_REPORT não gerado (ver Operational Note); BTC 4H state não capturado D27
+- Morning: **ACTIVE** — BTC trend 1D BEARISH (**21º dia consecutivo ACTIVE**; SIDEWAYS D24-D26 → BEARISH D27)
+
+**Mudança material:** BTC trend SIDEWAYS (3 dias D24-D26) → BEARISH (D27). A lateralização resolveu-se para baixo, não para cima — na véspera do gate.
+
+**3 EVENTOS MAJORES DIA 27:**
+
+**1) BTC retoma BEARISH — lateralização resolveu para baixo:**
+
+- D24-D26: trend SIDEWAYS (3 dias)
+- **D27: trend BEARISH, MACD BEARISH, OBV FALLING, -1.52% 24h, preço 75,579.01 (perto do low da janela 75,539 D23), RSI 41.72, score 27, WATCHLIST**
+- 7D -1.62%
+
+Os 3 dias de SIDEWAYS (que alimentaram a hipótese de alívio) resolveram-se de volta a BEARISH. Preço perto do low da janela. Na véspera do gate, o regime macro reafirma-se.
+
+**2) INJ — pre-threshold mantido; RSI 68.44 não cruzou 70:**
+
+INJ D27: RSI 68.33 (D26) → **68.44** (D27, praticamente parado abaixo de 70), +0.25% 24h (disparo de D26 parou), 7D +6.64% (longe dos 15%), score 27→24 (Δ-3), MACD BULLISH mantido, OBV RISING, tier BOA, WATCHLIST.
+
+**INJ re-aqueceu (D26) mas estabilizou abaixo do limiar (D27).** Não cruzou 70 → pre-threshold watch mantém-se sem ativação. Não há pré-alerta RC001 (precisa RSI>70 E 7D>15%; nenhum dos dois) nem 2º episódio RC001-R1 (precisa RSI>75; longe). **Sem mudança de status RC001-R1.**
+
+> "INJ re-heating peaked below threshold: RSI stalled at 68.44, 24h flattened to +0.25%, 7D +6.64% well under 15%. No threshold crossing, no RC001 pre-alert, no RC001-R1 second episode. RC001-R1 remains PROVISIONALLY_VALIDATED with no status change entering the gate."
+
+**Status RC001-R1 D27: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. Sem mudança de status entrando no gate.** Núcleo = drawdown realizado pós-RSI>75 (D16, D20). Re-heating D26 não confirmou 2º episódio (RSI estabilizou <70 no D27). Signal 6 △ oscillating (score 24, cumulativo D14→D27 = Δ-3).
+
+**3) FET — MACD BULLISH D4; persistência seletiva consolida (mas isolada):**
+
+FET D27: +2.40% 24h, score 28→29 (Δ+1, máximo do basket), 7D +14.79%, RSI 64.40, **MACD BULLISH 4º dia consecutivo (D24-D27)**, PREMIUM mantido, WATCHLIST.
+
+FET sustentou a confirmação MACD por **4 dias** — definitivamente não é bounce de 1 dia. A "persistência seletiva" robustece. **Mas continua isolado:** nenhum outro priorizado se juntou; breadth estável 13/18; os outros 8 priorizados maioritariamente negativos (6/9 24h negativo). Força concentrada, não generalizada — selective strength, não regime maturation.
+
+**Breadth D27 — 13/18 (estável vs. D26):**
+
+**13/18 MACD BEARISH:** BTC, ETH, SOL, BNB, AVAX, DOT, LINK, ADA, XRP, SUI, ARB, OP, TAO.
+**5/18 MACD BULLISH:** WLD, NEAR, INJ, FET, RENDER (exatamente os mesmos 5 do D26).
+
+Trajetória: D18 17/18 (pico) → D22 14/18 → D23 15/18 → D24 13/18 → D25 14/18 → D26 13/18 → D27 13/18. Estável no mínimo da oscilação 13-15; maioria BEARISH intacta. O conjunto BULLISH não cresceu nem encolheu — os mesmos 5 ativos há 2 dias.
+
+**OBV transitions D27 — fluxo desinflou de novo:** RISING só INJ, FET, ARB (3/9). FALLING: BTC, ETH, SOL, LINK, OP, TAO (6/9). De 8/9 RISING (D26) para 3/9 (D27). O fluxo comprador do swing D26 desinflou — padrão repetido (cada swing pró desinfla em 24h, exceto onde há persistência estrutural: FET).
+
+**Sequência maturation D22-D27:** D22+ / D23− / D24+ / D25− / D26+ / **D27−**. A oscilação fecha a janela pré-gate com mais um swing contra (regime macro reafirma-se), MAS com a exceção da persistência seletiva (FET D4). Padrão dominante confirmado: oscilação + força concentrada sob regime BEARISH persistente.
+
+**Carry-overs D27 (robustez/duração, sem label nova):**
+- SOL/LINK/TAO: bearish-watch persistente desde D17 (MACD BEARISH; OBV FALLING)
+- OP/FET: bearish-watch persistente desde D16 — **FET exceção: MACD BULLISH D4, PREMIUM, sustained isolated**; OP MACD BEARISH
+- INJ: MACD BULLISH mantido; re-heating estabilizou abaixo de 70
+- DOT/XRP/SUI/AVAX/ADA/BNB: persistência BEARISH (não-priorizados)
+- WLD, NEAR, RENDER: sustentam BULLISH (fora do bearish set)
+- ARB: RESUMED_BEARISH; flat 0.00% 24h; OBV RISING
+
+**Tabela cross-asset D26 → D27 (9 priorizados):**
+
+| Asset | D26 Score | D27 Score | Δ | D27 24h | RSI | Trend/Nota D27 |
+|---|---|---|---|---|---|---|
+| BTC | 22 | 27 | +5 | -1.52% | 41.72 | BEARISH (retomou de SIDEWAYS) — MACD BEARISH / OBV FALLING; perto do low janela; paradoxo +5 com queda |
+| ETH | 21 | 26 | +5 | -1.01% | 35.78 | BEARISH — MACD BEARISH / OBV FALLING; paradoxo +5; RSI <36 |
+| SOL | 23 | 25 | +2 | -0.84% | 41.86 | BEARISH — bearish-watch desde D17; OBV FALLING |
+| LINK | 18 | 22 | +4 | -0.57% | 44.79 | BEARISH — bearish-watch desde D17; OBV FALLING; recuperou |
+| INJ | 27 | 24 | -3 | +0.25% | 68.44 | BULLISH MACD / OBV RISING — pre-threshold mantido; RSI parou <70; Signal 6 △ |
+| ARB | 22 | 22 | 0 | +0.00% | 37.35 | BEARISH — flat; OBV RISING |
+| OP | 18 | 22 | +4 | -1.40% | 44.91 | BEARISH — bearish-watch desde D16; OBV FALLING; tier recuperou BOA |
+| FET | 28 | 29 | +1 | +2.40% | 64.40 | BULLISH MACD D4 — PREMIUM; máximo do basket; 7D +14.79%; sustained isolated |
+| TAO | 26 | 21 | -5 | -3.78% | 48.31 | BEARISH — maior queda 24h; MACD BEARISH; NO_TRADE |
+
+**Nota score paradox D27:** BTC +5, ETH +5, LINK +4, OP +4 com 24h negativo — o paradoxo de amplificação reaparece (scores sobem durante queda), igual ao padrão D18/D23. Mais um estado oscilatório do gap (dentro do arco Finding 002b já documentado; sem refinement novo).
+
+**CROSS-CHECK CLAUDE + CODEX:**
+
+Cross-check D27: alinhado. Acumulado formal mantém-se **158/158**; D27 tratado como validação operacional/pre-gate.
+
+Disciplina governance preservada: anomalia Asian registada factualmente sem investigação técnica (READ_ONLY); RC001-R1 enum preservado sem mudança (re-heating não confirmou 2º episódio); FET sustained isolated sem promover maturação; maturation OPEN entra no gate sem resolução antecipada; Finding 002b FINAL (score paradox D27 dentro do arco, sem refinement); sem Finding/RC/label nova.
+
+**Concordância operador-sistema Dia 27 (9 entradas):**
+- BTC: WATCHLIST / BEARISH retomou de SIDEWAYS; perto do low janela; paradoxo +5
+- ETH: WATCHLIST / BEARISH; paradoxo +5; RSI <36
+- SOL: WATCHLIST / bearish-watch desde D17; OBV FALLING
+- LINK: WATCHLIST / bearish-watch desde D17; recuperou score
+- INJ: WATCHLIST / RC001-R1 risk flag; pre-threshold mantido RSI 68.44; Signal 6 △
+- ARB: WATCHLIST / RESUMED_BEARISH; flat
+- OP: WATCHLIST / bearish-watch desde D16; tier recuperou BOA
+- FET: WATCHLIST / sustained isolated strength; MACD BULLISH D4; PREMIUM; máximo basket
+- TAO: NO_TRADE / maior queda 24h; MACD BEARISH
+
+**Severidades Findings / Rule Candidates (Dia 27):**
+- Finding 001: medium (superseded por 001a)
+- Finding 001a: medium-low (validado D4-D14; observado D15-D27)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (FINAL REFINEMENT D14 — arco oscilatório; D27 score paradox reaparece dentro do arco; FINAL mantido, sem refinement)
+- Finding 003: medium (VALIDADO D8-D14; breadth 13/18 D27 estável, oscilou 13-15 desde D22; observação histórica permanece relevante sem nova conclusão)
+- Rule Candidate 001: PROVISIONALLY_VALIDATED (sem mudança)
+- **RC001-R1: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. Núcleo = drawdown realizado pós-RSI>75 (D16, D20). D27: re-heating D26 estabilizou abaixo de 70; sem 2º episódio; sem mudança de status entrando no gate. Signal 6 △ oscillating (Δ-3).**
+
+**WATCH POINTS PARA D28 (GATE FORMAL):**
+
+| Watch point | Status D27 | O que monitorar D28 (dia do gate) |
+|---|---|---|
+| **GATE FORMAL T+28D** | Amanhã (Quinta 2026-05-28) | Decisão: continuar Fase 2 / transitar Fase 3 / prolongar. Síntese 14 dias + secção decisória. |
+| **Anomalia Asian** | Asian Scan Result 0 mas sem report D27 | Asian Scan volta a gerar report D28 (anomalia isolada) ou repete (problema sistémico)? Item para Operational integrity da síntese. |
+| **Maturation hypothesis (OPEN)** | D22-D27 +/−/+/−/+/−; oscilação + persistência seletiva | Resolução no gate: confirmada / rejeitada / ainda aberta (com evidência oscilante como dado central). |
+| **INJ pre-threshold** | RSI 68.44 estabilizou <70; sem ativação | Re-acelera (cruza 70/75) ou arrefece? Última leitura para o gate. |
+| **FET sustained** | MACD BULLISH D4; PREMIUM; score 29 | Sustenta D5 (persistência robusta) ou desinfla? Espalha? |
+| **BTC** | Retomou BEARISH; perto do low janela | Novo low (regime reforça) ou estabiliza? Morning 22º dia? |
+| **Breadth** | 13/18 estável | Contrai/expande? Os 5 BULLISH mantêm-se? |
+
+**Frase Codex que define o dia:**
+
+> "D27 closed the pre-gate window with the macro regime reasserting itself: BTC dropped back from SIDEWAYS to BEARISH near the window low, OBV faded to 3/9 RISING, and 6/9 prioritized assets fell, while FET held MACD BULLISH for a 4th day and INJ's re-heating stalled below threshold. The maturation hypothesis enters the T+28D gate OPEN and unconfirmed, with oscillation and concentrated selective strength as the dominant pattern. A silent artifact failure (Asian Scan Result 0 but no report generated) is logged as the first such anomaly of the window."
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
