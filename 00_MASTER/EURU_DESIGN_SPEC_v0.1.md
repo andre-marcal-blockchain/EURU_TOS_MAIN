@@ -42,10 +42,29 @@ Regra de nao-sobreposicao: macro_permission e permissao de REGIME (universal ao 
 
 ### 3.1 macro_permission
 
-- (a) Definicao: _[a preencher]_
-- (b) Inputs/sinais: _[a preencher]_
-- (c) Regra de leitura: _[a preencher]_
-- (d) Validade por regime: _[a preencher]_
+- (a) Definicao: Estado de permissao do regime macro para considerar setups no universo observado. Responde se BTC (ancora do regime, via Master Filter) permite ou veta a leitura de setups, independentemente da forca ou direcao de qualquer ativo individual. Dimensao de REGIME, nao de ativo: mesmo valor para os 18 ativos num dado dia. Nao mede direcao (directional_bias) nem qualidade local (operable_quality); mede apenas o estado do portao macro.
+
+- (b) Inputs/sinais:
+  - Morning Master Filter (BTC trend 1D): estado primario/dominante. ACTIVE quando BTC 1D BEARISH ou SIDEWAYS.
+  - Asian Master Filter (BTC 4H state): secundario/tatico. Estados: GEM_ALERT, WATCHLIST, NO_TRADE.
+  - Precedencia (assimetrica): Morning 1D domina. O 4H pode REBAIXAR um estado permissivo (PERMITTED -> CONDITIONAL), mas NUNCA promover um regime bloqueado (VETOED -> PERMITTED). O 4H modula para baixo, nunca para cima.
+
+- (c) Regra de leitura (3 estados):
+  - VETOED: Morning ACTIVE (BTC 1D BEARISH/SIDEWAYS). Regime nao permite jogar. [empiricamente validado - dominante D14-D28, 22 dias.]
+  - CONDITIONAL: Morning INACTIVE, mas Asian 4H mostra compressao, indecisao ou estado tatico nao-confirmado; ou divergencia entre horizontes. Permissao parcial/incerta. [slot arquitetural; regra preliminar; calibracao pendente - nao observado D15-D28.]
+  - PERMITTED: Morning INACTIVE e Asian permissivo. Portao aberto. [slot arquitetural; regra preliminar; validacao pendente - nunca observado D15-D28.]
+  - Mapa de leitura:
+    - Morning ACTIVE -> VETOED (4H irrelevante para promocao)
+    - Morning INACTIVE + Asian incerto/comprimido -> CONDITIONAL
+    - Morning INACTIVE + Asian permissivo -> PERMITTED
+  - Nota arquitetural: CONDITIONAL e PERMITTED sao estados definidos por logica de design, NAO por validacao empirica na janela D15-D28. A janela foi 100% VETOED; estes slots completam a arquitetura mas aguardam dados nao-bearish para calibracao.
+  - Caso-ancora (VETOED): BTC SETUP D28 - technical_strength produziu PREMIUM SETUP (31/35) mas macro_permission = VETOED (Morning ACTIVE, BTC 1D BEARISH). A separacao torna legivel o que o score unico escondia: "forca tecnica maxima sob portao macro fechado".
+
+- (d) Tag de validade por regime:
+  - validated_in_bearish: true - apenas o estado VETOED (22 dias ACTIVE, sell-off D28, todos os casos SETUP-em-veto).
+  - bull_regime_validation: pending - CONDITIONAL e PERMITTED nunca observados; definidos por logica de design, nao empiricos.
+  - SIDEWAYS_as_VETOED: bearish-derived - tratar SIDEWAYS como bloqueio (igual a BEARISH) foi como o sistema operou e a janela validou, MAS pode ser artefacto do regime bearish; pending neutral/bull validation (num regime neutro, SIDEWAYS pode nao dever bloquear tao fortemente como BEARISH).
+  - Limiar pendente: fronteira CONDITIONAL<->PERMITTED precisa de casos nao-bearish para calibracao.
 
 ### 3.2 directional_bias
 
