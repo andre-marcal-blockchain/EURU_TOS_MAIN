@@ -97,10 +97,32 @@ Regra de nao-sobreposicao: macro_permission e permissao de REGIME (universal ao 
 
 ### 3.3 technical_strength_score
 
-- (a) Definicao: _[a preencher]_
-- (b) Inputs/sinais: _[a preencher]_
-- (c) Regra de leitura: _[a preencher]_
-- (d) Validade por regime: _[a preencher]_
+- (a) Definicao: Magnitude da condicao tecnica de um ativo - forca, extensao, compressao - independentemente de direcao, permissao de regime ou qualidade de entrada. Responde "quao carregada esta a mola?", nao "para onde aponta?" (directional_bias), nao "o mercado deixa jogar?" (macro_permission), nao "setup limpo?" (operable_quality). E a dimensao que mais corresponde ao score numerico original do Core (0-35) - e por isso onde o Finding 002b se manifesta.
+  - TRAVA DE HERANCA: reutiliza o score original como INPUT PRINCIPAL, mas NAO herda o seu significado operacional. O score entra como materia-prima, nao como autoridade.
+  - PRINCIPIO: direction-agnostic e operability-agnostic por design. Score alto = condicao tecnica carregada, NAO oportunidade.
+
+- (b) Inputs/sinais:
+  - Core score (0-35): input central, marcado como legacy composite proxy for technical load, pending decomposition. Em v0.1 usado inteiro (sem subcomponentes formais ainda); em versao futura deve ser decomposto, nao usado como bloco opaco. Entra com caveat explicito para nao re-importar contaminacao.
+  - Tier (MEDIA/BOA/PREMIUM): banda qualitativa.
+  - RSI (nivel e extremos): RSI>70/75 sobre-extensao; RSI<30 sobre-venda.
+  - Compressao/extensao (Aguiar Module 05): estado de mola.
+
+- (c) Regra de leitura - magnitude + load_type:
+  - Banda de magnitude: tier (MEDIA/BOA/PREMIUM) + score (0-35) = nivel de carga.
+  - load_type:
+    - EXTENDED_UP: esticado para cima, energia gasta a subir (sobre-extensao de alta; ex. INJ D14 RSI 84.86). Liga RC001-R1 quando RSI>75.
+    - EXTENDED_DOWN: esticado para baixo, energia gasta a cair / oversold (ex. BTC D28 RSI 34.68).
+    - COMPRESSED: compressao/lateralizacao, energia acumulada (GEM_ALERT 4H, mola carregada).
+    - NEUTRAL: sem extremo nem compressao saliente.
+  - LEITURA CRITICA (Finding 002b): technical_strength alto NAO implica operavel. O score pode subir enquanto o preco cai - mede carga, nao direcao nem permissao. FORCA != OPERAVEL.
+  - FRONTEIRA load_type vs directional_bias: EXTENDED_DOWN nao significa BEARISH. BEARISH pertence a directional_bias e descreve inclinacao direcional. EXTENDED_DOWN pertence a technical_strength e descreve tipo de carga tecnica: condicao esticada/oversold apos movimento para baixo. Um ativo pode ser BEARISH sem estar EXTENDED_DOWN, e pode estar EXTENDED_DOWN enquanto a direcao comeca a neutralizar ou reverter.
+  - Caso-ancora: BTC D28 - technical_strength PREMIUM (31/35) / EXTENDED_DOWN (RSI 34.68 oversold), pior dia de preco (-3.17%). No score unico aparecia como "SETUP forte" (enganador). Decomposto: directional_bias BEARISH + technical_strength PREMIUM/EXTENDED_DOWN + macro_permission VETOED. A coincidencia BEARISH/EXTENDED_DOWN no mesmo dia nao e redundancia - sao duas dimensoes independentes a apontar leituras compativeis: direcao para baixo + carga esticada para baixo.
+
+- (d) Tag de validade por regime:
+  - validated_in_bearish: true (paradoxo "score alto em queda" validado: D18/D23/D28, >=10 estados Finding 002b).
+  - bull_regime_validation: pending (janela viu technical_strength alto sobretudo DURANTE quedas; comportamento bullish - score alto com preco a subir - sub-observado; em PERMITTED score alto pode significar oportunidade, nunca testado).
+  - load_type: EXTENDED_UP validado (INJ>80 D14); EXTENDED_DOWN validado (BTC<35 D28); COMPRESSED parcial (GEM_ALERT recorrente); NEUTRAL implicito; fronteiras pending.
+  - Ligacao RC001-R1 (cross-reference, nao duplicacao): technical_strength identifica condicoes extremas; RC001-R1 interpreta um subconjunto (EXTENDED_UP com RSI>75) como risk flag contextual. RC001-R1 NAO pertence a technical_strength; consome o seu padrao extremo.
 
 ### 3.4 operable_quality
 
