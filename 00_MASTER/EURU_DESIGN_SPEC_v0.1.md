@@ -68,10 +68,32 @@ Regra de nao-sobreposicao: macro_permission e permissao de REGIME (universal ao 
 
 ### 3.2 directional_bias
 
-- (a) Definicao: _[a preencher]_
-- (b) Inputs/sinais: _[a preencher]_
-- (c) Regra de leitura: _[a preencher]_
-- (d) Validade por regime: _[a preencher]_
+- (a) Definicao: Inclinacao direcional de um ativo, com base em trend, MACD e estrutura de preco. Responde "para onde aponta?". Dimensao de ATIVO (cada ativo tem o seu), ao contrario de macro_permission (de regime). Nao mede forca (technical_strength) nem permissao (macro_permission) nem limpeza local (operable_quality).
+  - TRAVA ANTI-GATE: directional_bias NUNCA concede permissao operacional. Apenas descreve inclinacao direcional. Permissao pertence EXCLUSIVAMENTE a macro_permission. Um bias BULLISH nao "abre" nada se macro_permission estiver VETOED.
+
+- (b) Inputs/sinais (hierarquia):
+  - Direcao primaria: MACD state (BULLISH/BEARISH) + Trend (BEARISH/SIDEWAYS/BULLISH). Sao o motor da direcao.
+  - Confirmacao/divergencia: OBV direction (RISING/FLAT/FALLING). NAO e motor primario; confirma ou diverge da direcao primaria. Pode converter uma leitura BULLISH/BEARISH em MIXED quando diverge materialmente.
+  - Duracao: ha quantos dias o bias se mantem (alimenta o confidence qualifier).
+
+- (c) Regra de leitura - direcao (3 estados) + confidence qualifier:
+  - Direcao primaria (MACD + trend):
+    - BULLISH: MACD BULLISH + trend nao-bearish.
+    - BEARISH: MACD BEARISH + trend bearish. [dominante na janela, 13-17/18.]
+    - MIXED / unresolved directional bias: conflito entre direcao primaria e confirmacao (ex.: MACD BULLISH mas OBV FALLING; ou trend SIDEWAYS com MACD/OBV em desacordo). NAO e uma "terceira direcao positiva"; e direcao nao-resolvida - a leitura direcional esta genuinamente ambigua, nao apenas fraca.
+  - Confidence qualifier (descritivo, NAO threshold operacional):
+    - SUSTAINED: persistencia multi-dia observada. Significa "persistiu ate agora", NAO "deve continuar". [limiar N pending calibration.]
+    - TRANSIENT: leitura curta/recente, pode desinflar. [limiar pending.]
+  - Leitura combinada: ex. "BULLISH/SUSTAINED" (FET D24-D27), "BULLISH/TRANSIENT" (INJ bounce D26 que arrefeceu).
+  - Casos-ancora:
+    - FET D24-D28: BULLISH/SUSTAINED 4 dias (MACD BULLISH mantido), mas quebrou D28 (-9.10%). SUSTAINED capturou a persistencia ate ao momento; a quebra confirma que SUSTAINED e descricao, nao previsao.
+    - OBV/MACD divergence D22, D24: MACD sem confirmacao OBV -> MIXED (direcao nao-resolvida). O caso onde a hierarquia (OBV como confirmacao, nao motor) torna a ambiguidade legivel.
+
+- (d) Tag de validade por regime:
+  - validated_in_bearish: true - BEARISH extensivamente validado (13-17/18 MACD BEARISH, dominante toda a janela).
+  - bull_regime_validation: pending - BULLISH/SUSTAINED so observado em bolsoes isolados (FET, WLD, NEAR, RENDER), nunca como regime. BULLISH generalizado nunca visto.
+  - MIXED: parcialmente validado (divergencias OBV/MACD D22/D24 observadas); catalogo de configuracoes MIXED incompleto sem regime variado.
+  - Limiar SUSTAINED<->TRANSIENT (N dias): pending calibracao. A janela sugere 1-2 dias = transient, 4 dias = sustained-mas-fragil (FET quebrou ao 5º), mas N nao esta fixado.
 
 ### 3.3 technical_strength_score
 
