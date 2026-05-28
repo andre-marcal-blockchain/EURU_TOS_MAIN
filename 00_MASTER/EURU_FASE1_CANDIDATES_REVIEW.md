@@ -4170,6 +4170,124 @@ Disciplina governance preservada: anomalia Asian registada factualmente sem inve
 **Frase Codex que define o dia:**
 
 > "D27 closed the pre-gate window with the macro regime reasserting itself: BTC dropped back from SIDEWAYS to BEARISH near the window low, OBV faded to 3/9 RISING, and 6/9 prioritized assets fell, while FET held MACD BULLISH for a 4th day and INJ's re-heating stalled below threshold. The maturation hypothesis enters the T+28D gate OPEN and unconfirmed, with oscillation and concentrated selective strength as the dominant pattern. A silent artifact failure (Asian Scan Result 0 but no report generated) is logged as the first such anomaly of the window."
+
+### Dia 28 - 2026-05-28 (quinta; T+28D; GATE FORMAL; sell-off amplo fecha a janela contra a maturation hypothesis; BTC novo low 73,181.94 com PREMIUM SETUP; 18/18 negativos; FET quebrou -9.10% perdeu PREMIUM; INJ arrefeceu RSI 63.35; Asian anomaly isolada; maturation REJECTED for this gate window)
+
+**Timing:** 5/5 tasks correram nas horas exactas (Asian 02:00:01, Morning 07:00:01, Trade Monitor 07:30:01, Journal Auditor 07:30:01, Daily Audit 08:30:01), todas Result 0. Critério F operacional PASS; artifact integrity RESTAURADA (5/5 reports gerados, incl. ASIAN_REPORT — anomalia D27 foi isolada).
+
+**T+28D MARCO — GATE FORMAL:** Décimo-quarto dia operacional Fase 2 (Design); **gate decisório** (continuar Fase 2 / transitar Fase 3 / prolongar). Modo READ_ONLY mantido. EXCLUDE list ativa (gate não desbloqueia execução). Commit canônico atual: d93b430 (audit 2026-05-28 08:30); commits do dia: eb877ce (Asian) → 9682624 (Morning) → d93b430 (Audit). [A decisão de gate e a síntese 14 dias entram como artefactos separados após este bloco diário.]
+
+**Master Filter D28:**
+- Asian: **ACTIVE** — BTC 4H state NO_TRADE (Asian report VOLTOU a gerar; anomalia D27 confirmada como isolada, não sistémica)
+- Morning: **ACTIVE** — BTC trend 1D BEARISH (**22º dia consecutivo ACTIVE**; BEARISH D27-D28)
+
+**3 EVENTOS MAJORES DIA 28:**
+
+**1) Sell-off amplo no dia do gate — macro regime reassertion / acceleration:**
+
+9/9 priorizados 24h fortemente negativo (-3.17% a -9.10%); **18/18 ativos negativos.** BTC -3.17% → **73,181.94, novo low da janela inteira** (anterior 75,539 D23). OP -7.09%, FET -9.10%, TAO -5.78%, LINK -5.30%, ARB -4.72%, ETH -4.36%.
+
+> "D28 closed the gate window decisively against the maturation hypothesis: the market sold off across 18/18 assets, BTC printed a new window low while still producing a PREMIUM SETUP score, and FET's sustained-strength case broke on the gate day."
+
+O regime BEARISH não só se reafirmou — **acelerou** no dia do gate. Registo factual: macro regime reassertion / sell-off acceleration into gate (sem label nova). Morning ACTIVE 22º dia.
+
+**2) Score paradox no EXTREMO — Finding 002b post-final extreme amplification:**
+
+9/9 preços fortemente negativos, mas **7/9 scores SUBIRAM** (ETH +5, OP +5, BTC +4, LINK +4, ARB +4, TAO +4, SOL +3). 4 PREMIUMs (BTC 31, ETH 31, SOL 28). **BTC state SETUP com -3.17% 24h e RSI 34.68 (oversold)** — máxima força de score no pior dia de preço.
+
+| Asset | D28 Score | 24h | RSI | Tier/State |
+|---|---|---|---|---|
+| BTC | 31 | -3.17% | 34.68 | PREMIUM / **SETUP** |
+| ETH | 31 | -4.36% | 29.29 | PREMIUM / WATCHLIST |
+| SOL | 28 | -3.30% | 36.49 | PREMIUM / WATCHLIST |
+
+> "Finding 002b remains FINAL — D28 post-final extreme amplification. The score-directionality gap reached its most extreme state of the window: 18/18 assets fell, yet 7/9 prioritized scores rose, with BTC printing a PREMIUM SETUP (31/35) at -3.17% and RSI 34.68. No new refinement or Finding required."
+
+**BTC SETUP em -3.17% = caso paradigmático final do score-state-operability gap:** SETUP técnico gerado em pleno sell-off, RSI oversold, macro-vetoed (Morning ACTIVE, trend BEARISH). É exatamente o que o Finding 002b descreve e o que a separação 3-D/4-D resolveria — technical_strength alto (score/SETUP) ≠ operable signal (regime BEARISH, sell-off). O caso D18 amplificado ao extremo, no dia do gate.
+
+**3) FET quebrou + INJ arrefeceu — a evidência pró-maturação caiu no gate:**
+
+- **FET: -9.10%** (maior queda do basket), score 29→21 (Δ-8), tier PREMIUM→BOA, state NO_TRADE. MACD ainda BULLISH tecnicamente (continua no bullish set 5/18), mas **a persistência seletiva — único argumento pró-maturação — quebrou no dia do gate.** 4 dias de sustentação (D24-D27) terminaram com -9.10% no D28.
+- **INJ: -3.63%**, score 24→19 (Δ-5), RSI 63.35 (desceu de 68.44 D27), tier MEDIA, NO_TRADE. Re-heating arrefeceu definitivamente (RSI longe de 70). MACD BULLISH / OBV RISING mantidos.
+
+**RC001-R1 status D28: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. Sem mudança no gate.** Núcleo = drawdown realizado pós-RSI>75 (D16, D20). Re-heating D26 (RSI 68.33) → estabilizou <70 (D27) → arrefeceu (D28 RSI 63.35). Episódio original D14-D20 único confirmado; sem episódio adicional. Signal 6 △ oscillating toda a janela.
+
+**Anomalia Asian D27 — resolvida:** ASIAN_REPORT voltou a gerar D28 (02:00:15). A falha silenciosa de D27 foi **isolada**, não sistémica. Item para Operational integrity da síntese (causa-raiz diagnosticada como carry-forward, sem investigação sob READ_ONLY).
+
+**Breadth D28 — 13/18 (estável vs. D26-D27):**
+
+**13/18 MACD BEARISH:** BTC, ETH, SOL, BNB, AVAX, DOT, LINK, ADA, XRP, SUI, ARB, OP, TAO.
+**5/18 MACD BULLISH:** WLD, NEAR, INJ, FET, RENDER (mesmos 5; não colapsou apesar do sell-off, mas tampouco impediu 18/18 negativo).
+
+Nota crítica: o nível MACD (13/18) ficou estável, mas o **sell-off de preço foi universal (18/18 negativo)** — o MACD bullish set (5/18) não se traduziu em proteção de preço. Disjunção MACD/preço que reforça, mais uma vez, o Finding 002b.
+
+**OBV transitions D28:** FALLING maioria (BTC, ETH, SOL, LINK, OP, TAO — 6/9); RISING só INJ, FET, ARB (3/9). Fluxo vendedor dominante no sell-off.
+
+**Carry-overs D28 (robustez/duração, sem label nova):**
+- SOL/LINK/TAO: bearish-watch persistente desde D17 (MACD BEARISH; sell-off)
+- OP/FET: bearish-watch persistente desde D16 — FET quebrou D28 (MACD BULLISH técnico mas -9.10%); OP -7.09%
+- INJ: MACD BULLISH mantido; re-heating arrefeceu
+- DOT/XRP/SUI/AVAX/ADA/BNB: persistência BEARISH (não-priorizados); sell-off
+- WLD, NEAR, RENDER: MACD BULLISH tecnicamente mas 24h negativo (parte do 18/18)
+- ARB: RESUMED_BEARISH; -4.72%
+
+**Tabela cross-asset D27 → D28 (9 priorizados):**
+
+| Asset | D27 Score | D28 Score | Δ | D28 24h | RSI | Trend/Nota D28 |
+|---|---|---|---|---|---|---|
+| BTC | 27 | 31 | +4 | -3.17% | 34.68 | BEARISH — novo low 73,181.94; PREMIUM SETUP em queda; paradoxo extremo; RSI oversold |
+| ETH | 26 | 31 | +5 | -4.36% | 29.29 | BEARISH — PREMIUM; paradoxo; RSI <30 |
+| SOL | 25 | 28 | +3 | -3.30% | 36.49 | BEARISH — bearish-watch desde D17; PREMIUM; paradoxo |
+| LINK | 22 | 26 | +4 | -5.30% | 36.50 | BEARISH — bearish-watch desde D17; paradoxo |
+| INJ | 24 | 19 | -5 | -3.63% | 63.35 | BULLISH MACD / OBV RISING — arrefeceu; RSI longe de 70; MEDIA; NO_TRADE |
+| ARB | 22 | 26 | +4 | -4.72% | 33.03 | BEARISH — paradoxo; RSI <34 |
+| OP | 22 | 27 | +5 | -7.09% | 38.52 | BEARISH — bearish-watch desde D16; maior paradoxo (Δ+5 com -7.09%) |
+| FET | 29 | 21 | -8 | -9.10% | 52.58 | BULLISH MACD / quebrou — maior queda; perdeu PREMIUM; persistência seletiva caiu |
+| TAO | 21 | 25 | +4 | -5.78% | 42.43 | BEARISH — paradoxo |
+
+**CROSS-CHECK CLAUDE + CODEX:**
+
+Cross-check D28 + gate: Bloco A (D28 daily) + Bloco B (maturation classification + gate inputs) alinhados. Acumulado formal passa a **165/165** se mantida a métrica formal D28.
+
+B1 — classificação da maturation hypothesis: **REJECTED for this D15-D28 gate window / not materialized in this Fase 2 observation window.** Sobreviveu ao tensionamento (advogado do diabo): os contra-argumentos (5/18 MACD BULLISH não colapsaram; FET/INJ ainda MACD BULLISH técnico; 14 dias curtos) não bastam — o sell-off 18/18 atravessou o bullish set, FET quebrou como evidência, INJ não cruzou limiares, e o gate julga ESTA janela formal. Escopo limitado: NÃO "rejeitada para sempre", NÃO "maturação impossível" — uma nova hipótese pode abrir noutra janela futura.
+
+Disciplina governance preservada: maturation REJECTED for this gate window (escopo limitado); RC001-R1 enum preservado sem mudança no gate; Finding 002b FINAL (D28 extreme amplification, sem refinement); design 3-D/4-D conceptually validated, não spec, gate não desbloqueia execução; EXCLUDE list mantida; sem Finding/RC/label nova.
+
+**Concordância operador-sistema Dia 28 (9 entradas):**
+- BTC: SETUP / BEARISH; novo low; PREMIUM SETUP macro-vetoed; paradoxo extremo
+- ETH: WATCHLIST / BEARISH; PREMIUM; RSI <30
+- SOL: WATCHLIST / bearish-watch desde D17; PREMIUM; paradoxo
+- LINK: WATCHLIST / bearish-watch desde D17; paradoxo
+- INJ: NO_TRADE / RC001-R1 risk flag; arrefeceu; sem mudança de status
+- ARB: WATCHLIST / RESUMED_BEARISH; paradoxo
+- OP: WATCHLIST / bearish-watch desde D16; maior paradoxo
+- FET: NO_TRADE / persistência seletiva quebrou; MACD BULLISH técnico mas -9.10%
+- TAO: WATCHLIST / bearish-watch; paradoxo
+
+**Severidades Findings / Rule Candidates (Dia 28 — gate):**
+- Finding 001: medium (superseded por 001a)
+- Finding 001a: medium-low (validado D4-D14; observado D15-D28)
+- Finding 002: medium-low (superseded por 002b)
+- Finding 002b: medium-low (FINAL REFINEMENT D14 — D28 post-final EXTREME amplification, caso mais extremo da janela; FINAL mantido, dramaticamente reforçado, sem refinement)
+- Finding 003: medium (VALIDADO D8-D14; breadth 13/18 D28 estável; sell-off 18/18 reforça regime BEARISH, consistente com a rejeição da maturação para esta janela; observação histórica permanece relevante sem nova conclusão)
+- Rule Candidate 001: PROVISIONALLY_VALIDATED (sem mudança)
+- **RC001-R1: PROVISIONALLY_VALIDATED como risk flag; não regra oficial. Núcleo = drawdown realizado pós-RSI>75 (D16, D20). Episódio original D14-D20 único confirmado; re-heating D26 não materializou 2º episódio (arrefeceu D27-D28). Signal 6 △ oscillating. Sem mudança no gate.**
+- **Maturation hypothesis: REJECTED for this D15-D28 gate window / not materialized in this Fase 2 observation window (escopo limitado à janela formal).**
+
+**WATCH POINTS PÓS-GATE:**
+
+| Watch point | Status D28 | Pós-gate |
+|---|---|---|
+| **DECISÃO DE GATE** | Maturation REJECTED for window; regime BEARISH claro | Decisão operador: continuar Fase 2 / transitar Fase 3 / prolongar (artefacto separado) |
+| **Regime BEARISH** | 22º dia Morning ACTIVE; novo low BTC; sell-off | Continua a aprofundar ou estabiliza pós-gate? |
+| **Design 3-D/4-D** | Conceptually validated, não spec | Decisão de avançar para spec (matéria de gate, não desbloqueia execução) |
+| **RC001-R1** | Provisional risk flag; 1 episódio confirmado | Ocorrências adicionais numa janela futura? |
+| **Score paradox (Finding 002b)** | Extremo D28 (BTC PREMIUM SETUP em -3.17%) | Núcleo empírico para o design 3-D/4-D |
+| **Maturation hypothesis futura** | Rejeitada para ESTA janela | Pode reabrir em janela futura com critérios definidos |
+
+**Frase Codex que define o dia:**
+
+> "D28 closed the gate window decisively against the maturation hypothesis: the market sold off across 18/18 assets, BTC printed a new window low while still producing a PREMIUM SETUP score, and FET's sustained-strength case broke on the gate day. Maturation is rejected for this D15-D28 window, while RC001-R1 remains a provisional risk flag and Finding 002b remains final but dramatically reinforced."
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
