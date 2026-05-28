@@ -126,10 +126,31 @@ Regra de nao-sobreposicao: macro_permission e permissao de REGIME (universal ao 
 
 ### 3.4 operable_quality
 
-- (a) Definicao: _[a preencher]_
-- (b) Inputs/sinais: _[a preencher]_
-- (c) Regra de leitura: _[a preencher]_
-- (d) Validade por regime: _[a preencher]_
+- (a) Definicao: Qualidade local de um setup especifico: clareza estrutural, ausencia de conflito entre sinais, contexto de risco/invalidacao. Responde "este setup e limpo?", dado o que macro_permission/directional_bias/technical_strength ja leram. Dimensao de COMPOSICAO (ultima a ler), com conteudo proprio, nao reagregacao.
+  - TRIPLA TRAVA:
+    - NAO e gate: nao concede permissao operacional (isso e macro_permission, exclusivo). Setup pode ser limpo e continuar nao-operavel se macro_permission=VETOED.
+    - NAO e media: nao agrega valores das outras dimensoes; apenas regista friccao, conflito ou clareza local depois de elas serem lidas independentemente. Coerencia inter-dimensional e meta-informacao, nao agregacao.
+    - NAO e veredito: nao emite o veredito final do ativo; descreve a qualidade local da leitura/setup. O output final permanece a leitura conjunta das 4 dimensoes, lidas independentemente.
+
+- (b) Inputs/sinais:
+  - Coerencia inter-dimensional (meta-informacao): as outras 3 leituras conflituam ou estao limpas entre si? Le o ESTADO DE CONFLITO (MIXED=friccao; 3 coerentes=limpeza), NAO os valores. Registo de friccao/clareza, nao score composto.
+  - Estado do scan (state): SETUP/WATCHLIST/NO_TRADE - juizo de operabilidade local que o Core ja emite.
+  - Proximidade de invalidacao / contexto de risco: quao perto o ponto que invalidaria o setup. [largamente sub-observado.]
+  - Limpeza estrutural: ausencia de ruido/whipsaw; clareza do padrao.
+
+- (c) Regra de leitura - grau de limpeza local (preliminar, pending calibration):
+  - CLEAN: setup estruturalmente claro, leituras coerentes entre as 3 dimensoes-fonte, invalidacao bem definida. [quase totalmente pending - poucos setups limpos sob regime bearish.]
+  - NOISY: friccao entre leituras (ex. directional_bias MIXED), estrutura ambigua, whipsaw. [parcialmente observado - MIXED/divergencia D22/D24.]
+  - INSUFFICIENT_DATA: contexto de risco/invalidacao nao-legivel com inputs atuais. [estado honesto DOMINANTE em v0.1.]
+  - REGRA DE COMPOSICAO (tripla trava): operable_quality e a ULTIMA leitura, mas NAO a decisao. A leitura completa de um ativo e o conjunto das 4 dimensoes lidas independentemente - operable_quality nao as colapsa num veredito. CLEAN sob macro_permission VETOED = "setup local limpo, mas regime nao permite".
+  - Caso-ancora: BTC D28 - state era SETUP (Core emitiu), mas as 4 dimensoes juntas (VETOED + BEARISH + PREMIUM/EXTENDED_DOWN + operable_quality local) leem "nao-operavel por veto macro", nao "SETUP operavel". O "SETUP" do score unico era leitura de state isolada do veto macro. A decomposicao em 4 dimensoes independentes torna explicito o que o numero unico escondia.
+
+- (d) Tag de validade por regime:
+  - operable_quality is architecturally required but empirically under-validated in v0.1 due to 100% macro_permission=VETOED. E a dimensao MENOS validada das quatro: sob VETOED (100% da janela), nunca esteve "no assento do condutor"; so se torna fator decisivo quando macro_permission != VETOED.
+  - validated_in_bearish: parcial (state e coerencia observados, mas sempre sob VETOED, nunca como fator decisivo).
+  - bull_regime_validation: pending (so "importa" quando o regime permite; calibracao real pending regime permissivo).
+  - Estados: CLEAN quase totalmente pending; NOISY parcialmente observado (MIXED/divergencia D22/D24); INSUFFICIENT_DATA estado honesto dominante em v0.1.
+  - Proximidade de invalidacao/risco: largamente nao especificado em v0.1 (READ_ONLY nao capturou estrutura de risco por setup). Carry-forward.
 
 ---
 
