@@ -4288,6 +4288,264 @@ Disciplina governance preservada: maturation REJECTED for this gate window (esco
 **Frase Codex que define o dia:**
 
 > "D28 closed the gate window decisively against the maturation hypothesis: the market sold off across 18/18 assets, BTC printed a new window low while still producing a PREMIUM SETUP score, and FET's sustained-strength case broke on the gate day. Maturation is rejected for this D15-D28 window, while RC001-R1 remains a provisional risk flag and Finding 002b remains final but dramatically reinforced."
+## Síntese 14 Dias D15-D28 — T+28D Gate Formal
+
+Registo da janela formal Fase 2 Design D15-D28 (2026-05-15 a 2026-05-28), 14 dias operacionais. T+28D é o GATE FORMAL DECISÓRIO. Esta síntese tem firewall: secções 1-7 = observação factual; secção 8 = constraints/EXCLUDE; secções 9-10 = opções e recomendação (juízo, não decisão); secção 10-bis = decisão do operador; secção 11 = carry-forward. Validada por cross-check Claude+Codex. Nada promove Finding/RC/label nem muda enum; o gate não desbloqueia execução.
+
+### 1. Escopo e governance
+
+Janela: Fase 2 Design, D15-D28 (14 dias operacionais), pós-transição Fase 1→Fase 2 (Type 2 Decision T2-FASE2-2026-05-14).
+
+Natureza: T+28D é o GATE FORMAL DECISÓRIO (continuar Fase 2 / transitar Fase 3 / prolongar), distinto do T+21D (observacional/informal). Esta síntese inclui componente de recomendação de decisão (secções 9-10), com firewall face à observação.
+
+Modo: READ_ONLY em todos os 14 dias. EXCLUDE list ativa e respeitada toda a janela. Disciplina: zero Finding 004+, zero RC002+, zero label/taxonomia nova em D15-D28. Múltiplas labels candidatas declinadas ao longo da janela.
+
+Cross-check Claude+Codex: acumulado formal 165/165 ao fim do D28 (115/115 no T+14D; +43 checks/perguntas formais documentadas D15-D26; D27 = validação operacional/pre-gate sem incremento; D28 gate = Bloco A + Bloco B). 100% alinhado.
+
+### 2. Operational integrity
+
+Tasks: 5 Ready (Asian 02:00, Morning 07:00, Trade Monitor 07:30, Journal Auditor 07:30, Daily Audit 08:30); 3 Disabled (GitHub_Sync, Friday_Cycle, EuruLearningEngine) mantidas Disabled toda a janela.
+
+Critério F (execução de task): PASS em 14/14 dias — todas as tasks Result 0, horas exactas, zero sleep recovery.
+
+Artifact integrity — 1 anomalia isolada (D27):
+
+| Janela | Estado |
+|---|---|
+| D15-D26 e D28 | Integridade total (5/5 reports cada dia) |
+| D27 | Artifact integrity PARTIAL: Euru_Asian_Scan Result 0 mas ASIAN_REPORT_2026-05-27.md não gerado, sem commit Asian; 4/5 reports presentes |
+| D28 | Anomalia RESOLVIDA — ASIAN_REPORT voltou a gerar (02:00:15); falha D27 isolada, não sistémica |
+
+Distinção para o gate: Critério F mede execução de task (PASS 14/14), não captura integridade de artefacto — a anomalia D27 é um gap não-detectado pelo Critério F.
+
+Implicação para design: o Critério F deveria incluir verificação de artefacto, não só de execução.
+
+Carry-forward operacional: diagnóstico de causa-raiz da falha silenciosa (porquê Result 0 sem artefacto), a fazer quando o sistema puder ser tocado (não investigado sob READ_ONLY). Tabela resume integridade diária; detalhes por dia permanecem no Candidates Review.
+
+### 3. RC001-R1 lifecycle D14-D28
+
+Arco completo do stress-test INJ — caso vivo central:
+
+| Dia | Evento INJ | Estado RC001-R1 |
+|---|---|---|
+| D14 | RSI 84.86, blow-off topo, score 27 | UNDER_OBSERVATION + stress-test |
+| D16 | -6.48%, drawdown, RSI 68.11, score 17 | PROVISIONALLY_VALIDATED como risk flag |
+| D18 | OBV FALLING confirmado | Reinforced 4/7 (Signal 6 ✓) |
+| D19 | +9.95% bounce | Weakened 3/7 (Signal 6 △) |
+| D20 | Score 16 window-low | Bounce failed; Signal 6 △ re-cross |
+| D24 | OBV virou RISING | Stress dissipating (divergência fechou) |
+| D25 | Perdeu MACD BULLISH, score 17 | Stress reativou (Δ-10) |
+| D26 | +9.59%, RSI 68.33, MACD recuperou | Re-heating / pre-threshold watch |
+| D27 | RSI 68.44 | Re-heating estabilizou <70 |
+| D28 | -3.63%, RSI 63.35, score 19 | Arrefeceu; sem 2º episódio |
+
+Resolução de síntese: RC001-R1 permanece PROVISIONALLY_VALIDATED como risk flag retrospectivo; não regra oficial. Sem mudança no gate. Núcleo de validação = drawdown realizado pós-RSI>75 (D16, D20).
+
+Limiares clarificados D26: RC001 forte = RSI>70 + 7D>15%; RC001-R1 = RSI>75. Episódio original D14-D20 único confirmado; sem episódio adicional confirmado além do episódio original D14-D20. O re-heating D26 (RSI 68.33) estabilizou abaixo de 70 (D27) e arrefeceu (D28 RSI 63.35), nunca cruzou limiar.
+
+Confirmação estrutural plena (5+/7) nunca alcançada; Signal 6 (score compression) oscilou todo o arco (Δ-4/Δ-11/Δ-2/Δ0/Δ-3 — instabilidade máxima confirmada), nunca sinal estável. Enum preservado toda a janela; nunca promovido.
+
+### 4. Finding 002b — arco oscilatório e score-directionality gap
+
+Finding 002b FINAL REFINEMENT D14 (score is direction-agnostic under bearish movement). D15-D28 acumulou observações pós-final sem refinement — tese FINAL intacta, multi-estado:
+
+| Estado | Dias | Descrição |
+|---|---|---|
+| Partial normalization | D15, D17 | Paradoxo dissipa parcial |
+| Amplification | D18 | 4 PREMIUMs em queda; ARB Δ+5 |
+| Transient reversal | D19 | Paradoxo reverteu em 24h |
+| Convergent compression | D20 | Scores e preços alinham para baixo |
+| Re-divergence | D21 | TAO→PREMIUM, ARB Δ+5 |
+| Design evidence (OBV/MACD) | D22 | Divergência fluxo/trend |
+| Amplification again | D23 | 9/9 negativos, scores +4 |
+| Partial inversion | D24 | Scores caem com preços a subir |
+| Generalized compression on bounce fade | D25 | 9/9 score down/flat |
+| Extreme amplification | D28 | 18/18 negativos, BTC PREMIUM SETUP em -3.17%, RSI 34.68 |
+
+Resolução de síntese: Finding 002b FINAL, dramaticamente reforçado pelo D28. O arco D15-D28 mostra o score-directionality gap como multi-estado e oscilatório (>=10 estados distintos), nunca resolvido.
+
+O D28 é o caso mais extremo: BTC produziu PREMIUM SETUP (31/35) no pior dia de preço da janela (-3.17%, novo low, RSI 34.68 oversold) — máxima força técnica de score em pleno sell-off macro-vetoed. Caso paradigmático final que justifica a separação arquitetural 3-D/4-D (technical_strength ≠ operable signal). ARB = caso paradigmático de instabilidade ao longo da janela.
+
+### 5. Maturation hypothesis — evidência pró/contra e classificação final
+
+Hipótese aberta no T+21D: possível maturação/exaustão do regime BEARISH nas bordas. Testada D22-D28:
+
+| Dia | Sinal | Direção |
+|---|---|---|
+| D22 | Breadth 16→14, OBV RISING 7/9, first follow-through | PRÓ |
+| D23 | Bounce reverteu, BTC BEARISH, novo low | CONTRA |
+| D24 | FET 1º priorizado MACD BULLISH, breadth 13/18 | PRÓ |
+| D25 | INJ perdeu BULLISH, FET isolado, OBV 9/9→2/9 | CONTRA |
+| D26 | INJ re-heating, FET PREMIUM D3 | PRÓ (concentrado) |
+| D27 | BTC retoma BEARISH, OBV faded, 6/9 negativos | CONTRA |
+| D28 | Sell-off 18/18, novo low BTC, FET quebrou -9.10%, INJ arrefeceu | CONTRA (decisivo) |
+
+Padrão: oscilação quase perfeita (+/−/+/−/+/−) D22-D27, fechada por D28 fortemente contra. A persistência seletiva (FET, único argumento que impedia rejeição) quebrou no dia do gate (-9.10%, score 29→21, perdeu PREMIUM).
+
+Bloqueios estruturais que nunca cederam na janela:
+
+- Breadth nunca passou de 15/18 (maioria BEARISH sempre); pico bearish 17/18 (D18)
+- BTC nunca virou BULLISH (oscilou BEARISH↔SIDEWAYS; D27-D28 BEARISH; D28 novo low)
+- Morning Master Filter ACTIVE todos os 22 dias consecutivos (D14-D28)
+- Cada bounce (D21-22, D24, D26) desinflou; FET sustentou 4 dias mas quebrou no gate
+
+Classificação final (validada + tensionada no cross-check D28): Maturation hypothesis REJECTED for this D15-D28 gate window / not materialized in this Fase 2 observation window. Escopo limitado à janela formal — NÃO "rejeitada para sempre", NÃO "maturação impossível". Uma nova hipótese de maturação futura pode ser aberta noutra janela com critérios definidos.
+
+A classificação sobreviveu ao tensionamento (advogado do diabo): os contra-argumentos (5/18 MACD BULLISH não colapsaram; FET/INJ ainda MACD BULLISH técnico; 14 dias curtos) não bastam — o sell-off 18/18 atravessou o bullish set, FET quebrou como evidência, INJ não cruzou limiares, e o gate julga esta janela formal. Nesta janela, a maturação não materializou.
+
+### 6. Master Filter behavior D14-D28
+
+| Dia | Asian (4H) | Morning (1D) |
+|---|---|---|
+| D14-D15 | ACTIVE (WATCHLIST) | ACTIVE BEARISH / despite SIDEWAYS — 8º/9º |
+| D16-D17 | INACTIVE (GEM_ALERT) | ACTIVE BEARISH — 10º/11º |
+| D18 | ACTIVE (NO_TRADE) | ACTIVE BEARISH — 12º |
+| D19-D20 | INACTIVE (GEM_ALERT) | ACTIVE BEARISH — 13º/14º |
+| D21 | INACTIVE (GEM_ALERT) | ACTIVE despite SIDEWAYS — 15º |
+| D22 | INACTIVE (GEM_ALERT) | ACTIVE SIDEWAYS — 16º |
+| D23 | ACTIVE (WATCHLIST) | ACTIVE BEARISH — 17º |
+| D24 | ACTIVE (NO_TRADE) | ACTIVE SIDEWAYS — 18º |
+| D25 | ACTIVE (WATCHLIST) | ACTIVE SIDEWAYS — 19º |
+| D26 | INACTIVE (GEM_ALERT) | ACTIVE SIDEWAYS — 20º |
+| D27 | INDISPONÍVEL (anomalia) | ACTIVE BEARISH — 21º |
+| D28 | ACTIVE (NO_TRADE) | ACTIVE BEARISH — 22º |
+
+Leitura do arco:
+
+- Morning Master Filter: ACTIVE contínuo TODA a janela (8º→22º dia consecutivo D14-D28). Nunca desativou. Regime 1D nunca permitiu SETUP de altcoin (incl. o BTC SETUP D28, macro-vetoed). SIDEWAYS tratado como bloqueio, nunca unlock.
+- Asian Master Filter: oscilou todo o período (GEM_ALERT↔WATCHLIST↔NO_TRADE) sem resolução direcional. 4H comprimiu/descomprimiu repetidamente, nunca rompeu. D27 indisponível (anomalia isolada).
+
+Tabela resume headers diários; detalhes por dia permanecem no Candidates Review.
+
+### 7. Design 3-D/4-D — evolução e estado atual
+
+Esboço 3-D entregue no T+21D (conceptual decomposition only): technical_strength_score / directional_bias / operable_quality. Caminho 4-D mapeado (macro_permission extraído de operable_quality como dimensão independente).
+
+14 dias de casos vivos que reforçam a necessidade do design:
+
+- OBV/MACD divergence (D22, D24): fluxo sem confirmação de trend — separar technical_strength (OBV) de directional_bias (MACD) tornaria legível
+- FET sustained-then-broke (D24-D28): distinguir persistência estrutural de soluço precisa de directional_bias com confiança/duração
+- Score paradox recorrente, extremo no D28 (D18, D23, D28): scores sobem em queda; BTC PREMIUM SETUP em -3.17% é o caso-limite
+- INJ re-heating (D26): technical_strength alto (RSI) ≠ operable_quality (pre-threshold, NO_TRADE) — RC001-R1 vive na 3ª dimensão
+- BTC SETUP em sell-off D28: SETUP técnico macro-vetoed — o caso que a separação 4-D (macro_permission explícito) tornaria imediatamente legível
+
+Estado atual: esboço conceptual validado por 14 dias de casos vivos, mas não-spec, não implementation-ready. A decisão de avançar conceptual→spec é matéria de gate (secções 9-10), e mesmo essa decisão não desbloqueia execução (continua design).
+
+### 8. Decision constraints / EXCLUDE list preserved
+
+O gate formal decide a FASE DE TRABALHO, não levanta restrições de segurança. Qualquer que seja a decisão (continuar / transitar / prolongar), as seguintes constraints permanecem em vigor e só podem ser alteradas por decisão explícita e separada do operador, fora deste gate:
+
+- READ_ONLY mantido. Nenhuma decisão de gate ativa trading, paper trading, ou qualquer modo de escrita/execução.
+- Sem código executável. Avançar o design 3-D/4-D para spec significa especificação, não implementação.
+- "Spec" nesta decisão significa documento de design e critérios de leitura; NÃO inclui implementação, automação, backtest executável, sinal acionável, nem alteração de Core.
+- Sem shorts acionáveis. Nenhum sinal direcional desta janela é convertível em ação.
+- RC001-R1 não promovido. Permanece PROVISIONALLY_VALIDATED como risk flag; a promoção a regra oficial exige 2-3 ocorrências adicionais (sem episódio adicional confirmado além do episódio original D14-D20). O gate não promove.
+- Sem reativação de tasks Disabled (GitHub_Sync, Friday_Cycle, EuruLearningEngine).
+- Sem Finding 004+ / RC002+ / label nova criados pelo gate.
+
+Em particular: mesmo a opção "transitar Fase 3" (se escolhida) não desbloquearia execução automaticamente — exigiria uma Type 2 Decision separada, explícita, com as suas próprias precondições de segurança. O gate não é um cheque em branco.
+
+Esta secção é o muro: tudo o que vem a seguir (opções, recomendação, decisão) opera dentro destas constraints.
+
+### 9. Gate decision options — prós e contras
+
+Três opções, cada uma com o caso honesto a favor e contra, ancorado nos dados D15-D28.
+
+**OPÇÃO A — Continuar Fase 2 Design, avançando 3-D/4-D de conceptual para spec**
+
+O que é: permanecer em Fase 2, mas mudar o eixo principal de trabalho de observação passiva para especificação do design (technical_strength / directional_bias / operable_quality / macro_permission). Spec, não implementação.
+
+A favor:
+
+- O trabalho observacional deu o que tinha a dar: o score-directionality gap (Finding 002b) está caracterizado em >=10 estados, com o caso-limite extremo no D28 (BTC PREMIUM SETUP em -3.17%). A arquitetura do problema está clara.
+- 14 dias de casos vivos acumulados informam diretamente cada dimensão do design (OBV/MACD divergence, FET sustained-then-broke, INJ technical-vs-operable, BTC SETUP macro-vetoed).
+- O design já está conceptualmente validado (T+21D + reforço D22-D28); o próximo passo lógico é especificá-lo.
+- Mantém READ_ONLY e EXCLUDE list intactos (baixo risco).
+
+Contra:
+
+- Spec sem mais dados pode cristalizar prematuramente decisões que mais observação refinaria.
+- O regime foi monodirecional (BEARISH 22 dias) — o design pode ficar enviesado para condições bearish, sem casos vivos bullish para o testar.
+- Não há ainda critério objetivo de "spec completa" definido.
+
+**OPÇÃO B — Transitar para Fase 3 (execução)**
+
+O que é: declarar a Fase 2 Design concluída e avançar para a fase de execução/implementação.
+
+A favor:
+
+- 14 dias de observação + design conceptual validado podem ser considerados base suficiente para começar a construir.
+- O regime BEARISH está claro e estável — ambiente direcionalmente claro para raciocínio de desenho, mas não suficiente para execução.
+
+Contra:
+
+- Não há spec. Transitar para execução sem especificação formal do design 3-D/4-D seria construir sobre um esboço conceptual — precisamente o erro que a Fase 2 Design existe para evitar.
+- A maturação foi rejeitada para a janela, mas o design não foi testado em regime não-bearish.
+- Violaria a lógica de faseamento (Design → Spec → Execução). Saltar a spec.
+- A secção 8 impediria de qualquer modo o desbloqueio de execução sem Type 2 Decision separada — então "transitar" hoje seria sobretudo simbólico, sem efeito operacional real.
+
+**OPÇÃO C — Prolongar observação passiva (estender a janela observacional)**
+
+O que é: manter o eixo de trabalho atual (observação diária + cross-check + journal) por mais uma janela (ex.: +14 dias até T+42D) antes de decidir.
+
+A favor:
+
+- Mais dados, especialmente se o regime mudar (capturar casos vivos bullish/transição que faltam).
+- A anomalia operacional D27 e a possível reabertura de hipótese de maturação futura beneficiariam de mais observação.
+- Risco mínimo (continua READ_ONLY).
+
+Contra:
+
+- Rendimento marginal decrescente: o Finding 002b já está caracterizado; mais dias do mesmo regime bearish provavelmente repetem estados já documentados.
+- Adia o trabalho de design que os dados já permitem começar.
+- "Observar até algo mudar" não é um critério — pode prolongar indefinidamente sem ganho claro.
+- O próprio T+21D já sinalizava que a fase observacional estava madura.
+
+### 10. Recomendação estruturada (NÃO-DECISÓRIA — tensionada por Codex)
+
+Esta recomendação foi apresentada como fundamentada, não vinculativa, e tensionada por Codex em ronda de advogado do diabo antes da decisão do operador.
+
+Recomendação testada: OPÇÃO A — continuar Fase 2 Design, avançando o 3-D/4-D de conceptual para spec, sem transitar para execução/Fase 3 e sem prolongar observação passiva como eixo principal.
+
+Resultado do tensionamento Codex:
+
+- B continua fraca: transitar para Fase 3 sem spec saltaria a etapa que a própria Fase 2 revelou como necessária.
+- C tem o melhor ataque contra A: janela monodirecional bearish e ausência de casos vivos bullish. Mas "esperar até outro regime" é critério aberto demais; não derruba A.
+- A preserva a EXCLUDE list se "spec" for definida como documento não-executável. Secção 8 reforçada explicitamente.
+- Risco bearish-derived é real, mas não invalida A; vira propriedade da spec, não motivo para adiar.
+- Melhor formulação final: A híbrida controlada — eixo principal = spec; observação diária leve continua como input de validação.
+
+Recomendação final após tensionamento: continuar Fase 2 Design, mudando o eixo principal para spec 3-D/4-D (documento não-executável), enquanto mantém observação diária leve como input de validação. A spec deve ser marcada bearish-derived v0.x, com validated_in_bearish=true e bull_regime_validation=pending. Sem transitar para execução/Fase 3. READ_ONLY e EXCLUDE list intactos.
+
+### 10-bis. Decisão do operador (André Marçal, 2026-05-28)
+
+**Decisão T+28D:** aprovada a **Opção A híbrida controlada**.
+
+Continuar Fase 2 Design, com eixo principal deslocado para a especificação 3-D/4-D não-executável, mantendo observação diária leve como input de validação. A spec será marcada como bearish-derived v0.x, com validated_in_bearish=true e bull_regime_validation=pending.
+
+READ_ONLY e EXCLUDE list permanecem intactos. Sem transição para Fase 3, sem implementação, sem paper trading, sem sinais acionáveis, sem promoção de RC001-R1, sem criação de Finding/RC/label nova, sem reativação de tasks Disabled.
+
+Fundamentação da decisão:
+
+- Não escolher B: execução sem spec seria prematuro e contrariaria o próprio achado central da Fase 2.
+- Não escolher C pura: prolongar observação passiva após D28 teria rendimento marginal baixo e critério aberto demais.
+- Escolher A híbrida controlada: proporcional aos dados — avança o design sem fingir que a validação bullish já existe, e preserva observação leve para capturar novos regimes.
+
+Esta decisão não desbloqueia execução. Qualquer transição futura para implementação, paper trading, automação, sinais acionáveis ou alteração de Core exigirá decisão explícita separada, com nova governance/Type 2 Decision se aplicável.
+
+### 11. Carry-forward pós-gate
+
+Independentemente da decisão, ficam como carry-forward:
+
+- Diagnóstico da anomalia Asian D27 (falha silenciosa Result-0-sem-artefacto) quando o sistema puder ser tocado; design note: Critério F verificar artefacto, não só execução.
+- Finding 002b como núcleo empírico do design 3-D/4-D (o caso BTC SETUP D28 é o exemplo-âncora).
+- RC001-R1: monitorizar ocorrências adicionais numa janela futura (precisa 2-3 para promoção; não promover agora).
+- Regime BEARISH: continuação ou mudança pós-gate (22º dia Morning ACTIVE; novo low D28).
+- Maturation hypothesis futura: pode reabrir noutra janela com critérios definidos à partida (não reaberta hoje).
+- Definir critério de "spec completa" com o operador.
+- Marcar dimensões/limiares da spec como bearish-derived pending bull-regime validation quando aplicável.
+- Manter observação diária leve como input de validação, sem retornar a observação passiva como eixo principal.
+
 ## Inconsistencias Detectadas
 
 ### Finding 001 - 2026-05-02: Overpromotion de SETUP sem confirmacao MAC
@@ -4668,3 +4926,4 @@ Sistema mistura estrutura, score, timeframe, regime e qualidade MAC sem semantic
 ### Decisao Pos-Fase 1
 
 (Cenario 1, 2 ou 3 conforme Seccao 12 do plano.)
+
