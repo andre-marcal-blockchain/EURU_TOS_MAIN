@@ -4,7 +4,7 @@ schema_version: 1.0
 ---
 # Euru OS — Asian Session Scan Report
 **Date:** 2026-06-05  
-**Time:** 06:04 UTC  
+**Time:** 20:02 UTC  
 **Session:** Asian (00:00 UTC open)  
 **Protocol:** Aguiar Protocol Module 05 — Lateralization & Compression  
 **Assets scanned:** 18  
@@ -31,24 +31,24 @@ PIPELINE_STATUS:         HEALTHY
 
 | Symbol | Price (USDT) | State |
 |--------|-------------|-------|
-| BTCUSDT |  62,169.9900 | **WATCHLIST** |
-| ETHUSDT |   1,672.4200 | **NO_TRADE** |
-| SOLUSDT |      65.9200 | **WATCHLIST** |
-| BNBUSDT |     581.6000 | **WATCHLIST** |
-| AVAXUSDT |       7.2210 | **NO_TRADE** |
-| DOTUSDT |       0.9920 | **WATCHLIST** |
-| LINKUSDT |       7.6130 | **WATCHLIST** |
-| ADAUSDT |       0.1644 | **NO_TRADE** |
-| XRPUSDT |       1.1204 | **WATCHLIST** |
-| WLDUSDT |       0.5072 | **WATCHLIST** |
-| SUIUSDT |       0.7244 | **WATCHLIST** |
-| NEARUSDT |       2.1760 | **NO_TRADE** |
-| INJUSDT |       5.2600 | **WATCHLIST** |
-| ARBUSDT |       0.0840 | **WATCHLIST** |
-| OPUSDT |       0.1055 | **WATCHLIST** |
-| FETUSDT |       0.2093 | **WATCHLIST** |
-| TAOUSDT |     201.0000 | **WATCHLIST** |
-| RENDERUSDT |       1.7660 | **WATCHLIST** |
+| BTCUSDT |  60,209.2400 | **WATCHLIST** |
+| ETHUSDT |   1,563.5400 | **WATCHLIST** |
+| SOLUSDT |      63.1700 | **NO_TRADE** |
+| BNBUSDT |     565.6400 | **NO_TRADE** |
+| AVAXUSDT |       6.6710 | **NO_TRADE** |
+| DOTUSDT |       0.9300 | **WATCHLIST** |
+| LINKUSDT |       7.2650 | **WATCHLIST** |
+| ADAUSDT |       0.1596 | **WATCHLIST** |
+| XRPUSDT |       1.0922 | **NO_TRADE** |
+| WLDUSDT |       0.5113 | **WATCHLIST** |
+| SUIUSDT |       0.6919 | **NO_TRADE** |
+| NEARUSDT |       1.9630 | **WATCHLIST** |
+| INJUSDT |       4.9310 | **WATCHLIST** |
+| ARBUSDT |       0.0796 | **NO_TRADE** |
+| OPUSDT |       0.0955 | **NO_TRADE** |
+| FETUSDT |       0.1896 | **WATCHLIST** |
+| TAOUSDT |     192.2000 | **NO_TRADE** |
+| RENDERUSDT |       1.6240 | **WATCHLIST** |
 
 ---
 
@@ -60,11 +60,11 @@ PIPELINE_STATUS:         HEALTHY
 AGENT: Scout (Asian Session)
 SYMBOL: BTCUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 62,169.9900
+DATE: 2026-06-05 20:02 UTC
+PRICE: 60,209.2400
 STATE: WATCHLIST
-SIGNAL: Volume exhaustion only: ratio=0.43, no range compression detected
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: Volume exhaustion confirmed: last-3 avg 3,461 is 0.43x prior-5 avg 8,093 (threshold ≤0.7)
+SIGNAL: Compression only: 2 shrinking candles (11.7%), volume not yet exhausted (ratio=1.84)
+REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 11.7% of widest in window | Volume: No volume exhaustion: last-3 avg 9,559 is 1.84x prior-5 avg 5,206 (need ≤0.7)
 ```
 
 ### ETHUSDT
@@ -73,11 +73,11 @@ REASON: Lateralization: No qualifying compression: 1 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: ETHUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 1,672.4200
-STATE: NO_TRADE
-SIGNAL: No compression or volume exhaustion (compression_pairs=0, vol_ratio=0.76)
-REASON: Lateralization: No qualifying compression: 0 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 90,349 is 0.76x prior-5 avg 119,293 (need ≤0.7)
+DATE: 2026-06-05 20:02 UTC
+PRICE: 1,563.5400
+STATE: WATCHLIST
+SIGNAL: Compression only: 2 shrinking candles (12.4%), volume not yet exhausted (ratio=1.51)
+REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 12.4% of widest in window | Volume: No volume exhaustion: last-3 avg 191,603 is 1.51x prior-5 avg 126,730 (need ≤0.7)
 ```
 
 ### SOLUSDT
@@ -86,11 +86,11 @@ REASON: Lateralization: No qualifying compression: 0 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: SOLUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 65.9200
-STATE: WATCHLIST
-SIGNAL: Volume exhaustion only: ratio=0.64, no range compression detected
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: Volume exhaustion confirmed: last-3 avg 570,250 is 0.64x prior-5 avg 896,950 (threshold ≤0.7)
+DATE: 2026-06-05 20:02 UTC
+PRICE: 63.1700
+STATE: NO_TRADE
+SIGNAL: No compression or volume exhaustion (compression_pairs=1, vol_ratio=1.41)
+REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 1,078,558 is 1.41x prior-5 avg 762,757 (need ≤0.7)
 ```
 
 ### BNBUSDT
@@ -99,11 +99,11 @@ REASON: Lateralization: No qualifying compression: 1 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: BNBUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 581.6000
-STATE: WATCHLIST
-SIGNAL: Volume exhaustion only: ratio=0.48, no range compression detected
-REASON: Lateralization: No qualifying compression: 0 consecutive compressing pairs (need 2) | Volume: Volume exhaustion confirmed: last-3 avg 36,566 is 0.48x prior-5 avg 76,285 (threshold ≤0.7)
+DATE: 2026-06-05 20:02 UTC
+PRICE: 565.6400
+STATE: NO_TRADE
+SIGNAL: No compression or volume exhaustion (compression_pairs=1, vol_ratio=1.77)
+REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 88,532 is 1.77x prior-5 avg 50,018 (need ≤0.7)
 ```
 
 ### AVAXUSDT
@@ -112,11 +112,11 @@ REASON: Lateralization: No qualifying compression: 0 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: AVAXUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 7.2210
+DATE: 2026-06-05 20:02 UTC
+PRICE: 6.6710
 STATE: NO_TRADE
-SIGNAL: No compression or volume exhaustion (compression_pairs=1, vol_ratio=0.71)
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 619,505 is 0.71x prior-5 avg 872,555 (need ≤0.7)
+SIGNAL: No compression or volume exhaustion (compression_pairs=1, vol_ratio=1.25)
+REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 935,023 is 1.25x prior-5 avg 746,625 (need ≤0.7)
 ```
 
 ### DOTUSDT
@@ -125,11 +125,11 @@ REASON: Lateralization: No qualifying compression: 1 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: DOTUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 0.9920
+DATE: 2026-06-05 20:02 UTC
+PRICE: 0.9300
 STATE: WATCHLIST
-SIGNAL: [BTC filter] Downgraded from GEM_ALERT — BTC state is WATCHLIST. COIL: 2 shrinking candles (60.0% compression) + volume at 0.61x baseline — breakout candidate
-REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 60.0% of widest in window | Volume: Volume exhaustion confirmed: last-3 avg 1,292,194 is 0.61x prior-5 avg 2,123,298 (threshold ≤0.7)
+SIGNAL: Compression only: 2 shrinking candles (9.4%), volume not yet exhausted (ratio=1.24)
+REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 9.4% of widest in window | Volume: No volume exhaustion: last-3 avg 2,339,040 is 1.24x prior-5 avg 1,879,712 (need ≤0.7)
 ```
 
 ### LINKUSDT
@@ -138,11 +138,11 @@ REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (
 AGENT: Scout (Asian Session)
 SYMBOL: LINKUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 7.6130
+DATE: 2026-06-05 20:02 UTC
+PRICE: 7.2650
 STATE: WATCHLIST
-SIGNAL: Volume exhaustion only: ratio=0.56, no range compression detected
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: Volume exhaustion confirmed: last-3 avg 675,278 is 0.56x prior-5 avg 1,202,845 (threshold ≤0.7)
+SIGNAL: Compression only: 2 shrinking candles (11.4%), volume not yet exhausted (ratio=1.34)
+REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 11.4% of widest in window | Volume: No volume exhaustion: last-3 avg 1,275,465 is 1.34x prior-5 avg 953,404 (need ≤0.7)
 ```
 
 ### ADAUSDT
@@ -151,11 +151,11 @@ REASON: Lateralization: No qualifying compression: 1 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: ADAUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 0.1644
-STATE: NO_TRADE
-SIGNAL: No compression or volume exhaustion (compression_pairs=1, vol_ratio=1.36)
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 87,770,615 is 1.36x prior-5 avg 64,474,867 (need ≤0.7)
+DATE: 2026-06-05 20:02 UTC
+PRICE: 0.1596
+STATE: WATCHLIST
+SIGNAL: [BTC filter] Downgraded from GEM_ALERT — BTC state is WATCHLIST. COIL: 5 shrinking candles (8.3% compression) + volume at 0.67x baseline — breakout candidate
+REASON: Lateralization: Compression confirmed: 5 consecutive compressing pairs (need 2), tightest range is 8.3% of widest in window | Volume: Volume exhaustion confirmed: last-3 avg 58,113,001 is 0.67x prior-5 avg 86,539,009 (threshold ≤0.7)
 ```
 
 ### XRPUSDT
@@ -164,11 +164,11 @@ REASON: Lateralization: No qualifying compression: 1 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: XRPUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 1.1204
-STATE: WATCHLIST
-SIGNAL: Volume exhaustion only: ratio=0.62, no range compression detected
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: Volume exhaustion confirmed: last-3 avg 21,174,333 is 0.62x prior-5 avg 34,145,251 (threshold ≤0.7)
+DATE: 2026-06-05 20:02 UTC
+PRICE: 1.0922
+STATE: NO_TRADE
+SIGNAL: No compression or volume exhaustion (compression_pairs=1, vol_ratio=1.45)
+REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 43,089,220 is 1.45x prior-5 avg 29,686,056 (need ≤0.7)
 ```
 
 ### WLDUSDT
@@ -177,11 +177,11 @@ REASON: Lateralization: No qualifying compression: 1 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: WLDUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 0.5072
+DATE: 2026-06-05 20:02 UTC
+PRICE: 0.5113
 STATE: WATCHLIST
-SIGNAL: Volume exhaustion only: ratio=0.64, no range compression detected
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: Volume exhaustion confirmed: last-3 avg 57,210,910 is 0.64x prior-5 avg 89,392,009 (threshold ≤0.7)
+SIGNAL: [BTC filter] Downgraded from GEM_ALERT — BTC state is WATCHLIST. COIL: 2 shrinking candles (13.2% compression) + volume at 0.56x baseline — breakout candidate
+REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 13.2% of widest in window | Volume: Volume exhaustion confirmed: last-3 avg 44,468,983 is 0.56x prior-5 avg 79,496,090 (threshold ≤0.7)
 ```
 
 ### SUIUSDT
@@ -190,11 +190,11 @@ REASON: Lateralization: No qualifying compression: 1 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: SUIUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 0.7244
-STATE: WATCHLIST
-SIGNAL: Volume exhaustion only: ratio=0.68, no range compression detected
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: Volume exhaustion confirmed: last-3 avg 16,686,926 is 0.68x prior-5 avg 24,533,157 (threshold ≤0.7)
+DATE: 2026-06-05 20:02 UTC
+PRICE: 0.6919
+STATE: NO_TRADE
+SIGNAL: No compression or volume exhaustion (compression_pairs=1, vol_ratio=0.77)
+REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 18,340,792 is 0.77x prior-5 avg 23,907,031 (need ≤0.7)
 ```
 
 ### NEARUSDT
@@ -203,11 +203,11 @@ REASON: Lateralization: No qualifying compression: 1 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: NEARUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 2.1760
-STATE: NO_TRADE
-SIGNAL: No compression or volume exhaustion (compression_pairs=1, vol_ratio=0.71)
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 10,493,431 is 0.71x prior-5 avg 14,858,509 (need ≤0.7)
+DATE: 2026-06-05 20:02 UTC
+PRICE: 1.9630
+STATE: WATCHLIST
+SIGNAL: Compression only: 2 shrinking candles (12.8%), volume not yet exhausted (ratio=0.89)
+REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 12.9% of widest in window | Volume: No volume exhaustion: last-3 avg 11,693,767 is 0.89x prior-5 avg 13,163,869 (need ≤0.7)
 ```
 
 ### INJUSDT
@@ -216,11 +216,11 @@ REASON: Lateralization: No qualifying compression: 1 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: INJUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 5.2600
+DATE: 2026-06-05 20:02 UTC
+PRICE: 4.9310
 STATE: WATCHLIST
-SIGNAL: Volume exhaustion only: ratio=0.62, no range compression detected
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: Volume exhaustion confirmed: last-3 avg 394,355 is 0.62x prior-5 avg 631,932 (threshold ≤0.7)
+SIGNAL: Compression only: 2 shrinking candles (9.9%), volume not yet exhausted (ratio=0.95)
+REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 9.9% of widest in window | Volume: No volume exhaustion: last-3 avg 549,548 is 0.95x prior-5 avg 581,280 (need ≤0.7)
 ```
 
 ### ARBUSDT
@@ -229,11 +229,11 @@ REASON: Lateralization: No qualifying compression: 1 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: ARBUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 0.0840
-STATE: WATCHLIST
-SIGNAL: Volume exhaustion only: ratio=0.47, no range compression detected
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: Volume exhaustion confirmed: last-3 avg 8,922,999 is 0.47x prior-5 avg 18,807,076 (threshold ≤0.7)
+DATE: 2026-06-05 20:02 UTC
+PRICE: 0.0796
+STATE: NO_TRADE
+SIGNAL: No compression or volume exhaustion (compression_pairs=1, vol_ratio=1.35)
+REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 21,285,773 is 1.35x prior-5 avg 15,773,668 (need ≤0.7)
 ```
 
 ### OPUSDT
@@ -242,11 +242,11 @@ REASON: Lateralization: No qualifying compression: 1 consecutive compressing pai
 AGENT: Scout (Asian Session)
 SYMBOL: OPUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 0.1055
-STATE: WATCHLIST
-SIGNAL: [BTC filter] Downgraded from GEM_ALERT — BTC state is WATCHLIST. COIL: 2 shrinking candles (44.9% compression) + volume at 0.37x baseline — breakout candidate
-REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 44.9% of widest in window | Volume: Volume exhaustion confirmed: last-3 avg 6,824,528 is 0.37x prior-5 avg 18,658,662 (threshold ≤0.7)
+DATE: 2026-06-05 20:02 UTC
+PRICE: 0.0955
+STATE: NO_TRADE
+SIGNAL: No compression or volume exhaustion (compression_pairs=1, vol_ratio=1.17)
+REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 12,557,409 is 1.17x prior-5 avg 10,728,207 (need ≤0.7)
 ```
 
 ### FETUSDT
@@ -255,11 +255,11 @@ REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (
 AGENT: Scout (Asian Session)
 SYMBOL: FETUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 0.2093
+DATE: 2026-06-05 20:02 UTC
+PRICE: 0.1896
 STATE: WATCHLIST
-SIGNAL: [BTC filter] Downgraded from GEM_ALERT — BTC state is WATCHLIST. COIL: 5 shrinking candles (59.9% compression) + volume at 0.37x baseline — breakout candidate
-REASON: Lateralization: Compression confirmed: 5 consecutive compressing pairs (need 2), tightest range is 59.9% of widest in window | Volume: Volume exhaustion confirmed: last-3 avg 13,480,326 is 0.37x prior-5 avg 36,696,844 (threshold ≤0.7)
+SIGNAL: Compression only: 2 shrinking candles (10.4%), volume not yet exhausted (ratio=1.05)
+REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 10.4% of widest in window | Volume: No volume exhaustion: last-3 avg 19,631,840 is 1.05x prior-5 avg 18,764,458 (need ≤0.7)
 ```
 
 ### TAOUSDT
@@ -268,11 +268,11 @@ REASON: Lateralization: Compression confirmed: 5 consecutive compressing pairs (
 AGENT: Scout (Asian Session)
 SYMBOL: TAOUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 201.0000
-STATE: WATCHLIST
-SIGNAL: Compression only: 2 shrinking candles (59.8%), volume not yet exhausted (ratio=0.90)
-REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 59.8% of widest in window | Volume: No volume exhaustion: last-3 avg 31,147 is 0.90x prior-5 avg 34,428 (need ≤0.7)
+DATE: 2026-06-05 20:02 UTC
+PRICE: 192.2000
+STATE: NO_TRADE
+SIGNAL: No compression or volume exhaustion (compression_pairs=1, vol_ratio=0.87)
+REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: No volume exhaustion: last-3 avg 32,146 is 0.87x prior-5 avg 36,755 (need ≤0.7)
 ```
 
 ### RENDERUSDT
@@ -281,11 +281,11 @@ REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (
 AGENT: Scout (Asian Session)
 SYMBOL: RENDERUSDT
 TIMEFRAME: 4H
-DATE: 2026-06-05 06:04 UTC
-PRICE: 1.7660
+DATE: 2026-06-05 20:02 UTC
+PRICE: 1.6240
 STATE: WATCHLIST
-SIGNAL: Volume exhaustion only: ratio=0.39, no range compression detected
-REASON: Lateralization: No qualifying compression: 1 consecutive compressing pairs (need 2) | Volume: Volume exhaustion confirmed: last-3 avg 856,386 is 0.39x prior-5 avg 2,171,395 (threshold ≤0.7)
+SIGNAL: Compression only: 2 shrinking candles (13.2%), volume not yet exhausted (ratio=1.42)
+REASON: Lateralization: Compression confirmed: 2 consecutive compressing pairs (need 2), tightest range is 13.2% of widest in window | Volume: No volume exhaustion: last-3 avg 1,735,401 is 1.42x prior-5 avg 1,218,746 (need ≤0.7)
 ```
 
 ---
