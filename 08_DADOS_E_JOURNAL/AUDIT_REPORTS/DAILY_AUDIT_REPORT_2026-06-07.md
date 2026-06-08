@@ -2,27 +2,34 @@
 schema_type: daily_audit
 schema_version: 1.0
 audit_date: '2026-06-07'
-fails: 2
-warns: 1
-passes: 4
+fails: 0
+warns: 0
+passes: 7
 ---
 
 # Euru OS — Daily Audit Report
 **Date:** 2026-06-07
-**Fails:** 2 | **Warns:** 1 | **Passes:** 4
+**Fails:** 0 | **Warns:** 0 | **Passes:** 7
 
 ## Check Results
 
 | # | Check | Status | Details |
 |---|---|---|---|
-| 1 | Morning Scan | **FAIL** | Missing SCOUT_REPORT_2026-06-07.md — morning scan did not run today |
-| 2 | Asian Scan | **FAIL** | Missing ASIAN_REPORT_2026-06-07.md — asian scan did not run today |
-| 3 | Trade Monitor | **WARN** | Missing TRADE_MONITOR_REPORT_2026-06-07.md — trade monitor did not run |
+| 1 | Morning Scan | **PASS** | SCOUT_REPORT_2026-06-07.md exists |
+| 2 | Asian Scan | **PASS** | ASIAN_REPORT_2026-06-07.md exists |
+| 3 | Trade Monitor | **PASS** | TRADE_MONITOR_REPORT_2026-06-07.md exists |
 | 4 | Git Sync | **PASS** | Git synchronized with origin/main |
-| 5 | Schema Integrity | **PASS** | All 60 critical files have valid schema |
+| 5 | Schema Integrity | **PASS** | All 61 critical files have valid schema |
 | 6 | Open Trades Health | **PASS** | No open trades |
-| 7 | Encoding Check | **PASS** | All 53 critical files UTF-8 clean |
+| 7 | Encoding Check | **PASS** | All 54 critical files UTF-8 clean |
 | 8 | News Sentinel Streak | **INFO** | News Sentinel HIGH streak: 0 day(s) |
+
+## Recovery Note
+
+The 08:30 audit initially reported 2 FAIL and 1 WARN because the recovered
+Morning Scan, Asian Scan, and Trade Monitor tasks were still producing their
+reports at the same time. All three canonical reports were present after task
+completion, and the post-recovery audit result is 0 FAIL, 0 WARN, 7 PASS.
 
 ---
 

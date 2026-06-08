@@ -54,10 +54,27 @@ class IndicatorState:
     volume_ratio: float
 
 
+def has_invalid_loopback_proxy() -> bool:
+    for env_name in ("HTTPS_PROXY", "https_proxy", "HTTP_PROXY", "http_proxy"):
+        proxy = os.environ.get(env_name, "").strip()
+        if not proxy:
+            continue
+        parsed = urllib.parse.urlparse(proxy)
+        host = (parsed.hostname or "").lower()
+        port = parsed.port
+        if host in {"127.0.0.1", "localhost", "::1"} and port == 9:
+            return True
+    return False
+
+
 def fetch_json(base_url: str, path: str, params: dict[str, object]) -> object:
     query = urllib.parse.urlencode(params)
     url = f"{base_url}{path}?{query}"
     req = urllib.request.Request(url, headers={"User-Agent": "AGuiaScanner/1.0"})
+    if has_invalid_loopback_proxy():
+        opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+        with opener.open(req, timeout=20) as response:
+            return json.loads(response.read().decode("utf-8"))
     with urllib.request.urlopen(req, timeout=20) as response:
         return json.loads(response.read().decode("utf-8"))
 
@@ -302,14 +319,28 @@ def verdict_for_symbol(symbol: str, candles_4h: list[Candle], candles_1h: list[C
     setup_ok = setup in {"Breakout", "Sweep+Reversal", "Retest", "Continuation", "Narrative+Chart"}
     one_hour_confirms = (state_1h.macd_hist > 0 and direction == "LONG") or (state_1h.macd_hist < 0 and direction == "SHORT")
     decision = "NO_ENTRY"
+    reason = "structure_or_confirmation_block"
     if not mac_ok:
         decision = "WAIT"
+        reason = "mac_incomplete"
+    elif not setup_ok:
+        reason = "setup_none"
+    elif not plan.get("valid"):
+        reason = "risk_plan_invalid"
+        if plan.get("reason") == "ATR unavailable":
+            reason = "atr_unavailable"
+        elif isinstance(plan.get("structure_room_r"), (int, float)):
+            reason = "room_r_below_1_5"
+    elif not one_hour_confirms:
+        reason = "one_hour_not_confirmed"
     if mac_ok and setup_ok and plan.get("valid") and one_hour_confirms:
         decision = "PAPER_ENTRY"
+        reason = "all_gates_passed"
     return {
         "symbol": symbol,
         "direction": direction,
         "decision": decision,
+        "decision_reason": reason,
         "btc_filter": "SELF" if symbol == "BTCUSDT" else "NOT_APPLIED",
         "setup": setup,
         "trend_4h": trend(candles_4h),
@@ -331,6 +362,10 @@ def fmt(value: object, digits: int = 4) -> str:
 def render_report(market: str, results: list[dict[str, object]], errors: list[str]) -> str:
     now = datetime.now(timezone.utc)
     paper_entries = [r for r in results if r["decision"] == "PAPER_ENTRY"]
+    reason_counts: dict[str, int] = {}
+    for result in results:
+        reason = str(result.get("decision_reason", "unknown"))
+        reason_counts[reason] = reason_counts.get(reason, 0) + 1
     if errors and len(errors) == len(results) + len(errors):
         top_verdict = "DATA_UNAVAILABLE"
     elif paper_entries:
@@ -350,8 +385,8 @@ def render_report(market: str, results: list[dict[str, object]], errors: list[st
         "",
         "## Pair Verdicts",
         "",
-        "| Pair | Decision | Direction | BTC Filter | Setup | 4H Trend | MAC | RSI 4H | MACD Hist 4H | Vol Ratio | Risk % | Room R |",
-        "|---|---|---:|---|---|---|---|---:|---:|---:|---:|---:|",
+        "| Pair | Decision | Reason | Direction | BTC Filter | Setup | 4H Trend | MAC | RSI 4H | MACD Hist 4H | Vol Ratio | Risk % | Room R |",
+        "|---|---|---|---:|---|---|---|---|---:|---:|---:|---:|---:|",
     ]
     for result in results:
         state = result["state_4h"]
@@ -359,9 +394,10 @@ def render_report(market: str, results: list[dict[str, object]], errors: list[st
         pillars = result["pillars"]
         mac = "/".join("Y" if pillars[name] else "N" for name in ("Movimento", "Aceleracao", "Confirmacao"))
         lines.append(
-            "| {symbol} | {decision} | {direction} | {btc_filter} | {setup} | {trend_4h} | {mac} | {rsi} | {hist} | {vol} | {risk} | {room} |".format(
+            "| {symbol} | {decision} | {reason} | {direction} | {btc_filter} | {setup} | {trend_4h} | {mac} | {rsi} | {hist} | {vol} | {risk} | {room} |".format(
                 symbol=result["symbol"],
                 decision=result["decision"],
+                reason=result["decision_reason"],
                 direction=result["direction"],
                 btc_filter=result["btc_filter"],
                 setup=result["setup"],
@@ -374,6 +410,9 @@ def render_report(market: str, results: list[dict[str, object]], errors: list[st
                 room=fmt(plan.get("structure_room_r", float("nan")), 2),
             )
         )
+    lines.extend(["", "## Decision Summary", ""])
+    for reason, count in sorted(reason_counts.items()):
+        lines.append(f"- {reason}: {count}")
     lines.extend(["", "## Trade Plans", ""])
     for result in results:
         plan = result["plan"]
@@ -381,6 +420,7 @@ def render_report(market: str, results: list[dict[str, object]], errors: list[st
             [
                 f"### {result['symbol']} - {result['decision']}",
                 "",
+                f"- Decision reason: {result['decision_reason']}",
                 f"- Direction: {result['direction']}",
                 f"- Setup: {result['setup']}",
                 f"- MAC pillars: {result['pillars']}",
@@ -430,6 +470,7 @@ def apply_btc_filter(results: list[dict[str, object]]) -> None:
                 result["btc_filter"] = "UNKNOWN"
                 if result["decision"] == "PAPER_ENTRY":
                     result["decision"] = "WAIT"
+                    result["decision_reason"] = "btc_filter_unknown"
         return
 
     btc_trend = str(btc["trend_4h"])
@@ -441,14 +482,17 @@ def apply_btc_filter(results: list[dict[str, object]]) -> None:
             result["btc_filter"] = "ACTIVE_SIDEWAYS"
             if result["decision"] == "PAPER_ENTRY":
                 result["decision"] = "WAIT"
+                result["decision_reason"] = "btc_filter_active_sideways"
         elif direction == "LONG" and btc_trend != "BULLISH":
             result["btc_filter"] = f"ACTIVE_{btc_trend}"
             if result["decision"] == "PAPER_ENTRY":
                 result["decision"] = "WAIT"
+                result["decision_reason"] = f"btc_filter_active_{btc_trend.lower()}"
         elif direction == "SHORT" and btc_trend != "BEARISH":
             result["btc_filter"] = f"ACTIVE_{btc_trend}"
             if result["decision"] == "PAPER_ENTRY":
                 result["decision"] = "WAIT"
+                result["decision_reason"] = f"btc_filter_active_{btc_trend.lower()}"
         else:
             result["btc_filter"] = "INACTIVE"
 
