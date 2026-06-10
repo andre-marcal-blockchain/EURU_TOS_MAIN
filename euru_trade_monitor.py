@@ -455,7 +455,7 @@ def generate_report(decisions: list, now: datetime.datetime, dry_run: bool) -> s
     """Generate TRADE_MONITOR_REPORT markdown."""
     date_str = now.strftime("%Y-%m-%d")
     time_str = now.strftime("%H:%M UTC")
-    mode = "DRY-RUN" if dry_run else "LIVE"
+    mode = "SIMULATE_DRY_RUN" if dry_run else "SIMULATE_WRITE"
 
     lines = [
         "---",
@@ -531,7 +531,7 @@ def main():
     date_str = now.strftime("%Y-%m-%d")
 
     print(f"\nEuru OS — Trade Monitor [{date_str}]")
-    print(f"Mode: {'DRY-RUN' if args.dry_run else 'LIVE'}")
+    print(f"Mode: {'SIMULATE_DRY_RUN' if args.dry_run else 'SIMULATE_WRITE'}")
 
     # Find all open paper trades
     pattern = os.path.join(TRADE_DIR, "PAPER_TRADE_*.md")
@@ -561,7 +561,7 @@ def main():
             d = evaluate_trade(fm, tf, now, args.dry_run)
             decisions.append(d)
             if d["action"] == "CLOSE":
-                tag = "[DRY-RUN] " if args.dry_run else ""
+                tag = "[SIMULATE_DRY_RUN] " if args.dry_run else ""
                 print(f"    {tag}→ {d['action']}: {d['exit_reason']} — {d['rule_triggered']}")
             else:
                 print(f"    → {d['action']}: {d['details'][:80]}...")

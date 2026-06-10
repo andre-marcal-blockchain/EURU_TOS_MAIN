@@ -905,14 +905,21 @@ Cada output de agente ou scan deve buscar, gradualmente, conter:
 
 ### 12.3 Regra de fase
 
-Em `READ_ONLY`:
+Estado operacional atual:
+
+- `System phase: SIMULATE`.
+- `Scanner data mode: READ_ONLY`.
+- `READ_ONLY` descreve como os scanners coletam e reportam dados; nao e a
+  fase global do sistema.
+
+Com scanner data mode `READ_ONLY`:
 
 - O Euru observa.
 - O Euru classifica.
 - O Euru cria reports.
 - O Euru nao abre trade.
 
-Em `SIMULATE`:
+Na fase `SIMULATE`:
 
 - O Euru pode criar paper trades.
 - O Euru mede assertividade.
@@ -928,9 +935,9 @@ Em `EXECUTE`:
 
 Para operar com os olhos do Bruno, os proximos passos tecnicos devem ser:
 
-1. Reativar Morning Scan em READ_ONLY.
-2. Reativar Asian Scan em READ_ONLY.
-3. Reativar Trade Monitor em READ_ONLY.
+1. Manter Morning Scan com scanner data mode READ_ONLY.
+2. Manter Asian Scan com scanner data mode READ_ONLY.
+3. Manter Trade Monitor na fase SIMULATE, sem ordens reais.
 4. Adaptar outputs para distinguir `LONG_CANDIDATE` e `SHORT_CANDIDATE`.
 5. Adicionar `MAC_VALID` explicito.
 6. Adicionar Two-Day OBV Protocol.
@@ -957,4 +964,6 @@ Playbook impede emocao.
 Journal transforma experiencia em aprendizado.
 ```
 
-A prioridade do Euru agora e ligar novamente os olhos de mercado em READ_ONLY, observar por alguns dias, calibrar os agentes e so depois avancar para simulacao.
+A prioridade do Euru agora e manter os olhos de mercado em scanner data mode
+READ_ONLY dentro da fase SIMULATE, calibrar os agentes e validar paper trades
+antes de qualquer transicao futura para EXECUTE.

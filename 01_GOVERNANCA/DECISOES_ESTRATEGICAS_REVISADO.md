@@ -1259,3 +1259,51 @@ A partir de 2 Maio, com PC 24/7, tasks deverao correr nas horas
 exactas previstas.
 
 Operador: Andre (Risk/Product Owner)
+
+## 2026-06-10 - ATIVACAO TYPE 1: REVISOES CLAUDE HEADLESS v1.8
+
+Tipo: Type 1 - automacao de relatorio e verificacao advisory
+Status: APPROVED; pacote preparado localmente, publicacao e agendamento
+pendentes de PowerShell elevado
+Versao ativada: v1.8
+
+DECISAO:
+
+Ativar a camada de revisao headless Claude em
+`09_AI_AUTOMATION/`, com duas tarefas agendadas:
+
+- `EURU Claude Daily Review`: diariamente as 21:35 Europe/Madrid.
+- `EURU Claude Weekly Learning Review`: domingos as 10:45
+  Europe/Madrid.
+
+ESCOPO E LIMITES:
+
+- A IA opera em modo READ-ONLY com allowlist `Read,Glob,Grep`.
+- A saida e apenas advisory e nao altera logica de scanner, thresholds,
+  schemas, journals ou documentos canonicos.
+- O wrapper escreve somente o review esperado em
+  `08_DADOS_E_JOURNAL/AI_REVIEWS/`.
+- O wrapper limita o commit Git ao arquivo de review gerado.
+- Locks e logs em `09_AI_AUTOMATION/LOGS/` ficam fora do Git.
+- Qualquer ampliacao da allowlist ou do escopo de escrita/commit exige
+  nova decisao Type 2.
+
+VALIDACAO PRE-ATIVACAO:
+
+- Scripts daily, weekly e setup analisados sem erros de parsing.
+- Claude Code local detectado e disponivel.
+- Guardrails de branch, indice staged, lock compartilhado, idempotencia,
+  exit codes e sincronizacao com origin/main revisados.
+- Smoke test obrigatorio apos registro das tarefas.
+- Primeira tentativa de setup bloqueada por falta de privilegios de
+  administrador; nenhuma tarefa foi criada.
+- Correcao Type 1 inclui separacao entre fase SIMULATE e scanner data mode
+  READ_ONLY, rotulos explicitos do Trade Monitor e protecao STALE_INPUT no
+  Journal Auditor.
+
+AUTORIDADE:
+
+Aprovacao humana explicita do operador recebida em 2026-06-10.
+Codex executa registro, setup, smoke test e verificacao operacional.
+
+Operador: Andre (Risk/Product Owner)

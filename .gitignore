@@ -8,6 +8,8 @@ venv/
 *.log
 desktop.ini
 
+# Headless AI review runtime artifacts (logs and shared lock)
+09_AI_AUTOMATION/LOGS/
 
 
 # Legacy archived folder from Type 3 migration (2026-04-27)

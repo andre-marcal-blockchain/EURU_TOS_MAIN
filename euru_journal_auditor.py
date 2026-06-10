@@ -1,6 +1,6 @@
 """
 Euru OS — Journal Auditor (AGT-07)
-Automatically creates a daily journal entry by reading the most recent
+Automatically creates a daily journal entry by reading the same-date
 Scout Report and Asian Report, summarising open positions, and writing
 a schema-compliant JOURNAL_<date>.md to 08_DADOS_E_JOURNAL/JOURNAL_DAILY/.
 
@@ -21,7 +21,6 @@ Output:
 from __future__ import annotations
 
 import argparse
-import glob
 import os
 import re
 import sys
@@ -49,17 +48,10 @@ def today_str() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 
-def find_latest_report(prefix: str, date: str) -> Optional[Path]:
-    """Find most recent report of a given prefix on or before date."""
-    pattern = str(SCORECARDS / f"{prefix}_*.md")
-    files = sorted(glob.glob(pattern))
-    # Filter: only files with date <= target date
-    candidates = []
-    for f in files:
-        m = re.search(r"(\d{4}-\d{2}-\d{2})", Path(f).name)
-        if m and m.group(1) <= date:
-            candidates.append(Path(f))
-    return candidates[-1] if candidates else None
+def find_report_for_date(prefix: str, date: str) -> Optional[Path]:
+    """Return only the report whose filename exactly matches the target date."""
+    report = SCORECARDS / f"{prefix}_{date}.md"
+    return report if report.is_file() else None
 
 
 def extract_btc_state(scout_path: Optional[Path]) -> str:
@@ -264,8 +256,18 @@ def estimate_summary_score(
 
 def build_journal(date: str, cycle: str) -> str:
     """Build the complete journal markdown string."""
-    scout_path = find_latest_report("SCOUT_REPORT", date)
-    asian_path = find_latest_report("ASIAN_REPORT", date)
+    scout_path = find_report_for_date("SCOUT_REPORT", date)
+    asian_path = find_report_for_date("ASIAN_REPORT", date)
+    missing_inputs = [
+        name
+        for name, path in (
+            ("SCOUT_REPORT", scout_path),
+            ("ASIAN_REPORT", asian_path),
+        )
+        if path is None
+    ]
+    input_status = "STALE_INPUT" if missing_inputs else "CURRENT"
+    system_status = "warning" if missing_inputs else "healthy"
 
     btc_state      = extract_btc_state(scout_path)
     regime         = extract_market_regime(scout_path)
@@ -291,6 +293,14 @@ def build_journal(date: str, cycle: str) -> str:
     if asian_path:
         linked.append(f"- Asian: {asian_path.name}")
     linked_str = "\n".join(linked) if linked else "- none"
+    if missing_inputs:
+        linked_str += "\n- STALE_INPUT: missing exact-date " + ", ".join(missing_inputs)
+
+    deviations = (
+        "- STALE_INPUT: exact-date input missing: " + ", ".join(missing_inputs)
+        if missing_inputs
+        else "- none"
+    )
 
     content = f"""---
 schema_type: daily_journal
@@ -298,7 +308,8 @@ schema_version: 1.0
 
 journal_date: {date}
 system_phase: {SYSTEM_PHASE}
-system_status: healthy
+system_status: {system_status}
+input_status: {input_status}
 
 market_regime: {regime}
 btc_macro_state: {btc_state}
@@ -309,7 +320,7 @@ open_positions_count: {open_positions}
 new_trades_count: {new_trades}
 closed_trades_count: 0
 watchlist_changes_count: {watchlist_changes}
-blockers_count: 0
+blockers_count: {len(missing_inputs)}
 
 key_theme_of_day: {key_theme}
 summary_score: {summary_score}
@@ -318,6 +329,7 @@ tags:
   - daily_journal
   - auto_generated
   - {cycle}_cycle
+  - {input_status.lower()}
 ---
 
 # Daily Summary
@@ -330,7 +342,7 @@ tags:
 - Actualizar manualmente com aprendizagens específicas da sessão.
 
 ## Deviations
-- none
+{deviations}
 
 ## Watchlist Changes
 {f"- Setups identificados para monitorização: {', '.join(setups)}" if setups else "- none"}
