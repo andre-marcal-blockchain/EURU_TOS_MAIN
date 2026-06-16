@@ -450,6 +450,96 @@ Sinais de oportunidade:
 - Breakout com fechamento confirmado.
 - Breakdown para short quando BTC e estrutura favorecem queda.
 
+### 4.6 Suporte, resistencia e congruencia
+
+Leitura profissional de suporte e resistencia nao trabalha com linhas exatas. Trabalha com zonas de decisao.
+
+Exemplo:
+
+- Resistencia fraca: pensar em `78000` como numero isolado.
+- Resistencia profissional: pensar em uma faixa como `77500-78500`.
+
+Motivo:
+
+- O mercado raramente respeita um nivel exato.
+- Milhoes de participantes executam ordens em regioes, nao em um pixel do grafico.
+- Wicks, varridas de liquidez e falsos rompimentos sao normais.
+
+Regra operacional:
+
+- O diario define as zonas-mestre.
+- O 4H e o 2H leem a reacao dentro dessas zonas.
+- Nenhuma entrada deve nascer sem contexto de zona.
+
+O conceito central nao e "adivinhar o futuro". E identificar onde o mercado historicamente costuma reagir e exigir evidencias antes de agir.
+
+Congruencia e o filtro de qualidade do metodo. Um unico indicador isolado nao basta. A entrada ganha qualidade quando varios blocos apontam para a mesma direcao:
+
+- Zona diaria relevante.
+- Estrutura de mercado coerente.
+- SMA alinhada com a tese.
+- SuperTrend alinhado com a tese.
+- Volume confirmando o movimento.
+- Espaco real ate a proxima zona para justificar o risco.
+
+Tradução pratica:
+
+- Suporte/resistencia sem confirmacao = observacao.
+- Rompimento sem volume = suspeita.
+- Indicadores alinhados sem contexto de zona = setup incompleto.
+- Zona + estrutura + confirmacao + risco controlado = candidato real a operacao.
+
+Isso muda a mentalidade do operador:
+
+- Pensamento amador: "o indicador funciona".
+- Pensamento profissional: "as evidencias aumentam a probabilidade".
+
+O metodo deve sempre priorizar probabilidade condicionada, nunca certeza ilusoria.
+
+### 4.7 Limites do metodo e cautelas de interpretacao
+
+O material didatico de Bruno pode ser valioso para leitura de mercado, mas o Euru OS nao deve importar afirmacoes promocionais ou probabilidades nao validadas como se fossem ciencia operacional.
+
+Separacao obrigatoria:
+
+- Conteudo util: zonas, estrutura, volume, leitura top-down, congruencia, disciplina.
+- Conteudo que exige cautela: percentuais de acerto declarados, lucros exemplares, operacoes isoladas usadas como prova do metodo.
+
+Regra de rigor:
+
+- Uma operacao vencedora nao valida um metodo.
+- Um trade ao vivo nao substitui amostra estatistica.
+- Frases como "80% de chance" so podem entrar no sistema se houver backtest, amostra auditavel e criterio de medicao claro.
+
+Para o Euru, a formulacao correta e:
+
+- Nao dizer "o setup funciona".
+- Dizer "o setup aumenta a probabilidade sob certas condicoes".
+- Nao dizer "essa zona vai segurar".
+- Dizer "essa zona historicamente provoca reacoes e merece observacao".
+
+Hierarquia de confianca para o sistema:
+
+1. Estrutura de mercado.
+2. Zonas de suporte e resistencia.
+3. Volume e participacao real.
+4. Gestao de risco.
+5. Contexto macro.
+6. Indicadores como confirmacao, nunca como prova isolada.
+
+Contexto macro e especialmente importante para cripto em 2026:
+
+- Politica monetaria.
+- Liquidez global.
+- ETFs e fluxo institucional.
+- Eventos macroeconomicos dos EUA.
+
+Conclusao operacional:
+
+- A aula e boa como introducao de leitura de comportamento de preco.
+- Ela nao deve ser tratada como validacao estatistica suficiente para automacao ou execucao.
+- O EURU deve absorver o processo mental e descartar qualquer promessa implicita de previsibilidade excessiva.
+
 ---
 
 ## 5. COMO ENTRA
@@ -831,6 +921,11 @@ Princípios operacionais:
 - O sistema aprende mais com as perdas do que com os ganhos.
 - Uma boa operacao pode ser nao operar.
 - Operar menor e sobreviver vale mais do que acertar grande e quebrar.
+- Suporte e resistencia sao zonas de decisao, nao linhas magicas.
+- Congruencia vale mais do que conviccao isolada.
+- Mesmo um setup forte falha; risco fixo e o que garante longevidade.
+- Marketing de trading nao e evidencia estatistica.
+- O melhor trade da narrativa importa menos do que a media de centenas de trades.
 
 ---
 
