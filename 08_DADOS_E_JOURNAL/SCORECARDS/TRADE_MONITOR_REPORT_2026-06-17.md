@@ -5,7 +5,7 @@ schema_version: 1.0
 # Euru OS — Trade Monitor Report
 **Date:** 2026-06-17
 **Time:** 06:06 UTC
-**Mode:** SIMULATE_DRY_RUN
+**Mode:** SIMULATE_WRITE
 
 ---
 
