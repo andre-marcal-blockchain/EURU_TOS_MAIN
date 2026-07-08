@@ -1,0 +1,19 @@
+{
+  "name": "verificador-acessibilidade",
+  "version": "1.0.0",
+  "description": "Auditoria de conformidade de sites com leis de acessibilidade (LBI, WCAG 2.2, EAA, ADA): falhas, riscos de sanção e correções.",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/smoke.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axe-core": "^4.12.1",
+    "express": "^5.2.1",
+    "playwright-core": "^1.61.1"
+  }
+}

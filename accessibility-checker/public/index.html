@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verificador de Acessibilidade Digital — conformidade LBI, WCAG, EAA</title>
+  <meta name="description" content="Audite gratuitamente a acessibilidade do site da sua empresa: falhas WCAG, riscos jurídicos (LBI, CDC, EAA, ADA) e correções recomendadas." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header>
+    <div class="container header-inner">
+      <span class="logo" aria-hidden="true">◎</span>
+      <div>
+        <p class="brand">Verificador de Acessibilidade Digital</p>
+        <p class="tagline">Conformidade com LBI, WCAG 2.2, EAA e ADA</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="container">
+      <section aria-labelledby="titulo-scan">
+        <h1 id="titulo-scan">Seu site está em conformidade com as leis de acessibilidade?</h1>
+        <p class="lead">
+          Informe o endereço do site ou landing page da sua empresa. Em cerca de um minuto,
+          você recebe um relatório com as falhas encontradas, as leis que elas afetam,
+          o risco de sanções e as correções recomendadas.
+        </p>
+
+        <form id="form-scan" novalidate>
+          <div class="campo">
+            <label for="url">Endereço do site</label>
+            <p id="url-dica" class="dica">Exemplo: https://www.suaempresa.com.br</p>
+            <div class="linha-form">
+              <input
+                type="url"
+                id="url"
+                name="url"
+                inputmode="url"
+                autocomplete="url"
+                spellcheck="false"
+                required
+                aria-describedby="url-dica url-erro"
+                placeholder="https://…"
+              />
+              <button type="submit" id="btn-scan">Analisar site</button>
+            </div>
+            <p id="url-erro" class="erro" role="alert" hidden></p>
+          </div>
+        </form>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section id="resultado" aria-labelledby="titulo-resultado" hidden>
+        <h2 id="titulo-resultado">Resultado da auditoria</h2>
+        <div id="resumo"></div>
+
+        <div class="acoes-relatorio">
+          <button type="button" id="btn-baixar">Baixar relatório completo (HTML)</button>
+        </div>
+
+        <h3 id="titulo-falhas">Falhas encontradas</h3>
+        <div id="lista-falhas"></div>
+
+        <h3 id="titulo-recomendacoes">Recomendações adicionais</h3>
+        <ul id="lista-recomendacoes"></ul>
+
+        <h3 id="titulo-leis">Legislação de referência</h3>
+        <div id="lista-leis"></div>
+
+        <p id="aviso-legal" class="aviso"></p>
+      </section>
+
+      <section aria-labelledby="titulo-porque" class="info-extra">
+        <h2 id="titulo-porque">Por que isso importa</h2>
+        <dl class="cartoes">
+          <div class="cartao">
+            <dt>É lei no Brasil</dt>
+            <dd>O art. 63 da Lei Brasileira de Inclusão (13.146/2015) obriga empresas com sede ou representação no país a manterem sites acessíveis.</dd>
+          </div>
+          <div class="cartao">
+            <dt>Multas e processos</dt>
+            <dd>Procons aplicam multas com base no CDC; o Ministério Público move ações civis públicas; na UE, o EAA prevê sanções que chegam a centenas de milhares de euros.</dd>
+          </div>
+          <div class="cartao">
+            <dt>Reputação e receita</dt>
+            <dd>Cerca de 1 em cada 6 pessoas tem alguma deficiência. Um site inacessível exclui clientes, prejudica o SEO e expõe a marca a repercussão negativa.</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        Auditoria automática baseada no motor axe-core e nas WCAG 2.2. Complementa — não substitui —
+        testes manuais com teclado e leitor de tela, nem parecer jurídico.
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

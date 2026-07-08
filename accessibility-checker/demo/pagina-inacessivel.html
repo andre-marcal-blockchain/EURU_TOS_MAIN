@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Página de DEMONSTRAÇÃO com falhas de acessibilidade INTENCIONAIS,
+     usada para testar o verificador. Não use como referência de código! -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style>
+    body { font-family: Arial; margin: 0; }
+    .banner { background: #4a90d9; color: #7fb3e8; padding: 20px; }
+    .cinza { color: #999; background: #fff; }
+    .botao { background: #eee; border: none; padding: 4px; }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h3>MegaLoja Promoções</h3>
+    <p class="cinza">As melhores ofertas da internet você encontra aqui</p>
+  </div>
+
+  <div>
+    <img src="produto1.jpg" width="200">
+    <img src="produto2.jpg" width="200">
+    <a href="/oferta"><img src="banner-oferta.jpg" width="400"></a>
+  </div>
+
+  <div>
+    <h1>Ofertas da semana</h1>
+    <h4>Eletrônicos</h4>
+    <p class="cinza">Descontos de até 70% em toda a loja. Aproveite!</p>
+    <a href="/eletronicos">clique aqui</a>
+    <a href="/mais"></a>
+  </div>
+
+  <form>
+    Digite seu e-mail para receber ofertas:
+    <input type="text" name="email">
+    <button class="botao"><img src="seta.png" width="16"></button>
+  </form>
+
+  <div tabindex="3">
+    <select>
+      <option>Escolha uma categoria</option>
+      <option>Celulares</option>
+    </select>
+  </div>
+
+  <iframe src="https://www.example.com" width="300" height="150"></iframe>
+
+  <ul>
+    <li>Frete grátis acima de R$ 199</li>
+    <div>Parcelamento em até 12x</div>
+  </ul>
+
+  <marquee>OFERTA RELÂMPAGO: 50% OFF SOMENTE HOJE!</marquee>
+</body>
+</html>
